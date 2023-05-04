@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: e07a42e2-c659-4991-b59a-d48bfb7d2972
-source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2709'
-ht-degree: 63%
+source-wordcount: '2745'
+ht-degree: 62%
 
 ---
 
 # AEM への貢献{#contributing-to-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 開発手法 {#development-methodology}
 

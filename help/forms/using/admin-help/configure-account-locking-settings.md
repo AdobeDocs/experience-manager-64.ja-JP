@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d4409c6b-f4ef-499c-8daa-e93a163ff8ab
 exl-id: e407c643-5753-447e-ad4e-deb7b9eb2b55
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 12%
+source-wordcount: '230'
+ht-degree: 14%
 
 ---
 
 # アカウントロックの設定 {#configure-account-locking-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ドメインを追加する際に、アカウントのロックを有効にするかどうかを指定します。 「アカウントロックを有効にする」オプションが選択されている場合、ユーザーアカウントは、指定された回数連続した認証エラーの後でロックされます。 指定された時間が経過すると、ユーザーは再度認証を試みることができます。 この機能を使用すると、ユーザーが様々な資格情報の組み合わせを試みてシステムにアクセスするのを防ぐことができます。
 

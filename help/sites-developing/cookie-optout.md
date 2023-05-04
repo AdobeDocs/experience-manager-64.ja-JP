@@ -10,14 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 exl-id: 7f604d89-c6ad-405d-98cd-80f057466e61
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '590'
 ht-degree: 29%
 
 ---
 
 # Cookie の使用法の設定{#configuring-cookie-usage}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM では、Web ページでの Cookie の使用方法を設定および制御できるサービスを提供しています:
 

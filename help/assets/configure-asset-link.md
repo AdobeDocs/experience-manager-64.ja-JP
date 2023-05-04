@@ -5,16 +5,20 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
 exl-id: 6d9a954f-433d-41ec-9bb9-45e857890aba
-source-git-commit: 657bb7df01a7b8e03d39c3bda868d87253b81b2a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3135'
-ht-degree: 95%
+source-wordcount: '3171'
+ht-degree: 94%
 
 ---
 
 # Experience Manager Assets を Adobe Asset Link 用に設定 {#adobe-asset-link}
 
-[Adobe Asset Link（AAL）](https://www.adobe.com/jp/creativecloud/business/enterprise/adobe-asset-link.html) を使用すると、コンテンツ作成プロセスでのクリエイターとマーケティング担当者の共同作業を効率化できます。Adobe Experience Manager Assets を Creative Cloud デスクトップアプリケーションの Adobe InDesign、Adobe Photoshop および Adobe Illustrator に接続します。Adobe Asset Link パネルを使用すると、クリエイターが最も慣れているクリエイティブアプリから離れることなく、AEM Assets に保存されたコンテンツをアクセスしたり、変更したりすることができます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+[Adobe Asset Link（AAL）](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html) を使用すると、コンテンツ作成プロセスでのクリエイターとマーケティング担当者の共同作業を効率化できます。Adobe Experience Manager Assets を Creative Cloud デスクトップアプリケーションの Adobe InDesign、Adobe Photoshop および Adobe Illustrator に接続します。Adobe Asset Link パネルを使用すると、クリエイターが最も慣れているクリエイティブアプリから離れることなく、AEM Assets に保存されたコンテンツをアクセスしたり、変更したりすることができます。
 
 Experience Manager Assetsを Asset Link と共に使用するように設定するには、次のタスクを実行します。Experience Manager 管理者アカウントを使用して設定を行います。
 

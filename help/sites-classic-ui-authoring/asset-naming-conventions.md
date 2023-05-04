@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 exl-id: 3dc38c37-f2a0-44f5-90f6-fee8c6f84ff4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 53%
+source-wordcount: '164'
+ht-degree: 46%
 
 ---
 
 # アセットの命名規則のテスト{#naming-conventions-for-assets-testing}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 リポジトリーのノードは、[Java コンテンツリポジトリー](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
 

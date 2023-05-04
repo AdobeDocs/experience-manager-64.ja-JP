@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
 exl-id: 509d1fb4-a88d-4438-a618-ba063adb6fb9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 2%
+source-wordcount: '326'
+ht-degree: 4%
 
 ---
 
 # 「いいね!」の設定の基本事項 {#liking-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「いいね！」設定コンポーネント、 [集計](tally.md) サブクラスは、メンバーがハートアイコンを選択するだけで、コンテンツの特定の部分に関する肯定的な意見を表すのに役立つツールです。
 

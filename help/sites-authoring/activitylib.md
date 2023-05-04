@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 358d32bc-be5f-4500-9637-525d35cdbeff
 exl-id: 269eee08-5fca-4621-a56e-93db9361fa64
-source-git-commit: 1c9da35f65b6b9edacc3d5529ee80e7be94495d2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 40%
+source-wordcount: '2037'
+ht-degree: 39%
 
 ---
 
 # アクティビティの管理 {#managing-activities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アクティビティコンソールでは、ブランドのマーケティング[アクティビティ](/help/sites-authoring/personalization.md#activities)を作成、整理、管理できます。次のことができます。
 

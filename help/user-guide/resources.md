@@ -6,14 +6,18 @@ seo-description: AEM 6.4 release notes, certifications, and additional resources
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: 77111a12-1d9d-4f2d-a2f2-6b2f66709fce
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 89%
+source-wordcount: '120'
+ht-degree: 71%
 
 ---
 
 # AEM 6.4 のその他のリソース {#aem-64-additional-resources}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## AEM 6.4 リリースノート {#aem-64-release-notes}
 
@@ -21,7 +25,7 @@ ht-degree: 89%
 
 ## AEM 6.4 チュートリアルビデオ {#aem-64-tutorial-videos}
 
-* [AEMTutorialsとビデオ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html#tutorials)
+* [AEMTutorialsとビデオ](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-cloud-service.html#tutorials)
 
 ## クラスと認定制度 {#classes-and-certification}
 

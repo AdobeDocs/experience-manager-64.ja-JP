@@ -2,14 +2,18 @@
 title: リンクチェッカー
 description: リンクチェッカーは、内部リンクと外部リンクの両方を検証し、リンクの書き換えを許可するのに役立ちます。
 exl-id: 30718d02-3370-48aa-a5ba-242d5efaa14c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 100%
+source-wordcount: '1022'
+ht-degree: 97%
 
 ---
 
 # リンクチェッカー {#the-link-checker}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コンテンツ作成者は、コンテンツページに含まれるすべてのリンクの検証に関心を持つ必要はありません。
 

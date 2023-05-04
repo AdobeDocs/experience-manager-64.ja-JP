@@ -8,14 +8,18 @@ topic-tags: installing
 discoiquuid: 7333641e-8c8c-4b52-a7da-a2976c88592c
 role: Admin
 exl-id: 308b106f-4c5a-49d6-a7f6-c1e8a0bf62e9
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 92%
+source-wordcount: '1645'
+ht-degree: 69%
 
 ---
 
 # OSGi 上での Forms ベースのワークフローのインストールと設定 {#installing-and-configuring-forms-centric-workflow-on-osgi}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -35,9 +39,9 @@ AEM Forms は強力なエンタープライズクラスのプラットフォー�
 
 ## デプロイメントトポロジ {#deployment-topology}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。OSGi 機能上で Forms ベースのワークフローを実行するには、最小限の AEM オーサーインスタンスまたは処理インスタンス（実稼動オーサー）が必要です。処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md) インスタンスです。実稼動オーサーでは、ワークフローやアダプティブフォームの作成など、実際のオーサリングを実行しないでください。
+AEM Formsアドオンパッケージは、AEMにデプロイされたアプリケーションです。 OSGi 機能上で Forms ベースのワークフローを実行するには、最小限の AEM オーサーインスタンスまたは処理インスタンス（実稼動オーサー）が必要です。処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md) インスタンスです。実稼動オーサーでは、ワークフローやアダプティブフォームの作成など、実際のオーサリングを実行しないでください。
 
-次のトポロジは、AEM Forms のインタラクティブ通信、Correspondence Management、AEM Forms のデータ取得および OSGi 機能にあるフォーム中心のワークフローを実行するための指標トポロジです。トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
+次のトポロジは、AEM Formsインタラクティブ通信、Correspondence Management、AEM Formsデータキャプチャ、および OSGi 上のForms中心のワークフローを実行するためのトポロジを示しています。 トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
 ![recommended-topology](assets/recommended-topology.png)
 
@@ -53,19 +57,19 @@ Forms ベースのワークフローを OSGi 上でのインストールと設�
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアとソフトウェアの一覧について詳しくは、「[技術要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
-* AEM インスタンスのインストールパスに空白が含まれていないこと。
-* AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。OSGi 上で Forms ベースのワークフローを実行するには、少なくとも 1 つの AEM インスタンス（オーサーまたは処理）が必要です。
+* AEMインスタンスのインストールパスに空白が含まれていません。
+* AEMインスタンスが起動し、実行中です。 AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。OSGi 上で Forms ベースのワークフローを実行するには、少なくとも 1 つの AEM インスタンス（オーサーまたは処理）が必要です。
 
-   * **作成者：**&#x200B;コンテンツを作成、アップロード、編集し、Web サイトを管理する AEM インスタンス。公開する準備ができたコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。 
-   * **パブリッシュ**：発行されたコンテンツをインターネットまたは社内ネットワークを通じて公開する AEM インスタンス。
+   * **作成者**:コンテンツの作成、アップロード、編集、Web サイトの管理に使用されるAEMインスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+   * **処理中：** 処理インスタンスは [AEM オーサーの堅牢化](/help/forms/using/hardening-securing-aem-forms-environment.md) インスタンス。 オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。 
+   * **公開**:公開されたコンテンツをインターネットまたは内部ネットワーク経由で公開するAEMインスタンス。
 
-* メモリ要件が満たされていること。AEM Forms アドオンパッケージでは、次が必要です。
+* メモリ要件を満たしています。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+   * 15 GB の一時領域 (Microsoft Windows ベースのインストール用 )
    * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
-* Unix ベースのシステムの追加必要システム構成：Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
+* UNIX ベースのシステムの追加要件：UNIX ベースのオペレーティングシステムを使用している場合は、各オペレーティングシステムのインストールメディアから次のパッケージをインストールします。
 
 <table> 
  <tbody>
@@ -98,12 +102,12 @@ Forms ベースのワークフローを OSGi 上でのインストールと設�
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、OSGi 上の Forms ベースのワークフローとその他の機能が含まれます。次の手順を実行してアドオンパッケージをインストールします。
+AEM Formsアドオンパッケージは、AEMにデプロイされたアプリケーションです。 このパッケージには、OSGi 上の Forms ベースのワークフローとその他の機能が含まれます。次の手順を実行してアドオンパッケージをインストールします。
 
-1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 「**[!UICONTROL フィルター]**」セクションで、
-   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+1. 内 **[!UICONTROL フィルター]** セクション：
+   1. 選択 **[!UICONTROL Forms]** から **[!UICONTROL 解決策]** 」ドロップダウンリストから選択できます。
    2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
@@ -111,14 +115,14 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが [AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルに表示されなくなり、このログファイルが安定した状態になるまで待ってください。
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにサーバーを再起動しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが [AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルに表示されなくなり、このログファイルが安定した状態になるまで待ってください。
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ## インストール後の設定 {#post-installation-configurations}
 
-AEM Forms には、いくつかの必須およびオプションの設定があります。必須の設定には、BouncyCastle ライブラリおよびシリアル化エージェントの設定が含まれます。オプションの設定には、ディスパッチャーおよび Adobe Target の設定が含まれます。
+AEM Formsには、いくつかの必須およびオプションの設定があります。 必須の設定には、BouncyCastle ライブラリの設定やシリアル化エージェントの設定が含まれます。 オプションの設定には、ディスパッチャーおよび Adobe Target の設定が含まれます。
 
-### インストール後の必須の設定 {#mandatory-post-installation-configurations}
+### 必須のインストール後の設定 {#mandatory-post-installation-configurations}
 
 #### RSA ライブラリと BouncyCastle ライブラリの設定  {#configure-rsa-and-bouncycastle-libraries}
 
@@ -154,30 +158,30 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 1. **sun.util.calendar** パッケージを&#x200B;**許可リストに加える**&#x200B;フィールドに追加します。「保存」をクリックします。
 1. 手順 1 から 3 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
-### インストール後のオプションの設定 {#optional-post-installation-configurations}
+### インストール後のオプション設定 {#optional-post-installation-configurations}
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-ディスパッチャーは AEM のキャッシングおよびロードバランスツールです。AEM ディスパッチャーはまた、AEM サーバーを攻撃から保護することにも役立ちます。エンタープライズクラスの Web サーバーと一緒にディスパッチャーを使用することで、AEM インスタンスのセキュリティを向上できます。[ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Forms の次の設定を実行してください。
+Dispatcher は、AEMのキャッシュおよびロードバランシングツールです。 AEM Dispatcher は、AEMサーバーを攻撃から保護するのにも役立ちます。 エンタープライズクラスの Web サーバーと組み合わせて Dispatcher を使用することで、AEMインスタンスのセキュリティを強化できます。 [ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Forms の次の設定を実行してください。
 
 1. AEM Forms のアクセスの設定：
 
-   dispatcher.any ファイルを開いて編集します。フィルターセクションに移動し、次のフィルターをフィルターセクションに追加します。
+   dispatcher.any ファイルを編集用に開きます。 フィルターセクションに移動し、次のフィルターをフィルターセクションに追加します。
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)」を参照してください。
+   ファイルを保存して閉じます。 フィルターについて詳しくは、 [Dispatcher のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja).
 
-1. リファラーフィルターサービスの設定：
+1. リファラーフィルターサービスを設定します。
 
-   管理者として Apache Felix Configuration Manager にログインします。Configuration Manager のデフォルト URL は `https://[server]:[port_number]/system/console/configMgr` です。**Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。URL の形式は、`https://[server]:[port]` です。
+   Apache Felix Configuration Manager に管理者としてログインします。 Configuration Manager のデフォルト URL は `https://[server]:[port_number]/system/console/configMgr` です。**Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。URL の形式は、`https://[server]:[port]` です。
 
 #### キャッシュの設定 {#configure-cache}
 
-キャッシングは、データへのアクセスにかかる時間を短縮し、遅延を削減して I/O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、アダプティブフォームのレンダリングの時間を短縮します。
+キャッシュは、データアクセス時間の短縮、待ち時間の短縮、入出力 (I/O) 速度の向上を実現するメカニズムです。 アダプティブフォームのキャッシュには、アダプティブフォームのHTMLコンテンツと JSON 構造のみが保存されます。事前入力されたデータは保存されません。 これにより、アダプティブフォームのレンダリングに要する時間を短縮できます。
 
-* アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
-* カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
+* アダプティブフォームのキャッシュを使用する場合は、 [AEM Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html) アダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュする場合。
+* カスタムコンポーネントを開発する際は、開発に使用するサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
 
@@ -190,7 +194,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### Acrobat Signの設定 {#configure-adobe-sign}
 
-Acrobat Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+Acrobat Sign により、アダプティブフォームの電子サインワークフローを有効にできます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
 OSGi 上の一般的なAcrobat SignおよびForms中心のワークフローシナリオでは、ユーザーがアダプティブフォームに入力してサービスの申し込みを行います。 例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申し込みフォームに入力、送信、署名すると、承認または却下のワークフローが開始されます。サービスプロバイダーは、AEMインボックスでアプリケーションを確認し、Acrobat Signを使用してアプリケーションに電子署名します。 同様の電子署名ワークフローを有効にするには、Acrobat SignとAEM Formsを統合します。
 

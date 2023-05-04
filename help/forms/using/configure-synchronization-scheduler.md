@@ -10,14 +10,18 @@ topic-tags: Configuration
 discoiquuid: 2c8cea3c-8d8b-41d4-8ef9-a0ada8f86be6
 role: Admin
 exl-id: 7f1c4bac-accf-43e4-9439-89c5420d50f2
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 58%
+source-wordcount: '322'
+ht-degree: 54%
 
 ---
 
 # 同期スケジューラの設定 {#configuring-the-synchronization-scheduler}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 デフォルトでは、同期スケジューラーは 3 分ごとに実行され、LiveCycleWorkbench 11 を介してリポジトリ内で変更および更新されたすべてのアセットを同期します。 同期プロセスが完了すると、フォームとリソースを含むアプリケーションがAEM Formsユーザーインターフェイスに表示されます。
 

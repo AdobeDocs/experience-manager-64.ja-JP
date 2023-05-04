@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e3f2dc5a-ef5e-432c-be07-b3dedbd6549b
 exl-id: cdb45bec-81d7-4356-ac55-5b6a40b35433
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1637'
 ht-degree: 48%
 
 ---
 
 # SharePoint コネクター{#sharepoint-connector}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Microsoft SharePoint 2010 およびMicrosoft SharePoint 2013、バージョン 4.0 用の Day JCR Connector。
 

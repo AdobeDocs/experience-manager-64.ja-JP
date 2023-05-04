@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: 794769f8-57c7-43c1-87dd-952121ced3e4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2562'
 ht-degree: 53%
 
 ---
 
 # ロールの作成および設定{#creating-and-configuring-roles}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 User Management Web ページを使用して、既に User Management データベースに含まれている役割にユーザーとグループを関連付けることができます。 役割の作成、編集、削除もできます。
 

@@ -11,14 +11,18 @@ discoiquuid: e78f539a-109c-444c-8e52-be2260c3509f
 feature: Adaptive Forms
 role: Admin
 exl-id: 9f0e7284-ac11-406d-8d8c-7682f1d66fff
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 74%
+source-wordcount: '727'
+ht-degree: 72%
 
 ---
 
 # アダプティブフォームのローカリゼーション用に新しいロケールをサポート {#supporting-new-locales-for-adaptive-forms-localization}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## ロケールの辞書について {#about-locale-dictionaries}
 

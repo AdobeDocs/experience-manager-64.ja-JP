@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 exl-id: 0bdb3063-7333-487b-947f-3fe29c6a6eef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 10%
+source-wordcount: '585'
+ht-degree: 11%
 
 ---
 
 # Communities 用の推奨トポロジ {#recommended-topologies-for-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communities 6.1 以降では、サイト訪問者（メンバー）がパブリッシュ環境から送信したユーザー生成コンテンツ (UGC) を処理するための独自のアプローチが採用されています。
 

@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: 3a8302e8-bc61-402c-a9f2-5db3dfa6dd6d
 exl-id: 913e1fee-b071-4152-94c3-dd7b8900e5ed
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 34%
+source-wordcount: '229'
+ht-degree: 32%
 
 ---
 
 # テスト計画の策定{#compiling-your-test-plan}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 その後、個々のテストケースをテスト計画に統合し、次の項目も定義します。
 

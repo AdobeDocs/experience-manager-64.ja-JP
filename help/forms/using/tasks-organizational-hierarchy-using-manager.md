@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c7cf28bf-2806-47bc-a803-8bc0e803fc4d
 exl-id: 28877528-2f91-4ee0-b9d8-c7df364ed803
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 40%
+source-wordcount: '380'
+ht-degree: 38%
 
 ---
 
 # マネージャービューを使用した組織階層でのタスクの管理 {#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace で、管理者は、階層内の任意のユーザーに割り当てられたタスク（直属または直属の部下）にアクセスし、様々なアクションを実行できるようになりました。 タスクは、AEM Forms Workspace の「TODO」タブで使用できます。 ダイレクトレポートのタスクでサポートされるアクションは次のとおりです。
 

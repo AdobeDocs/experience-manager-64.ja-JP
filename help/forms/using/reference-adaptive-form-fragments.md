@@ -8,18 +8,22 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 43dc10c2-8cfc-4ca3-8ccb-9b3f268663b7
 exl-id: cceea4d1-8fc2-4118-b22e-91f27e69c7e4
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 62%
+source-wordcount: '450'
+ht-degree: 58%
 
 ---
 
 # 参照用のアダプティブフォームフラグメント {#reference-adaptive-form-fragments}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 [アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md) は、フォームの作成時に使用できるフィールドのグループ、またはフィールドのグループを含むパネルです。 これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用して、アダプティブフォームフラグメントをフォームにドラッグ＆ドロップし、それをフォームエディターで編集できます。
 
-アダプティブフォームの作成者を対象に、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で参照用のフラグメントが提供されています。これには、次のフラグメントが含まれます。
+アダプティブフォームの作成者を対象に、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)で参照用のフラグメントが提供されています。これには、次のフラグメントが含まれます。
 
 * アドレス
 * 連絡先情報

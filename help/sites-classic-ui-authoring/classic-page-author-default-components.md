@@ -11,14 +11,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 exl-id: d552cbcc-8f71-48a3-9685-eba1ab8805c3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 65%
+source-wordcount: '253'
+ht-degree: 59%
 
 ---
 
 # コンポーネント{#components}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager(AEM) には、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。 これらは、 [ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) およびは、フィルタリングのために主な機能領域（コンポーネントグループ）でグループ化されます。
 

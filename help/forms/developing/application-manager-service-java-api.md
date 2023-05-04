@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 role: Developer
 exl-id: 1d93a7c2-631a-4cf7-938f-0133536c7e09
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 92%
+source-wordcount: '247'
+ht-degree: 82%
 
 ---
 
 # Application Manager サービス JavaAPI クイックスタート（SOAP） {#application-manager-service-javaapi-quick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Application Manager サービスで Java API クイックスタート（SOAP）を使用できます。
 

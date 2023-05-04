@@ -11,14 +11,18 @@ topic-tags: site-features
 discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 793c44fa-9dd1-45f2-b1ab-219b436fcb54
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 12%
+source-wordcount: '350'
+ht-degree: 13%
 
 ---
 
 # ローンチの昇格{#promoting-launches}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 公開する前に、ローンチページを昇格して、コンテンツをソース（実稼動）に戻す必要があります。 ローンチページが昇格されると、ソースページの対応するページが、昇格されたページのコンテンツに置き換えられます。 ローンチページを昇格させるときには、次のオプションを使用できます。
 

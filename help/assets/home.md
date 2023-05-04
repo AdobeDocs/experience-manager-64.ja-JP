@@ -5,14 +5,18 @@ user-guide-title: Assets ガイド
 feature: Asset Management
 role: User,Architect,Admin
 exl-id: 72b5e053-9307-4333-84e5-d4cc2b6bdecc
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 65%
+source-wordcount: '336'
+ht-degree: 60%
 
 ---
 
 # Assets ガイド
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このガイドでは、すべての [!DNL Experience Manager] デジタルアセットの作成、管理、配信、最適化の方法など、Assets のタスク。
 

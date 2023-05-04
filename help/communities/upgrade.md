@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 7aa28e36-6b31-4447-b800-cab2dc78c93c
 exl-id: ef622ac3-d96d-48bf-bfb2-61516d9deb5c
-source-git-commit: 0f82e82cf6e09a2734893a98d67ed1a84b1fec5e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 3%
+source-wordcount: '700'
+ht-degree: 4%
 
 ---
 
 # AEM 6.4 Communities へのアップグレード {#upgrading-to-aem-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 各サイトのトポロジと機能に応じて、AEM Communities 6.4 にアップグレードする場合、または最新の機能パックをインストールする場合に、次の操作が必要になる場合があります。
 
@@ -57,7 +61,7 @@ AEM 6.3 以降、イネーブルメント機能では MySQL にレポート情�
 1. 既存の UGC を表示するには、次の手順に従います。
 
    i.Web コンソールを参照します。 デフォルトの URL は、
-   `https://localhost:4502/system/console/configMgr`
+   `https://localhost:4502/system/console/configMgr`。
 
    ii.場所 **[!UICONTROL AEM Communities Utilities]** 設定を選択し、設定パネルを展開します。
 

@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 379957bf-0634-4182-b269-1b010da4c90f
 feature: Document Security
 exl-id: 0c4a846f-4e31-435b-a6f6-d0b7c4cd1259
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '994'
 ht-degree: 31%
 
 ---
 
 # イベントの監視 {#monitoring-events}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 監査機能を有効にすると、Document Security で特定の種類のイベントを監視できます。 表示できるイベントは、自分の役割に応じて異なります。
 

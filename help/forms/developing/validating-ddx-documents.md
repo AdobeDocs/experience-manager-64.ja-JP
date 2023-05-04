@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
 exl-id: 5be91b23-355b-4e50-b1f5-afed248bc8b5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1512'
-ht-degree: 100%
+source-wordcount: '1548'
+ht-degree: 98%
 
 ---
 
 # DDX ドキュメントの検証 {#validating-ddx-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler サービスで使用される DDX ドキュメントをプログラムで検証できます。つまり、Assembler サービス API を使用して、DDX ドキュメントが有効かどうかを判断できます。例えば、以前の AEM Forms バージョンからアップグレードした場合に、DDX ドキュメントが有効であることを確認するには、Assembler サービス API を使用してドキュメントを検証します。
 

@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのテスト自動化
 seo-title: Automate testing of adaptive forms
-description: Calvin を使用して、CRXDE でテストケースを作成して Web ブラウザーで直接 UI テストを実行し、アダプティブフォームを十分にテストすることができます。
+description: Calvin を使用すると、CRXDE でテストケースを作成し、Web ブラウザーで直接 UI テストを実行して、アダプティブフォームを十分にテストできます。
 seo-description: Using Calvin you can create test cases in CRXDE and run UI tests directly in the web browser to thoroughly test your adaptive forms.
 uuid: 2a89d1c0-58f6-4bbf-a367-5fe659851c13
 contentOwner: gtalwar
@@ -10,14 +10,18 @@ topic-tags: adaptive_forms, develop
 discoiquuid: 2daf95b6-bf72-4191-bdb7-e17e76b166f3
 feature: Adaptive Forms
 exl-id: d7406206-d63a-48da-bb95-e62db0f2c8a5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 97%
+source-wordcount: '1289'
+ht-degree: 49%
 
 ---
 
 # アダプティブフォームのテスト自動化 {#automate-testing-of-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -25,10 +29,10 @@ ht-degree: 97%
 
 Calvin を使用すれば web ブラウザーでアダプティブフォームの自動テストを実行できます。Calvin は、テストの実行用に [Hobbes](/help/sites-developing/hobbes.md) のユーザーインターフェイスを利用して、次のツールを提供します。
 
-* テスト作成用の JavaScript API。
-* テスト実行用のユーザーインターフェイス。
+* テストを作成するための JavaScript API。
+* テストを実行するためのユーザーインターフェイス。
 
-Calvin を使用して、CRXDE でテストケースを作成して Web ブラウザーで直接 UI テストを実行し、アダプティブフォームの以下の点について十分にテストすることができます。
+Calvin を使用すると、CRXDE でテストケースを作成し、Web ブラウザーで直接 UI テストを実行して、アダプティブフォームの以下の側面を十分にテストできます。
 
 <table> 
  <tbody> 
@@ -37,34 +41,34 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
    <td><strong>説明</strong></td> 
   </tr> 
   <tr> 
-   <td>アダプティブフォームの事前入力機能</td> 
+   <td>アダプティブフォームの事前入力エクスペリエンス</td> 
    <td> 
     <ul> 
-     <li>フォームはデータモデルのタイプに基づいて予想通りに事前入力されているか。</li> 
-     <li>フォームオブジェクトのデフォルト値は予想通りに事前入力されているか。</li> 
+     <li>データモデルのタイプに基づいて、フォームが期待どおりに事前入力されているか。</li> 
+     <li>フォームオブジェクトのデフォルト値は、期待どおりに事前入力されますか？</li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>アダプティブフォームの送信機能</td> 
+   <td>アダプティブフォームの送信エクスペリエンス</td> 
    <td> 
     <ul> 
-     <li>送信時に適切なデータが生成されているか。</li> 
-     <li>フォームは送信時にサーバー上で再検証されているか。</li> 
-     <li>フォームに対して設定された送信アクションは実行されているか。</li> 
+     <li>送信時に正しいデータが生成されているか。</li> 
+     <li>送信時に、フォームがサーバー上で再検証されますか？</li> 
+     <li>送信アクションは、実行されるフォームに対して設定されていますか？</li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>式のルール</p> <p> </p> </td> 
+   <td><p>式ルール</p> <p> </p> </td> 
    <td> 
     <ul> 
-     <li>関連する UI 操作を実行した後、フォームオブジェクトに関連付けられている式（フィールドを閉じた後のスクリプトの計算、表示、実行など）は実行されているか。<br /> </li> 
+     <li>フィールドを終了した後にスクリプトを計算、表示、実行など、フォームオブジェクトに関連付けられた式は、関連する UI 操作の実行後に実行されますか？<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td>検証</td> 
    <td> 
     <ul> 
-     <li>操作を実行した後にフィールド検証は予想通りに実行されているか。</li> 
+     <li>操作を実行した後、フィールド検証は期待どおりに実行されますか？</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -78,7 +82,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
    <td><p>UI インタラクション</p> </td> 
    <td> 
     <ul> 
-     <li><a href="https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html#toc2__anchor" target="_blank">アダプティブフォームオブジェクトでの UI インタラクションのテスト</a></li> 
+     <li><a href="https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html#toc2__anchor" target="_blank">アダプティブフォームオブジェクトでの UI インタラクションのテスト</a></li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -86,20 +90,20 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 ### 前提条件 {#prerequisites}
 
-この記事を読んでテストケースを作成する前に、次の内容を理解しておく必要があります。
+この記事を使用してテストケースを作成する前に、以下を知っておく必要があります。
 
 * [Hobbes](https://docs.adobe.com/docs/jp/aem/6-3/develop/components/hobbes.html) を使用したテストスイートの作成とテストケースの実行
 * [Hobbes JavaScript API](https://docs.adobe.com/docs/jp/aem/6-2/develop/ref/test-api/index.html)
 * [Calvin JavaScript API](https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 
-## 例： Hobbes をテスト用フレームワークとして使用してアダプティブフォームのテストスイートを作成する {#example-create-a-test-suite-for-an-adaptive-form-using-hobbes-as-testing-framework}
+## 例：Hobbes をテストフレームワークとして使用し、アダプティブフォームのテストスイートを作成する {#example-create-a-test-suite-for-an-adaptive-form-using-hobbes-as-testing-framework}
 
-次の例では、複数のアダプティブフォームのテスト用にテストスイートを作成する手順を説明しています。テストする必要のある各フォームに対して個別のテストケースを作成します。以下の手順と同じ手順に従って、手順 11 の JavaScript コードを変更し、独自のテストスイートを作成してアダプティブフォームをテストすることができます。
+次の例では、複数のアダプティブフォームをテストするためのテストスイートの作成手順を説明します。 テストするフォームごとに別々のテストケースを作成する必要があります。 次の手順と同様の手順に従い、手順 11 で JavaScript コードを変更することで、独自のテストスイートを作成してアダプティブフォームをテストすることができます。
 
 1. Web ブラウザーで CRXDE Lite（`https://[server]:[port]/crx/de`）に移動します。
 1. /etc/clientlibs サブフォルダーを右クリックして、**[!UICONTROL 作成／ノードを作成]**&#x200B;をクリックします。名前（ここでは afTestRegistration）を入力し、ノードのタイプを cq:ClientLibraryFolder と指定して、「 **[!UICONTROL OK]**.
 
-   clientlibs フォルダーには、使用するアプリケーション（JS および Init）の登録機能が含まれています。clientlibs フォルダーには、フォームに固有の Hobbes のすべてのテストスイートオブジェクトを登録することをお勧めします。
+   clientlibs フォルダーには、アプリケーション（JS および Init）の登録側面が含まれます。 フォームに固有のすべての Hobbes テストスイートオブジェクトを clientlibs フォルダーに登録することをお勧めします。
 
 1. 次のプロパティ値を、新しく作成したノード（ここでは afTestRegistration）で指定し、「**[!UICONTROL すべて保存]**」をクリックします。これらのプロパティにより、Hobbes でフォルダーをテストとして認識できます。このクライアントライブラリを他のクライアントライブラリで依存関係として再利用するには、granite.testing.calvin.tests という名前を付けます。
 
@@ -125,7 +129,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 >[!NOTE]
 >
->granite.testing.calvin.af clientlib には、すべてのアダプティブフォーム API が含まれます。これらの API は、Calvin の名前空間の一部です。
+>granite.testing.calvin.af clientlib には、すべてのアダプティブフォーム API が含まれています。 これらの API は calvin 名前空間の一部です。
 
 ![1_aftestregistration](assets/1_aftestregistration.png)
 
@@ -155,11 +159,11 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
    }(window, window.hobs));
    ```
 
-   上記のコードを使用すると、**Adaptive Form - Demo Test** という名前のテストスイートが作成されます。別の名前でテストスイートを作成するには、それに応じて名前を変更します。
+   上記のコードは、 **アダプティブフォーム — デモテスト**. 別の名前でテストスイートを作成するには、名前を変更します。
 
-1. **[!UICONTROL 作成]**／**ノードを作成**&#x200B;をクリックし、テストを行う各フォームの clientlib フォルダーの下にノードを作成します。この例では、 **testForm** アダプティブフォームをテストするには **testForm** `.`次のプロパティを指定し、「 **[!UICONTROL OK]**:
+1. クリック **[!UICONTROL 作成]** > **ノードを作成** をクリックして、テストする各フォームの clientlib フォルダーの下にノードを作成します。 この例では、 **testForm** アダプティブフォームをテストするには **testForm** `.`次のプロパティを指定し、「 **[!UICONTROL OK]**:
 
-   * 名前：testForm（使用するフォーム名）
+   * 名前：testForm （自分のフォーム名）
    * タイプ：cq:ClientLibraryFolder
 
 1. 次のプロパティを新しく作成したノード（ここでは testForm）に追加し、アダプティブフォームをテストします。
@@ -175,9 +179,9 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
    ![2_testformproperties](assets/2_testformproperties.png)
 
-1. テストフォーム用に作成したフォルダー（ここでは testForm）を右クリックし、**[!UICONTROL 作成／ファイルを作成]**&#x200B;を選択します。ファイルに scriptingTest.js と名前を付けて、次のコードをファイルに追加して「**[!UICONTROL すべて保存]**」をクリックします。
+1. テストフォーム用に作成したフォルダー（ここでは testForm）を右クリックし、「 」を選択します。 **[!UICONTROL 作成/ファイルを作成]**. ファイルに scriptingTest.js という名前を付け、次のコードをファイルに追加して、 **[!UICONTROL すべて保存します。]**
 
-   次のコードを使用して別のアダプティブフォームをテストするには、**navigateTo**（行 11、36、62）および個々のテストケースで、フォームのパスと名前を変更します。フォームおよびフォームオブジェクトのさまざまな機能をテストするための API について詳しくは、[Calvin API](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)を参照してください。
+   次のコードを使用して別のアダプティブフォームをテストするには、**navigateTo**（行 11、36、62）および個々のテストケースで、フォームのパスと名前を変更します。フォームおよびフォームオブジェクトのさまざまな機能をテストするための API について詳しくは、[Calvin API](https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)を参照してください。
 
    ```
    (function(window, hobs) {
@@ -279,15 +283,15 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 ## 自動テストを使用した UI のテスト {#testing-your-ui-using-automated-tests}
 
-### 1 つのテストスイートの実行 {#running-a-single-test-suite}
+### 単一のテストスイートの実行 {#running-a-single-test-suite}
 
-テストスイートは個別に実行できます。1 つのテストスイートを実行すると、テストケースとそのアクションの実行に応じてページが変化し、テストの完了後に結果が表示されます。アイコンによって結果が示されます。
+テストスイートは個別に実行できます。 テストスイートを実行すると、テストケースとそのアクションが実行され、テストの完了後に結果が表示されるにつれ、ページは変化します。 アイコンは結果を示します。
 
-チェックマークアイコンは、成功したテストを示します。![チェックマーク](assets/checkmark.png)
+チェックマークアイコンは、合格したテストを示します。 ![checkmark](assets/checkmark.png)
 
 「X」アイコンは、失敗したテストを示します：![クロス](assets/cross.png)
 
-1 つのテストスイートを実行するには：
+テストスイートを実行するには：
 
 1. テストパネルで、実行するテストケースの名前をクリックまたはタップして、アクションの詳細を展開します。
 
@@ -305,7 +309,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
    ![4_reviewresults](assets/4_reviewresults.png)
 
-AEM アダプティブフォームのテスト手順は、AEM UI のテスト手順と同じです。アダプティブフォームのテストについて詳しくは、「[UI のテスト](https://helpx.adobe.com/jp/experience-manager/6-3/sites-developing/hobbes.html)」で以下のセクションを参照してください。
+AEMアダプティブフォームをテストする手順は、AEM UI をテストする手順と似ています。 アダプティブフォームのテストについて詳しくは、 [UI のテスト](https://helpx.adobe.com/jp/experience-manager/6-3/sites-developing/hobbes.html):
 
 * テストスイートの表示
 * 複数のテストの実行
@@ -328,11 +332,11 @@ AEM アダプティブフォームのテスト手順は、AEM UI のテスト手
   </tr> 
   <tr> 
    <td><p>アクション</p> </td> 
-   <td><p>アクションとは、UI でジェスチャ（ボタンのクリックや入力ボックスへの値の入力など）を実行するメソッドです。</p> <p>hobs.actions.Asserts、hobs.actions.Core、hobs.utils.af クラスのメソッドが、テストで使用できるアクションです。すべてのアクションは同期的に実行されます。</p> </td> 
+   <td><p>アクションとは、UI でジェスチャ（ボタンのクリックや入力ボックスへの値の入力など）を実行するメソッドです。</p> <p>hobs.actions.Asserts、hobs.actions.Core および hobs.utils.af クラスのメソッドは、テストで使用できるアクションです。 すべてのアクションは同期的に実行されます。</p> </td> 
   </tr> 
   <tr> 
-   <td><p>オーサー環境とパブリッシュ環境</p> </td> 
-   <td><p>一般的に、フォームはオーサー環境またはパブリッシュ環境のいずれかでテストできます。パブリッシュ環境の場合、デフォルトではテストを実行するためにアクセスは制限されています。これは、テスト実行者に関連するすべてのクライアントライブラリが、JCR 構造のライブラリにあるためです。</p> </td> 
+   <td><p>オーサー環境またはパブリッシュ環境</p> </td> 
+   <td><p>一般に、フォームは、オーサー環境またはパブリッシュ環境でテストできます。 パブリッシュ環境の場合、デフォルトでは、テストを実行するためのアクセスは制限されます。 これは、テストランナーに関連するすべてのクライアントライブラリが、JCR 構造の/libs 内にあるからです。</p> </td> 
   </tr> 
  </tbody> 
 </table>

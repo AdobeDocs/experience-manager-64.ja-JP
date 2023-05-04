@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
 exl-id: 42d8472d-0eab-4cf9-a7c3-bf2775ee6bec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 33%
+source-wordcount: '318'
+ht-degree: 32%
 
 ---
 
 # To Do リストでの追加データの表示 {#displaying-additional-data-in-todo-list}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 デフォルトでは、AEM Forms Workspace の TODO リストにタスクの表示名と説明が表示されます。 ただし、作成日や期限日など、他の情報を追加することもできます。 また、アイコンを追加して、表示のスタイルを変更することもできます。
 

@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: 54e48abc-be75-4477-83fa-bd74d5b995af
 exl-id: 82554eb8-34a0-4877-b92c-56ee662dda97
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 71%
+source-wordcount: '289'
+ht-degree: 64%
 
 ---
 
 # AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -27,7 +31,7 @@ AEMを初めて開発する場合 ベストプラクティスに関する情報�
 
 ## WKND 開発者向けチュートリアル {#wknd-developer-tutorial}
 
-チュートリアルを利用できます [ここ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja) または下の画像をクリックしてください。
+チュートリアルを利用できます [ここ](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) または下の画像をクリックしてください。
 
 [![画像をクリック](assets/screen_shot_2018-11-23at152453.png)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
 

@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 487fc170-3750-49a7-af59-f1cc20d5f528
 exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 61%
+source-wordcount: '398'
+ht-degree: 58%
 
 ---
 
 # SharePoint Connector のライセンス、著作権情報および免責事項{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、Day JCR Connector for MS SharePointに関連して明示的に記載する必要があるすべてのライセンス、著作権に関する通知、免責事項を示します。
 

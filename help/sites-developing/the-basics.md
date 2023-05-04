@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: 0b263211-6cfd-4b4c-bfa5-e36f5e06c861
-source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3313'
-ht-degree: 59%
+source-wordcount: '3349'
+ht-degree: 58%
 
 ---
 
 # AEM の中心概念 {#aem-core-concepts}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -455,7 +459,7 @@ FileVault は、JCR リポジトリにファイルシステムマッピングと
 
 詳しくは、 [FileVault ツール](/help/sites-developing/ht-vlttool.md) 詳しくは、ドキュメントを参照してください。
 
-## ワークフロー {#workflows}
+## workflows {#workflows}
 
 多くの場合、コンテンツは組織のプロセスに依存します。これには、様々な参加者による承認やサインオフの手順が含まれます。 これらのプロセスは、ワークフローとして表すことができます。 [AEM内で定義および開発される](/help/sites-developing/workflows-models.md)を [適切なコンテンツページ](/help/sites-administering/workflows.md) または [デジタルアセット](/help/assets/assets-workflow.md) 必要に応じて。
 

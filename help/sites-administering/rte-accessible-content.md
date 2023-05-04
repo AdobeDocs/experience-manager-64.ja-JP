@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ff0f006d-461c-4cc4-b6eb-d665f3f3b498
 exl-id: 245e1c28-f702-4300-81cf-5139db9d95ec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 56%
+source-wordcount: '954'
+ht-degree: 55%
 
 ---
 
 # アクセス可能なサイトを生成するための RTE の設定 {#configuring-rte-for-producing-accessible-sites}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMは、次の両方をサポートしています。
 

@@ -10,14 +10,18 @@ topic-tags: correspondence-management, interactive-communications
 discoiquuid: 046b1bf9-1ac7-4e2e-ab37-6fe5422dfa20
 feature: Correspondence Management
 exl-id: 92f90e7f-2869-4201-a927-47de1fc08f5c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1321'
 ht-degree: 9%
 
 ---
 
 # レイアウトデザイン {#layout-design}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 XFA フォームテンプレートまたは XDP は、次のテンプレートです。
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 8cbace00-c354-4f37-a781-04cadd441419
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 50%
+source-wordcount: '1461'
+ht-degree: 49%
 
 ---
 
 # Forms JEE ワークフロー | ユーザーデータの処理 {#forms-jee-workflows-handling-user-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms JEE ワークフローには、ビジネスプロセスを設計、作成および管理するためのツールが用意されています。ワークフロープロセスは、指定された順序で実行される一連のステップで構成されます。 各手順では、ユーザーへのタスクの割り当てや電子メールメッセージの送信など、特定のアクションを実行します。 プロセスは、アセット、ユーザーアカウントおよびサービスとやり取りでき、次のいずれかの方法でトリガーできます。
 

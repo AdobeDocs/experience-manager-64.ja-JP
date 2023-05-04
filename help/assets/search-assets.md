@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Search,Metadata
 role: User
 exl-id: cc1a5946-e13d-4433-a25a-d297fd07e2e4
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '585'
 ht-degree: 22%
 
 ---
 
 # [!DNL Experience Manager] でのアセットの検索  {#search-assets-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フィルターパネルを使用した[!DNL Experience Manager]での必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 

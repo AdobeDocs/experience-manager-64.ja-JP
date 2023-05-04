@@ -1,7 +1,7 @@
 ---
 title: ソーシャルグラフの基本事項
 seo-title: Social Graph Essentials
-description: フォローコンポーネントとフォロー中コンポーネントの概要
+description: フォローコンポーネントとフォローコンポーネントの概要
 seo-description: follow component and following component overview
 uuid: 8ea33760-62b1-4de2-b07f-bc2417ade156
 contentOwner: Guillaume Carlino
@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 exl-id: 55aa015e-e0e4-411e-8e28-75006ae3090b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 21%
+source-wordcount: '305'
+ht-degree: 8%
 
 ---
 
 # ソーシャルグラフの基本事項 {#social-graph-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コミュニティメンバーがフォローする機能 [アクティビティ](essentials-activities.md) それに続くものは、次の 2 つの構成要素を通じて確立されます。
 
@@ -36,8 +40,8 @@ ht-degree: 21%
    <td>social/socialgraph/components/hbs/relationships</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -56,11 +60,11 @@ ht-degree: 21%
    <td>詳しくは、 <a href="socialgraph.md">ソーシャルグラフの使用</a></td> 
   </tr>
   <tr>
-   <td><strong> オプション<br /> プロパティ</strong></td> 
+   <td><strong> <br /> プロパティ（オプション）</strong></td> 
    <td>
     <ul> 
-     <li>名前: <strong><code>outgoing</code></strong></li> 
-     <li>タイプ：Boolean</li> 
+     <li>名前： <strong><code>outgoing</code></strong></li> 
+     <li>型：ブール値</li> 
      <li>値：<br /> 
       <ul> 
        <li><i>true </i>- <code>following</code> コンポーネントは、現在サインインしているメンバーを一覧表示します <code>follows</code></li> 
@@ -75,7 +79,7 @@ ht-degree: 21%
 
 | **resourceType** | social/socialgraph/components/hbs/following |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | 不可 |
+| [**包含可能な**](scf.md#add-or-include-a-communities-component) | いいえ |
 | **テンプレート** | /libs/social/socialgraph/components/hbs/following/following.hbs |
 | **css** | /libs/social/socialgraph/components/hbs/following/clientlibs/following.css |
 

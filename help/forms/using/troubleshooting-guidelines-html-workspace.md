@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 exl-id: 210cb5f2-cc5c-4664-b324-5c6f70f7b593
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '765'
 ht-degree: 28%
 
 ---
 
 # AEM Forms ワークスペースのトラブルシューティングガイドライン {#troubleshooting-guidelines-for-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この記事では、ログを有効にし、ブラウザーで debugger を使用してAEM Forms Workspace をデバッグする方法について説明します。 また、AEM Forms Workspace とその回避策を使用する際に発生する可能性のある一般的な問題についても説明します。
 

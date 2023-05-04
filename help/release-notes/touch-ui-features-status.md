@@ -10,14 +10,18 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 482b5eb0-1b15-4f10-a9d8-3b72dd74acf8
 exl-id: e1422581-143b-4fce-976e-e5aa3360e2d0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 57%
+source-wordcount: '1096'
+ht-degree: 56%
 
 ---
 
 # タッチ操作対応 UI 機能のステータス {#touch-ui-feature-status}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >
@@ -67,11 +71,11 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>ワークフローを開始</td> 
-   <td>完全<br /> </td> 
+   <td>完全<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>新しいページを作成</td> 
+   <td>ページを新規作成</td> 
    <td>完全</td> 
    <td> </td> 
   </tr>
@@ -102,7 +106,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>検索</td> 
-   <td>完全<br /> </td> 
+   <td>完全<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -147,7 +151,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>後で非公開</td> 
-   <td>完全<br /> </td> 
+   <td>完全<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -177,7 +181,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>バージョンを復元</td> 
-   <td>完全<br /> </td> 
+   <td>完全<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -186,7 +190,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td>クラシック UI を使用します。</td> 
   </tr>
   <tr>
-   <td>古いバージョンと現在のバージョンの違いを表示<br /> </td> 
+   <td>古いバージョンと現在のバージョンの違いを表示<br />。 </td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
@@ -235,7 +239,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>モバイル Web ページを編集<br /> </td> 
+   <td>モバイル Web ページを編集<br />。 </td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
@@ -256,12 +260,12 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>フォームを編集</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>オファーを編集</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -275,7 +279,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>レスポンシブプレビュー<br /> </td> 
+   <td>レスポンシブプレビュー<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -290,7 +294,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>モード：ライブコピーステータス<br /> </td> 
+   <td>モード：ライブコピーステータス<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -300,7 +304,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>プロパティの編集<br /> </td> 
+   <td>プロパティの編集<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -317,7 +321,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   <tr>
    <td>ワークフローパッケージ処理</td> 
    <td>ほぼ完全</td> 
-   <td>タッチ操作対応 UI から完全にアクセス可能。クラシック UI では、複数のワークフローペイロードが引き続き表示されます。<br /> </td> 
+   <td>タッチ操作対応 UI から完全にアクセス可能。クラシック UI では、複数のワークフローペイロードが引き続き表示されます。<br />。 </td> 
   </tr>
   <tr>
    <td>ページのロック/ロック解除</td> 
@@ -336,18 +340,18 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>ページをコピー</td> 
-   <td>削除<br /> </td> 
+   <td>削除<br />。 </td> 
    <td>サイト管理を使用して<a href="/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page">ページをコピー</a>します。<br /> </td> 
   </tr>
   <tr>
    <td>ページを移動</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page">ページを移動</a>します。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page">ページを移動</a>します。<br />。 </td> 
   </tr>
   <tr>
    <td>ページを削除</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-authoring/managing-pages.md#deleting-a-page">ページを削除</a>します。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-authoring/managing-pages.md#deleting-a-page">ページを削除</a>します。<br />。 </td> 
   </tr>
   <tr>
    <td>参照を表示</td> 
@@ -357,12 +361,12 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   <tr>
    <td>監査ログ</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-authoring/author-environment-tools.md#events-timeline">アクティビティレールを開きます</a>。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-authoring/author-environment-tools.md#events-timeline">アクティビティレールを開きます</a>。<br />。 </td> 
   </tr>
   <tr>
    <td>バージョンを作成</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-authoring/working-with-page-versions.md#creating-a-new-version">バージョンを新規作成</a>します。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-authoring/working-with-page-versions.md#creating-a-new-version">バージョンを新規作成</a>します。<br />。 </td> 
   </tr>
   <tr>
    <td>バージョンの復元</td> 
@@ -372,12 +376,12 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   <tr>
    <td>起動を切り替え</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-authoring/launches-promoting.md">ローンチを切り替え</a>ます。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-authoring/launches-promoting.md">ローンチを切り替え</a>ます。<br />。 </td> 
   </tr>
   <tr>
    <td>ページを翻訳</td> 
    <td>削除済み</td> 
-   <td>サイト管理を使用して<a href="/help/sites-administering/tc-manage.md">翻訳プロジェクトにページを追加</a>します。<br /> </td> 
+   <td>サイト管理を使用して<a href="/help/sites-administering/tc-manage.md">翻訳プロジェクトにページを追加</a>します。<br />。 </td> 
   </tr>
   <tr>
    <td>タイムワープ（日付／時刻を選択してその指定日時の時点のサイトを表示）<br /> </td> 
@@ -390,18 +394,18 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>クライアントコンテキスト UI<br /> </td> 
+   <td>クライアントコンテキスト UI<br />。 </td> 
    <td>置換</td> 
    <td>以下を使用： <a href="/help/sites-authoring/ch-previewing.md">ContextHub</a> UI を今後も開始します。</td> 
   </tr>
   <tr>
-   <td>各種メディアタイプのコンテンツファインダー<br /> </td> 
+   <td>各種メディアタイプのコンテンツファインダー<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
    <td>コンポーネントリスト</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -450,12 +454,12 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>RTE プラグインの有効化／無効化</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td><a href="/help/sites-authoring/templates.md">テンプレートエディター</a>を使用して実行できます。</td> 
   </tr>
   <tr>
    <td>プレーンテキストに RTE を使用</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -474,7 +478,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>RTE プラグイン：Microsoft Word から貼り付け<br /> </td> 
+   <td>RTE プラグイン：Microsoft Word から貼り付け<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -485,7 +489,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>RTE プラグイン：テキストフォーマット（太字、...）</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -495,7 +499,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>RTE プラグイン：均等揃え</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -505,7 +509,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>RTE プラグイン：段落書式</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -514,7 +518,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>RTE プラグイン：ソースエディター（HTML の編集）<br /> </td> 
+   <td>RTE プラグイン：ソースエディター（HTML の編集）<br />。 </td> 
    <td>完了<br /> </td> 
    <td>ダイアログとフルスクリーンでのみ使用できます。<br /> </td> 
   </tr>
@@ -529,7 +533,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td> </td> 
   </tr>
   <tr>
-   <td>RTE プラグイン：取り消し／やり直し<br /> </td> 
+   <td>RTE プラグイン：取り消し／やり直し<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -541,7 +545,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   <tr>
    <td>テーブルエディター</td> 
    <td>完了</td> 
-   <td>インプレース、ダイアログおよびフルスクリーンで使用できます。<br /> </td> 
+   <td>インプレース、ダイアログおよびフルスクリーンで使用できます。<br />。 </td> 
   </tr>
   <tr>
    <td>表のセルに画像をドラッグ&amp;ドロップ<br /> </td> 
@@ -549,9 +553,9 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td>インラインで使用可能</td> 
   </tr>
   <tr>
-   <td>画像エディター<br /> </td> 
+   <td>画像エディター<br />。 </td> 
    <td>完了</td> 
-   <td>インプレース、ダイアログおよびフルスクリーンで使用できます。<br /> </td> 
+   <td>インプレース、ダイアログおよびフルスクリーンで使用できます。<br />。 </td> 
   </tr>
   <tr>
    <td>IPE プラグインの有効化／無効化</td> 
@@ -565,12 +569,12 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>IPE プラグイン：反転</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>IPE プラグイン：取り消し／やり直し</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -585,7 +589,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
   </tr>
   <tr>
    <td>IPE プラグイン：ズーム</td> 
-   <td>完了<br /> </td> 
+   <td>完了<br />。 </td> 
    <td> </td> 
   </tr>
  </tbody>
@@ -618,7 +622,7 @@ AEM 6.4 にアップグレードするお客様の推奨事項については、
    <td>クラシック UI を使用します。</td> 
   </tr>
   <tr>
-   <td>管理 UI のタグ付け<br /> </td> 
+   <td>管理 UI のタグ付け<br />。 </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>

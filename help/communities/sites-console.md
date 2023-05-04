@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
 role: Admin
 exl-id: f1408709-5402-4f55-bd37-9943fe828af0
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3263'
 ht-degree: 4%
 
 ---
 
 # コミュニティサイトコンソール {#communities-sites-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コミュニティサイトコンソールでは、次の項目にアクセスできます。
 
@@ -562,7 +566,7 @@ UGC はサイトパッケージに含まれていません。
 
    `/content/sites/engage/en/signin:/content/sites/engage/en`
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-468](assets/chlimage_1-468.png)
 

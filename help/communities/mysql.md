@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 role: Admin
 exl-id: 1dfb55c2-41cb-445f-9bf8-f12ab6b8e9d8
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 4%
+source-wordcount: '1127'
+ht-degree: 6%
 
 ---
 
 # イネーブルメント機能のための MySQL 設定 {#mysql-configuration-for-enablement-features}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 MySQL は、主にイネーブルメントリソースの SCORM 追跡およびレポートデータに使用されるリレーショナルデータベースです。 ビデオの一時停止/再開の追跡など、その他の機能に関する表が含まれています。
 
@@ -82,8 +86,8 @@ MySQL Workbench を初めて起動したときは、他の目的で既に使用�
    * 接続名： `Enablement`
    * 接続方法： `Standard (TCP/IP)`
    * ホスト名： `127.0.0.1`
-   * ユーザー名: `root`
-   * パスワード: `no password by default`
+   * ユーザー名：`root`
+   * パスワード：`no password by default`
    * デフォルトのスキーマ： `leave blank`
 1. 選択 `Test Connection` 実行中の MySQL サービスへの接続を検証するには、以下を実行します。
 
@@ -151,7 +155,7 @@ SQL スクリプトは、オーサーインスタンスでCRXDE Liteを使用し
 MySQL Workbench 内
 
 * [ ファイル ] プルダウンメニューから
-* 選択 `Open SQL Script ...`
+* `Open SQL Script ...` を選択します。
 * この順序で、次のいずれかを選択します。
    1. `database_scormengine.sql`
    1. `database_scorm_integration.sql`
@@ -196,12 +200,12 @@ MySQL をAEMとは異なるサーバーで実行する場合は、JDBC コネク
 ![chlimage_1-336](assets/chlimage_1-336.png)
 
 * 次の値を入力します。
-   * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
    * **DBC 接続 URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` MySQL サーバーが「this」AEMサーバーと同じでない場合は、localhost の代わりにサーバーを指定します
    * **[!UICONTROL ユーザー名]**:Root にするか、MySQL サーバー用に設定されたユーザー名を入力します（「root」でない場合）。
    * **[!UICONTROL パスワード]**:MySQL のパスワードが設定されていない場合はこのフィールドをクリアし、設定されていない場合は MySQL ユーザー名用に設定されたパスワードを入力します
    * **[!UICONTROL データソース名]**:次に対して入力した名前： [MySQL 接続](#new-connection-settings)（例： &#39;enablement&#39;）
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ## Scorm の設定 {#configure-scorm}
 
@@ -230,7 +234,7 @@ MySQL をAEMとは異なるサーバーで実行する場合は、ScormEngine �
    * **[!UICONTROL Scorm ユーザーパスワード]**:編集しない
 
       内部でのみ使用します。 AEM Communitiesが SCORM エンジンと通信する際に使用する特別なサービスユーザー用です。
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ### AdobeGranite CSRF フィルタ {#adobe-granite-csrf-filter}
 
@@ -245,4 +249,4 @@ MySQL をAEMとは異なるサーバーで実行する場合は、ScormEngine �
    ![chlimage_1-338](assets/chlimage_1-338.png)
 * を選択します。 `[+]` 安全なユーザーエージェントを追加するためのアイコン
 * `Mozilla/*` と入力します。
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します

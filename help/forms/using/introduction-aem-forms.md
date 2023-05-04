@@ -10,20 +10,24 @@ topic-tags: introduction
 discoiquuid: a976a854-4bf2-49f8-871e-28bc597ac496
 feature: Adaptive Forms
 exl-id: 0a79111d-e42f-4eb6-8bc4-ab97424e7f90
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 20%
+source-wordcount: '946'
+ht-degree: 22%
 
 ---
 
 # AEM Forms の概要 {#introduction-to-aem-forms}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 AEM Formsの最新の機能と機能強化について詳しくは、 [AEM Formsの新機能](/help/forms/using/whats-new.md).
 
 ## AEM Formsについて {#about-aem-forms}
 
-Adobe Experience Manager(AEM) は、複雑なデジタルフォームの作成、管理、公開、更新を容易におこなえるソリューションで、バックエンドのプロセス、ビジネスルール、データとの統合を実現します。
+Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作成、管理、公開、更新するための、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。
 
 AEM Forms では、通信管理機能、ドキュメントセキュリティ、統合された分析とともに、フォームのオーサリング、管理、公開を組み合わせて、魅力的なエンドツーエンドのエクスペリエンスを作成します。AEM Forms は、すべての Web チャネルやモバイルチャネルで動作するように設計されており、ビジネスプロセスに効率的に統合することができます。これにより、効率を向上させながらも、文書業務やエラーを削減することができます。
 

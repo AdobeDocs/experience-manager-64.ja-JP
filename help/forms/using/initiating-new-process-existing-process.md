@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4d55a100-1876-41f0-a06f-7a009c934f3d
 exl-id: d7bdbd22-97b0-45cd-8e72-43ca3d0d1215
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '268'
 ht-degree: 25%
 
 ---
 
 # AEM Forms Workspace における既存のプロセスデータを使用した新しいプロセスの開始 {#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 既存のプロセスデータのデータを使用して、新しいプロセスを開始できます。 既存のプロセスデータから新しいプロセスを開始する必要が生じるのは、同じフォームを頻繁に使用し、有料タイムオフフォームのようなコンテンツの変更がほとんどない場合です。 この機能により、特にプロセスに記入に時間がかかる場合に、ユーザーの時間と労力を節約できます。
 

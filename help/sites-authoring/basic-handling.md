@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 616d42c8-2316-4c56-b89f-660903270620
 exl-id: 9abef452-b435-4419-895c-083cae6cd7d2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 49%
+source-wordcount: '2789'
+ht-degree: 48%
 
 ---
 
 # 基本操作  {#basic-handling}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -111,7 +115,7 @@ AEMユーザーインターフェイスでタッチ操作が有効になりま�
   </tr>
   <tr>
    <td>プロジェクト</td> 
-   <td>この <a href="/help/sites-authoring/touch-ui-managing-projects.md">プロジェクトコンソールを使用して、プロジェクトに直接アクセスできます</a>. プロジェクトは仮想ダッシュボードです。 このコンソールでは、チームを結成し、チームに対してリソース、ワークフローおよびタスクへのアクセスを提供できるので、チームメンバーは共通の目標に向かって作業できます。<br /> </td> 
+   <td>この <a href="/help/sites-authoring/touch-ui-managing-projects.md">プロジェクトコンソールを使用して、プロジェクトに直接アクセスできます</a>. プロジェクトは仮想ダッシュボードです。これを使用してチームを結成し、チームに対してリソース、ワークフロー、タスクを提供できるので、チームメンバーは共通の目標に向かって作業できます。. <br /> </td> 
   </tr>
   <tr>
    <td>Sites</td> 

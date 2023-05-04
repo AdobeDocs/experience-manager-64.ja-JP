@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 283ef073-b71d-4b48-882f-15f05581c1de
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 46%
+source-wordcount: '840'
+ht-degree: 45%
 
 ---
 
 # Forms の場所の設定 {#configuring-locations-for-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 属性の URL、URI、ファイルの場所 (Web ルート、取得するフォームの場所、PDFForm 変換で使用されるシードPDFファイル、キャッシュの場所など ) を指定できます。
 

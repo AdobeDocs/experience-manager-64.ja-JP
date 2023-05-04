@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin
 exl-id: 11c5dd92-f824-41d2-9ab2-b32bdeae01b6
-source-git-commit: bd65633e85226659df99da1d3834fa18a89de11e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 78%
+source-wordcount: '1340'
+ht-degree: 77%
 
 ---
 
 # スマートコンテンツサービスを使用したアセットのタグ付けの設定 {#configure-asset-tagging-using-the-smart-content-service}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 統合可能な [!DNL Adobe Experience Manager] を使用してスマートコンテンツサービスを使用する [!DNL Adobe Developer Console]. この設定を使用して、内からスマートコンテンツサービスにアクセスします [!DNL Experience Manager].
 

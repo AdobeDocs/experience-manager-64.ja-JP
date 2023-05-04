@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 8469b063-ea22-4706-ad02-1477d5f9d6c5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1193'
 ht-degree: 21%
 
 ---
 
 # AEM Forms データの回復 {#recovering-the-aem-forms-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、AEM forms データを回復するために必要な手順について説明します。 関連トピック [バックアップとリカバリに関する特別な考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery).
 
@@ -71,15 +75,15 @@ AEM forms は、次のエラーから確実に回復します。
 
    * （JBoss）`[appserver root]/server/[server]/svcnative/DocumentStorage/backup` を次に変更：
 
-      `[appserver root]/server/[server]/svcnative/DocumentStorage/restore`
+      `[appserver root]/server/[server]/svcnative/DocumentStorage/restore`。
 
    * （WebLogic）`[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-      `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore`
+      `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore`。
 
    * （WebSphere）`[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` を次に変更：
 
-      `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore`
+      `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore`。
 
 1. コンテンツ保存場所のルートディレクトリを復元するには、まずAEM forms の既存のインストールにあるコンテンツ保存場所のルートディレクトリの内容を削除し、次に、スタンドアロン環境またはクラスター環境のタスクに従って内容を復元します。
 

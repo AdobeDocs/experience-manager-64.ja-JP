@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 033db49a-3a8b-46cf-92b3-c0a04d7c820d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1148'
 ht-degree: 26%
 
 ---
 
 # トラブルシューティング{#troubleshooting}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、トラブルシューティングに役立つログに関する詳細情報と、AEMで発生する可能性のある問題の一部に関する情報を示します。
 

@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: f7f19679-cfc2-4ac0-9a26-685fad09276f
 role: Admin
 exl-id: c6e5c19a-9d93-470f-916e-7ef06c3de141
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '720'
 ht-degree: 25%
 
 ---
 
 # フォームおよびアセットの検索 {#searching-for-forms-and-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 テキスト文字列またはテキスト文字列をワイルドカードと共に使用して、フォームまたはフォームアセットを検索できます。 また、検索パネルの様々なカテゴリで使用できる条件を使用して、検索を絞り込むこともできます。
 

@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: a79839e2-be39-418b-a3bd-f5457e555172
 exl-id: 2c455a20-a2b9-4a80-8577-f1a1713710d6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 29%
+source-wordcount: '1258'
+ht-degree: 28%
 
 ---
 
 # アセットパフォーマンスガイド{#assets-performance-guide}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 デジタルアセット管理はパフォーマンスが問題となっている場合によく使用されますが、標準的な DAM 設定には、パフォーマンスに影響を与える多くのハードウェアとソフトウェアのコンポーネントが含まれています。このドキュメントでは、次の情報について説明します。
 

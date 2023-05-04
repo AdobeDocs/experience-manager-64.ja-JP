@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Search
 role: Developer
 exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 48%
+source-wordcount: '856'
+ht-degree: 47%
 
 ---
 
 # Assets 検索の拡張 {#extending-assets-search}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets の検索機能を拡張できます。 すぐに使える [!DNL Experience Manager] Assets は、文字列でアセットを検索します。
 

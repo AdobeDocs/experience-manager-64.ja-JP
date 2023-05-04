@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: f458054e-885c-4c7a-afcd-ad1e4465e0c1
 feature: Adaptive Forms
 exl-id: 0ae34ddd-9a8d-48df-af2d-80c3fe6abd62
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 41%
+source-wordcount: '279'
+ht-degree: 39%
 
 ---
 
 # Designer での Page Zero コンテンツの変更 {#changing-page-zero-content-in-designer}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Chrome や Firefox のデフォルトのPDFビューアなど、Adobe PDF以外のビューアでPDF/XFA フォームのコンテンツを読み取れない場合は、Page Zero コンテンツがデフォルトで表示されます。 デフォルトの Page Zero メッセージは、以下のとおりです。
 

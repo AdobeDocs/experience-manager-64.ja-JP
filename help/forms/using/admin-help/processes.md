@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 37e702c2-8716-4360-a3eb-d9877b28cc86
 exl-id: 322cc7c2-0f24-4ed9-9af2-61b036324f46
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1667'
 ht-degree: 38%
 
 ---
 
 # プロセスの管理 {#managing-processes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「プロセスリスト」ページには、ユーザーが開始したプロセスまたは自動的に開始されたプロセスが表示されます。
 

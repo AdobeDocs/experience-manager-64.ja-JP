@@ -1,7 +1,7 @@
 ---
-title: アセットのワークフローオフローダー
+title: Assets Workflow Offloader
 seo-title: Assets Workflow Offloader
-description: アセットのワークフローオフローダーについて説明します。
+description: Assets Workflow Offloader について説明します。
 seo-description: Learn about the Assets Workflow Offloader.
 uuid: d1c93ef9-a0e1-43c7-b591-f59d1ee4f88b
 contentOwner: Chiradeep Majumdar
@@ -10,18 +10,22 @@ topic-tags: content
 content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 exl-id: 2ca8e786-042b-44f6-ac60-834eca64f79f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 28%
+source-wordcount: '628'
+ht-degree: 3%
 
 ---
 
-# アセットのワークフローオフローダー{#assets-workflow-offloader}
+# Assets Workflow Offloader{#assets-workflow-offloader}
 
-Assets ワークフローオフローダーを使用すると、Adobe Experience Manager（AEM）Assets の複数のインスタンスを有効にして、プライマリ（リーダー）インスタンスでの処理の負荷を軽減できます。処理の負荷は、リーダーインスタンスとそれに追加する各種オフローダー（ワーカー）インスタンスの間で分散されます。アセットの処理の負荷を分散すると、AEM Assets でのアセット処理の効率と速度が上がります。さらに、特定の MIME タイプのアセットの処理に専用リソースを割り当てやすくなります。例えば、トポロジの特定のノードを InDesign アセットの処理専用として割り当てることができます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-## オフローダートポロジの設定 {#configure-offloader-topology}
+Assets ワークフローオフローダーを使用すると、Adobe Experience Manager(AEM)Assets の複数のインスタンスを有効にして、プライマリ（リーダー）インスタンスの処理負荷を軽減できます。 処理負荷は、リーダーインスタンスと、それに追加する様々なオフローダー（ワーカー）インスタンスに分散されます。 アセットの処理負荷を分散すると、AEM Assetsでアセットを処理する際の効率と速度が向上します。 また、特定の MIME タイプのアセットを処理するための専用リソースを割り当てるのに役立ちます。 例えば、トポロジ内の特定のノードを割り当てて、InDesignのアセットのみを処理できます。
+
+## オフローダトポロジの設定 {#configure-offloader-topology}
 
 Configuration Manager を使用して、リーダーインスタンスの URL と、リーダーインスタンス上の接続要求のオフローダーインスタンスのホスト名を追加します。
 
@@ -38,13 +42,13 @@ Configuration Manager を使用して、リーダーインスタンスの URL �
 
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
-1. 内 **Topology Connector のホワイトリスト** フィールドで、リーダーインスタンスとの接続が許可されるオフローダインスタンスの IP アドレスまたはホスト名を指定します。 「**Save**」をタップまたはクリックします。
+1. 内 **Topology Connector のホワイトリスト** フィールドで、リーダーインスタンスとの接続が許可されるオフローダインスタンスの IP アドレスまたはホスト名を指定します。 「**保存**」をタップまたはクリックします。
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
 
-1. リーダーインスタンスに接続されているオフローダーインスタンスを確認するには、**ツール**／**導入**／**トポロジ**&#x200B;で、クラスタービューをタップまたはクリックします。
+1. リーダーインスタンスに接続されているオフローダーインスタンスを確認するには、に移動します。 **ツール** > **導入** > **トポロジ** 「クラスター」表示をタップまたはクリックします。
 
-## オフロードの無効化 {#disable-offloading}
+## オフロードを無効にする {#disable-offloading}
 
 1. AEMロゴをタップまたはクリックし、「 」を選択します。 **ツール** > **導入** > **オフロード**. この **ブラウザーのオフロード** このページには、トピックと、トピックを使用できるサーバーインスタンスが表示されます。
 
@@ -76,7 +80,7 @@ Configuration Manager を使用して、リーダーインスタンスの URL �
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. のコンテキストメニューを表示します。 **DAM ワークフローのオフロード** ステップと選択 **編集**. 設定ダイアログの「**汎用引数**」タブで「**ジョブトピック**」フィールドのエントリを確認します。
+1. のコンテキストメニューを表示します。 **DAM ワークフローのオフロード** ステップと選択 **編集**. 「 **ジョブトピック** フィールド **汎用引数** 設定ダイアログの「 」タブ
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
 

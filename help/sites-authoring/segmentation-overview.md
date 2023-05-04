@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 36c87684-e62a-4983-b123-87f56dbf7bc5
 exl-id: 020d8f9b-7e55-415c-8b1e-c23a5f84a092
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 60%
+source-wordcount: '586'
+ht-degree: 61%
 
 ---
 
 # セグメント化について {#understanding-segmentation}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 キャンペーンを作成する場合、セグメント化を考えることが重要になります。ほとんどの場合、キャンペーンを開始する前に、セグメントを既に定義しておく必要があります。
 
@@ -29,7 +33,7 @@ ht-degree: 60%
 * プロファイル
 * 他の Web サイトでの活動
 
-一致するセグメントに応じて、訪問者のニーズと興味に特別にターゲットしたコンテンツを表示できます。
+一致するセグメントに基づいて、訪問者のニーズと関心に特化したコンテンツを表示できます。
 
 ## セグメント化の使用 {#using-segmentation}
 

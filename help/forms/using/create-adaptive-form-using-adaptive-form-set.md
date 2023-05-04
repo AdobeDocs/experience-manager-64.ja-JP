@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: 75ee94f7-e939-409b-b8cb-8fdc3f79bb63
 feature: Adaptive Forms
 exl-id: 969b0c11-adc7-476e-8c82-d444fccba984
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 50%
+source-wordcount: '605'
+ht-degree: 48%
 
 ---
 
 # アダプティブフォームのセットを使用したアダプティブフォームの作成 {#create-an-adaptive-form-using-a-set-of-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 

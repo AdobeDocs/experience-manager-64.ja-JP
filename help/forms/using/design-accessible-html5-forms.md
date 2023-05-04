@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: ccc59dd5-c0cf-415a-b71a-5bc0cf452ede
 feature: Mobile Forms
 exl-id: 64d8cf2c-8180-49ce-a725-48cd03476fb8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '383'
 ht-degree: 18%
 
 ---
 
 # アクセス可能な HTML5 フォームの設計 {#designing-accessible-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 フォームは、ARIAHTML5 アクセシビリティ標準を使用して、アクセシブルなHTMLフォームを生成します。 これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的なスクリーンリーダーとの互換性が認定されています。 優れたアクセシビリティ機能を備えたHTML5 フォームを生成するには、いくつかの機能に基づいて XFA フォームテンプレートをデザインします [基本設計ガイドライン](/help/forms/using/best-practices-for-html5-forms.md). デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Forms Designer ではこれらのフォームコントロール属性を設定し、アクセシビリティを備えた PDF フォームおよび HTML5 フォームを生成できます。
 

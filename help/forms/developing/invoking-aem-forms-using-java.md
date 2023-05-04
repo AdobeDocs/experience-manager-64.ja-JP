@@ -11,14 +11,18 @@ topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
 exl-id: 1c239c05-e221-442a-a748-0c28704ee032
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '5385'
+source-wordcount: '5421'
 ht-degree: 56%
 
 ---
 
 # Java API を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-the-javaapi}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsは、AEM Forms Java API を使用して呼び出すことができます。 AEM Forms Java API を使用する場合は、呼び出し API または Java クライアントライブラリを使用できます。 Java クライアントライブラリは、Java サービスなどのサービスで使用できます。Rights Managementサービス。 これらの強く型指定された API を使用すると、AEM Formsを呼び出す Java アプリケーションを開発できます。
 

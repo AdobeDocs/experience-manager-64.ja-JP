@@ -12,14 +12,18 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
 feature: Configuration
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 88%
+source-wordcount: '1308'
+ht-degree: 86%
 
 ---
 
 # Web アプリケーションへの URL のリンク {#linking-urls-to-your-web-application}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Web サイトやアプリケーションは、URL コールによって Dynamic Media のサービスにアクセスします。アセットを公開すると、Dynamic Media はそのアセットを参照する URL 文字列をアクティベートします。これらの URL を web ブラウザーに貼り付けてテストできます。
 

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: f24d9260-31e8-4bdf-8b80-c17cdd2d0747
-source-git-commit: bf9b94e8af72ad7b0a2c1d867fa35acfa31e6c1c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3757'
-ht-degree: 59%
+source-wordcount: '3793'
+ht-degree: 58%
 
 ---
 
 # メールエンドポイントの設定 {#configuring-email-endpoints}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 電子メールエンドポイントを使用すると、ユーザーは、1 つ以上のドキュメントを（電子メールの添付ファイルとして）指定した電子メールアカウントに送信することで、サービスを呼び出すことができます。 E メールインボックスは、添付ファイルの収集ポイントとして機能します。 サービスはインボックスを監視し、添付ファイルを処理します。 変換の結果は、エンドポイントで定義されたユーザーに転送されます。
 

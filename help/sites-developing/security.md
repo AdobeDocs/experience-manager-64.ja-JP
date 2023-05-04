@@ -4,14 +4,18 @@ seo-title: Security
 description: 開発フェーズ中にアプリケーションのセキュリティが開始
 seo-description: Application Security starts during the development phase
 exl-id: 22c48f8c-38df-4c9b-88cf-67f6ae46e7e1
-source-git-commit: 70d86d2a8c9654a52a2d2c4a000cc101c54a4552
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 61%
+source-wordcount: '462'
+ht-degree: 58%
 
 ---
 
 # セキュリティ{#security}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アプリケーションのセキュリティは、開発フェーズで開始します。 Adobeでは、次のセキュリティのベストプラクティスを適用することをお勧めします。
 

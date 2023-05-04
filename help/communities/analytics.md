@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
 role: Admin
 exl-id: cb2f61df-73bb-47f7-86ce-feda4772c8d0
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2764'
-ht-degree: 5%
+source-wordcount: '2800'
+ht-degree: 6%
 
 ---
 
 # コミュニティ機能のための Analytics の設定 {#analytics-configuration-for-communities-features}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -88,16 +92,16 @@ Analytics for Communities の機能を設定するには、アカウント担当
 
 ## ビデオレポート用のAdobe Analyticsレポートスイート {#adobe-analytics-report-suite-for-video-reporting}
 
-Adobe Marketing Cloud の [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)を設定すると、コミュニティサイトでコミュニティ機能のレポートを提供できるように、Analytics レポートスイートを設定できます。
+Adobe Marketing Cloud の [Report Suite Manager](https://experienceleague.adobe.com/docs/?lang=jaanalytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)を設定すると、コミュニティサイトでコミュニティ機能のレポートを提供できるように、Analytics レポートスイートを設定できます。
 
-にサインインする [Adobe Marketing Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) と [会社名とユーザ名](analytics.md#prerequisites)を使用する場合、以下の項目を含む新しいレポートスイートまたは既存のレポートスイートを設定できます。
+にサインインする [Adobe Marketing Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=ja) と [会社名とユーザ名](analytics.md#prerequisites)を使用する場合、以下の項目を含む新しいレポートスイートまたは既存のレポートスイートを設定できます。
 
-* [11 個のコンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) (evar)
+* [11 個のコンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja) (evar)
 
    * **`evar1`** 経由 **`evar11`** 有効
    * 既存の eVar を転用（名前を変更）したり、新しい eVar を作成してコミュニティ機能に使用したりできます。
 
-* [7 件の成功イベント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) （イベント）
+* [7 件の成功イベント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html?lang=ja) （イベント）
 
    * **`event1`** 経由 **`event7`** 有効
    * 型 **`Counter`**
@@ -111,11 +115,11 @@ Adobe Marketing Cloud の [Report Suite Manager](https://experienceleague.adobe.
    * ビデオレポートコンソール
 
       * Enable（有効） `Video Core`
-      * 保存を選択
+      * 「保存」を選択します
    * ビデオコア指標コンソール
 
-      * 選択 `Use Solution Variables`
-      * 保存を選択
+      * `Use Solution Variables` を選択します。
+      * 「保存」を選択します
 
 
 を使用している場合、 **新しいレポートスイート**&#x200B;新しいレポートスイートには 4 つの evar と 6 つのイベント変数しか設定できませんが、Communities では 11 個の evar と 7 個のイベント変数が必要です。
@@ -186,7 +190,7 @@ Video Heartbeat Analytics が有効な場合、ビデオプレーヤーの JavaS
 
 * **[!UICONTROL テンプレート]**
 
-   選択 `Adobe Analytics Configuration`
+   `Adobe Analytics Configuration` を選択します。
 
 * 選択 **[!UICONTROL 作成]**
    * 設定ページを起動して開きます `Analytics Settings` ダイアログ
@@ -267,7 +271,7 @@ Adobe Analyticsへの基本的な接続を正常に設定したら、コミュ�
 
 * **[!UICONTROL テンプレート]**
 
-   選択 `Adobe Analytics Framework`
+   `Adobe Analytics Framework` を選択します。
 
 * 選択 **[!UICONTROL 作成]**
 
@@ -339,8 +343,20 @@ Analytics のトラッキングと読み込みがコミュニティサイトに�
 
 ```xml
 # present in default sitepage.hbs
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 # only one scf-js-site-title class should be included
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 # this example sets it to be hidden as it serves no visual purpose
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 <div
     class="navbar-brand scf-js-site-title"
     href="{{siteUrl}}.html"

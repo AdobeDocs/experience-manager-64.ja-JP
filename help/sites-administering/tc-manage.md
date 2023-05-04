@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
 feature: Language Copy
 exl-id: 191b9aff-3acd-4272-8683-d3e6899fe78c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3418'
+source-wordcount: '3454'
 ht-degree: 48%
 
 ---
 
 # 翻訳プロジェクトの管理 {#managing-translation-projects}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 翻訳するコンテンツを準備したら、見つからない言語コピーを作成して言語構造を完了し、翻訳プロジェクトを作成する必要があります。
 

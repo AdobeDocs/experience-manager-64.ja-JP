@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: a2a299b5-a15a-47d9-a9d8-83f45917d080
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 51%
+source-wordcount: '498'
+ht-degree: 48%
 
 ---
 
 # ベストプラクティス{#best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 開発者向けのベストプラクティス — はじめに {#best-practices-for-developers-getting-started}
 
@@ -32,7 +36,7 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [コードの落とし穴](/help/sites-developing/code-pitfalls.md)
 * [JCR 統合](/help/sites-developing/jcr-integration.md)
 * [OSGi バンドル](/help/sites-developing/osgi-bundles.md)
-* [Java API のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=ja)
+* [Java API のベストプラクティス](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### ベストプラクティスに関する追加情報 {#additional-best-practices-information}
 
@@ -102,4 +106,4 @@ HTMLHTML言語 (HTL) は、AEM 6.0 で導入された新しいテンプレート
 >[!NOTE]
 >
 >次の複数パートのチュートリアルでは、新しい AEM プロジェクトを設定するためのベストプラクティスとして、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、コンポーネント開発について説明します。\
->[AEM Sites の概要 - WKND チュートリアル](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[AEM Sites の基本を学ぶ - WKND チュートリアル](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

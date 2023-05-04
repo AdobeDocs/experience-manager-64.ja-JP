@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: afd8f9ab-ae44-4845-9cb4-f6e28a35ad27
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '805'
 ht-degree: 30%
 
 ---
 
 # AEM プラットフォームの概要{#introduction-to-the-aem-platform}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 6 の AEM プラットフォームは、Apache Jackrabbit Oak に基づいています。
 

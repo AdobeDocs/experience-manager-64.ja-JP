@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 2d7367fa-6cb8-40a1-8566-1fd0d46fdfde
 feature: Adaptive Forms
 exl-id: 26a1a5f7-b4d4-4f38-81a4-5f2d39702138
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 61%
+source-wordcount: '251'
+ht-degree: 56%
 
 ---
 
 # AEM Forms のプレースホルダーテキスト {#placeholder-text-in-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プレースホルダーテキストは、単語または短いフレーズを表します。 これは、コントロールに値がない場合に、ユーザーのデータ入力を支援するためのものです。 プレースホルダーテキストには、サンプル値や、必要な形式の簡単な説明を指定できます。 プレースホルダーテキストはユーザーが値を入力する前に表示され、ユーザーが値を入力または選択すると削除されます。
 

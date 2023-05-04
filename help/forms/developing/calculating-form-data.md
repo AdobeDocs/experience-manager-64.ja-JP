@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 476b1c78-8332-4a79-93dc-a615ec58abbe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 100%
+source-wordcount: '1889'
+ht-degree: 98%
 
 ---
 
 # フォームデータの計算 {#calculating-form-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Forms サービスでは、ユーザーがフォームに入力した値を計算し、結果を表示できます。フォームデータを計算するには、2 つのタスクを実行する必要があります。まず、フォームデータを計算するフォームデザインスクリプトを作成します。フォームデザインは、3 つのタイプのスクリプトをサポートしています。1 つのスクリプトタイプはクライアントで実行され、もう 1 つはサーバーで実行され、3 つ目のタイプはサーバーとクライアントの両方で実行されます。このトピックで説明するスクリプトタイプは、サーバー上で実行されます。HTML、PDF、Form Guide（非推奨）の変換では、サーバーサイドの計算がサポートされます。
 

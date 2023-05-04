@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Workflow,Renditions
 role: User,Admin
 exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 72%
+source-wordcount: '1068'
+ht-degree: 70%
 
 ---
 
 # デジタルアセットの処理 {#process-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [!DNL Adobe Experience Manager Assets] では、様々な方法でデジタルアセットを操作し、堅牢なアセット処理を行うことができます。使用可能な処理方法を使用したり、メソッドを拡張して、デジタルアセットの使用、監査とコンプライアンス、検出と配布、基本的なサニティ、および基本的なサニティを使用して、エンドツーエンドのビジネスプロセスを確実に完了させたりできます。 必要なスケールとカスタマイズを達成しながら、これらすべてを実行できます。
 

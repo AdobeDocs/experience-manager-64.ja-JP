@@ -8,14 +8,18 @@ content-type: reference
 exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
 feature: Asset Management,Renditions
 role: User
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1497'
 ht-degree: 54%
 
 ---
 
 # 画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 許容可能な結果のレンダリングには多くの要因が寄与するので、画質の最適化は時間のかかるプロセスになる場合があります。 個人の画質に対する知覚が異なるので、結果は部分的に主観的です。 構造化された実験が重要です。
 

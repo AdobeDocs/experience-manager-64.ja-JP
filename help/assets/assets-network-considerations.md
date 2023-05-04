@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Developer Tools
 role: Architect,Admin
 exl-id: f8f9d86f-a5e3-46ac-8d96-c2e44eac9c93
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1035'
 ht-degree: 20%
 
 ---
 
 # Assets のネットワークに関する考慮事項 {#assets-network-considerations}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ネットワークについて理解することは、Adobe Experience Manager Assets について理解することと同じくらい重要です。 ネットワークは、アップロード、ダウンロード、ユーザーエクスペリエンスに影響を与える可能性があります。 ネットワークトポロジの図を作成すると、ネットワークのパフォーマンスとユーザーエクスペリエンスを向上させるために修正が必要な、ネットワーク内のチョークポイントとサブ最適化された領域を特定できます。
 

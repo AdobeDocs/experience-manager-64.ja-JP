@@ -1,7 +1,7 @@
 ---
 title: コンソールのカスタマイズ
 seo-title: Customizing the Consoles
-description: AEM には、オーサリングインスタンスのコンソールをカスタマイズできる様々な仕組みが用意されています
+description: AEMには、オーサーインスタンスのコンソールをカスタマイズできる様々なメカニズムが用意されています
 seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
 uuid: f10cea87-ef8a-468e-94ca-89a1017dcf44
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
 exl-id: 31bced35-4845-40d1-9bfd-5c75d54e1a83
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 97%
+source-wordcount: '714'
+ht-degree: 52%
 
 ---
 
@@ -21,9 +21,13 @@ ht-degree: 97%
 
 >[!CAUTION]
 >
->このドキュメントでは、最新のタッチ操作対応 UI でのコンソールのカスタマイズ方法について説明します。クラシック UI には適用されません。
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-AEM には、オーサーインスタンスのコンソール（および[ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)）をカスタマイズできる様々な仕組みが用意されています。
+>[!CAUTION]
+>
+>このドキュメントでは、最新のタッチ操作対応 UI でコンソールをカスタマイズする方法について説明します。クラシック UI には適用されません。
+
+AEMは、コンソール ( および [ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)) を作成します。
 
 * Clientlibs
 
@@ -33,15 +37,15 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
    オーバーレイオーバーレイはノード定義に基づいており、（`/libs`にある）標準の機能に、（`/apps`にある）カスタマイズした独自機能を重ねることができます。Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
-これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
+これらは、AEMコンソールを拡張するための様々な方法で使用できます。 一部については、以降で（大まかに）説明します。
 
 >[!NOTE]
 >
 >詳しくは、次のセクションを参照してください。
 >
->* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
->* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
->* [Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+>* の使用と作成 [clientlibs](/help/sites-developing/clientlibs.md).
+>* の使用と作成 [overlays](/help/sites-developing/overlays.md).
+>* [Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
 >
 >このトピックについては、[AEM Gems セッション - User interface customization for AEM 6.0](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-user-interface-customization-for-aem6.html) でも説明しています。
 
@@ -184,9 +188,9 @@ You can find the code of this page on GitHub
 
 ## コンソールのデフォルト表示のカスタマイズ {#customizing-the-default-view-for-a-console}
 
-コンソールのデフォルト表示（列、カード、リスト）をカスタマイズできます。
+コンソールのデフォルトの表示（列、カード、リスト）をカスタマイズできます。
 
-1. 次の場所で、必要なエントリをオーバーレイすることによって、表示の順序を変更できます。
+1. ビューの順序を変更するには、次の場所から必要なエントリをオーバーレイします。
 
    `/libs/wcm/core/content/sites/jcr:content/views`
 
@@ -256,9 +260,9 @@ You can find the code of this page on GitHub
           `/apps/<yourProject>/admin/ext/launches/content/jcr:content/body/rail`
 -->
 
-## 新しいアクションをツールバーに追加 {#add-new-action-to-the-toolbar}
+## ツールバーに新しいアクションを追加する {#add-new-action-to-the-toolbar}
 
-1. 独自コンポーネントを作成し、カスタムアクション用のクライアントライブラリを含めることができます。例えば、次のファイルの **Twitter に宣伝**&#x200B;アクションなどです。
+1. 独自のコンポーネントを構築し、対応するカスタムアクション用のクライアントライブラリを含めることができます。 例： **twitterに昇格** アクション：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -270,11 +274,11 @@ You can find the code of this page on GitHub
 
    `content/jcr:content/body/content/header/items/selection/items/twitter`
 
-## ツールバーアクションを特定のグループに制限 {#restrict-a-toolbar-action-to-a-specific-group}
+## 特定のグループにツールバーアクションを制限する {#restrict-a-toolbar-action-to-a-specific-group}
 
-1. カスタムレンダリング条件を使用すると、標準のアクションをオーバーレイし、レンダリング前に満たさなければならない具体的な条件を課すことができます。
+1. カスタムのレンダリング条件を使用して、標準のアクションをオーバーレイし、レンダリング前に満たす必要のある特定の条件を課すことができます。
 
-   例えば、グループに基づいてレンダリング条件を制御するためのコンポーネントを作成します。
+   例えば、グループに従ってレンダリング条件を制御するコンポーネントを作成します。
 
    `/apps/myapp/components/renderconditions/group`
 
@@ -375,7 +379,7 @@ You can find the code of this page on GitHub
 * Download the project as [a ZIP file](https://github.com/Adobe-Marketing-Cloud/aem-sites-extension-listview-columns/archive/master.zip)
 -->
 
-リスト表示で列をカスタマイズするには、次の手順を実行します。
+リスト表示の列をカスタマイズするには：
 
 1. 使用可能な列のリストをオーバーレイします。
 
@@ -391,12 +395,12 @@ You can find the code of this page on GitHub
    * 追加データを挿入する場合は、以下を持つ ` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)` を記述する必要があります。
 
       `pageInfoProviderType` property.
-   例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
+   例えば、以下の GitHub から添付されたクラス/バンドルを参照してください。
 
-1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
+1. これで、リスト表示の列コンフィギュレーターで列を選択できます。
 
 ## リソースのフィルタリング {#filtering-resources}
 
-コンソールを使用する際の一般的な使用例は、ユーザーがリソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
+コンソールを使用する場合、一般的な使用例は、ユーザーがリソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。 これは、例えば、作成者が項目を選択する必要があるリストの形式をとることができます。
 
-特定の用途に関連する内容を持つ妥当なサイズのリストにするには、カスタム述語の形式でフィルターを実装できます。詳しくは、[この記事](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)を参照してください。
+リストを適切なサイズに保ち、使用事例にも関連するように、カスタム述語の形式でフィルターを実装できます。 詳しくは、 [この記事](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 」を参照してください。

@@ -10,14 +10,18 @@ topic-tags: components
 content-type: reference
 discoiquuid: 508f4fab-dd87-4306-83ae-12e544b8b723
 exl-id: c747bfda-e82a-4b2d-a4af-5792bfe82576
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '5151'
-ht-degree: 69%
+source-wordcount: '5187'
+ht-degree: 68%
 
 ---
 
 # ウィジェットの使用および拡張（クラシック UI）{#using-and-extending-widgets-classic-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager の web ベースインターフェイスでは、AJAX やその他の最新のブラウザー技術を使用しています。これらの技術により、作成者は、web ページ上でコンテンツの WYSIWYG 編集や書式設定を行うことができます。
 
@@ -535,7 +539,7 @@ AEMに付属しているすぐに使用できるウィジェットは、ほと�
 
 * [CQ.form.CompositeField](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField) のメソッド `setValue`、`getValue`、`getRawValue` を上書きして、次の形式の CustomWidget の値を設定および取得します。
 
-   `<allowField value>/<otherField value>, e.g.: 'Bla1/hello'`
+   `<allowField value>/<otherField value>, e.g.: 'Bla1/hello'`。
 
 * 自分自身を「`ejstcustom`」 xtype として登録します。
 

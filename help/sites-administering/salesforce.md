@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b9752c60-eb26-4840-9163-a99537a58727
 exl-id: 4c09699a-c7ae-48ee-9423-87ff35b1e9d9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1532'
 ht-degree: 31%
 
 ---
 
 # Salesforce との統合{#integrating-with-salesforce}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Salesforce とAEMの統合は、リード管理機能を提供し、Salesforce が提供する既存の機能を活用します。 リードを Salesforce に投稿し、Salesforce から直接データにアクセスするコンポーネントを作成するようにAEMを設定できます。
 

@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 role: Developer
 exl-id: be09271b-3004-4866-b43b-fb03c91305ec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 100%
+source-wordcount: '2146'
+ht-degree: 98%
 
 ---
 
 # PDF ドキュメントをプログラムで組み立てる {#programmatically-assembling-pdf-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler サービス API を使用して、複数の PDF ドキュメントを 1 つの PDF ドキュメントにアセンブリすることができます。次のイラストは、3 つの PDF ドキュメントを 1 つの PDF ドキュメントに統合する様子を示しています。
 

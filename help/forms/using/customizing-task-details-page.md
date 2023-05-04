@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 exl-id: de97e6f7-25bf-462b-b67d-0d3fbd86a321
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 37%
+source-wordcount: '299'
+ht-degree: 35%
 
 ---
 
 # タスクの詳細ページのカスタマイズ {#customizing-the-task-details-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タスクの詳細ページには、タスクとそのプロセスに関する情報が含まれます。 ただし、タスクの詳細ページをカスタマイズして、情報を追加または削除できます。
 

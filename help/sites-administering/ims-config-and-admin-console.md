@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 38bbad03-aead-43d3-a28c-cc716955ddfb
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1785'
 ht-degree: 49%
 
 ---
 
 # AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >

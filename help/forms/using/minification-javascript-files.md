@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 exl-id: 8394151e-e9cf-4f68-97a3-ba1d1dd6a2d2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 40%
+source-wordcount: '219'
+ht-degree: 37%
 
 ---
 
 # JavaScript ファイルの縮小 {#minification-of-the-javascript-files}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 縮小により、ソースコードから、空白、新しい行、コメントなどの冗長な文字が削除されます。 これにより、コードのサイズが小さくなるので、パフォーマンスが向上します。 縮小化は機能に影響を与えませんが、コードの読みやすさが低下します。
 

@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: fbe70162-ced6-4989-9322-e12772edbcbc
 feature: Mobile Forms
 exl-id: b7f0b209-3970-49ad-a1d8-5a053be0d2bc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1875'
-ht-degree: 48%
+source-wordcount: '1911'
+ht-degree: 47%
 
 ---
 
 # HTML5 フォームに関するよくある質問（FAQ） {#frequently-asked-questions-faq-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 レイアウト、スクリプティングのサポート、およびHTML5 フォームの範囲に関するよくある質問 (FAQ) がいくつかあります。
 

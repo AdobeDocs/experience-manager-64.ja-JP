@@ -10,14 +10,18 @@ discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 feature: Adaptive Forms
 exl-id: 5d0dcf4d-8995-4547-acb1-4917696af95e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 47%
+source-wordcount: '789'
+ht-degree: 46%
 
 ---
 
 # AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォームのローカライズにより、様々な地域の幅広い対象者に向けてフォームを提供できるようになります。Adobe Experience Manager翻訳ワークフローは、アダプティブフォームとそのレコードのドキュメントをローカライズする場合に役立ちます。 以下を使用できます。 **機械翻訳** または **翻訳者** アダプティブフォームをローカライズするには
 

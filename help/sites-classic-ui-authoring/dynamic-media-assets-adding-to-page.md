@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 exl-id: b498d54e-ff34-49a1-bfad-c6efbb6f75f4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 52%
+source-wordcount: '1721'
+ht-degree: 51%
 
 ---
 
 # ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Web サイトで使用するアセットにダイナミックメディア機能を追加するには、**[!UICONTROL ダイナミックメディア]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;のコンポーネントをページに直接追加します。これを行うには、次のように入力します。 [!UICONTROL デザイン] モードに切り替えて、dynamic media コンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。ダイナミックメディアおよびインタラクティブメディアコンポーネントはスマートです。追加する画像またはビデオの種類が判別され、それに応じて使用可能なオプションが変わります。
 

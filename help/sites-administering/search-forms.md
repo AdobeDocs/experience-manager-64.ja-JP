@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 exl-id: b1f17bcd-1e91-43f0-85e1-963ff5fe3717
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2044'
-ht-degree: 78%
+source-wordcount: '2080'
+ht-degree: 77%
 
 ---
 
 # 検索フォームの設定{#configuring-search-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 用途 **検索Forms** を使用すると、様々なAEMコンソールやオーサー環境のパネルで使用できる検索パネルで使用される検索用述語の選択をカスタマイズできます。 これらのパネルをカスタマイズすると、検索機能を特定のニーズに合わせて汎用化できます。
 
@@ -179,7 +183,7 @@ ht-degree: 78%
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>非表示のフィルター</td> 
+   <td>非表示フィルター</td> 
    <td>プロパティおよび値のフィルターで、ユーザーには表示されません。</td> 
    <td> 
     <ul> 

@@ -8,14 +8,18 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: f2b7ffa37bcb14e7be47c10ea9d3e39f89e1858d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '10401'
+source-wordcount: '10437'
 ht-degree: 59%
 
 ---
 
 # ビデオ {#video}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、Dynamic Media でのビデオの操作について説明します。
 
@@ -217,17 +221,17 @@ HLS（HTTP ライブストリーミング）は、Appleのアダプティブビ�
   <tr> 
    <td>デスクトップ</td>
    <td>Firefox 45 以降</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>デスクトップ</td>
    <td>Chrome</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>デスクトップ</td>
    <td>Safari（Mac）</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>モバイル</td>
@@ -237,7 +241,7 @@ HLS（HTTP ライブストリーミング）は、Appleのアダプティブビ�
   <tr> 
    <td>モバイル</td>
    <td>Chrome（Android 7 以降）</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>モバイル</td>
@@ -247,17 +251,17 @@ HLS（HTTP ライブストリーミング）は、Appleのアダプティブビ�
   <tr> 
    <td>モバイル</td>
    <td>Safari（iOS）</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>モバイル</td>
    <td>Chrome（iOS）</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
   <tr> 
    <td>モバイル</td>
    <td>Blackberry</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLS ビデオストリーミング.</td>
   </tr>
  </tbody>
 </table>

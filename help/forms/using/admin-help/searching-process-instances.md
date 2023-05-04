@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 exl-id: 25a01630-47ec-4823-ad11-9a636697f3dc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 13%
+source-wordcount: '485'
+ht-degree: 14%
 
 ---
 
 # プロセスインスタンスの検索{#searching-for-process-instances}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「プロセスの検索」ページを使用して、プロセスインスタンスを検索するための検索条件を入力します。 プロセスの検索ページには、フォームワークフローページからアクセスするか、プロセスインスタンスページの「検索」をクリックしてアクセスできます。
 

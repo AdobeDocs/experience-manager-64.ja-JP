@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9744cc2d-5e6b-4341-9270-43d479bdca04
 exl-id: 45741270-2d57-4d6d-92ef-65b6c1deb448
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 1%
+source-wordcount: '180'
+ht-degree: 5%
 
 ---
 
 # 証明書失効リストの管理{#managing-certificate-revocationlists}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Trust Store の管理を使用して、証明書失効リスト (CRL) の読み込み、編集および削除を行うことができます。 Base64 および DER でエンコードされた証明書失効リストがサポートされています。
 

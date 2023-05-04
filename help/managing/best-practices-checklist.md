@@ -10,14 +10,18 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 exl-id: d85fa478-8192-42b9-a5fc-a38a87cfc7dd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '352'
 ht-degree: 22%
 
 ---
 
 # チェックリスト{#the-checklist}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロジェクトチェックリストは、プロジェクト配信のベストプラクティスのセットとして用意されています。 プロジェクトのライフサイクルのすべての段階を通じて、現在のステータスを高レベルで監視できます。
 

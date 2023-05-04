@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 exl-id: 00ac29fb-cc8f-4dd9-a261-839a4bf664c2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 6%
+source-wordcount: '447'
+ht-degree: 7%
 
 ---
 
 # サンプルページの作成 {#create-a-sample-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 6.1 Communities 以降、サンプルページを作成する最も簡単な方法は、単に Page 機能で構成されるシンプルなコミュニティサイトを作成することです。
 
@@ -39,7 +43,7 @@ AEM 6.1 Communities 以降、サンプルページを作成する最も簡単な
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
-* 選択 `Create button`
+* `Create button` を選択します。
 * 基本情報
 
    * `Name`:単一ページテンプレート
@@ -85,17 +89,17 @@ AEM 6.1 Communities 以降、サンプルページを作成する最も簡単な
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-* 選択 `Next`
+* `Next` を選択します。
 * ステップ `2 - Design`
 
    * 任意のデザインを選択
 
-* 選択 `Next`
-* 選択 `Next`
+* `Next` を選択します。
+* `Next` を選択します。
 
    （すべてのデフォルト設定を受け入れる）
 
-* 選択 `Create`
+* `Create` を選択します。
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 

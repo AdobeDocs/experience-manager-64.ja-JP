@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management
 role: Leader,Architect,User
 exl-id: 9292871d-3b10-49f8-ac1a-4770b4e44048
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 82%
+source-wordcount: '897'
+ht-degree: 79%
 
 ---
 
 # DAM ソリューションとしての [!DNL Adobe Experience Manager Assets] について {#about-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [!DNL Assets] は、[!DNL Experience Manager] プラットフォームの重要な要素となるデジタルアセット管理（DAM）ツールの 1 つです。企業はこのツールを使用することで、デジタルアセットの管理や配布を行うことができます。組織全体を通じてユーザーは、画像、ビデオ、ドキュメント、オーディオクリップ、3D ファイル、リッチメディアなど多様なデジタルアセットを対象に、Web での使用、印刷、デジタル配布を目的として管理、保存、およびアクセスを行うことができます。
 
@@ -52,7 +56,7 @@ Assets managed within [!DNL Experience Manager] DAM can then be accessed via the
 
 アセットとは、デジタルドキュメント、画像、ビデオまたはオーディオ（あるいはその一部）のことで、この中には複数のレンディションや、サブアセット（例えば、Photoshop ファイルのレイヤー、PowerPoint ファイルのスライド、PDF のページ、ZIP 中のファイルなど）を含めることができます。
 
-アセットは、基本的に、バイナリ、メタデータ、レンディション、サブアセットの 3 種類です。 詳しくは、 [DAM パフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=ja) を参照してください。
+アセットは、基本的に、バイナリ、メタデータ、レンディション、サブアセットの 3 種類です。 詳しくは、 [DAM パフォーマンスガイド](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-64/assets/administer/performance-tuning-guidelines.html) を参照してください。
 
 >[!CAUTION]
 >

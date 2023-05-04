@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
 exl-id: 8787ffa9-9ddc-439d-9934-8913d1ed459e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 6%
+source-wordcount: '695'
+ht-degree: 7%
 
 ---
 
 # 不在設定の指定 {#configuring-out-of-office-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「不在」機能を使用すると、ユーザーまたは管理者は、ユーザーが不在になるタイミングを指定し、AEM forms によって割り当てられたタスクを完了できません。 ユーザーが「不在」に設定されている間、そのユーザーのタスクは 1 人以上の指定されたユーザーに割り当てられます。 ユーザーは Workspace で「不在」設定を変更できます。ユーザーの代わりに、管理者が Forms ワークフローで設定を変更することもできます。
 

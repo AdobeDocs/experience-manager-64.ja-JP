@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e30e5a21-ac86-4653-bd1f-7351852db3f3
 exl-id: 41727155-2a67-44b6-b925-22001891a348
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2293'
 ht-degree: 18%
 
 ---
 
 # キャンペーンの設定 {#setting-up-your-campaign}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 新しいキャンペーンの設定には、次の（一般的な）手順が含まれます。
 

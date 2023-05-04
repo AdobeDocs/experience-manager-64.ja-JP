@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Developer Tools
 role: Developer
 exl-id: 0291690b-874a-483d-901f-f02cb6d8ab28
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 48%
+source-wordcount: '293'
+ht-degree: 45%
 
 ---
 
 # アセットのカスタマイズと拡張 {#customizing-and-extending-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アセットエディターは、Adobe Enterprise Manager の web サイトのユーザーがリポジトリー内のデジタルアセットを検索、表示および操作するために使用する主要なアクセスポイントです。
 

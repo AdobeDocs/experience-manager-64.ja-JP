@@ -12,14 +12,18 @@ discoiquuid: ba8efc24-a34c-477b-8c6d-6e8f893eb999
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: ed67e664-3be0-4337-85bd-cd042915b021
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2214'
+source-wordcount: '2250'
 ht-degree: 29%
 
 ---
 
 # コードのアップグレードとカスタマイズ{#upgrading-code-and-customizations}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アップグレードを計画する際は、実装の次の領域を調べ、対処する必要があります。
 
@@ -84,7 +88,7 @@ AEM Uber Jar では、すべての AEM API を単一の依存関係として Mav
 
 ### クラシック UI オーサリング {#classic-ui-authoring}
 
-クラシック UI のオーサリングは、AEM 6.4 で引き続き利用できますが、非推奨（廃止予定）となっています。 詳細はこちらをご覧ください [ここ](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). アプリケーションが現在クラシック UI オーサー環境で動作している場合は、AEM 6.4 にアップグレードし、引き続きクラシック UI を使用することをお勧めします。 その後、タッチ UI への移行を個別のプロジェクトとして計画し、複数の開発サイクルにわたって完了するようにします。 AEM 6.4 でクラシック UI を使用するには、いくつかの OSGi 設定をコードベースにコミットする必要があります。 この設定方法について詳しくは、[こちら](/help/sites-administering/enable-classic-ui.md)を参照してください。
+クラシック UI のオーサリングは、AEM 6.4 で引き続き利用できますが、非推奨（廃止予定）となっています。 詳しくは、[こちら](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release)を参照してください。アプリケーションが現在クラシック UI オーサー環境で動作している場合は、AEM 6.4 にアップグレードし、引き続きクラシック UI を使用することをお勧めします。 その後、タッチ UI への移行を個別のプロジェクトとして計画し、複数の開発サイクルにわたって完了するようにします。 AEM 6.4 でクラシック UI を使用するには、いくつかの OSGi 設定をコードベースにコミットする必要があります。 この設定方法について詳しくは、[こちら](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
 >[!NOTE]
 >

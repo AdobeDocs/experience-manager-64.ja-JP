@@ -7,7 +7,8 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature: Communities
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+hide: true
+source-git-commit: b61797a9096c0473658d6aabfb584a53e42095b7
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 98%
@@ -16,6 +17,7 @@ ht-degree: 98%
 
 
 # AEM 6.4 Communities ユーザーガイド {#communities}
+
 
 + [AEM Communitiesの概要](home.md)
 + AEM Communities の概要 {#introduction}

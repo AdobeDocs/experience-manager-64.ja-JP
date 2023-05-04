@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Developer Tools
 role: Admin
 exl-id: 637c57ae-55a6-4032-9821-b55839b3e567
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 47%
+source-wordcount: '439'
+ht-degree: 45%
 
 ---
 
 # Camera Rawを使用して画像を処理 {#camera-raw-support}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 CR2、NEF、RAF などの生のファイル形式を処理し、画像をJPEG形式でレンダリングするCamera Rawサポートを有効にできます。 この機能は、Adobe Experience Manager Assets で [Camera Raw包装](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) は、「ソフトウェア配布」から入手できます。
 

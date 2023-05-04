@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: 46d0513c-04b2-41ed-bb56-e0778fa5fd10
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 8%
+source-wordcount: '531'
+ht-degree: 9%
 
 ---
 
 # BrightEdge Content Optimizer との結合{#integrating-with-brightedge-content-optimizer}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 BrightEdge アカウントの資格情報を使用してAEMが接続できるように、BrightEdge クラウド設定を作成します。 複数のアカウントを使用する場合は、複数の設定を作成できます。
 

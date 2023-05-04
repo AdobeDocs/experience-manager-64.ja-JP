@@ -11,14 +11,18 @@ topic-tags: configuring
 discoiquuid: 6fe1c5c5-deb7-4405-82e4-23e0f90e2bd8
 feature: Configuring
 exl-id: b4a56f59-dc5e-40c3-a024-ee9df10949d8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3577'
+source-wordcount: '3613'
 ht-degree: 40%
 
 ---
 
 # レプリケーション{#replication}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 レプリケーションエージェントは、次の目的で使用されるメカニズムとしてAdobe Experience Manager(AEM) の中心となるものです。
 
@@ -105,7 +109,7 @@ AEMの標準インストールに含まれるGeometrixxWeb サイトを使用し
 
    この詳細（設定とログ）は、オーサー環境のツールコンソールからアクセスできます。または
 
-   `http://localhost:4502/etc/replication/agents.author/publish.html`
+   `http://localhost:4502/etc/replication/agents.author/publish.html`。
 
 ### レプリケーションエージェント — 標準 {#replication-agents-out-of-the-box}
 
@@ -432,7 +436,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
       * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。 
 
-         `http://localhost:4504/bin/receive`
+         `http://localhost:4504/bin/receive`。
 
       * レプリケーションに使用するサイト固有のユーザーアカウントを入力します。
       * 必要に応じて、他のパラメーターを設定できます。
@@ -477,7 +481,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
       * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。 
 
-         `http://localhost:80/dispatcher/invalidate.cache`
+         `http://localhost:80/dispatcher/invalidate.cache`。
 
       * レプリケーションに使用するサイト固有のユーザーアカウントを入力します。
       * 必要に応じて、他のパラメーターを設定できます。

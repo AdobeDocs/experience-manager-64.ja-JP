@@ -10,14 +10,18 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: dafe26ae-b2c5-4070-b8b1-cc1da147b464
 exl-id: 3e19aac2-49b1-48e1-85ce-36354cd8fd32
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 47%
+source-wordcount: '137'
+ht-degree: 40%
 
 ---
 
 # ダイアログ変換ツール{#dialog-conversion-tool}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ダイアログ変換ツールは、（ExtJS に基づく）クラシック UI 用、または Granite UI と Coral 2 に基づくダイアログのみが定義された既存のコンポーネントを拡張するのに役立ちます。 このツールでは、元のダイアログを使用して、Granite UI および Coral 3 に基づく標準 UI 用の複製のダイアログを作成します。
 

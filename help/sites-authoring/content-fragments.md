@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 076a3064-80c3-454b-93f9-6ae925c54328
 exl-id: bbe4ae86-e9b8-4c3f-ada3-82470e371c4e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 54%
+source-wordcount: '1189'
+ht-degree: 53%
 
 ---
 
 # コンテンツフラグメントを使用したページのオーサリング {#page-authoring-with-content-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >

@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 exl-id: 2ab55a72-2eb2-49dc-8716-0a8a4d0c4b73
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 80%
+source-wordcount: '419'
+ht-degree: 75%
 
 ---
 
 # 実稼動準備モードでの AEM の実行{#running-aem-in-production-ready-mode}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 6.1 では、アドビは実稼動環境においてデプロイメント用の AEM インスタンスを準備するために必要な手順の自動化を目的とした、新しい `"nosamplecontent"` 実行モードを導入します。
 

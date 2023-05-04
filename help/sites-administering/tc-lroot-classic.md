@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 237b8cc6-158e-4c51-970d-4c9cc74f6496
 feature: Language Copy
 exl-id: 316903a8-22cf-45e6-a9f3-ac1d75beddec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 25%
+source-wordcount: '352'
+ht-degree: 24%
 
 ---
 
 # クラシック UI による言語ルートの作成{#creating-a-language-root-using-the-classic-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 次の手順では、クラシック UI を使用してサイトの言語ルートを作成します。 詳しくは、 [言語ルートの作成](/help/sites-administering/tc-prep.md#creating-a-language-root).
 

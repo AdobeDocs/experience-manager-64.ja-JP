@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: f8991416-995b-4160-a705-d131e78089ee
 exl-id: 4b37c866-30c3-45ff-b7a3-013b69598668
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3490'
+source-wordcount: '3526'
 ht-degree: 41%
 
 ---
 
 # ランディングページ用のデザインインポーターの拡張と設定{#extending-and-configuring-the-design-importer-for-landing-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、ランディングページのデザインインポーターを設定し、必要に応じて拡張する方法について説明します。 読み込み後のランディングページの使用については、 [ランディングページ。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 

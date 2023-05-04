@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fc403a60-b635-4334-9bf8-2f3d2036b2f3
 exl-id: 40890db3-240c-4021-967a-b6b3eb1d4b7c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 6%
+source-wordcount: '688'
+ht-degree: 7%
 
 ---
 
 # 共有キューの設定{#configuring-shared-queues}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 共有キューを使用すると、ユーザーキューを効果的に設定および管理できます。 ユーザーキューは、ユーザーに割り当てられたすべてのタスクです。 [タスクリスト](https://help.adobe.com/ja_JP/livecycle/11.0/WorkspaceHelp/WS92d06802c76abadb-2b6ab502126beb6ba2f-7ffc.2.html) を参照してください。 組織のニーズに応じて、ユーザーキューを割り当て、割り当て解除、再割り当てできます。 共有キューは次の 2 つの方法で管理できます。
 

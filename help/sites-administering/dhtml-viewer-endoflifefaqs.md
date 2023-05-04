@@ -7,18 +7,22 @@ topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
 exl-id: 7a9d6e97-2592-43cb-b5ab-4238409bd7f3
-source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 66%
+source-wordcount: '78'
+ht-degree: 50%
 
 ---
 
 # DHTML ビューアのサポート終了 {#dhtml-viewer-end-of-life-}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 2014 年 1 月 31 日をもって、DHTML ビューアプラットフォームは正式にサポート終了となりました。
 
-サポートされている最新のビューアについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html)を参照してください。
+サポートされている最新のビューアについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/?lang=jadynamic-media-developer-resources/library/homeviewers.html)を参照してください。
 
 <!-- **What is the change?**
 

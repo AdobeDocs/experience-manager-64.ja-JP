@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Collaboration
 role: User,Admin
 exl-id: 7e2adfcc-410d-4574-8f7e-39aceecfdd4b
-source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1114'
 ht-degree: 22%
 
 ---
 
 # [!DNL Experience Manager] から [!DNL Creative Cloud] フォルダー共有のベストプラクティス {#aem-to-creative-cloud-folder-sharing-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >

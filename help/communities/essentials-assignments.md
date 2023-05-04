@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 796781e6-5cab-4ea1-b484-0945bc8febbf
 exl-id: 310d9086-36b6-42ea-835f-c77d75e880cb
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 13%
+source-wordcount: '249'
+ht-degree: 14%
 
 ---
 
 # 割り当ての基本事項 {#assignments-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このページでは、の割り当て機能を使用する際に必要な情報を示します。 [実施可能コミュニティ](overview.md#enablement-community) サイト。
 

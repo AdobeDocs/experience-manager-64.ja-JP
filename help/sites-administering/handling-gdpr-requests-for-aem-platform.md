@@ -7,14 +7,18 @@ uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 exl-id: dcd67a1e-b20f-4ed4-b154-dd250cbd8320
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 88%
+source-wordcount: '471'
+ht-degree: 83%
 
 ---
 
 # AEM 基盤における GDPR 要件の取り扱い{#handling-gdpr-requests-for-the-aem-foundation}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!IMPORTANT]
 >

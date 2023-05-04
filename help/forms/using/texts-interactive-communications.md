@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
 feature: Interactive Communication
 exl-id: a689aead-7b39-4d66-8922-ae8910c5e9ef
-source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2233'
+source-wordcount: '2269'
 ht-degree: 54%
 
 ---
 
 # インタラクティブ通信内のテキスト {#texts-in-interactive-communications}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信で使用するテキストドキュメントフラグメントの作成と編集 — テキストは、インタラクティブ通信の構築に使用する 4 種類のドキュメントフラグメントの 1 つです。 残りの 3 つは、条件、リスト、レイアウトフラグメントです。
 

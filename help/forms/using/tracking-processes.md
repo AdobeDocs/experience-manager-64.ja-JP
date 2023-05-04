@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2228dcdd-5c9c-46b3-9888-489756c04887
 exl-id: e7eae36b-39e0-4550-b18b-a1ac1a5c3015
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 11%
 
 ---
 
 # プロセスの追跡 {#tracking-processes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 追跡ページで、開始または関係したアクティブなプロセスまたは完了したプロセスを検索し、プロセスの詳細を表示できます。 プロセスの詳細には、プロセスに含まれていたタスク、割り当て、フォームが表示されます。 また、以前に開始したプロセスのフォームデータを使用して、新しいプロセスを開始することもできます。
 

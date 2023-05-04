@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: b4fa018f-48a6-4991-9f80-d2d6e0b30555
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 92%
+source-wordcount: '285'
+ht-degree: 83%
 
 ---
 
 # Backup and Restore サービス API のクイックスタート {#backup-and-restore-service-apiquick-starts}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Java API クイックスタート（SOAP）は、Backup and Restore サービス API で使用できます。
 

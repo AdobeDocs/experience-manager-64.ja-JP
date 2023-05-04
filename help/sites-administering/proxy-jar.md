@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ff0b1e93-2fd2-4dc1-898f-4ba4db1b3d98
 exl-id: fb96ed26-b5b6-4afc-a820-3ef45a9f3abd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 9%
+source-wordcount: '1197'
+ht-degree: 10%
 
 ---
 
 # プロキシサーバーツール（proxy.jar）{#proxy-server-tool-proxy-jar}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロキシサーバは、クライアントとサーバとの間で要求を中継する中間サーバとして機能します。 プロキシサーバは、クライアントとサーバとの間のすべてのやり取りを追跡し、TCP 通信全体のログを出力します。 これにより、メインサーバーにアクセスする必要なく、何が起こっているかを正確に監視できます。
 

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 6678e462-d40b-4b55-8f7e-98fab2273898
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3153'
+source-wordcount: '3189'
 ht-degree: 25%
 
 ---
 
 # ClientContext JavaScript API{#client-context-javascript-api}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## CQ_Analytics.ClientContextMgr {#cq-analytics-clientcontextmgr}
 

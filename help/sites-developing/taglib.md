@@ -10,14 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 exl-id: 24d53784-5915-4638-ab2b-26f897cca13b
-source-git-commit: 1d5f9be7aa1e45ebaf689922396832e82c63321f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 61%
+source-wordcount: '2519'
+ht-degree: 60%
 
 ---
 
 # タグライブラリ{#tag-libraries}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Granite、CQ、Sling の各タグライブラリを使用すると、テンプレートおよびコンポーネントの JSP スクリプトで使用する特定の関数にアクセスできます。
 

@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 884b3e75-78b5-421a-938e-97fe6d77c8c2
 exl-id: 9f57087f-895d-43b9-9b6a-9cfb4c794c7b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1453'
-ht-degree: 41%
+source-wordcount: '1489'
+ht-degree: 40%
 
 ---
 
 # 基礎モード{#scaffolding}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 同じ構造を共有し、コンテンツが異なるページを大量に作成する必要が生じる場合があります。 標準のAEMインターフェイスでは、各ページを作成し、適切なコンポーネントをページ上にドラッグして、それぞれに個別に入力する必要があります。
 

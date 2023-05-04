@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 194c0835-e9b5-4968-a5f0-2ed3bf6793fd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 53%
+source-wordcount: '1512'
+ht-degree: 52%
 
 ---
 
 # Oak インデックスのトラブルシューティング{#troubleshooting-oak-indexes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## インデックス再作成が遅い  {#slow-re-indexing}
 

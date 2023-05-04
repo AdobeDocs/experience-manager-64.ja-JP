@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 exl-id: 8cdd7b94-b247-4598-bb0f-36c5ec1319ec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
 
 # コミュニティコンポーネントガイド {#community-components-guide}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コミュニティコンポーネントガイドは、 [ソーシャルコンポーネントフレームワーク (SCF)](scf.md). 使用可能なAEM Communitiesコンポーネントや、複数のコンポーネントから構築されたより複雑な機能のリストを提供します。
 

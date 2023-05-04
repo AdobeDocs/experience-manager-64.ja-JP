@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 exl-id: 26c9098b-f810-4c3d-a6c8-9a5fbcd307dd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1127'
 ht-degree: 28%
 
 ---
 
 # AEM の開発 - ガイドラインとベストプラクティス{#aem-development-guidelines-and-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## テンプレートとコンポーネントの使用に関するガイドライン {#guidelines-for-using-templates-and-components}
 

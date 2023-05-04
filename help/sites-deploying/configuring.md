@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 feature: Configuring
 exl-id: 758ef6d2-2eba-44ef-8e65-18258c4e9123
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 38%
+source-wordcount: '2180'
+ht-degree: 37%
 
 ---
 
 # 設定の基本概念{#basic-configuration-concepts}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager(AEM) は、すべてのパラメーターのデフォルト設定と共にインストールされ、「標準で」実行できます。 ただし、独自の要件に合わせてAEMを設定することもできます。
 

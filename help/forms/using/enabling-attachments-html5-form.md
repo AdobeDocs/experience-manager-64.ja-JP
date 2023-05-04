@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 feature: Mobile Forms
 exl-id: 82a843c4-5cb2-4f5e-ad4d-cf2e9ea6cdb8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 44%
+source-wordcount: '355'
+ht-degree: 42%
 
 ---
 
 # HTML5フォームの添付ファイルの有効化 {#enabling-attachments-for-an-html-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 添付ファイルは、HTML5 フォームを使用してアップロード、プレビュー、送信することができます。 デフォルトでは、添付ファイルのサポートは無効になっています。 添付ファイルサポートを有効にするには：
 

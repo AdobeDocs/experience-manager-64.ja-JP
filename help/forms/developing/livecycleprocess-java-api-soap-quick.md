@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 role: Developer
 exl-id: ee8f5f16-218a-41eb-be42-fda4537b2b4e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 100%
+source-wordcount: '464'
+ht-degree: 93%
 
 ---
 
 # LiveCycleProcess Java API（SOAP）クイックスタート {#livecycleprocess-java-api-soap-quick-start}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロセスで Java API（SOAP）クイックスタートを使用できます。*プロセスインスタンス*&#x200B;は、Invocation API などの呼び出しメソッドによって、またはワークスペース内から開始された特定のプロセスのオカレンスです。
 

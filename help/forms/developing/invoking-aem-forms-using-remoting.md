@@ -11,14 +11,18 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: de8ba694-0b68-4442-bd50-5ba6d845749c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4621'
-ht-degree: 97%
+source-wordcount: '4657'
+ht-degree: 96%
 
 ---
 
 # Remoting を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-remoting}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Workbench で作成されたプロセスは、Remoting を使用して呼び出すことができます。つまり、Flex で作成されたクライアントアプリケーションから AEM Forms プロセスを呼び出すことができます。この機能は、データサービスに基づいています。
 

@@ -10,30 +10,34 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 exl-id: 077a940d-19de-4d19-ad99-61f465e68205
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 87%
+source-wordcount: '315'
+ht-degree: 22%
 
 ---
 
 # 設定プロパティの暗号化サポート{#encryption-support-for-configuration-properties}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ## 概要 {#overview}
 
-この機能を使用すると、すべての OSGI 設定プロパティをクリアテキストではなく保護された暗号化形式で保存できます。Web コンソール UI のフォームは、システム全体の暗号化マスターキーを使用して、クリアテキストから暗号化されたテキストを作成するために使用されます。
+この機能を使用すると、すべての OSGi 設定プロパティを、クリアテキストではなく、保護された暗号化形式で保存できます。 Web コンソール UI のフォームは、システム全体の暗号化マスターキーを使用して、クリアテキストから暗号化されたテキストを作成するために使用されます。
 
-OSGi 設定プラグインのサポートは、サービスによって使用される前に、プロパティを復号化するために追加されました。
+サービスで使用される前にプロパティを復号化するために、OSGi 設定プラグインのサポートが追加されました。
 
 >[!NOTE]
 >
->暗号化された値を予期するサービスは、値を復号化する前に IsProtected チェックを使用して、暗号化されているかどうかを確認する必要があります。
+>暗号化された値を想定するサービスは、IsProtected チェックを使用して、値が既に復号化されている可能性があるので、値を復号化する前に暗号化されているかどうかを確認する必要があります。
 
 ## 暗号化サポートの有効化 {#enabling-encryption-support}
 
-これらの手順は、メールサービスの SMTP パスワードを暗号化する方法を示します。暗号化する OSGI プロパティに対してこれらのステップを完了します。
+以下の手順では、Mail サービスの SMTP パスワードを暗号化する方法を示します。 暗号化する OSGi プロパティに対して、次の手順を実行できます。
 
-1. AEM Web コンソール ( ) に移動します。 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
+1. AEM web コンソール（*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*）にアクセスします。
 1. 左上隅の **Main／Crypto Support** に移動します。
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
@@ -42,17 +46,17 @@ OSGi 設定プラグインのサポートは、サービスによって使用さ
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. 「**Plain Text**」フィールドに保護する機密データのテキストを入力します。
-1. 「**Protect**」を選択します。保護されたテキストは暗号化されたテキストとして表示されます。
+1. 内 **プレーンテキスト** 「 」フィールドに、保護する機密データのテキストを入力します。
+1. 選択 **Protect**. 「保護」テキストは、暗号化されたテキストとして表示されます。
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
-1. ステップ 5 の保護テキストをコピーして OSGI フォーム値に貼り付けます。この例では、暗号化された **SMTP パスワード** は *Day CQ Mail Service* に追加されます。
+1. 手順 5 の「保護されたテキスト」をコピーし、OSGI フォーム値に貼り付けます。 この例では、暗号化された **SMTP パスワード** が *Day CQ Mail Service*.
 
    ![screen_shot_2016-12-18at105809pm](assets/screen_shot_2016-12-18at105809pm.png)
 
-1. Day CQ Mail Service のプロパティを保存します。SMTP パスワードは暗号化された値として送信されます。
+1. Day CQ Mail Service プロパティを保存します。 SMTP パスワードは暗号化された値として送信されるようになります。
 
-## 復号化サポート {#decryption-support}
+## 復号化のサポート {#decryption-support}
 
-AEM は現在、設定プロパティを復号化するための設定プラグインを提供しています。このAEM Plugin は自動的に復号化してクリアテキストプロパティを取得します。
+AEMは、設定プロパティを復号化する設定プラグインを提供するようになりました。 このAEM Plugin は、自動的に復号化し、クリアテキストプロパティを取得します。

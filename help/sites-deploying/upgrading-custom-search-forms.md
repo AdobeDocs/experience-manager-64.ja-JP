@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: f55e2fe7-04ac-4368-b580-b8950d90548e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1721'
 ht-degree: 31%
 
 ---
 
 # カスタム検索フォームのアップグレード {#upgrading-custom-search-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 6.2 では、カスタマイズされた検索Formsがリポジトリに格納される場所が変更されました。 アップグレード時に、6.1 の場所から次の場所に移動されます。
 

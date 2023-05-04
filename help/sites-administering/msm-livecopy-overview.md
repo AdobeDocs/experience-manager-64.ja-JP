@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 96238d40-c19a-4c1f-9400-c7bb8636b448
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 45%
+source-wordcount: '570'
+ht-degree: 43%
 
 ---
 
 # ライブコピーの概要コンソール{#live-copy-overview-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この **ライブコピーの概要** では、次のことが可能です。
 

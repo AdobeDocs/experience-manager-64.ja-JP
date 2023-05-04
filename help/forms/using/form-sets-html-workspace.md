@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c1793e2e-413c-4b6f-b96b-09e011f06263
 exl-id: 4e39f6dd-b7a3-4c6c-be1f-66b9a5743352
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 60%
+source-wordcount: '382'
+ht-degree: 57%
 
 ---
 
 # AEM Forms Workspace のフォームセットの使用 {#working-with-formsets-in-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォームセットは、HTML5 のフォームの集まりで、エンドユーザーには 1 つのフォームのセットとして表示されます。 エンドユーザーがフォームセットの入力を開始すると、フォームが別のフォームにシームレスに切り替わります。 その後、フォームのセットを 1 回のクリックで送信できます。 フォームセットおよびその設定方法について詳しくは、[AEM Forms のフォームセット](/help/forms/using/formset-in-aem-forms.md)を参照してください。
 

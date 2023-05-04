@@ -11,14 +11,18 @@ topic-tags: designer
 discoiquuid: abb5513f-c824-4dc2-8617-29ea47684afe
 feature: Designer
 exl-id: 8b6b151d-2422-4261-9edb-66efe3d33f8b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '694'
 ht-degree: 22%
 
 ---
 
 # HTML5 フォームでの手書き署名の使用 {#using-scribble-signature-in-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 のフォームは、タッチデバイスで使用される傾向が強まっています。また、共通の要件の 1 つは、署名をサポートすることです。 スタイラスや指での手書きは、モバイルデバイス上でフォームに署名する際に受け入れられる方法となっています。 HTML5 のフォームとForms Designer で、フォームに手書き署名フィールドを挿入するオプションが有効になりました。 フォームがブラウザーでレンダリングされると、スタイラス、マウス、またはタッチを使用して、これらのフィールドに署名できます。
 

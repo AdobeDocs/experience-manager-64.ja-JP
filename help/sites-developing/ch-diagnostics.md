@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6aa88583-5d34-4f77-a932-d47d84785eca
 exl-id: 31926737-1a06-4fb9-b851-665095954875
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 60%
+source-wordcount: '510'
+ht-degree: 57%
 
 ---
 
 # ContextHub の診断 {#contexthub-diagnostics}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ContextHub には、ContextHub フレームワークの概要を確認できる診断ページがあります。このページを開くには、AEM オーサーインスタンスの `contexthub.diagnostics.html` ページに移動します。例：
 

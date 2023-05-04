@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Video,Renditions
 role: User
 exl-id: 9fc93034-e83a-42b5-901d-7867b4a850a8
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 77%
+source-wordcount: '256'
+ht-degree: 69%
 
 ---
 
 # ビデオレンディション {#video-renditions}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets では、様々な形式（OGG、FLV など）のビデオアセット用のビデオレンディションが生成されます。
 

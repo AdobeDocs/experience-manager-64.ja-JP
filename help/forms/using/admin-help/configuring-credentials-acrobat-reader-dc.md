@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5bb32fb1-4b6e-412f-aa16-f60db9dcaba1
 exl-id: 40c2e205-0115-4ebe-ab24-66c8ee0663fa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 14%
+source-wordcount: '591'
+ht-degree: 15%
 
 ---
 
 # 証明書を Acrobat Reader DC Extensions で使用するための設定{#configuring-credentials-for-use-with-acrobat-reader-dc-extensions}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 使用権限をPDFドキュメントに適用するには、Acrobat Reader DC Extensions 用の有効な資格情報を使用してAEM Forms を設定します。 秘密鍵証明書は、AEM forms のインストール中に設定されている可能性があります。 Configuration Manager の実行中にAcrobat Reader DC Extensions 証明書を設定しなかった場合、または新しい証明書または置き換え用の証明書を読み込む必要がある場合は、Trust Store の管理ページを使用して設定できます。
 

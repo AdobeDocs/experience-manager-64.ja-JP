@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
 exl-id: 1ee7ccbd-8654-4d03-8a67-2c41863ae951
-source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 37%
+source-wordcount: '148'
+ht-degree: 33%
 
 ---
 
 # ソリューション統合{#solutions-integration}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 * [Adobe Marketing Cloud との統合](/help/sites-administering/marketing-cloud.md)
 * [サードパーティのサービスとの統合](/help/sites-administering/third-party-services.md)

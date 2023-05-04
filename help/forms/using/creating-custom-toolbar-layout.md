@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: c69bb229-d680-4a55-9b2d-cd5ad0f83a9e
 exl-id: 1b273437-8d71-4224-bdcd-0ae522ae8913
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 53%
+source-wordcount: '563'
+ht-degree: 51%
 
 ---
 
 # カスタムツールバーレイアウトの作成 {#creating-custom-toolbar-layout}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## ツールバーレイアウト {#layout}
 
@@ -47,7 +51,7 @@ CustomToolbarLayoutDemo.zip
 
 1. カスタムツールバーレイアウトを維持するためのフォルダーを作成します。 例：
 
-   `/apps/customlayout/toolbar`
+   `/apps/customlayout/toolbar`。
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 

@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a89ab508-173f-4b1c-88d9-ef944af4d9ae
 feature: PDF Generator
 exl-id: a5a12344-acbd-4f77-b849-b0b9db716ac5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 55%
+source-wordcount: '1403'
+ht-degree: 54%
 
 ---
 
 # セキュリティ設定の指定{#configuring-security-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 パスワードを設定し、印刷や編集などの特定の機能を制限することで、PDFドキュメントへのアクセスを制限できます。 PDFドキュメントに制限された機能が含まれている場合は、それらの機能に関連するツールおよびメニュー項目が淡色表示になります。 また、ドキュメントの暗号化や認証など、他の方法を使用して、保護されたドキュメントを作成することもできます。 セキュリティ設定には、特定のパスワード変換に使用するパスワードと特定のPDFが含まれます。
 

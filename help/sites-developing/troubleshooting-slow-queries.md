@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: edffa86c-a157-45bc-a565-a57200debb37
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2265'
+source-wordcount: '2301'
 ht-degree: 56%
 
 ---
 
 # 処理に時間のかかるクエリのトラブルシューティング{#troubleshooting-slow-queries}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 処理に時間のかかるクエリの分類 {#slow-query-classifications}
 
@@ -433,7 +437,7 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 
    * AEMで実行された最近の遅いクエリと一般的なクエリの一覧を示すAEM操作ダッシュボード。
 
-* **[インデックスマネージャ](/help/sites-administering/operations-dashboard.md#the-index-manager)**
+* **[インデックスマネージャー](/help/sites-administering/operations-dashboard.md#the-index-manager)**
 
    * AEMインスタンス上のインデックスを表示するAEM Operations WebUI;は、既に存在し、ターゲット設定や拡張が可能なインデックスを容易に理解できます。
 

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
 exl-id: 1a7fe230-093b-4d2b-95cb-f9479c0febe5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 61%
+source-wordcount: '717'
+ht-degree: 59%
 
 ---
 
 # 翻訳するコンテンツの準備{#preparing-content-for-translation}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 通常、多言語の Web サイトでは、多言語のコンテンツがいくつか提供されます。 サイトは 1 つの言語で作成され、他の言語に翻訳されます。 一般に、多言語サイトはページのブランチで構成され、各ブランチには異なる言語のサイトのページが含まれます。
 

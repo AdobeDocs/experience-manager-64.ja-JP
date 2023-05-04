@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: 9f3ba207-b5a3-43a2-b59c-0d74d62c03fc
 feature: Adaptive Forms
 exl-id: ce6fa21c-aa83-4c5e-be7f-ad4f6e0811f8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 89%
+source-wordcount: '2774'
+ht-degree: 88%
 
 ---
 
 # アダプティブフォームの式 {#adaptive-form-expressions}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームは、ダイナミックスクリプティング機能を使用して、エンドユーザー向けに最適化されたシンプルなフォーム入力機能を提供します。 式を記述することで、フィールドやパネルのダイナミックな表示／非表示など、様々な動作を追加できます。また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
 

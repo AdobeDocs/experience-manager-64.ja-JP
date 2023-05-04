@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: aff8b79f-dd4e-486e-9d59-5d09dfe34f27
 exl-id: 5b16c775-3bd0-4a55-ba9e-f326224e8bae
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1767'
 ht-degree: 4%
 
 ---
 
 # イネーブルメントのための新しいコミュニティサイトの作成 {#author-a-new-community-site-for-enablement}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## コミュニティサイトを作成 {#create-community-site}
 
@@ -105,7 +109,7 @@ ht-degree: 4%
 名前空間を検索するには、先頭入力検索を使用すると簡単です。 例：
 
 * &#39;tut&#39;と入力します
-* 選択 `Tutorial`
+* `Tutorial` を選択します。
 
 ![chlimage_1-286](assets/chlimage_1-286.png)
 
@@ -158,7 +162,7 @@ ht-degree: 4%
 `Community Enablement Managers` このコミュニティサイトを管理するために、グループを選択できます。
 
    * 「s」と入力します。
-   * 選択 `Sirius Nilson`
+   * `Sirius Nilson` を選択します。
 
 * **[!UICONTROL Marketing Cloud組織 ID]**
 （オプション） Adobe Analyticsアカウントの ID で、 [ビデオハートビート分析](analytics.md#video-heartbeat-analytics) （イネーブルメントレポート内）
@@ -245,7 +249,7 @@ ht-degree: 4%
 * 入力 `quinn` 検索ボックスに
 * 選択 **[!UICONTROL クインハーパー]** （イネーブルメントリソースの連絡先）
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-295](assets/chlimage_1-295.png)
 
@@ -353,7 +357,7 @@ ht-degree: 4%
 * **URL**: `catalog`
 
 * **すべての名前空間を選択**:デフォルトのままにします。
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-299](assets/chlimage_1-299.png)
 

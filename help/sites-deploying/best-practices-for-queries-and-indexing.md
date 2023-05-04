@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 5be5e2ff-2b46-4b9f-a58e-ecb16c77d603
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4602'
+source-wordcount: '4638'
 ht-degree: 34%
 
 ---
 
 # クエリとインデックスに関するベストプラクティス{#best-practices-for-queries-and-indexing}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。Jackrabbit 2 では、デフォルトですべてのコンテンツのインデックスが作成され、自由にクエリできました。Oak では、`oak:index` ノードの下にインデックスを手動で作成する必要があります。クエリはインデックスなしでも実行できますが、大規模なデータセットの場合は、実行が非常に遅くなるだけでなく、中止されることもあります。
 
@@ -103,7 +107,7 @@ Oak が使用するインデックスを選択する方法、およびクエリ�
 
 この方法について詳しくは、 [ログドキュメント](/help/sites-deploying/configure-logging.md).
 
-### インデックス統計 {#index-statistics}
+### インデックスの統計 {#index-statistics}
 
 Lucene は、各インデックスに存在するドキュメントのサイズや数など、インデックスで指定されたコンテンツの詳細を提供する JMX Bean を登録します。
 
@@ -363,7 +367,7 @@ Oak インデックスの再インデックスに対して許容されるエラ�
 
    * Lucene インデックスのローカルコピーを削除します。
 
-      1. AEMを停止
+      1. AEM を停止します。
       1. `crx-quickstart/repository/index`にある Lucene インデックスのローカルコピーを削除
       1. AEM を再起動します。
    * この手順を実行しても問題が解決せず、`AsyncIndexUpdate` 例外が引き続き発生する場合は、次の手順に従います。

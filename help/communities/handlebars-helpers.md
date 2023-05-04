@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: 66045e67-4d33-4c0c-81d7-d4287ed68ccc
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1550'
 ht-degree: 6%
 
 ---
 
 # SCF Handlebars ヘルパー {#scf-handlebars-helpers}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 | **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -344,7 +348,7 @@ AEM HTML クライアントライブラリを含むヘルパーです。js、css
 
 カットオフポイントに経過した時間を表示するヘルパーです。その後、通常の日付形式が表示されます。
 
-例：
+次に例を示します。
 
 * 12 時間前
 * 7 日前
@@ -528,7 +532,7 @@ template(data);
 
 カスタム SCF ヘルパーをサーバー側に実装して登録するには、Java インターフェイスを実装するだけです [TemplateHelper](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、作成 [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
 
-例：
+次に例を示します。
 
 ### FooTextHelper.java {#footexthelper-java}
 
@@ -575,7 +579,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 ### クライアント側カスタムヘルパー {#client-side-custom-helpers}
 
 クライアント側ヘルパーは、呼び出しによって登録される Handlebars スクリプトです `Handlebars.registerHelper()`.\
-例：
+次に例を示します。
 
 ### custom-helpers.js {#custom-helpers-js}
 

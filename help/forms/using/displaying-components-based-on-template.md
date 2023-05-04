@@ -10,14 +10,18 @@ topic-tags: customization
 content-type: reference
 discoiquuid: 940e45b4-dbf1-4207-bd4a-cf677d645fb4
 exl-id: a4cee2e6-a56f-4355-8176-b3ed7478a775
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 63%
+source-wordcount: '388'
+ht-degree: 59%
 
 ---
 
 # 使用するテンプレートに基づいたコンポーネントの表示 {#displaying-components-based-on-the-template-used}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォーム作成者が [テンプレート](/help/forms/using/template-editor.md)を使用すると、フォーム作成者は、テンプレートポリシーに基づいて特定のコンポーネントを表示し、使用することができます。 テンプレートコンテンツポリシーを指定して、フォーム作成者がフォームの作成時に表示するコンポーネントのグループを選択できます。
 

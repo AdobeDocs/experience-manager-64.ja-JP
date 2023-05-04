@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management
 role: Architect,Admin
 exl-id: e2ab924b-53cb-4011-8c0a-9e8e59dd2f16
-source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '661'
 ht-degree: 15%
 
 ---
 
 # のベストプラクティス [!DNL Experience Manager] Assets {#best-practices-for-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現する上で重要な役割を果たします。 内で多数のアセットを操作する場合 [!DNL Assets] また、ビデオや dynamic media を含む多数のアセットを定期的/定期的にアップロードし、デジタルアセット管理エクスペリエンスを最適化することが、システムの効率性のために重要です。
 

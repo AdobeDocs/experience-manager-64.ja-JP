@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: d29e1b1e-62df-4b0d-aa64-ad98568cf4a6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1914'
+source-wordcount: '1950'
 ht-degree: 7%
 
 ---
 
 # 業務カレンダーの設定 {#configuring-business-calendars}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 *業務カレンダー* 組織の営業日と非営業日（法定休日、週末、会社のシャットダウン日など）を定義します。 業務カレンダーを使用する場合、AEM Forms では、特定の日付計算の実行時に非稼働日がスキップされます。 Workbench では、タスクのリマインダー、デッドライン、エスカレーションなどのユーザー関連のイベントに業務カレンダーを使用するか、タイマーイベントや待機サービスなどのユーザーに関連しないアクションに業務カレンダーを使用するかを指定できます。
 

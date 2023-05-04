@@ -1,7 +1,7 @@
 ---
 title: オーバーレイ
 seo-title: Overlays
-description: 'AEM は、オーバーレイという原理を利用して、開発者がコンソールおよびその他の機能を拡張し、カスタマイズできるようにします '
+description: AEM は、オーバーレイという原理を利用して、コンソールおよびその他の機能を拡張し、カスタマイズできるようにします
 seo-description: AEM uses the principle of overlays to allow you to extend and customize the consoles and other functionality
 uuid: d14c08fe-04c0-4925-8c99-c6644357919d
 contentOwner: Guillaume Carlino
@@ -10,30 +10,34 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 0470b74c-2c34-4327-afed-b95eefb1d521
 exl-id: c0678bb6-5e57-4ebb-b6dc-5240bafbc79e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 63%
+source-wordcount: '642'
+ht-degree: 65%
 
 ---
 
 # オーバーレイ{#overlays}
 
-AEM（旧称 CQ）は、以前からオーバーレイという原理を利用して、開発者が[コンソール](/help/sites-developing/customizing-consoles-touch.md)およびその他の機能（[ページオーサリング](/help/sites-developing/customizing-page-authoring-touch.md)など）を拡張し、カスタマイズできるようにしてきました。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-オーバーレイは様々なコンテキストで使用される用語です。このコンテキスト（AEM の拡張）では、オーバーレイとは、「事前定義済みの機能に対して独自の定義を強制的に付加する（標準の機能をカスタマイズする）こと」を表します。
+AEM（以前は、CQ）は、オーバーレイの原則を使用して、 [コンソール](/help/sites-developing/customizing-consoles-touch.md) その他の機能 ( 例： [ページオーサリング](/help/sites-developing/customizing-page-authoring-touch.md)) をクリックします。
 
-標準インスタンスでは、事前定義された機能は `/libs` オーバーレイ（カスタマイズ）は、 `/apps` 分岐。 AEMは、検索パスを使用してリソースを検索し、最初に `/apps` 分岐してから `/libs` 分岐 ( [検索パスを設定できます](#configuring-the-search-paths)) をクリックします。 このメカニズムにより、オーバーレイ（およびそこに定義されているカスタマイズ）が優先されることになります。
+オーバーレイは様々なコンテキストで使用される用語です。このコンテキスト (AEMの拡張 ) では、オーバーレイとは、事前定義された機能に対して独自の定義を強制的に付加する（標準の機能をカスタマイズする）ことを意味します。
 
-AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のように変更されました。
+標準インスタンスでは、事前定義された機能は `/libs` 以下に置かれるので、オーバーレイ（カスタマイズ）は `/apps` ブランチ以下に定義することが推奨されます。AEM がリソースを検索するときは検索パスを使用します。具体的には、最初に `/apps` ブランチを検索し、次に `/libs` ブランチを検索します（[検索パスは必要に応じて設定可能](#configuring-the-search-paths)）。このメカニズムにより、オーバーレイ（およびそこに定義されているカスタマイズ）が優先されます。
 
-* AEM 6.0 以降 - [Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) 関連のオーバーレイ（つまりタッチ操作対応 UI）
+AEM 6.0 以降、オーバーレイの実装方法と使用方法が変更されました。
+
+* AEM 6.0 以降 - [Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) 関連のオーバーレイ（つまりタッチ操作対応 UI）
 
    * 方法
 
       * `/apps` の下に適切な `/libs` 構造を再構築します。
 
-         1:1 コピーは不要で、 [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は、必要な元の定義を相互参照するために使用されます。 Sling Resource Merger は、差分メカニズムによってリソースにアクセスおよびマージするためのサービスを提供します。
+         これには 1:1 のコピーは不要です。[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は、必要な元の定義を相互参照するために使用されるからです。Sling Resource Merger は、差分メカニズムによってリソースにアクセスおよびマージするためのサービスを提供します。
 
       * 変更は `/apps` 以下で行います。
    * メリット
@@ -46,43 +50,44 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のよう
 
    * メソッド
 
-      * コンテンツのコピー元 `/libs` から `/apps`
+      * コンテンツを `/libs` から `/apps` にコピーします。
 
-         プロパティを含め、サブブランチ全体をコピーする必要があります。
+         プロパティを含むサブブランチ全体をコピーする必要があります。
 
       * 変更は `/apps` 以下で行います。
    * デメリット
 
-      * ただし、以下で何かが変更された場合に変更内容が失われることはありません。 `/libs`の下のオーバーレイで発生する特定の変更を再作成する必要が生じる場合があります `/apps`.
+      * `/libs` 以下で変更しても変更内容は失われませんが、`/apps` 以下のオーバーレイでは一部の変更作業をやり直す必要がある場合があります。
 
 
 >[!CAUTION]
 >
->[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) と併用する場合に限り使用できます。つまり、オーバーレイをスケルトン構造で作成する方法は、標準のタッチ操作対応 UI でのみ使用できます。
+>[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) と併用する場合に限り使用できます。つまり、スケルトン構造を持つオーバーレイの作成は、標準のタッチ操作対応 UI にのみ適しています。
 >
->他の領域（クラシック UI など）でのオーバーレイには、該当するノードとサブ構造全体をコピーして、必要な変更を加えます。
+>他の領域（クラシック UI を含む）のオーバーレイでは、適切なノードとサブ構造全体をコピーし、必要な変更を行います。
 
 オーバーレイは、[コンソールの設定](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)、[サイドパネル内にあるアセットブラウザーへの選択カテゴリの作成](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser)（ページのオーサリング時に使用）など、多くの変更において推奨される方法です。オーバーレイは、次の理由で必要になります。
 
-* あなた ***次の値を指定する* 変更を加える `/libs` 分岐&#x200B;**このブランチは、次の操作を行うたびに変更される可能性が高いので、加えた変更はすべて失われる可能性があります。
+* `/libs`ブランチ&#x200B;**では&#x200B;***変更しないでください*。
+このブランチは次のように常に変更される可能性があるため、変更内容が失われる可能性があります。
 
-   * インスタンス上のアップグレード
+   * インスタンスにアップグレードします
    * ホットフィックスの適用
-   * 機能パックのインストール
+   * 機能パックをインストールする
 
 * オーバーレイにより、変更を 1 箇所に集中させることができます。そのため、必要に応じて変更の追跡、移行、バックアップ、デバッグを実行しやすくなります。
 
 ## 検索パスの設定 {#configuring-the-search-paths}
 
-オーバーレイの場合、配信されるリソースは、取得されたリソースとプロパティの集合体で、定義可能な以下の検索パスに応じます。
+オーバーレイの場合、配信されるリソースは、取得されたリソースとプロパティの集計で、定義可能な検索パスに応じて表されます。
 
-* **OSGi 設定**&#x200B;で [Apache Sling Resource Resolver Factory](/help/sites-deploying/configuring-osgi.md) 用に定義された、リソースの **Resolver Search Path**。
+* リソース **Resolver Search Path** ( [OSGi 設定](/help/sites-deploying/configuring-osgi.md) の **Apache Sling Resource Resolver Factory**.
 
-   * 検索パスの順序は、上から下の順で、それぞれの優先順位を示します。
-   * 標準インストールでは、プライマリのデフォルトは次のようになります。 `/apps`, `/libs`  — その内容は `/apps` ～よりも優先度が高い `/libs` ( 例： *overlays* )。
+   * 検索パスの上から下に並ぶ順序は、それぞれの優先度を示します。
+   * 標準インストールの場合、主なデフォルトは `/apps` と `/libs` で、`/apps` のコンテンツの方が `/libs` のコンテンツより優先されます（つまり、前者が後者を&#x200B;*オーバーレイ*&#x200B;します）。
 
-* 2 人のサービスユーザーは、スクリプトが格納される場所への JCR:READ アクセス権が必要です。 次のユーザーが該当します。components-search-service (com.day.cq.wcm.coreto access/cache コンポーネントで使用 ) および sling-scripting （サーブレットを検索するために org.apache.sling.servlets.resolver で使用）。
-* 次の設定も、スクリプトを配置する場所に応じて設定する必要があります（この例では、/etc、/libs または/apps の下）。
+* スクリプトの保存場所への JCR:READ アクセス権を 2 人のサービスユーザーに付与する必要があります。この 2 人のユーザーは、components-search-service（com.day.cq.wcm.core でコンポーネントのアクセス／キャッシュに使用）と sling-scripting（org.apache.sling.servlets.resolver でサーブレットの検索に使用）です。
+* 次の設定も、スクリプトの保存場所に応じて設定する必要があります（この例では /etc、/libs または /apps の下）。
 
    ```
    PID = org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl
@@ -90,7 +95,7 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のよう
    resource.resolver.vanitypath.whitelist=["/etc/","/apps/","/libs/","/content/"]
    ```
 
-* 最後に、サーブレットリゾルバーも設定する必要があります（この例では/etc も追加します）。
+* 最後に、Servlet Resolver を設定する必要もあります（この例では /etc も追加します）。
 
    ```
    PID = org.apache.sling.servlets.resolver.SlingServletResolver  
@@ -99,7 +104,7 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のよう
 
 ## 使用例 {#example-of-usage}
 
-以下のページで、一部の例が紹介されています。
+以下に例を示します。
 
 * [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md)
 * [ページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)

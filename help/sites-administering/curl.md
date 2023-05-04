@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: 97120959-0a45-46b8-a10d-68522ad6f81a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 33%
+source-wordcount: '914'
+ht-degree: 32%
 
 ---
 
 # AEM での cURL の使用{#using-curl-with-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 管理者は、多くの場合、あらゆるシステム内で一般的なタスクを自動化またはシンプル化する必要があります。 例えば、AEMでは、ユーザーの管理、パッケージのインストール、OSGi バンドルの管理は、一般的におこなう必要があるタスクです。
 

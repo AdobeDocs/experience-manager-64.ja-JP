@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: a9ab5a78-2add-46e1-a8f2-444d0f25f43a
 feature: Mobile Forms
 exl-id: 74e54d96-e418-40aa-9b93-561fbdd6312d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 44%
+source-wordcount: '351'
+ht-degree: 42%
 
 ---
 
 # HTML5 フォームのデフォルトスタイルの変更 {#changing-default-styles-of-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 のフォームはHTML5 機能を使用してレンダリングされ、レンダリングされたフォームのスタイル設定は CSS を使用しておこなわれます。 HTML5 フォームのデフォルトの外観は、PDFレンディションに似ています。 開発者は、カスタム CSS を使用して、HTML5 フォームのデフォルトの外観を変更できます。
 

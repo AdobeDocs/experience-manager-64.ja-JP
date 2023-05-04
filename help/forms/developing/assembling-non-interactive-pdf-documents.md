@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 role: Developer
 exl-id: d4e40d68-781d-4fc8-8557-bf36462ca1d9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 100%
+source-wordcount: '1811'
+ht-degree: 98%
 
 ---
 
 # 非インタラクティブ PDF ドキュメントの作成 {#assembling-non-interactive-pdf-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 非インタラクティブ PDF ドキュメントは、インタラクティブ PDF フォームを入力として使用することで作成できます。つまり、ユーザーがフィールドにデータを入力できるフォームがあるとします。そのフォームを Assembler サービスに渡すと、ユーザーがフィールドにデータを入力できない PDF ドキュメントを Assembler サービスから受け取ることができます。このドキュメントが非インタラクティブ PDF フォームです。例えば、インタラクティブなフォームである住宅ローン申し込みフォームを次の図に示します。
 

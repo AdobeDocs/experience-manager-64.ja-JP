@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 70be208d-185b-4b27-8e01-74e62f656344
 exl-id: 358b70b8-8122-4eda-baa7-d9a58d6901f9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 4%
+source-wordcount: '304'
+ht-degree: 6%
 
 ---
 
 # 外観の変更（HBS） {#alter-the-appearance-hbs}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アプリケーションディレクトリ (/apps) 内のカスタムコメントシステムのコンポーネントが配置され、resourceSuperType がデフォルトのコメントシステムとカスタムのモデル/ビューを参照するので、実装を変更できます。
 
@@ -62,7 +66,7 @@ ht-degree: 4%
 * メインメニューから
 
    * 選択 **[!UICONTROL [ ツール ] > [ 操作 ] > [ レプリケーション ]]**
-   * 選択 `Activate Tree`
+   * `Activate Tree` を選択します。
    * 設定 `Start Path`:から `/apps/custom`
    * オフ `Only Modified`
    * 選択 `Activate` ボタン

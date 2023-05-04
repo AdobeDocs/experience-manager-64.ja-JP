@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: 9eeb3203-e27a-4960-a4ec-58dd9dd098a2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 81%
+source-wordcount: '897'
+ht-degree: 79%
 
 ---
 
 # AEM タッチ操作対応 UI の構造{#structure-of-the-aem-touch-enabled-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM タッチ操作対応 UI には、基盤となる原則があり、いくつかの主要な要素で構成されています。
 

@@ -8,15 +8,19 @@ uuid: 5bcfb5d8-37d4-4a0e-882d-bc8a1bac6ba7
 contentOwner: AEM Docs
 discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '622'
 ht-degree: 13%
 
 ---
 
 
 # 公開しないが、コンテンツフラグメントモデルのカスタマイズをDELETEしない{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コンテンツフラグメントモデルエディターは、 `Formbuilder`、から継承：
 
@@ -119,5 +123,5 @@ The properties on the right side define a form that is submitted directly into J
 
 * **説明** ( `fieldDescription`) — コンテンツフラグメント内のコンポーネントの説明
 
-* その他.
+* その他
 

@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 exl-id: bd5a247f-cd4b-41c8-b5f6-8def4f5c93ef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1379'
 ht-degree: 20%
 
 ---
 
 # プロセスの開始 {#starting-processes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms workspace は、管理者またはプロセスデザイナーが設定したカテゴリ別にプロセスを整理します。 頻繁に使用するプロセスをお気に入りカテゴリに配置して、すばやく見つけられるようにすることもできます。
 

@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: e135fa01-fede-4285-b4dd-2d23acbb4d26
 feature: Mobile Forms
 exl-id: 248e56c7-51b7-41d3-8bc9-a5d737bf178b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 54%
+source-wordcount: '379'
+ht-degree: 51%
 
 ---
 
 # HTML5 フォーム用のフォームテンプレートのデザイン {#designing-form-templates-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMのHTML5 フォームコンポーネントは、XFA フォームテンプレートをHTML5 形式にレンダリングする機能を提供します。 フォームデザイナーは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) とは、HTML5 のレンディション機能を使用します。 これらのフォームテンプレートは、アセットと共に、AEMリポジトリやファイルシステムに配置することも、http 経由で公開することもできます。 ただし、Forms Manager を使用してフォームを管理する場合には、テンプレートとアセットを AEM リポジトリに置く必要があります。
 

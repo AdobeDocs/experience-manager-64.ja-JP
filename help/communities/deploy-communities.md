@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 exl-id: 0b7496f0-0b3c-4d12-a659-d95744157f14
-source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2180'
-ht-degree: 4%
+source-wordcount: '2216'
+ht-degree: 5%
 
 ---
 
 # Communities のデプロイ {#deploying-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 前提条件 {#prerequisites}
 
@@ -122,7 +126,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
 1. Web コンソールを使用して、バンドルをインストールして起動します。
 
    * 例： http://localhost:4502/system/console/bundles
-   * 選択 **`Install/Update`**
+   * **`Install/Update`** を選択します。
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照して選択
    * 確認する *Oracle社の MySQLcom.mysql.jdbc 用 JDBC ドライバ* がアクティブで、アクティブでない場合は開始（またはログを確認）
 
@@ -131,7 +135,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
    * 例： http://localhost:4502/system/console/configMgr
    * 場所 `Day Commons JDBC Connections Pool` 設定
    * 選択して開く
-   * 選択 `Save`
+   * `Save` を選択します。
 
 1. すべてのオーサーインスタンスとパブリッシュインスタンスで、手順 3 と 4 を繰り返します。
 
@@ -264,7 +268,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 * を `AEM Communities Publisher Configuration`
 * 編集アイコンを選択します。
 * 「 **[!UICONTROL プライマリ発行者]** ボックス
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ### オーサー環境のレプリケーションエージェント {#replication-agents-on-author}
 
@@ -322,7 +326,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 * を `AEM Communities Publish Tunnel Service`
 * 編集アイコンを選択します。
 * 次を確認します。 **[!UICONTROL 有効]** ボックス
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-414](assets/chlimage_1-414.png)
 

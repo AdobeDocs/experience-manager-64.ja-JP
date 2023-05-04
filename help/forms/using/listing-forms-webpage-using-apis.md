@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 exl-id: e42b7cdf-9a70-4ff6-8283-7bbc3690ca05
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '729'
 ht-degree: 37%
 
 ---
 
 # API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsは、Web 開発者が検索条件を満たす一連のフォームに対してクエリを実行し、取得する際に使用できる、REST ベースの検索 API を提供します。 API を使用して、様々なフィルターに基づいてフォームを検索できます。 応答オブジェクトには、フォームの属性、プロパティおよびフォームのレンダリングエンドポイントが含まれます。
 

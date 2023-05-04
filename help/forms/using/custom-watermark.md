@@ -10,14 +10,18 @@ topic-tags: correspondence-management
 discoiquuid: a09e2c83-083d-427a-8336-0567e00c5712
 feature: Correspondence Management
 exl-id: 8aeabd95-948d-4a54-b593-1eda8ddd731b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 50%
+source-wordcount: '371'
+ht-degree: 47%
 
 ---
 
 # レター PDF プレビューのカスタム透かし {#custom-watermark-in-letter-pdf-preview}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 

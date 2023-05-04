@@ -9,14 +9,18 @@ topic-tags: correspondence-management
 discoiquuid: 1f48548c-4222-454d-ad16-53da37170de2
 feature: Correspondence Management
 exl-id: 54159851-bae1-4efd-8c8f-3a855776ecc4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '275'
 ht-degree: 21%
 
 ---
 
 # ドキュメントフラグメント {#document-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ドキュメントフラグメントは、インタラクティブ通信/レターを作成できる、通信の再利用可能なパーツ/コンポーネントです。 ドキュメントフラグメントは、次のいずれかの種類になります。
 

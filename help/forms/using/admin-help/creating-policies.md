@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
 feature: Document Security
 exl-id: a4e69794-ea83-4cb6-a3da-cef0ceb6892a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4718'
+source-wordcount: '4754'
 ht-degree: 18%
 
 ---
 
 # ポリシーの作成と管理 {#creating-and-managing-policies}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 *ポリシー*&#x200B;では、機密設定、およびポリシーが適用されるドキュメントにアクセスできるユーザーのセットを定義します。ポリシーセットは、ある共通の目的を持つ一群のポリシーをグループ化するために使用します&#x200B;*。*&#x200B;その後、これらのポリシーセットは、システム内のユーザーのサブセットで使用できるようになります。 ポリシーについて詳しくは、 [ポリシーとポリシーで保護されたドキュメント](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents).
 

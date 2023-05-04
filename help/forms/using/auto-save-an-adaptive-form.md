@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 feature: Adaptive Forms
 exl-id: 073734e9-449b-463a-b539-d73e11f50fa4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 40%
+source-wordcount: '724'
+ht-degree: 39%
 
 ---
 
 # アダプティブフォームの自動保存 {#auto-save-an-adaptive-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームを設定して、イベントまたは事前定義された時間間隔に基づいてコンテンツの保存を自動的に開始することができます。 デフォルトでは、アダプティブフォームのコンテンツは、保存ボタンを押したときなど、ユーザーの操作時に保存されます。 自動保存オプションは、次の場合に便利です。
 

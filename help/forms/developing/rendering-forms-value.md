@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 role: Developer
 exl-id: 50c34781-45e3-4255-a997-44f694527c92
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1821'
-ht-degree: 100%
+source-wordcount: '1857'
+ht-degree: 98%
 
 ---
 
 # 値別に Forms をレンダリング {#rendering-forms-by-value}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 通常、Designer で作成されたフォームデザインは、参照によって Forms サービスに渡されます。フォームデザインは大きくなる可能性があり、その結果、フォームデザインのバイトを値でマーシャリングする必要がなくなるよう、参照で渡す方がより効率的です。また、Forms サービスは、キャッシュ時にフォームデザインを継続的に読み取る必要がないように、フォームデザインをキャッシュすることもできます。
 

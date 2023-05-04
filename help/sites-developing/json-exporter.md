@@ -1,7 +1,7 @@
 ---
 title: コンテンツサービス用の JSON エクスポーター
 seo-title: JSON Exporter for Content Services
-description: AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。
+description: AEM Content Services は、AEMでのコンテンツの説明と配信を、Web ページに焦点を当てるだけでなく、一般化するように設計されています。 従来のAEM Web ページではないチャネルに対して、あらゆるクライアントが利用できる標準化された方法を使用してコンテンツを配信します。
 seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
@@ -10,18 +10,22 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: ead4306a-6337-4dae-8839-14fada0ae0e5
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 54%
 
 ---
 
 # コンテンツサービス用の JSON エクスポーター{#json-exporter-for-content-services}
 
-AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。そうしたチャネルの例を次に示します。
+AEM Content Services は、AEMでのコンテンツの説明と配信を、Web ページに焦点を当てるだけでなく、一般化するように設計されています。
+
+従来のAEM Web ページではないチャネルに対して、あらゆるクライアントが利用できる標準化された方法を使用してコンテンツを配信します。 次のチャネルが含まれます。
 
 * [単一ページアプリケーション](spa-walkthrough.md)
 * ネイティブモバイルアプリケーション
@@ -33,21 +37,21 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 >
 >ここで説明する機能は、[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/?lang=ja) 以降のすべてのコンポーネントで使用できます。
 
-## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
+## コンテンツフラグメントコアコンポーネントを使用した JSON エクスポーター {#json-exporter-with-content-fragment-core-components}
 
-AEM JSON エクスポーターを使用すると、任意の AEM ページのコンテンツを JSON データモデル形式で配信できます。その後、独自のアプリケーションでコンテンツを使用できるようになります。
+AEM JSON エクスポーターを使用して、任意のAEMページのコンテンツを JSON データモデル形式で配信できます。 その後、独自のアプリケーションでコンテンツを使用できるようになります。
 
 AEM 内では、セレクター `model` と `.json` 拡張機能を使用して配信をおこないます。
 
 `.model.json`
 
-1. 例えば、次の URL では
+1. 例えば、次のような URL があります。
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en.model.json
    ```
 
-1. 次のようなコンテンツが配信されます。
+1. 次のようなコンテンツを配信します。
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
@@ -57,15 +61,15 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-ページには、単一のコンテンツフラグメントまたはタイプが異なる複数のコンポーネントを含めることができます。また、リストコンポーネントなどのメカニズムを使用して、関連するコンテンツを自動的に検索することもできます。
+ページには、1 つのコンテンツフラグメントを含めることも、様々なタイプの複数のコンポーネントを含めることもできます。 また、リストコンポーネントなどのメカニズムを使用して、関連するコンテンツを自動的に検索することもできます。
 
-* 例えば、次の URL では
+* 例えば、次のような URL があります。
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
    ```
 
-* 次のようなコンテンツが配信されます。
+* 次のようなコンテンツを配信します。
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -87,9 +91,9 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
 * Sling モデル：
 
-   * [Sling モデル - 130 以降のモデルクラスとリソースタイプの関連付け](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling モデル — 130 以降のモデルクラスとリソースタイプの関連付け](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* AEM と JSON：
+* AEM with JSON:
 
    * [JSON 形式でページ情報を取得](/help/sites-developing/pageinfo.md)
 

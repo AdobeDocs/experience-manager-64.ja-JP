@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
 role: Developer
 exl-id: fa9d0720-f4bf-4933-ae63-c24bb835cc60
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2082'
-ht-degree: 99%
+source-wordcount: '2118'
+ht-degree: 98%
 
 ---
 
 # ドキュメントが PDF/A に準拠しているかどうかの検証 {#determining-whether-documents-are-pdf-a-compliant}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler サービスを使用して、PDF ドキュメントが PDF/A に準拠しているかどうかを判断できます。PDF/A ドキュメントは、ドキュメントのコンテンツを長期間保存するためのアーカイブ形式として存在します。フォントはドキュメントに埋め込まれ、ファイルは非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。
 

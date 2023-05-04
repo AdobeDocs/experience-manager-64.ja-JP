@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5434df9c-ecf6-450a-aa7e-d9ab69b66fe6
 exl-id: cac16c50-a85d-4e40-a590-8a0a52be893c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 59%
+source-wordcount: '183'
+ht-degree: 52%
 
 ---
 
 # 認証評価の順序の変更 {#change-the-order-of-evaluation-for-authentication}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 複数の認証プロバイダーを設定した場合、AEM forms が認証を評価する順序を変更できます。 認証評価の順序は、config.xml ファイルにリストされる認証プロバイダーの順序によって決まります。
 

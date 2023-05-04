@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: d570ead9-8f9c-4668-8b23-e8984d9b25e9
 feature: Adaptive Forms
 exl-id: 92d88888-343c-4edb-9b11-8e876539573a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 76%
+source-wordcount: '1000'
+ht-degree: 74%
 
 ---
 
 # 遅延読み込みによる大きなフォームのパフォーマンスの向上  {#improve-performance-of-large-forms-with-lazy-loading}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 遅延読み込みの概要 {#introduction-to-lazy-loading}
 

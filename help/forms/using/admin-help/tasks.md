@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9161c8ca-ef33-4ec9-affc-94b5b3e48a4c
 exl-id: 130ba568-b035-4c80-b47a-e19ed8d8ac25
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '876'
 ht-degree: 40%
 
 ---
 
 # タスクの使用 {#working-with-tasks}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タスクの検索ページを使用して、ユーザー名またはタスク ID でタスクを検索します。 検索結果が [ タスクリスト ] ページに表示され、タスクの履歴にアクセスできます。 また、1 人のユーザーにタスクが多すぎる場合や、ユーザーがタスクの割り当てを誤って受け取った場合に、タスクを再割り当てすることもできます。
 

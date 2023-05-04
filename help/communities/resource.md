@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 exl-id: 9f447a54-4512-41ab-b8d3-327e751eda58
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 6%
+source-wordcount: '742'
+ht-degree: 7%
 
 ---
 
 # イネーブルメントリソースの作成と割り当て {#create-and-assign-enablement-resources}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## イネーブルメントリソースの追加 {#add-an-enablement-resource}
 
@@ -31,7 +35,7 @@ ht-degree: 6%
    ![chlimage_1-199](assets/chlimage_1-199.png)
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * イネーブルメントリソースを追加するコミュニティサイトを選択します。
-   * 選択 `Enablement Tutorial`
+   * `Enablement Tutorial` を選択します。
 * メニューから、 ` Create`
 * 選択 **[!UICONTROL リソース]**
 
@@ -157,7 +161,7 @@ ht-degree: 6%
 >
 >学習パスと同じレベルで利用可能なリソースのみを選択できます。 例えば、グループ内に作成された学習パスの場合、グループレベルのリソースのみを使用できます。コミュニティサイトで作成された学習パスの場合は、そのサイトのリソースを学習パスに追加できます。
 
-* **[!UICONTROL 送信]**&#x200B;を選択します。
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ![chlimage_1-214](assets/chlimage_1-214.png) ![chlimage_1-215](assets/chlimage_1-215.png)
 

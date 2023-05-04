@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 0452062d-cf85-4009-a0a5-a1e891192ea8
 exl-id: d68806f8-8ed8-4aff-9724-bafbe2b1f18e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '975'
 ht-degree: 13%
 
 ---
 
 # 発行済みフォームへのアクセスと入力 {#accessing-and-filling-published-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォーム中心のポータルデプロイメント設定では、フォーム開発とポータル開発が 2 つの異なるアクティビティになります。 フォームデザイナーがフォームをデザインし、リポジトリに保存しますが、Web 開発者はフォームをリストし、送信を処理する Web アプリケーションを作成します。 フォームリポジトリと Web アプリケーションの間で通信がおこなわれないので、Formsは Web 層にコピーされます。
 
@@ -35,7 +39,7 @@ Forms Portal は、管理のオーバーヘッドと実稼動の遅延を軽減�
 ![フォームポータルページのサンプル ](assets/forms-portal-page.png)
 **図：** *フォームポータルページのサンプル*
 
-### Search &amp; Lister {#search-and-lister}
+### 検索とリスター {#search-and-lister}
 
 Search &amp; Lister コンポーネントを使用すると、フォームポータルに以下の機能を追加できます。
 

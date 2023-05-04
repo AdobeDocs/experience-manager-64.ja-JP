@@ -9,14 +9,18 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 exl-id: 16fa0371-6bf5-449a-872a-914840640efa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 1%
+source-wordcount: '1004'
+ht-degree: 2%
 
 ---
 
 # コンテンツ配信{#content-delivery}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -42,7 +46,7 @@ ht-degree: 1%
 
 アセットコレクションは、他のコレクションへの参照を含むAEM構成です。
 
-アセットコレクションは、コンテンツサービスを通じて公開できます。 リクエストでアセットコレクションを呼び出すと、アセットのリストであるオブジェクト（URL を含む）が返されます。 アセットには URL でアクセスします。 URL はオブジェクトで指定されます。 例：
+アセットコレクションは、コンテンツサービスを通じて公開できます。 リクエストでアセットコレクションを呼び出すと、アセットのリストであるオブジェクト（URL を含む）が返されます。 アセットには URL でアクセスします。 URL はオブジェクトで指定されます。 次に例を示します。
 
 * ページエンティティは、画像参照を含む JSON（ページオブジェクト）を返します。 画像参照は、画像のアセットバイナリを取得するために使用される URL です。
 * フォルダー内のアセットのリストをリクエストすると、JSON とそのフォルダー内のすべてのエンティティに関する詳細が返されます。 そのリストはオブジェクトです。 この JSON には、そのフォルダー内の各アセットのアセットバイナリを取得するために使用される URL 参照が含まれています。

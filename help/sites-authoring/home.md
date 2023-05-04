@@ -4,14 +4,18 @@ seo-title: AEM 6.4 Authoring User Guide
 description: このガイドでは、AEM でのオーサリングの概念を説明します。
 seo-description: Explains the concepts of authoring in AEM.
 exl-id: c507de40-d840-4457-ae40-59c81afbe7aa
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 99%
+source-wordcount: '340'
+ht-degree: 91%
 
 ---
 
 # AEM 6.4 オーサリングユーザーガイド
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このガイドでは、AEM でのオーサリングの概念を説明します。
 

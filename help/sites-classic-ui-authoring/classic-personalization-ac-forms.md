@@ -9,15 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 52%
+source-wordcount: '1264'
+ht-degree: 51%
 
 ---
 
 
 # AEM での Adobe Campaign フォームの作成 {#creating-adobe-campaign-forms-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMを使用すると、Web サイト上でAdobe Campaignとやり取りするフォームを作成して使用できます。 特定のフィールドをフォームに挿入し、Adobe Campaignデータベースにマッピングできます。
 

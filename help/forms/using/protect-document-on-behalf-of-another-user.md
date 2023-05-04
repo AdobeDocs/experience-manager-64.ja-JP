@@ -8,14 +8,18 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 feature: Document Security
 exl-id: 76f25e65-1bc3-4801-998c-40ff533393e2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 30%
+source-wordcount: '419'
+ht-degree: 29%
 
 ---
 
 # 別のユーザーの代わりにドキュメントを保護する {#protect-a-document-on-behalf-of-another-user}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Document Security Java SDK は、ユーザーアカウントがドキュメントを編集する権限を取得することなく、別のユーザーの代わりにドキュメントを保護できる API を提供します。 この API は、ワークフロープロセスで使用することも、プログラムによってドキュメントサービスとして使用することもできます。 新しい API は次のとおりです。
 

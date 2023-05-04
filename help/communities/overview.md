@@ -10,14 +10,18 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 418cc919-0ae3-4c6c-8566-7e9a206f02a8
 exl-id: 3a8b21f8-75da-4867-9a8a-80fddf7946ed
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 2%
+source-wordcount: '1432'
+ht-degree: 3%
 
 ---
 
 # AEM Communities の概要 {#aem-communities-overview}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager(AEM)Communities を使用すると、パフォーマンスの向上、サイト管理の向上、貴重なコミュニティメンバーへのサイト訪問者の転換を促すオンプレミスのコミュニティサイトをすばやく作成できます。
 
@@ -25,7 +29,7 @@ Adobe Experience Manager(AEM)Communities を使用すると、パフォーマン
 Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
 -->
 
-## コミュニティの機能 {#communities-features}
+## Communities の機能 {#communities-features}
 
 AEM Communitiesは、ブログ、Q&amp;A、イベントカレンダーを通じて通知するサイト訪問者との関係を構築し、フォーラム、コメント、その他のコミュニティコンテンツ (UGC) を通じて洞察を得ることができます。
 

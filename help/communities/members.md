@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: 2d0154b3-4cd7-439a-869d-cb116f60b69d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 5%
+source-wordcount: '980'
+ht-degree: 6%
 
 ---
 
 # メンバーコンソールとグループ管理コンソール {#members-groups-management-consoles}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -108,7 +112,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 (
 *オプション*) 既存のメンバーグループから選択して、そのグループにメンバーを追加します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ### 一般 — アカウント設定 {#general-account-settings}
 
@@ -196,7 +200,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 (
 *オプション*) グループの最初のメンバーとして含めるパブリッシュ側のメンバーを選択します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ## 認証済み管理者 {#authorized-administrators}
 

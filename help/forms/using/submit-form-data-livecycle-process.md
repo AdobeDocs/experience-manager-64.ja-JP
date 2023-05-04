@@ -10,14 +10,18 @@ topic-tags: Configuration
 discoiquuid: 03619a67-d1ea-4b80-b1a6-0c65a9e9212f
 role: Admin
 exl-id: 260e405e-f59c-4aea-b83f-53ee103df94e
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 57%
+source-wordcount: '362'
+ht-degree: 54%
 
 ---
 
 # AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定 {#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームは、さらに処理するためのデータを JEE 上のAEM Formsプロセスに送信する機能をサポートしています。 JEE 上のAEM Formsプロセスのトリガーを、送信済みフォームから使用可能なデータと共に実行できます。 次の手順を実行して、AEM Forms インスタンスがアダプティブフォームを AEM Forms on JEE プロセスに送信できるようにします。
 

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 2d0835e0-5602-49a9-b9ad-636ce5a8ad2a
 feature: Tagging
 exl-id: 634fecc8-5132-4e8f-a2dd-7e8c9b74c79b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 92%
+source-wordcount: '136'
+ht-degree: 73%
 
 ---
 
 # タグ付け{#tagging}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タグ付けにより、コンテンツを分類および整理できます。タグは、名前空間と分類で分類できます。
 

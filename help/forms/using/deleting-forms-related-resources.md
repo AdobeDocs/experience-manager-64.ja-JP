@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
 role: Admin
 exl-id: 94a66d83-b359-4be6-b668-4b4ba024b1e7
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 25%
+source-wordcount: '407'
+ht-degree: 24%
 
 ---
 
 # フォームと関連リソースの削除 {#deleting-forms-and-related-resources}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォームとアセットを削除して、これらのアセットをリポジトリから削除できます。 削除操作は、すべてのアセットタイプおよびフォルダーで機能します。
 

@@ -1,7 +1,7 @@
 ---
 title: キャンペーン
 seo-title: Campaigns
-description: AEM キャンペーンの基本について説明します。
+description: AEM Campaigns の使用の基本について説明します。
 seo-description: Learn the basics of using AEM Campaigns.
 uuid: f4be814f-8b0f-4089-88bb-0141227bce02
 contentOwner: Guillaume Carlino
@@ -10,22 +10,26 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
 exl-id: 2bc23d5a-11ee-4d29-be3d-1a8cac306aa6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 100%
+source-wordcount: '178'
+ht-degree: 15%
 
 ---
 
 # キャンペーン{#campaigns}
 
-キャンペーン管理で、デジタルマーケティング担当者は個人設定されたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成することができます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-キャンペーン（ランディングページを含む）を管理している場合は、次のことを実行する必要がある場合があります。
+キャンペーン管理は、デジタルマーケターに、パーソナライズされたコンテンツを配信し、訪問者に向けた専用のエクスペリエンスを作成する機会を提供します。
 
-* **セグメントを定義する** - ターゲットとなるコンテンツにセグメントと戦略を定義する必要があります。
-* **ランディングページ用の HTML を準備する** - ランディングページを使用すると、作成者は AEM ページにデザインとコンテンツをすばやく簡単に読み込むことができます。アセットが正しく読み込まれるように HTML を準備する必要があります。ランディングページは、期間限定でアクティブにするマーケティングランディングページを短期間で作成する必要がある場合に有効です。
-* **SiteCatalyst に統合する** - ランディングページを SiteCatalyst に組み込むことができます。
+キャンペーン（ランディングページを含む）を管理している場合は、次の操作が必要になる場合があります。
+
+* **セグメントの定義** ：ターゲットコンテンツのセグメントと戦略を定義する必要があります。
+* **ランディングページのHTMLを準備**  — ランディングページを使用すると、作成者はデザインとコンテンツをAEMページにすばやく簡単に読み込むことができます。 アセットが正しく読み込まれるように、HTMLを準備する必要があります。 ランディングページは、限られた時間しかアクティブでなく、すばやく作成する必要のあるマーケティングランディングページを作成する場合に役立ちます。
+* **SiteCatalystとの統合** ：ランディングページはSiteCatalystと統合できます。
 
 次のページを参照してください。
 

@@ -5,14 +5,18 @@ uuid: e709871b-c04c-43bb-a7d0-45e89fbd3d44
 content-type: reference
 discoiquuid: 83bace08-1d4f-4192-a634-c7c4879963d8
 exl-id: ce5300ce-03f4-4e7b-bc5b-01a9968ebe06
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 76%
+source-wordcount: '580'
+ht-degree: 67%
 
 ---
 
 # AEM Forms JEE パッチインストーラー {#aem-forms-jee-patch-installer}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -28,19 +32,20 @@ AEM 6.4 Forms JEE パッチインストーラーには、このパッチのリ�
 
 ## パッチのインストールと設定 {#installing-and-configuring-the-patch}
 
-1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
+1. &lt;*AEM_forms_root*>/deploy フォルダー。 クイックフィックスをアンインストールする場合に必要です。
 1. アプリケーションサーバーを停止します。
 1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
    * **Windows**
 
-インストーラをコピーしたハードディスク上のインストールメディアまたはフォルダの適切なディレクトリに移動し、 
-`aemforms64_cfp_install.exe` ファイル.
+インストールメディアまたはハードディスク上にあるインストーラーのコピー先フォルダー内の適切なディレクトリに移動して、をダブルクリックします 
+`aemforms64_cfp_install.exe` ファイル。
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
-   * **Linux、Solaris、AIX** 適切なディレクトリに移動して、コマンドプロンプトで 
+   * **Linux、Solaris、AIX**
+適切なディレクトリに移動し、コマンドプロンプトで次のように入力します。 
 `./aem64_cfp_install.bin` を入力します。
 
       * （Linux）`Linux/Disk1/InstData/NoVM`
@@ -50,12 +55,12 @@ AEM 6.4 Forms JEE パッチインストーラーには、このパッチのリ�
          ```
          AIX/Disk1/InstData/VM
          ```
-   インストールの手順を示すインストールウィザードが起動します。
+   これにより、インストール手順を示すインストールウィザードが起動します。
 
-1. 概要パネルで「**[!UICONTROL 次へ]**」をクリックします。
+1. 最初のパネルで「**[!UICONTROL 次へ]**」をクリックします。
 1. インストールフォルダーを選択画面で、表示されるデフォルトの場所が既存のインストール場所であることを確認するか、または「**[!UICONTROL 参照]**」をクリックして AEM Forms がインストールされている別のフォルダーを選択してから、「**[!UICONTROL 次へ]**」をクリックします。
 
-1. Quick Fix パッチの概要の情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
+1. クイックフィックスパッチの概要の情報を読み、 **[!UICONTROL 次へ]**.
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**」をクリックします[!UICONTROL 次へ]**をクリックして、インストールされているファイルにクイックフィックスの更新を適用します。
 1. [Windows のみ] 次のいずれかの手順を実行します。
@@ -74,7 +79,7 @@ AEM 6.4 Forms JEE パッチインストーラーには、このパッチのリ�
 
    * [AEM Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
    * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
-   * [AEM Forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
+   * [AEM forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
 
 1. （JBoss のみ）パッチをインストールしてサーバーを設定した後、JBoss Application Server の tmp および work ディレクトリを削除します。
 

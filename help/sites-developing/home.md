@@ -4,14 +4,18 @@ seo-title: AEM 6.4 Developing User Guide
 description: このガイドでは、AEM インスタンスの構築方法について説明します。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 82ba239f-f83a-4ee1-b201-d44c220fd193
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 99%
+source-wordcount: '342'
+ht-degree: 91%
 
 ---
 
 # AEM 6.4 開発ユーザーガイド
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このガイドでは、AEM インスタンスの構築方法について説明します。
 

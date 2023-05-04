@@ -10,14 +10,18 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 5fae4a4c-c97a-4541-bdc5-63ef4ca0172c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 53%
+source-wordcount: '471'
+ht-degree: 51%
 
 ---
 
 # Eclipse を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-eclipse}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このガイドでは、AEMベースのプロジェクトを開発するために Eclipse を使用する方法について説明します。
 
@@ -40,7 +44,7 @@ Eclipse でのAEM開発を開始するには、次の手順が必要です。
 >
 >このガイドは、Eclipse 4.3(Kepler) とAEM 5.6.1 をベースとしています。
 
-## Eclipse をインストール {#install-eclipse}
+## Eclipse のインストール {#install-eclipse}
 
 [Eclipse のダウンロードページ](https://www.eclipse.org/downloads/) から「Eclipse IDE for Java EE Developers」をダウンロードします。
 

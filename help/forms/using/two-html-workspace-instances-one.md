@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 exl-id: ef2ad8e1-5007-4587-97ca-cf21070be9a6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 50%
+source-wordcount: '335'
+ht-degree: 47%
 
 ---
 
 # 2 つの AEM Forms ワークプレースインスタンスを 1 つのサーバー上にホストする {#hosting-two-aem-forms-workspace-instances-on-one-server}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsのデフォルトのインストールと設定では、1 つのAEM Forms Workspace のみをサーバー上で使用できます。 ただし、場合によっては、AEM Forms Workspace の 2 つの異なるインスタンスを 1 つのAEM Formsサーバー上でホストする必要があります。 2 つのインスタンスは、異なる URL でアクセスできます。
 

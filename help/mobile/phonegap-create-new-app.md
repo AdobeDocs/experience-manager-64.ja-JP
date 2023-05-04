@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 exl-id: 79d2dbfb-5e44-4a96-ab9b-ba5d93fc3aae
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 6%
+source-wordcount: '674'
+ht-degree: 7%
 
 ---
 
 # 作成ウィザードを使用した新規 AEM Mobile アプリの作成{#creating-a-new-aem-mobile-app-using-create-wizard}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -37,7 +41,7 @@ AEM Mobileアプリは、ページ構造とプロパティを定義するブル�
 ビルドクラウドサービスや、AdobeMobile Services SDK プラグインをアプリに統合するための追加のタブが存在します（オプション）。
 
 * ビルド：ここで、「設定を管理」をクリックし、build.phonegap.com ビルドサービスを設定します。 その後、ドロップダウンから、新しく作成した PhoneGap Build クラウドサービスを選択できます。
-* 分析：「設定を管理」をクリックし、 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/download-sdk.html) クラウドサービス。 次に、ドロップダウンから、新しく作成した Mobile Service を選択して、モバイルアプリに統合できます。
+* 分析：「設定を管理」をクリックし、 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/?lang=jamobile-services/using/manage-app-settings-ug/configuring-app/download-sdk.html) クラウドサービス。 次に、ドロップダウンから、新しく作成した Mobile Service を選択して、モバイルアプリに統合できます。
 
 ## アプリテンプレートの使用 {#using-app-templates}
 

@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 exl-id: badb7082-3ebf-4bb3-9157-48b8e7ea8ff9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 72%
+source-wordcount: '738'
+ht-degree: 70%
 
 ---
 
 # ページ編集のための取り消しの設定{#configuring-undo-for-page-editing}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [OSGi サービス](/help/sites-deploying/configuring-osgi.md)の **Day CQ WCM Undo Configuration**（`com.day.cq.wcm.undo.UndoConfigService`）では、ページ編集の取り消しおよびやり直しのコマンドの動作を制御するプロパティを確認できます。
 

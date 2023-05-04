@@ -10,13 +10,17 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d3565776-1b7d-498c-9840-b17f80170d9b
 exl-id: ad14ff27-964f-481f-a8ef-052d9cfb7734
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 27%
+source-wordcount: '120'
+ht-degree: 25%
 
 ---
 
 # Oracle データベースの最大オープンカーソル数のしきい値 {#oracle-database-maximum-open-cursors-threshold}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 oracleのオープンカーソルの最大値を設定するには、アプリケーションに適した数値にこの値を調整する必要がある場合があります。 中程度の負荷では、開いている平均カーソル数は 2700 であることが明らかです。 上限は 3000 にすることをお勧めします。 詳しくは、[https://www.orafaq.com/node/758](https://www.orafaq.com/node/758) を参照してください。

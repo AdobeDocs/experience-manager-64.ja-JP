@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 1e329725-538a-4058-8832-4eba036f7972
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1684'
 ht-degree: 50%
 
 ---
 
 # AEM 6 での LDAP の設定 {#configuring-ldap-with-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 LDAP ( **L**&#x200B;明るさ **D**&#x200B;ディレクトリ **A**&#x200B;アクセス **P** rotocol) は、一元化されたディレクトリサービスへのアクセスに使用されます。 これにより、複数のアプリケーションからアクセスできるので、ユーザーアカウントの管理に必要な作業を軽減できます。 そのような LDAP サーバの 1 つが Active Directory です。 多くの場合、LDAP はシングルサインオン（ユーザーが 1 回ログインすると複数のアプリケーションにアクセスできる機能）を実現するために使用されます。
 

@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ddb86546-d04b-4967-937b-50a19b0237a0
 exl-id: 84aa46d5-4ca4-4f6e-b0b9-fc9907be00a5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 2%
+source-wordcount: '1002'
+ht-degree: 3%
 
 ---
 
 # スコアおよびバッジの基本事項 {#scoring-and-badges-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesのスコアとバッジ機能を使用すると、コミュニティメンバーを特定し、報奨を与えることができます。
 
@@ -95,7 +99,7 @@ slinglog ファイルを簡単にセットアップするには：
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. 選択 **[!UICONTROL 保存]**
+   1. 「**[!UICONTROL 保存]**」を選択します
 
 
 

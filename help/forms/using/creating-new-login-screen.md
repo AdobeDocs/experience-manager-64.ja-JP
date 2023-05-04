@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
 exl-id: caa4f835-c353-49d5-b18c-4d0538c1136f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 74%
+source-wordcount: '504'
+ht-degree: 70%
 
 ---
 
 # 新しいログイン画面の作成 {#creating-a-new-login-screen}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsログイン画面を使用するすべてのAEM Formsモジュールのログイン画面を変更できます。 例えば、変更は、Forms Manager とAEM Forms Workspace の両方のログイン画面に影響します。
 

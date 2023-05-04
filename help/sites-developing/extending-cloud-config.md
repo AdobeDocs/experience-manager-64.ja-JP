@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: d2b8503e-8ac1-4617-ad76-b05d1e80a6b6
-source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 57%
+source-wordcount: '600'
+ht-degree: 55%
 
 ---
 
-# クラウドサービス設定{#cloud-service-configurations}
+# クラウドサービスの設定{#cloud-service-configurations}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 設定は、サービス設定を保存するためのロジックと構造を提供するように設計されています。
 
@@ -34,7 +38,7 @@ ht-degree: 57%
 
 設定のベースパスは次のとおりです。
 
-`/etc/cloudservices`
+`/etc/cloudservices`。
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 

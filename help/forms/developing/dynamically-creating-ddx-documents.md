@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 role: Developer
 exl-id: 883b33c8-50b1-4df2-a762-02be67ce24f1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 100%
+source-wordcount: '2185'
+ht-degree: 98%
 
 ---
 
 # DDX ドキュメントの動的な作成 {#dynamically-creating-ddx-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler 操作の実行に使用できる DDX ドキュメントを動的に作成できます。DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。DDX ドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。例えば、Java を使用してクライアントアプリケーションを開発する場合は、 `org.w3c.dom.*`パッケージに属するクラスを使用します。同様に、Microsoft .NET を使用している場合は、 `System.Xml` 名前空間に属するクラスを使用します。
 

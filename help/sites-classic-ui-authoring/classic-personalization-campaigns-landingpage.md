@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 8be3adcf-5b3a-40e9-8f87-1a6f39aab554
 exl-id: c8712b93-34b1-421c-8a39-ab9465b05efe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3147'
+source-wordcount: '3183'
 ht-degree: 41%
 
 ---
 
 # ランディングページ{#landing-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ランディングページ機能を使用すると、デザインとコンテンツをAEMページにすばやく簡単に読み込むことができます。 Web 開発者は、HTMLと追加のアセットを準備して、完全なページまたはページの一部として読み込むことができます。 この機能は、限られた時間しかアクティブでなく、すばやく作成する必要があるマーケティングランディングページを作成する場合に役立ちます。
 

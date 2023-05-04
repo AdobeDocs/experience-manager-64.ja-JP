@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 71f16254-336f-41bf-bf75-f69ba1051d59
 exl-id: e7111c21-1f38-4d0d-ac4b-c83133c0d8d6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '617'
 ht-degree: 23%
 
 ---
 
 # インボックス {#your-inbox}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMの様々な領域から通知を受け取ることができます。例えば、作業項目に関する通知や、ページコンテンツに対して実行する必要のあるアクションを表すタスクなどです。
 

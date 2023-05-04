@@ -11,16 +11,20 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: bcbdab55-4871-4c7f-b82a-b7d8280e82e3
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 48%
+source-wordcount: '639'
+ht-degree: 49%
 
 ---
 
 # AEM 6 での監査ログのメンテナンス{#audit-log-maintenance-in-aem}
 
-監査ログの対象となるAEMイベントは、多くのアーカイブデータを生成します。 このデータは、レプリケーション、アセットのアップロード、その他のシステムアクティビティにより、時間の経過と共に急速に増加する可能性があります。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+監査ログの対象となるAEMイベントは、多くのアーカイブデータを生成します。 このデータは、レプリケーション、アセットのアップロード、およびその他のシステムアクティビティによって、短期間で増大する可能性があります。
 
 監査ログのメンテナンスには、特定のポリシーで監査ログのメンテナンスを自動化できる機能のいくつかの部分が含まれています。
 

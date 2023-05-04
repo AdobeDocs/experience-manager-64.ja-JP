@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 1fd28077-37a4-4cba-bbce-6d5b353f1e7d
 exl-id: 67537323-e9c8-4eec-bcec-dc5bac4b623c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 68%
+source-wordcount: '186'
+ht-degree: 59%
 
 ---
 
 # ユーザー名とパスワードの秘密鍵証明書の追加と削除 {#adding-and-removing-user-name-and-password-credentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Trust Store の管理ページでは、SOAP レベルのセキュリティで要求を受け取ったときにFormsサービスで使用されるユーザー名とパスワードの資格情報を追加および削除できます。
 

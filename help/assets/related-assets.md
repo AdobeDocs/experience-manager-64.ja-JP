@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management,Collaboration
 role: User
 exl-id: d19544c4-c8e7-4a39-9c86-15a46dca848e
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '646'
 ht-degree: 26%
 
 ---
 
 # 関連アセット {#related-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets では、関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。 例えば、同様のトピック上のアセットや画像/ビデオにライセンスファイルを関連付けることができます。 特定の共通属性を共有するアセットを関連付けることができます。 また、この機能を使用して、アセット間にソースと派生の関係を作成することもできます。 例えば、INDD ファイルから生成されたPDFファイルがある場合、そのPDFファイルをそのソース INDD ファイルに関連付けることができます。
 

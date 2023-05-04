@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 feature: PDF Generator
 exl-id: 0b7642c3-d616-44e8-a5d9-3cdd362fedb5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '644'
 ht-degree: 14%
 
 ---
 
 # PDFG ネットワークプリンターの設定（Windows のみ） {#setting-up-a-pdfg-network-printer-windows-only}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 PDFG ネットワークプリンターを使用すると、印刷をサポートする任意のPDFからアプリケーションドキュメントを生成できます。 PDFG ネットワークプリンターをインストールすると、*PDF Generator* という名前の新しいプリンターが Windows コントロールパネルの「プリンター」セクションに表示されます。同じ名前のプリンタが既に存在する場合は、別の名前を指定するように求められます。
 

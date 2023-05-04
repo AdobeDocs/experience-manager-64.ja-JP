@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: c6115b64-e06f-4b5e-b7f9-876553c7627f
 exl-id: 83f978ca-d451-4d27-820f-3620331285cf
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 61%
+source-wordcount: '1181'
+ht-degree: 62%
 
 ---
 
 # カスタムアダプティブフォームのテンプレートの作成 {#creating-a-custom-adaptive-form-template}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 前提条件 {#prerequisites}
 
@@ -26,7 +30,7 @@ ht-degree: 61%
 
 ## アダプティブフォームテンプレート {#adaptive-form-template}
 
-アダプティブフォームテンプレートは、特別なAEMページテンプレートで、アダプティブフォームの作成に使用される特定のプロパティとコンテンツ構造を備えています。 このテンプレートには、レイアウト、スタイルおよび基本的な初期コンテンツ構造が事前に設定されています。
+アダプティブフォームテンプレートは、アダプティブフォームの作成に使用される特定のプロパティとコンテンツ構造を持つ特殊な AEM ページテンプレートです。このテンプレートのレイアウト、スタイル、基本的な初期コンテンツ構造は事前に設定されています。
 
 フォームを作成すると、オリジナルテンプレートのコンテンツ構造が変更された場合でも、フォームには反映されません。
 

@@ -12,14 +12,18 @@ discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
 exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
 feature: Asset Management,Renditions
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 57%
+source-wordcount: '1052'
+ht-degree: 56%
 
 ---
 
 # Dynamic Media アセットのプレビュー {#previewing-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 以下を使用できます。 **[!UICONTROL プレビュー]** を使用して、Dynamic Mediaデジタルアセットがユーザー自身の Web ブラウザーで表示されたときにどのように表示されるかを確認できます。 アセットに割り当てられるデフォルトの埋め込みクロスデバイスビューアが **[!UICONTROL プレビュー]**.
 

@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 feature: Document Security
 exl-id: b83e1059-aada-4b89-b587-288d525ab0c2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
 
 # 招待ユーザーおよびローカルユーザーのアカウントの管理 {#managing-invited-and-local-user-accounts}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 招待ユーザーとローカルユーザーページを使用して、招待ユーザーとローカルユーザーを管理します。 このページは、次の要件を満たす場合にのみ表示されます。
 

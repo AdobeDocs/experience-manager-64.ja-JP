@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 5cb571ae-eeb5-4943-a6b8-92e346e85be2
 role: Admin
 exl-id: 0e906f67-b908-4c41-b243-e4f90100ce5d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 4%
+source-wordcount: '760'
+ht-degree: 5%
 
 ---
 
 # メッセージングの設定 {#configuring-messaging}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -105,7 +109,7 @@ supportAttachments がオンになっている場合、この値はすべての�
 
 * **[!UICONTROL attachmentTypeBlocklist.name]**
 ファイルブロックリスト拡張子の。先頭に「 」が付く
-****「 」（システムによって却下されます） 選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張機能は、「 」を使用して追加または削除できます&#x200B;**+**&#39;および&#39;**-**&#39;アイコン。 デフォルトはです。 *デフォルト*.
+**。**「 」（システムによって却下されます） 選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張機能は、「 」を使用して追加または削除できます&#x200B;**+**&#39;および&#39;**-**&#39;アイコン。 デフォルトはです。 *デフォルト*.
 
 * **[!UICONTROL allowedAttachmentTypes.name]**
 

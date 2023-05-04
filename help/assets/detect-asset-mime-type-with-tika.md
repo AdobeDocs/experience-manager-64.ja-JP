@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Metadata,Developer Tools,Asset Management
 role: Admin,Architect
 exl-id: 6c9e53e9-5e54-4816-9431-41e796340d1e
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 29%
+source-wordcount: '230'
+ht-degree: 28%
 
 ---
 
 # Apache Tika を使用してデジタルアセットの MIME タイプを検出する {#detecting-mime-type-of-assets-using-apache-tika}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 通常、Adobe Experience Manager Assets は、アップロードするアセットの MIME タイプをファイル拡張子から検出します。 Apache Tika を使用してアセットをアップロードする場合、 [!DNL Experience Manager] Assets は、アップロード操作中に、ファイル拡張子ではなくコンテンツストリームから MIME タイプを検出します。
 

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c303e967-944d-40b0-96ca-f91e2f42a0d0
 exl-id: 70ccc0ae-04c6-4af9-9150-72d0d71c945f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 2%
+source-wordcount: '332'
+ht-degree: 4%
 
 ---
 
 # ヘルスモニターの概要 {#overview-of-health-monitor}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ヘルスモニターは、サーバー情報、メモリ使用量、プロセッサー使用量など、AEM forms システムに関する重要な情報を提供します。 また、キュー内の作業項目やジョブの数、そのステータスなど、ワークマネージャーの統計も使用できます。 ヘルスモニターを使用して、次のタスクを実行できます。
 

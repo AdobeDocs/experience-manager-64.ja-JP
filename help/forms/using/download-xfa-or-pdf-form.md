@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 role: Admin
 exl-id: 68d881c6-7507-4018-b40e-205604221d0c
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 40%
+source-wordcount: '349'
+ht-degree: 38%
 
 ---
 
 # XFA または PDF フォームテンプレートのダウンロード {#download-an-xfa-or-a-pdf-form-template}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ダウンロード操作を実行すると、名前が示すように、リポジトリからローカルシステムにフォームを書き出すことができます。 アップロード操作と組み合わせて、この操作を使用すると、あるリポジトリから別のリポジトリにフォームを移行する際に役立ちます。
 

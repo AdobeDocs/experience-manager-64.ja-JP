@@ -4,14 +4,18 @@ seo-title: AEM 6.4 Administering User Guide
 description: AEM 管理
 seo-description: AEM administering
 exl-id: 74ffdd0a-681c-498e-a4a4-5ab88fd4f58f
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 99%
+source-wordcount: '330'
+ht-degree: 90%
 
 ---
 
 # AEM 6.4 管理ユーザーガイド
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このガイドでは、すべての AEM 管理タスクについて説明します。
 

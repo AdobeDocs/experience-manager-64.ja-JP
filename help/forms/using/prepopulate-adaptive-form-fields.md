@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: 2ddb33a5-0d62-46f4-8f8c-0f0807a975cb
 feature: Adaptive Forms
 exl-id: 67bb208a-042b-4fa1-9ab1-23325e0c7e4c
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2037'
 ht-degree: 62%
 
 ---
 
 # アダプティブフォームのフィールドの事前入力 {#prefill-adaptive-form-fields}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 既存データを使用して、アダプティブフォームのフィールドを事前入力します。
 

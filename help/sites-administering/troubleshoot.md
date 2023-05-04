@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 1bc19f9a-fa3f-43e3-813e-23ab0b708d43
 exl-id: 34b509d5-4e80-4229-b155-40004856e87e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 32%
+source-wordcount: '583'
+ht-degree: 31%
 
 ---
 
 # AEM のトラブルシューティング{#troubleshooting-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 次の節では、AEMの使用時に発生する可能性のあるいくつかの問題と、そのトラブルシューティング方法に関する推奨事項について説明します。
 

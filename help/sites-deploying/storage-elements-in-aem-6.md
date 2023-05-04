@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 3b1100ed-44c6-4c09-aec4-9e6670234567
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 65%
+source-wordcount: '750'
+ht-degree: 63%
 
 ---
 
 # AEM 6.4 のストレージ要素{#storage-elements-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この記事では、以下について説明します。
 
@@ -126,4 +130,4 @@ Red Hat Linux は、Transparent Huge Pages(THP) と呼ばれるメモリ管理�
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}
 
-リポジトリを更新するたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。制御できないリポジトリの増加を避けるには、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。 このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンクリーンアップのメカニズムによって、ディスク領域を再利用するために、リポジトリから古いデータが削除されます。リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
+リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。制御できないリポジトリの増加を避けるには、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。 このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンクリーンアップのメカニズムによって、ディスク領域を再利用するために、リポジトリから古いデータが削除されます。リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。

@@ -9,14 +9,18 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 exl-id: 3a666efe-1592-4425-82f5-c4d9343f65da
 feature: Image Presets
 role: Admin,User
-source-git-commit: 78e187855845046071bc7f22cd7d491d48568336
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3871'
 ht-degree: 57%
 
 ---
 
 # Dynamic Media 画像プリセットの管理 {#managing-image-presets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 画像プリセットを使用すると、AEM Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像を表示するためのサイズとフォーマットに関するコマンドの事前定義済みのコレクションを表します。 画像プリセットを作成する際に、画像配信のサイズを選択します。 また、画像が表示用に配信される際に、画像の外観が最適化されるように、書式設定コマンドを選択します。
 
@@ -122,7 +126,7 @@ Dynamic Media を使用して AI、EPS または PDF ファイルの動的レン
   <tr> 
    <td>最大の高さ</td>
    <td>2048</td>
-   <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br/> </td>
+   <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br/>。 </td>
   </tr> 
   <tr> 
    <td>解像度</td>

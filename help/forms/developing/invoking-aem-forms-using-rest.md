@@ -11,14 +11,18 @@ topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 role: Developer
 exl-id: 82770ac6-aafc-44b9-82fb-6f193bb3a128
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2492'
-ht-degree: 98%
+source-wordcount: '2528'
+ht-degree: 96%
 
 ---
 
 # REST リクエストを使用した AEM Forms の呼び出し {#invoking-aem-forms-using-rest-requests}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Workbench で作成されたプロセスは、Representational State Transfer(REST) 要求を通じて呼び出せるように設定できます。 REST リクエストは、HTMLページから送信されます。 つまり、REST リクエストを使用して、Web ページから直接 Forms プロセスを呼び出すことができます。例えば、web ページの新しいインスタンスを開くことができます。次に、Forms プロセスを呼び出し、HTTP POST リクエストで送信されたデータを含む、レンダリングされた PDF ドキュメントを読み込むことができます。
 

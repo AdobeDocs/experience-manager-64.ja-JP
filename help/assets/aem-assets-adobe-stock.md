@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Search,Adobe Stock
 role: User,Admin
 exl-id: f360abaf-a812-46ed-a160-ff569b6bec1c
-source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1114'
-ht-degree: 90%
+source-wordcount: '1150'
+ht-degree: 89%
 
 ---
 
 # [!DNL Adobe Experience Manager Assets] での [!DNL Adobe Stock] アセットの使用 {#use-adobe-stock-assets-in-aem-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [!DNL Adobe Stock] エンタープライズプランと [!DNL Experience Manager Assets] を統合すると、[!DNL Experience Manager] の強力なアセット管理機能を使用して、ライセンスが必要なアセットをクリエイティブプロジェクトやマーケティングプロジェクトに幅広く活用できます。
 
@@ -20,7 +24,7 @@ ht-degree: 90%
 
 ## 前提条件 {#prerequisites}
 
-統合には、 [エンタープライズAdobe Stockプラン](https://stockenterprise.adobe.com/jp/) および [!DNL Experience Manager] 6.4（少なくとも Service Pack 2 がデプロイされている場合） の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
+この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/jp/)[!DNL Experience Manager]と、最新のサービスパック 2 を展開した 6.4 が必要です。の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
 
 ## [!DNL Experience Manager] と [!DNL Adobe Stock] の統合  {#integrate-aem-and-adobe-stock}
 

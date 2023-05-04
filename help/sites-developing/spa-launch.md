@@ -10,20 +10,24 @@ content-type: reference
 topic-tags: spa
 discoiquuid: a458cc95-cd94-4f3f-9e7b-d6a5780ec4d5
 exl-id: 1af29921-7c24-49b5-9f4c-60671641d4e4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 92%
+source-wordcount: '236'
+ht-degree: 86%
 
 ---
 
 # SPAと Launch の統合{#spa-and-launch-integration}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 Adobe Experience Platform Launch は、Analytics、Target および Audience Manager をシングルページアプリケーション（SPA）内に実装する方法として推奨されます。
 
 >[!NOTE]
 >
->シングルページアプリケーション (SPA) エディター機能には、AEM 6.4 Service Pack 2 以降が必要です。
+>シングルページアプリケーション（SPA）エディター機能には、AEM 6.4 サービスパック 2 以降が必要です。
 >
 >SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 

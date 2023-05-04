@@ -8,22 +8,26 @@ uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 feature: Adaptive Forms
 exl-id: 144f7c0a-66af-4a8f-8d8c-f960cb612104
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1397'
-ht-degree: 59%
+source-wordcount: '1433'
+ht-degree: 60%
 
 ---
 
 # チュートリアル：アダプティブフォームの作成 {#do-not-publish-tutorial-create-an-adaptive-form}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
 このチュートリアルは、 [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md) 系列。 チュートリアルの使用例を理解、実行、デモするために、時系列に従うことをお勧めします。
 
-## チュートリアルについて {#about-the-tutorial}
+## このチュートリアルについて {#about-the-tutorial}
 
-アダプティブフォームは、動的でレスポンシブな新世代のフォームです。 アダプティブフォームを使用して、パーソナライズされたエクスペリエンスを提供することができます。 また、アダプティブフォームをAdobe Analyticsと統合して使用状況の統計を確認し、Adobe Campaignをキャンペーン管理用に統合することもできます。 アダプティブフォームの機能について詳しくは、「[アダプティブフォーム作成の概要](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
+アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用して、エクスペリエンスをカスタマイズできます. また、アダプティブフォームをAdobe Analyticsと統合して使用状況の統計を確認し、Adobe Campaignをキャンペーン管理用に統合することもできます。 アダプティブフォームの機能について詳しくは、「[アダプティブフォーム作成の概要](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
 
 正しい手順を踏めば、フォームの作成と管理を簡単に行うことができます。このチュートリアルでは、以下の操作を行う方法について説明します。
 
@@ -117,7 +121,7 @@ AEM Formsは、アダプティブフォームに関する情報を表示する�
 
    | プロパティ | 値 |
    |---|---|
-   | タイトル | 郵便番号 |
+   | タイトル | ZIP Code |
    | 要素名 | customer_ZIPCode |
    | 最大桁数 | 6 |
    | 必須フィールド | Enabled |

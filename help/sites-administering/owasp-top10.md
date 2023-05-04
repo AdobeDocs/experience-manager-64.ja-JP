@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 exl-id: c29472c8-9a93-4cb1-9cb1-05fc155ba736
-source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 44%
+source-wordcount: '532'
+ht-degree: 43%
 
 ---
 
 # OWASP Top 10{#owasp-top}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この [Web アプリケーションセキュリティプロジェクトを開く](https://www.owasp.org) (OWASP) は、これらが [Web アプリケーションのセキュリティリスク上位 10 件](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).
 

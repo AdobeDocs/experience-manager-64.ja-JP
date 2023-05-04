@@ -11,14 +11,18 @@ topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 feature: Upgrading
 exl-id: 6ff5a23a-c9b5-49ca-87b2-ba01eaf48a9f
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 77%
+source-wordcount: '573'
+ht-degree: 73%
 
 ---
 
 # AEM 6.4 におけるリポジトリの再構築{#repository-restructuring-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -44,7 +48,7 @@ AEM 6.4 へのアップグレードを計画している場合は、作業量を
 
 * [すべての AEM ソリューションに共通のリポジトリ再構築](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md)
 * [AEM Sites のリポジトリ再構築](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md)
-* [AEM Assets のリポジトリ再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=ja)
+* [AEM Assets のリポジトリ再構築](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-64/deploying/restructuring/repository-restructuring.html)
 * [AEM Assets Dynamic Media のリポジトリ再構築](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
 * [AEM Forms のリポジトリ再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
 * [AEM Communities のリポジトリ再構築](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)

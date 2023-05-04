@@ -10,14 +10,18 @@ topic-tags: integration
 discoiquuid: b6786321-6e8e-40e2-809b-d117991246c4
 feature: Form Data Model
 exl-id: 8cbd3fb0-3c87-433e-bfd7-0f93216a5de7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '595'
 ht-degree: 20%
 
 ---
 
 # AEM Forms データ統合機能の概要 {#aem-forms-data-integration}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 データ統合を使用すると、AEM Formsを異なるデータソースと統合し、フォームデータモデルを作成して、アダプティブフォームとインタラクティブ通信を作成して操作することができます。
 

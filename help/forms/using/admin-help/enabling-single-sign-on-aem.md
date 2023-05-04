@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 exl-id: ac56a1db-593e-4996-84ec-c9e6d1256059
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 26%
 
 ---
 
 # AEM forms でのシングルサインオンの有効化 {#enabling-single-sign-on-in-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms でシングルサインオン（SSO）を有効化するには、HTTP ヘッダーと SPNEGO の 2 つの方法があります。
 
@@ -113,7 +117,7 @@ Windows 環境で Active Directory を LDAP サーバーとして使用する場
 
    **領域：** ドメインコントローラの Active Directory 領域です。 この例では、UM.LC.COMに設定されています。 領域は必ず大文字で入力してください。 Windows 2003 のレルムを決定するには、次の手順を実行します。
 
-   * [ マイコンピュータ ] を右クリックし、[ プロパティ ] を選択します。
+   * 「マイコンピューター」を右クリックし、「プロパティ」を選択します。
    * [ コンピュータ名 ] タブをクリックします。 「ドメイン名」の値が領域名です。
 
    **ユーザー：** 前のタスクで作成したユーザーアカウントのログイン名です。 この例では、spnegodemo に設定されています。

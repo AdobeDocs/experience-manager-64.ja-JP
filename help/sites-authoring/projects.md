@@ -10,14 +10,18 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 42b224e5-1256-44b6-9b46-4cd6de5927fb
 exl-id: 70a70f56-1d33-4d8a-984a-a3e6f8deedeb
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 65%
+source-wordcount: '1410'
+ht-degree: 64%
 
 ---
 
 # プロジェクト{#projects}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロジェクトを使用すると、リソースを 1 つのエンティティにグループ化できます。 共通の共有環境を使用すると、プロジェクトを簡単に管理できます。 プロジェクトに関連付けることができるリソースのタイプは、AEMではタイルと呼ばれます。 タイルには、プロジェクトとチームの情報、アセット、ワークフローおよびその他のタイプの情報を含めることができます。詳しくは、[プロジェクトタイル](#project-tiles)を参照してください。
 

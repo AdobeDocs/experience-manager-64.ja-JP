@@ -1,7 +1,7 @@
 ---
 title: 送信レビュー担当者のフォームへの関連付け
 seo-title: Associating submission reviewers with a form
-description: AEM Forms のフォームへ送信レビュー担当者を関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
+description: AEM Formsで送信レビュー担当者をフォームに関連付ける方法を説明します。 関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
 seo-description: Learn how to associate submission reviewers with a form in AEM Forms. Associated reviewers review a form submitted via forms portal.
 uuid: 66834c2b-ae70-4a6e-ae8e-07d0e38de06b
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 7c39383b-b430-40a1-9bcb-f5aaccb616ad
 feature: Adaptive Forms
 exl-id: b45d844e-acf9-4da2-b54e-08c67aa183a3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 93%
+source-wordcount: '529'
+ht-degree: 73%
 
 ---
 
-# 送信レビュー担当者のフォームへの関連付け  {#associating-submission-reviewers-with-a-form}
+# 送信レビュー担当者とフォームの関連付け  {#associating-submission-reviewers-with-a-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定できます。組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
 
@@ -26,13 +30,13 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 ## 前提条件 {#prerequisite}
 
-### メタデータスキーマエディターを使用してアダプティブフォームで送信レビュー担当者グループのプロパティを有効化 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
+### メタデータスキーマエディターを使用してアダプティブフォームの送信レビュー担当者グループプロパティを有効にする {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
-レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
+レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。 デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
 
 メタデータスキーマを編集するには、以下の手順に従います。
 
-1. オーサーモードで、Experience Manager の&#x200B;**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;をクリックします。
+1. オーサーモードで、Experience Manager の **[!UICONTROL ツール／アセット／メタデータスキーマ]** をクリックします。
 1. スキーマFormsページで、に移動します。 **[!UICONTROL Forms / Forms AEMで作成]**.
 
    ページの URL は次のようになります。
@@ -54,7 +58,7 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 ## 送信レビュー担当者のフォームへの関連付け {#associating-submission-reviewers-with-a-form-1}
 
-アダプティブフォームに送信レビュー担当者を関連付けるには、レビュー担当者グループを作成し、そこにユーザーを追加します。フォームの詳細属性内のフォーム送信レビュー担当者のフィールドに、作成したレビュー担当者グループを追加します。\
+送信レビュー担当者をアダプティブフォームに関連付けるには、レビュー担当者グループを作成し、そのグループにユーザーを追加します。 フォームの詳細属性内のフォーム送信レビュー担当者のフィールドに、作成したレビュー担当者グループを追加します。\
 ユーザーグループを使用することで、アダプティブフォームごとに異なる送信レビュー担当者のグループを関連付けることができます。この機能によって、権限のないユーザーによる送信レビューを避けることができます。
 
 以下の手順を行う前に、「[必要条件](/help/forms/using/adding-reviewers-form.md#prerequisite)」を参照してください。
@@ -63,7 +67,7 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 詳しくは、「[ユーザー管理およびサービス](/help/sites-administering/security.md)」を参照してください。\
 作成したグループが、あらかじめ用意されているユーザーグループ **forms-submission-reviewers** のメンバーとして追加されていることを確認してください。このユーザーグループは、AEM Forms に付属しており、ユーザーは送信レビュー担当者として確実に追加されます。
 
-アダプティブフォームにユーザーグループを関連付けるには、次の手順に従います。
+ユーザーグループをアダプティブフォームに関連付けるには、次の手順を実行します。
 
 1. 作成者モードで、**[!UICONTROL フォーム／フォームとドキュメント]**&#x200B;に移動します。
 1. 以下を使用： **[!UICONTROL 選択]** アダプティブフォームを選択するオプションを選択し、 **[!UICONTROL プロパティを表示]**.
@@ -74,6 +78,6 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 >[!NOTE]
 >
->リモートでの AEM Forms の導入においてユーザーとフォームの可用性を確認するには、ユーザーとフォームを複製してください。
+>AEM Formsのリモート実装でユーザーとフォームを確実に使用できるように、ユーザーとフォームを複製します。
 >
 >リモートで、すべてのユーザーがレビュー担当のメンバーとして複製されていることを確認してください。

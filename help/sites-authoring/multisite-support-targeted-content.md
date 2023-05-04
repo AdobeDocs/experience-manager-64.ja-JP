@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: adf7c1d3-5e3d-42b7-b1e1-ae6980b08a90
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2872'
+source-wordcount: '2908'
 ht-degree: 37%
 
 ---
 
 # マルチサイトでのターゲットコンテンツの操作{#working-with-targeted-content-in-multisites}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アクティビティ、エクスペリエンス、オファーなどのターゲットコンテンツを複数のサイトにまたがって管理する必要がある場合は、AEM に組み込まれているターゲットコンテンツ用マルチサイト管理機能を利用できます。
 

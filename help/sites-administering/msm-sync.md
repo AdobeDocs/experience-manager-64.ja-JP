@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
 feature: Multi Site Manager
 exl-id: 42b92993-abde-4ae4-8f0d-44166a3ea22e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2695'
-ht-degree: 61%
+source-wordcount: '2731'
+ht-degree: 60%
 
 ---
 
 # ライブコピーの同期の設定 {#configuring-live-copy-synchronization}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ライブコピーをソースコンテンツと同期する方法とタイミングを制御するには、次のタスクを実行します。
 

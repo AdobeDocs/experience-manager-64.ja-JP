@@ -10,14 +10,18 @@ topic-tags: develop
 discoiquuid: 6e4e3af5-4260-4f38-9b29-0818e92bc182
 feature: Adaptive Forms
 exl-id: 1ca492e9-9832-4e5d-8020-2690ac4f5505
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 76%
+source-wordcount: '691'
+ht-degree: 73%
 
 ---
 
 # アダプティブフォームの非同期送信 {#asynchronous-submission-of-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 これまでの Web フォームは、同期送信用に設定されていました。ユーザーがフォームを送信すると、確認ページにリダイレクトされます。送信が失敗した場合はエラーページにリダイレクトされます。 しかし、現在では、単一ページアプリケーションなどの最新の Web エクスペリエンスが広く使用されるようになっています。こうしたアプリケーションでは、バックグラウンドでクライアントとサーバー間の通信が実行されている間は、Web ページが静的な状態のままになります。非同期送信を設定することにより、アダプティブフォームでこうした Web エクスペリエンスを実現することができます。この場合、アダプティブフォームは、フォームが再読み込みされないか、送信されたフォームデータがサーバー上で検証されても URL が変更されないので、単一ページアプリケーションのように動作します。
 

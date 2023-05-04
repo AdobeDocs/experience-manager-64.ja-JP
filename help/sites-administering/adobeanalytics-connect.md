@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
 exl-id: 654387e3-d837-4bde-a9e4-962862ad69e9
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 64%
+source-wordcount: '1570'
+ht-degree: 63%
 
 ---
 
 # Adobe Analytics への接続とフレームワークの作成{#connecting-to-adobe-analytics-and-creating-frameworks}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Analytics で AEM ページからの web データを追跡するには、Adobe Analytics Cloud サービス設定と Adobe Analytics フレームワークを作成します。
 
@@ -180,7 +184,7 @@ AEMは、デフォルトでサンノゼ (https://api.omniture.com/admin/1.4/rest
 
 1. のドロップダウンセレクター **Adobe Analytics** が追加されます。 これを使用して、必要なフレームワーク設定を選択します。
 
-1. 選択 **保存して閉じる**.
+1. 「**保存して閉じる**」を選択します。
 1. **[公開](/help/sites-authoring/publishing-pages.md)** ページと、接続されている設定/ファイルをアクティベートするページ。
 1. 最後の手順は、パブリッシュインスタンスのページにアクセスし、 **検索** コンポーネント。
 1. [Adobe Experience Cloud デバッガー](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=ja)などの適切なツールを使用して、Adobe Analytics への呼び出しを確認できます。

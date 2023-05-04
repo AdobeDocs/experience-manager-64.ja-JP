@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
 exl-id: 88932b5b-2acc-4f21-8ce3-b819a990ad30
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 6%
+source-wordcount: '762'
+ht-degree: 7%
 
 ---
 
 # 証明書ベースの認証の設定 {#configuring-certificate-based-authentication}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 User Management は、通常、ユーザー名とパスワードを使用して認証を実行します。 User Management は、証明書ベースの認証もサポートしています。証明書ベースの認証は、Acrobatを通じてユーザーを認証する場合や、プログラムを通じてユーザーを認証する場合に使用できます。 プログラムによるユーザーの認証について詳しくは、 [AEM forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp).
 

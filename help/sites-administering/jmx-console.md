@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 0798ae5c-e06e-425f-ba8a-9309eb233083
 exl-id: 22110676-c102-4730-ab38-45396b15a274
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4931'
+source-wordcount: '4967'
 ht-degree: 61%
 
 ---
 
 # JMX コンソールを使用したサーバーリソースの監視{#monitoring-server-resources-using-the-jmx-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 JMX コンソールを使用すると、CRX サーバー上のサービスを監視および管理できます。以下の節では、JMX フレームワークによって明らかになる属性および操作についてまとめます。
 

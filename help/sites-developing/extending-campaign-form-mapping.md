@@ -10,14 +10,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 exl-id: 3270a279-13ef-4bbf-aafe-539df388c652
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '566'
 ht-degree: 18%
 
 ---
 
 # カスタムフォームマッピングの作成{#creating-custom-form-mappings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Campaignでカスタムテーブルを作成する場合、AEMでそのカスタムテーブルにマッピングするフォームを作成する必要が生じる場合があります。
 

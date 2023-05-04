@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: a7be7d33-9d06-4d07-b7a0-e23251e26cb8
 exl-id: 706ffc8b-3004-4413-aeb5-d97c0da78040
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 48%
+source-wordcount: '187'
+ht-degree: 43%
 
 ---
 
 # 次期リリース{#the-next-release}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロジェクトの実装がプロセスの終わりになることはほとんどありません。 その後のリリースは（ほぼ）常に予想され、現在の実装の最終段階で開始することもできます。
 

@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: 599f1925-a17e-4bae-93d9-b54edcee92b0
 feature: Mobile Forms
 exl-id: 5bb8b307-93f0-4ccd-89ac-de82d65021e6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2042'
 ht-degree: 34%
 
 ---
 
 # HTML5 フォームのアーキテクチャ {#architecture-of-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## アーキテクチャ {#architecture}
 

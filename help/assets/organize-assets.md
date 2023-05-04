@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management,Search
 role: User
 exl-id: 41e083b3-e956-4346-9a99-008de2c6a169
-source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 80%
+source-wordcount: '839'
+ht-degree: 77%
 
 ---
 
 # デジタルアセットの整理 {#organize-digital-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Microsoft Office および PDF ドキュメントのすべてのデジタルアセット、メタデータおよびコンテンツが抽出され、検索可能になります。検索では、アセットに対する高度なフィルタリングが可能で、適切な権限が完全に順守されます。 メタデータについては、「デジタルアセット管理」の「メタデータ」で詳しく説明されています。
 

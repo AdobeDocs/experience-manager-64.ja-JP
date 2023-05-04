@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2f514072-81d9-48de-8369-cca94a330f1d
 exl-id: 88fa9c80-4eae-4663-a6c8-abbf1921444e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 58%
+source-wordcount: '713'
+ht-degree: 56%
 
 ---
 
 # HTML Workspace でのアダプティブフォームの使用 {#using-an-adaptive-form-in-html-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 JEE 上の AEM Forms では、HTML Workspace でアダプティブフォームを使用することができます。
 

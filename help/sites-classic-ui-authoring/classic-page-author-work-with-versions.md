@@ -10,16 +10,20 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: ba74d3fb-063d-4bd6-a551-8e71ad6559e3
 exl-id: 407287cf-8096-40ee-971c-006d876ba4e4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 45%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
 
 # ページバージョンの処理 {#working-with-page-versions}
 
-バージョン管理では、特定の時点でのページの「スナップショット」が作成されます。 バージョン管理を使用して、次の操作を実行できます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+バージョン管理では、特定の時点でのページの「スナップショット」が作成されます。バージョン管理を使用して、次の操作を実行できます。
 
 * ページのバージョンを作成します。
 * ページに対して行った変更を取り消すには、例えば、ページを以前のバージョンに戻します。

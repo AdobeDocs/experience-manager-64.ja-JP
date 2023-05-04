@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 exl-id: c21cddb3-d12d-4e1b-bd62-cf75946569be
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '528'
 ht-degree: 26%
 
 ---
 
 # タスクまたはフォームをドラフトとして保存する {#saving-a-task-or-form-as-a-draft}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「ドラフトとして保存」オプションでは、タスクまたはフォームのスナップショットと、関連するフォームに入力されたデータが保存されます。 また、テンプレートからドラフトを作成することもできます。 下書きはモバイルデバイスに保存され、後で取得できるようにAdobe Experience Manager Formsサーバーと同期されます。
 

@@ -12,10 +12,10 @@ discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 exl-id: 0123fb44-9f38-4d9e-9dce-7c9cfd4260e1
 feature: Content Fragments,Metadata
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 88%
+source-wordcount: '148'
+ht-degree: 52%
 
 ---
 
@@ -23,11 +23,15 @@ ht-degree: 88%
 
 >[!CAUTION]
 >
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+>[!CAUTION]
+>
 >一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 
-コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
+コンテンツフラグメントのメタデータ（プロパティ）を表示および編集できます。
 
 1. **[!UICONTROL Assets]** コンソールで、コンテンツフラグメントの場所に移動します。
 1. 以下のどちらかの操作を行います。
@@ -37,9 +41,9 @@ ht-degree: 88%
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
-1. 「**[!UICONTROL 基本]**」タブに、表示または編集が可能なオプションが表示されます。
+1. この **[!UICONTROL 基本]** 「 」タブには、表示または編集できるオプションが表示されます。
 
-   * 「**画像をアップロード**」の対象となるサムネール
+   * サムネール（使用可能） **画像をアップロード**
    * **タイトル**
    * **説明**
    * **タグ**

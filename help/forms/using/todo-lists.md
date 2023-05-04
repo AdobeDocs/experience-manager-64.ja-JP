@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2cb251a6-d8d0-4563-b0f0-2dca38037155
 exl-id: 0111d1f6-1780-40a2-b7d7-43930c4b96f7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4000'
+source-wordcount: '4036'
 ht-degree: 17%
 
 ---
 
 # To Do リストの操作 {#working-with-to-do-lists}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 TODO リストを表示すると、自分に割り当てられているビジネスプロセス、自分が属しているグループ、または他のユーザーの共有タスクのタスクが表示されます。 リクエストの承認または却下、詳細情報の追加など、必要に応じてタスクを開き、操作し、完了できます。 タスクを完了すると、ビジネスプロセスの次のユーザーにタスクが送信されます。
 

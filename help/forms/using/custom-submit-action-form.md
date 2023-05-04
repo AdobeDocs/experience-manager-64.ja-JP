@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 607b2242-d81c-4e7a-9e56-e6dabffccbb6
 exl-id: 199ebb63-8fbc-43c4-8c4d-421bf02454ed
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 85%
+source-wordcount: '1663'
+ht-degree: 83%
 
 ---
 
 # アダプティブフォーム向けのカスタム送信アクションの作成  {#writing-custom-submit-action-for-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームでは、ユーザーが指定したデータを処理するために送信アクションが必要です。 送信アクションとは、アダプティブフォームを使って送信されるデータに対して実行されるタスクを決定するものです。Adobe Experience Manager（AEM）には、ユーザーによって送信されたデータを使って実行できるカスタムタスクを示す [OOTB 送信アクション](/help/forms/using/configuring-submit-actions.md)が含まれています。例えば、メール送信やデータの格納などのタスクを実行することができます。
 

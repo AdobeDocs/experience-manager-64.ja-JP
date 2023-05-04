@@ -10,14 +10,18 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2729'
+source-wordcount: '2765'
 ht-degree: 21%
 
 ---
 
 # Adobe Experience Manager 6.4 の一般リリースノート {#general-release-notes-for-adobe-experience-manager}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## リリース情報 {#release-information}
 
@@ -189,7 +193,7 @@ AEM 6.4 では、新機能、強化された CreativeCloud 統合、主な人工
 
 Adobe向けCreative Cloudの Asset Link を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケターのコラボレーションを合理化できます。 これは、Photoshop、Illustrator、InDesignをAEMに接続する企業向けの新しいネイティブ機能で、クリエイティブチームがツールを選択したままで済みます。
 
-この機能、前提条件およびアクセス方法について詳しくは、 [Adobeアセットリンク](https://www.adobe.com/jp/creativecloud/business/enterprise/adobe-asset-link.html).
+この機能、前提条件およびアクセス方法について詳しくは、 [Adobeアセットリンク](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
 
 ![adobe_asset_link](assets/adobe_asset_link.png)
 

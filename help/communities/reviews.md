@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 5aae7744-73cc-472b-a4e6-ecd88284b70c
-source-git-commit: ''
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1302'
+source-wordcount: '1338'
 ht-degree: 3%
 
 ---
 
 # レビューおよびレビューの概要（表示）の使用 {#using-reviews-and-reviews-summary-display}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この `Reviews`コンポーネントは、 [ `Comments`](comments.md) および [ `Rating`](rating.md) コンポーネントを使用する準備が整いました。
 

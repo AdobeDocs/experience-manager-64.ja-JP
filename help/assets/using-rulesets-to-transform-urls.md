@@ -8,14 +8,18 @@ content-type: reference
 exl-id: f0cd3a75-03ed-40a9-b336-8a782f3cfe69
 feature: Rulesets
 role: Admin,User,Developer
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 74%
+source-wordcount: '798'
+ht-degree: 71%
 
 ---
 
 # ルールセットを使用した URL の変換 {#using-rulesets-to-transform-urls}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Dynamic Media でルールセットをデプロイして、URL を変換できます。ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。各ルールは、少なくとも 1 つの条件と、少なくとも 1 つのアクションで構成されます。 ルールは、XML データを条件と照らし合わせて評価し、条件が満たされた場合は、適切なアクションを実行します。 ルールセットの例を次に示します。
 

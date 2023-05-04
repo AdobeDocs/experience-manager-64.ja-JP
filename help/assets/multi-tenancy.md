@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Collections
 role: Architect,Admin,Leader
 exl-id: d00a671a-6707-4941-868d-fa13510b7b60
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 11%
+source-wordcount: '266'
+ht-degree: 12%
 
 ---
 
 # コレクション、スニペットおよびスニペットテンプレートのマルチテナント {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 マルチテナント機能を使用すると、組織のプレフィックスと組織 ID に基づいて CRX 内のコンテンツを区別し、他の組織のユーザーがコンテンツに不正にアクセスするのを防ぐことができます。
 

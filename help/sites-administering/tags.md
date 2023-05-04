@@ -10,14 +10,18 @@ topic-tags: content
 content-type: reference
 discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: 5c78edf8-148f-41a3-8b11-c1dada34090e
-source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1755'
-ht-degree: 66%
+source-wordcount: '1791'
+ht-degree: 65%
 
 ---
 
 # タグの管理{#administering-tags}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タグを使用すると、Web サイト内のコンテンツをすばやく簡単に分類できます。 これらは、検索の結果としてコンテンツをよりすばやく見つけることができるキーワードまたはラベル（メタデータ）と考えることができます。
 

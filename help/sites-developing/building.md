@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: b3b0f505-3d7d-493d-a37b-abc8a365f95b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 96%
+source-wordcount: '911'
+ht-degree: 93%
 
 ---
 
 # AEM アプリケーションへのタグ付けの構築{#building-tagging-into-an-aem-application}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このページでは、カスタムAEMアプリケーション内のタグや拡張タグをプログラムで操作する目的で、
 

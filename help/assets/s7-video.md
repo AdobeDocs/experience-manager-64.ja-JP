@@ -8,14 +8,18 @@ content-type: reference
 exl-id: 081e7db0-95cc-4260-8f08-318cd7d9d5b4
 feature: Video
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1639'
 ht-degree: 55%
 
 ---
 
 # ビデオ {#video}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assets では、ビデオを Assets に直接アップロードして、Dynamic Media Classicに自動エンコーディングできる、一元化されたビデオアセット管理を実現しています。 Assets から直接Dynamic Media Classicビデオにアクセスして、ページをオーサリングすることもできます。
 
@@ -25,7 +29,7 @@ Dynamic Media Classic のビデオの統合により、最適化されたビデ�
 
 単一のビデオアセットだけでなく、アダプティブビデオセットを含めることができます。 アダプティブビデオセットは、複数の画面をシームレスに再生するために必要なすべてのビデオレンディションのコンテナです。 アダプティブビデオセットは、異なるビットレートおよび形式でエンコードされた、同じビデオのバージョンをグループ化します。 例： 400 kbps、800 kbps、1000 kbps。 複数の画面タイプにわたるアダプティブビデオのストリーミングには、S7 ビデオコンポーネントと共にアダプティブビデオセットを使用します。 例えば、デスクトップ、iOS、Android、BlackBerry、Windows モバイルデバイスなどです。
 
-詳しくは、[アダプティブビデオセットに関する Dynamic Media Classic のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/video-profiles.html#dynamicmedia)を参照してください。
+詳しくは、[アダプティブビデオセットに関する Dynamic Media Classic のドキュメント](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-cloud-service/assets/dynamicmedia/video-profiles.html#dynamicmedia)を参照してください。
 
 ## FFMPEG と Dynamic Media Classic について {#about-ffmpeg-and-scene}
 

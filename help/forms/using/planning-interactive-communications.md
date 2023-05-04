@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 feature: Interactive Communication
 exl-id: 40f6297d-7238-4e56-9fd1-6df3a6362724
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '690'
 ht-degree: 23%
 
 ---
 
 # チュートリアル：インタラクティブ通信の計画 {#tutorial-plan-the-interactive-communication}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信用の分析の計画
 
@@ -75,7 +79,7 @@ ht-degree: 23%
      <li>請求日</li> 
      <li>請求期間</li> 
     </ul> <p> </p> </td> 
-   <td>—</td> 
+   <td>--</td> 
   </tr>
   <tr>
    <td>顧客の詳細</td> 

@@ -10,14 +10,18 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 exl-id: a86ba10c-0d62-4dae-b8d5-8b24156c30b8
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '6135'
+source-wordcount: '6171'
 ht-degree: 36%
 
 ---
 
 # ファイルタイプ設定の指定 {#configuring-file-type-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 PDFジェネレータでは、サポートされるファイルタイプのアプリケーション設定を設定できます。 Windows では、サポートされる各ファイルタイプに対してアプリケーション設定を設定できます。 UNIX および Linux では、PDF間および OpenOffice 用のHTML設定を設定できます。
 

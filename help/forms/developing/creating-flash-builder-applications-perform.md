@@ -11,14 +11,18 @@ topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: e4e99b9d-3023-4b9b-9c93-be04c7a871ee
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 100%
+source-wordcount: '1818'
+ht-degree: 98%
 
 ---
 
 # HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成できます。例えば、Flash Builder を使用して web ベースのアプリケーションを作成する場合を考えてみましょう。次に、アプリケーションに異なるビューが含まれ、各ビューが異なる AEM Forms 操作を呼び出すと仮定します。各 Forms 操作でユーザーを認証する代わりに、1 回でユーザーを認証できるログインページを作成できます。認証が完了すると、ユーザーは再度認証を行わなくても複数の操作を呼び出すことができます。例えば、ユーザーがワークスペース（または別の Forms アプリケーション）にログインした場合、そのユーザーを再認証する必要はありません。
 

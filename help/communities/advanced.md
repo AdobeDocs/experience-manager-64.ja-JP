@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 42fb3c50-8728-4897-ade9-6b839294a10e
 role: Admin
 exl-id: c9406aae-288e-4cdf-ac01-cb26b423639e
-source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 2%
+source-wordcount: '1177'
+ht-degree: 3%
 
 ---
 
 # 高度なスコアとバッジ {#advanced-scoring-and-badges}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -61,7 +65,7 @@ ht-degree: 2%
 * **[!UICONTROL スコア付けの重み付け]**
 トピックの場合、スコアの計算時に最も優先度が高い動詞を指定します。 1 つ以上のトピックを入力できますが、次に限定されます **1 つの話題に対する 1 つの動詞**. 詳しくは、 [トピックと動詞](implementing-scoring.md#topics-and-verbs).
 
-   次の形式で入力 `topic,verb` コンマはエスケープされます。 例：
+   次の形式で入力 `topic,verb` コンマはエスケープされます。 次に例を示します。
 
    `/social/forum/hbs/social/forum\,ADD`
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 exl-id: b9d2c63c-1777-4c13-a39f-6891f0ff52b2
-source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '7631'
+source-wordcount: '7667'
 ht-degree: 20%
 
 ---
 
 # AEM Forms の監視フォルダー {#watched-folder-in-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 管理者は、監視PDFーと呼ばれるネットワークフォルダーを設定し、ユーザーがファイル（監視フォルダーなど）を監視フォルダーに配置すると、事前に設定されたワークフロー、サービス、スクリプトの操作が開始され、追加されたファイルが処理されます。 指定した操作を実行した後、指定した出力フォルダーに結果ファイルを保存します。 ワークフロー、サービス、スクリプトについて詳しくは、 [様々なファイル処理方法](#variousmethodsforprocessingfiles).
 

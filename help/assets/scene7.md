@@ -8,14 +8,18 @@ topic-tags: managing-assets
 exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
 feature: Dynamic Media Classic
 role: User
-source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2824'
-ht-degree: 46%
+source-wordcount: '2860'
+ht-degree: 45%
 
 ---
 
 # ページへのDynamic Media Classicコンポーネントの追加 {#adding-scene-features-to-your-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Dynamic Media Classic は、リッチメディアアセットの管理や拡張のほか、web、モバイル、メールをはじめインターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
 
@@ -187,7 +191,7 @@ SPS からアクティブな画像プリセットを取得するために使用�
 画像にシャープを適用する方法を選択します。 シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
 * **[!UICONTROL URL 修飾子]**
-追加のDynamic Media Classic画像コマンドを指定すると、画像エフェクトを変更できます。 詳しくは、 [画像プリセット](/help/assets/managing-image-presets.md) そして [コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=ja).
+追加のDynamic Media Classic画像コマンドを指定すると、画像エフェクトを変更できます。 詳しくは、 [画像プリセット](/help/assets/managing-image-presets.md) そして [コマンドリファレンス](https://experienceleague.adobe.com/docs/?lang=jadynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 * **[!UICONTROL ブレークポイント]**
 レスポンシブ Web サイトの場合は、ブレークポイントを調整する必要があります。 ブレークポイントはコンマ（,）で区切る必要があります。

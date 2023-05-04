@@ -9,18 +9,22 @@ topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 feature: Adaptive Forms
 exl-id: 84a46197-9933-4b94-a8e3-e7baf9c644b1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 47%
+source-wordcount: '1070'
+ht-degree: 46%
 
 ---
 
-# 外部 Web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
+# 外部 web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 外部 Web ページにアダプティブフォームを埋め込む方法について学びましょう
 
-以下が可能です。 [AEM Sitesにアダプティブフォームを埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md) ページまたはAEMの外でホストされる Web ページ。 埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページ上の他の要素のコンテキストにとどまり、同時にフォームを操作できます。
+以下が可能です。 [AEM Sitesにアダプティブフォームを埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md) ページまたはAEMの外でホストされる Web ページ。 埋め込まれたアダプティブフォームではすべての機能を使用できるので、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページ上の他の要素のコンテキストにとどまり、同時にフォームを操作できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -142,11 +146,19 @@ ProxyPass /content https://<AEM_Instance>/content
 ProxyPass /etc https://<AEM_Instance>/etc
 ProxyPass /etc.clientlibs https://<AEM_Instance>/etc.clientlibs
 # CSRF Filter
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 ProxyPass /libs/granite/csrf/token.json https://<AEM_Instance>/libs/granite/csrf/token.json
   
 ProxyPassReverse /etc https://<AEM_Instance>/etc
 ProxyPassReverse /etc.clientlibs https://<AEM_Instance>/etc.clientlibs
 # written for thank you page and other URL present in AF during redirect
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 ProxyPassReverse /content https://<AEM_Instance>/content
 ```
 

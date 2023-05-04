@@ -12,14 +12,18 @@ discoiquuid: eaf65bdd-9091-4985-90bd-5eb2148965e3
 exl-id: 43b11355-ee21-421c-8809-cd8a0443a03a
 feature: Content Fragments
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 97%
+source-wordcount: '496'
+ht-degree: 60%
 
 ---
 
 # コンテンツフラグメント - 削除に関する考慮事項 {#content-fragments-delete-considerations}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >
@@ -29,27 +33,27 @@ ht-degree: 97%
 
 コンテンツを削除する機能は強力ですが、この特権の割り当て方法を制限および管理する必要がある多くの業界では、慎重な取り扱いが求められる可能性があります。
 
-削除権限に関しては、コンテンツフラグメントを次の 2 つのレベルで考える必要があります。
+削除権限に関しては、コンテンツフラグメントを次の 2 つのレベルで考慮する必要があります。
 
 1. **単一のエンティティとしてのコンテンツフラグメント**。
 
    * **使用例**：コンテンツフラグメントの編集または更新を必要とするユーザーが&#x200B;**フラグメント全体を削除できる**&#x200B;場合。
    * **権限**：[削除](/help/sites-administering/security.md#actions)権限は[ユーザー管理やグループ管理で割り当てる](/help/sites-administering/security.md#managing-permissions)ことができます。
 
-1. **コンテンツフラグメントを構成する複数のサブエンティティ（例：バリエーション、サブノードなど）。**
+1. **コンテンツフラグメントを構成する複数のサブエンティティ例えば、バリエーション、サブノードなどです。**
 
-   コンテンツフラグメントエディターの基本操作を使用するには、そうした一時的なサブ要素を削除できる必要があります。例えば、バリエーションの操作、メタデータの編集、関連コンテンツの管理などをおこなう場合です。
+   コンテンツフラグメントエディターの基本的な操作では、このような一時的なサブ要素を削除できる必要があります。 例えば、バリエーションの操作、メタデータの編集、関連コンテンツの管理などをおこなう場合です。
 
    * **使用例**：コンテンツフラグメントの編集または更新を必要とするユーザーが&#x200B;**フラグメント全体を削除できない**&#x200B;場合。
    * **権限**：[エディター機能のみに必要な権限](content-fragments-delete.md#permissions-required-for-editor-functionality-only)を参照してください。
 
 >[!NOTE]
 >
->ユーザーに[削除](/help/sites-administering/security.md#actions)権限がない場合、コンテンツフラグメントエディターは&#x200B;*読み取り専用*&#x200B;モードで動作します。
+>ユーザーが [削除](/help/sites-administering/security.md#actions) 権限を持つ場合、コンテンツフラグメントエディターは *読み取り専用* モード。
 
 >[!NOTE]
 >
->[AEM でのユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)も参照してください。
+>関連トピック [AEMでユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md).
 
 ## エディター機能のみに必要な権限 {#permissions-required-for-editor-functionality-only}
 
@@ -59,11 +63,11 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->コンテンツフラグメントの編集または更新に必要な削除権限は、[ユーザー管理やグループ管理で割り当てられた](/help/sites-administering/security.md#managing-permissions)削除権限に含まれています。
+>コンテンツフラグメントの編集または更新に必要な削除権限は、削除権限に含まれます [ユーザー管理やグループ管理を通じて割り当てられる](/help/sites-administering/security.md#managing-permissions).
 
-フラグメントの編集または更新に必要な権限は、コンテンツフラグメントを含んでいるノードまたは適切な親ノード（`/content/dam` 下の任意のレベル）のどちらかに適用する必要があります。このような親ノードに割り当てられた権限は、そのブランチ内のすべてのノードに適用されます。
+フラグメントの編集または更新に必要な権限は、コンテンツフラグメントを含んでいるノードまたは適切な親ノード（`/content/dam` 下の任意のレベル）のどちらかに適用する必要があります。このような親ノードに割り当てられると、権限はそのブランチ内のすべてのノードに適用されます。
 
-例えば、すべてのコンテンツフラグメントが格納される次のようなフォルダーです。
+例えば、次のようなすべてのコンテンツフラグメントを格納するフォルダーです。
 
 * `/content/dam/contentfragments`
 
@@ -71,9 +75,9 @@ ht-degree: 97%
 >
 >`/content/dam` に権限を設定することもできます。すべてのコンテンツフラグメントがそこに格納されているからです。
 >
->ただし、その場合は、他の&#x200B;*すべての*&#x200B;アセットタイプにも同じ削除権限が適用されます。
+>ただし、この操作により、同じ削除権限が *すべて* その他のアセットタイプも同様です。
 
-特定のユーザーまたはグループにコンテンツフラグメントの編集または更新を許可するうえであらかじめ必要な権限は次のとおりです。
+特定のユーザーやグループに対し、コンテンツフラグメントの編集や更新を許可するための権限の前提条件は次のとおりです。
 
 >[!NOTE]
 >

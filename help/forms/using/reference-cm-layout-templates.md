@@ -9,18 +9,22 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 exl-id: 319db420-3318-4ef7-be2b-1ff2b1c08563
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '508'
 ht-degree: 21%
 
 ---
 
 # 参照レターテンプレート {#reference-letter-templates}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 Correspondence Management のレターテンプレートには、一般的なフォームフィールド、ヘッダーやフッターなどのレイアウト機能、コンテンツを配置するための空の「ターゲット領域」が含まれています。
 
-Correspondence Management では、レターテンプレートをAEM Formsパッケージで提供します [AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。このパッケージには、次のテンプレートが含まれています。
+Correspondence Management では、レターテンプレートをAEM Formsパッケージで提供します [AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。このパッケージには、次のテンプレートが含まれています。
 
 * クラシック
 * クラシックシンプル

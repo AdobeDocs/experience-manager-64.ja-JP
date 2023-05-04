@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 165b3950-b03f-4848-8361-ffb0a26d2658
 exl-id: eaa2c889-d116-4209-9063-0c0b32dd8849
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 60%
+source-wordcount: '219'
+ht-degree: 54%
 
 ---
 
 # LDAP バインドパスワードの設定{#configure-the-ldap-bind-password}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 セキュリティ上の問題を回避するために、書き出された設定ファイル (config.xml) の bind password フィールドは設定されていません。 設定ファイルを別のシステムに読み込む前に、このパスワードを設定しておく必要があります。 このパスワードは、データベースに保存されている既存のパスワードよりも優先されます。 null パスワードは、null 以外の既存のパスワード値を上書きしません。
 

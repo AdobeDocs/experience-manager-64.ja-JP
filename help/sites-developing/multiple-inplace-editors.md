@@ -3,14 +3,18 @@ title: 複数のインプレースエディター用に RTE を設定します�
 description: リッチテキストエディターを設定して、Adobe Experience Manager で複数のインプレースエディターを作成します。
 contentOwner: AG
 exl-id: 8537582c-7e48-4a93-b93c-9187400e264d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 100%
+source-wordcount: '481'
+ht-degree: 94%
 
 ---
 
 # 複数のインプレースエディターを設定 {#configure-multiple-in-place-editors}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager のリッチテキストエディターは、複数のインプレースエディターを持つように設定できます。このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
 

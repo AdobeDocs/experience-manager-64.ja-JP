@@ -11,14 +11,18 @@ discoiquuid: 7eebef08-83b9-4b56-90ec-35ab3b0c27e8
 noindex: true
 feature: Document Security
 exl-id: dbf97dc1-cf05-4d45-859e-60ff01186e51
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 62%
+source-wordcount: '679'
+ht-degree: 60%
 
 ---
 
 # Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする{#enable-aem-to-search-document-security-protected-pdf-and-microsoft-office-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Managerは、AEMに保存されている様々なアセットを検索して検索するためのユーザーインターフェイスを提供します。 ネイティブ検索機能を使用して AEM アセットを検索して位置を特定し、実行することが可能です。共通して使用されるドキュメント形式（プレーンテキストファイル、Microsoft Office ドキュメント、PDF ドキュメントなど）でテキスト検索を実行することができます。ネイティブ検索を拡張して有効にし、DRM 保護された PDF ドキュメントと Microsoft Office ドキュメントで全テキストの検索を実行できるようにすることも可能です。
 

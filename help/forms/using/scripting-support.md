@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: 2194bbbb-22d9-4422-aefb-9651fd795ca3
-source-git-commit: aa70ce1b05353e0d6f234c59df673486c8fa5082
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3930'
 ht-degree: 20%
 
 ---
 
 # HTML5 フォームのスクリプティングのサポート {#scripting-support-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 以下に、JavaScript、FormCalc プロパティ、JavaScript5 フォームでサポートされるHTMLを示します。
 
@@ -1229,7 +1233,7 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
 
    1. At()
    1. Concat()
-   1. 左()
+   1. Left()
    1. Len()
    1. Lower()
    1. Ltrim()

@@ -12,14 +12,18 @@ discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 54a4a053-ca44-451a-9a31-f1c1e8cb7002
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2869'
+source-wordcount: '2905'
 ht-degree: 3%
 
 ---
 
 # コミュニティのスコアとバッジ {#communities-scoring-and-badges}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -164,7 +168,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 非常に簡単に、各スコアルールは 1 つ以上のサブルールのリストです。 バッジが有効な場合に適用するルールを識別するために、スコアルールがコミュニティサイトのコンテンツに適用されます。
 
-スコア付けルールは継承されますが、加算的ではありません。 例：
+スコア付けルールは継承されますが、加算的ではありません。 次に例を示します。
 
 * page2 にスコアルール 2 が含まれ、その上位ページ 1 にスコアルール 1 が含まれる場合
 * page2 コンポーネントのアクションは、rule1 と rule2 の両方を呼び出します。
@@ -203,7 +207,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 各サブルールは、1 つ以上のスコアルールに含めることができます。
 
-通常、サブルールの名前は、 *件名、オブジェクト* および *動詞*. 例：
+通常、サブルールの名前は、 *件名、オブジェクト* および *動詞*. 次に例を示します。
 
 * member-comment-create
 * member-receive-vote
@@ -244,7 +248,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
   </tr> 
   <tr> 
    <td><code>forOwner</code></td> 
-   <td>ブール値</td> 
+   <td>ブーリアン</td> 
    <td> 
     <ul> 
      <li>オプション；メンバーが自分のコンテンツに対して行動を起こす場合は関係ありません</li> 
@@ -325,7 +329,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 バッジルールはタイプのノードです `cq:Page` プロパティを含む `jcr:content`スコアルールをスコアおよびバッジに関連付けるノード。
 
-バッジのルールは必須の `thresholds`バッジにマッピングされたスコアの順序付きリストであるプロパティ。 スコアは、値を増やすために並べ替える必要があります。 例：
+バッジのルールは必須の `thresholds`バッジにマッピングされたスコアの順序付きリストであるプロパティ。 スコアは、値を増やすために並べ替える必要があります。 次に例を示します。
 
 * `1|/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
@@ -606,7 +610,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
    * 選択 **[!UICONTROL 複数]**
    * 選択 **[!UICONTROL 追加]**
    * `/etc/community/badging/rules/forums-badging` と入力します。
-   * 選択 `+`
+   * `+` を選択します。
    * `/etc/community/badging/rules/comments-badging` と入力します。
    * 選択 **[!UICONTROL OK]**
 
@@ -617,7 +621,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
    * 選択 **[!UICONTROL 複数]**
    * 選択 **[!UICONTROL 追加]**
    * `/etc/community/scoring/rules/forums-scoring` と入力します。
-   * 選択 `+`
+   * `+` を選択します。
    * `/etc/community/scoring/rules/comments-scoring` と入力します。
    * 選択 **[!UICONTROL OK]**
 

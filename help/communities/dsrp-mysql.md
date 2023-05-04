@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 role: Admin
 exl-id: 1de1ffc6-63f8-4316-a2fa-5095d407c265
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 4%
+source-wordcount: '759'
+ht-degree: 6%
 
 ---
 
 # DSRP 向け MySQL 設定 {#mysql-configuration-for-dsrp}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 MySQL は、ユーザー生成コンテンツ (UGC) の保存に使用できるリレーショナルデータベースです。
 
@@ -92,8 +96,8 @@ MySQL Workbench を初めて起動したときは、他の目的で既に使用�
    * 接続名： `Communities`
    * 接続方法： `Standard (TCP/IP)`
    * ホスト名： `127.0.0.1`
-   * ユーザー名: `root`
-   * パスワード: `no password by default`
+   * ユーザー名：`root`
+   * パスワード：`no password by default`
    * デフォルトのスキーマ： `leave blank`
 
 1. 選択 `Test Connection` 実行中の MySQL サービスへの接続を検証するには、以下を実行します。
@@ -183,7 +187,7 @@ MySQL をAEMとは異なるサーバーで実行する場合は、JDBC コネク
 
 * 次の値を入力します。
 
-   * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC 接続 URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
       MySQL サーバーが「this」AEMサーバーと同じでない場合は、localhost の代わりにサーバーを指定します
@@ -201,4 +205,4 @@ MySQL をAEMとは異なるサーバーで実行する場合は、JDBC コネク
       「 」を選択しない場合は、MySQL ユーザー名用に設定したパスワードを入力します。
    * **[!UICONTROL データソース名]**:次に対して入力された名前： [MySQL 接続](#new-connection-settings)例： 「コミュニティ」
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します

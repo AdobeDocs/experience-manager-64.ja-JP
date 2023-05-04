@@ -10,22 +10,26 @@ topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
 feature: Upgrading
 exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 92%
+source-wordcount: '1149'
+ht-degree: 76%
 
 ---
 
 # AEM 6.4 における Assets リポジトリの再構築{#assets-repository-restructuring-in-aem}
 
-[AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.4 にアップグレードする場合は、このページを参考に、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を評価する必要があります。一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+[AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.4 にアップグレードする場合は、このページを参考に、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を評価する必要があります。一部の変更ではAEM 6.4 のアップグレードプロセス中に作業が必要ですが、6.5 のアップグレードまで延期することもできます。
 
 **6.4 へのアップグレード時におこなう変更**
 
-* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc)
+* [その他](https://experienceleague.adobe.com/docs/?lang=jaexperience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc)
 
-**6.5 へのアップグレードまでにおこなう変更**
+**6.5 へのアップグレード前**
 
 * [アセット／コレクションイベントのメール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#asset-collection-event-e-mail-notification-template)
 * [従来のアセット共有デザイン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#classic-asset-share-designs)
@@ -53,7 +57,7 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>カスタムコードがこの場所に依存している（コードがこのパスに明示的に依存している）場合は、アップグレード前に、新しい場所を使用するようにコードを更新する必要があります。JCR 内の特定パスへの依存を減らすために Java API が利用可能な場合は、Java API を使用することをお勧めします。</p> <p>クライアントがダウンロードする zip ファイルを一時的に保存するための場所。クライアントがアセットのダウンロードを要求するので、更新する必要はありません。新しい場所にファイルが生成されます。</p> </td> 
+   <td><p>カスタムコードがこの場所 ( コードは明示的にこのパスに依存しています )。その場合、アップグレードの前に、新しい場所を使用するようにコードを更新する必要があります。Java API を使用して、JCR 内の特定のパスへの依存を減らすのが理想的です。</p> <p>クライアントがダウンロードする zip ファイルを保持する一時的な場所。 クライアントがアセットのダウンロードをリクエストするので、更新する必要はありません。 新しい場所にファイルが生成されます。</p> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
@@ -62,7 +66,7 @@ ht-degree: 92%
  </tbody> 
 </table>
 
-## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
+## 6.5 へのアップグレード前 {#prior-to-upgrade}
 
 ### アセット／コレクションイベントのメール通知テンプレート {#asset-collection-event-e-mail-notification-template}
 
@@ -155,7 +159,7 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
-   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> がルックアップ対象として技術的にサポートされている間は（通常の Sling CAConfig ルックアップでは /apps より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に格納することもできます。ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
+   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> がルックアップ対象として技術的にサポートされている間は（通常の Sling CAConfig ルックアップでは /apps より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に格納することもできます。ただし、電子メールテンプレートの編集を容易にするランタイム UI がないので、この方法はお勧めしません。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -196,7 +200,7 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
-   <td><code>/conf/global/settings/dam/adhocassetshare</code> がルックアップ対象として技術的にサポートされている間は（通常の Sling CAConfig ルックアップでは <code>/apps</code> より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に格納することもできます。ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
+   <td><code>/conf/global/settings/dam/adhocassetshare</code> がルックアップ対象として技術的にサポートされている間は（通常の Sling CAConfig ルックアップでは <code>/apps</code> より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に格納することもできます。ただし、電子メールテンプレートの編集を容易にするランタイム UI がないので、この方法はお勧めしません</td> 
   </tr> 
  </tbody> 
 </table>
@@ -276,7 +280,7 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>既製のビューアプリセットの場合は、新しい場所でのみ使用できます。</p> <p>カスタムビューアプリセットの場合：</p> 
+   <td><p>標準提供のビューアプリセットの場合、新しい場所でのみ使用できます。</p> <p>カスタムビューアプリセットの場合：</p> 
     <ul> 
      <li>移行スクリプトを実行して、ノードを <code>/etc</code> から <code>/conf</code> に移動する必要があります。スクリプトの URL は <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em> です。</li> 
      <li>または、設定を編集できます。編集した設定は新しい場所に自動保存されます。</li> 

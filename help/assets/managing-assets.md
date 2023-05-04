@@ -8,14 +8,18 @@ content-type: reference
 exl-id: a87c7562-0d61-403e-9e8e-e706cac9b7c5
 feature: Asset Management
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 72%
+source-wordcount: '154'
+ht-degree: 60%
 
 ---
 
 # Dynamic Media アセットの管理について {#managing-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アップロード後の Dynamic Media アセット（画像、ビデオ、インタラクティブアセット）の管理には、アセットのプレビュー、ダウンロード、公開を含む数多くのタスクが必要になります。
 

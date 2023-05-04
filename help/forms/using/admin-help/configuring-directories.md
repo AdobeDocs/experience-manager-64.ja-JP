@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: fe69a3ca-0452-4e06-bd74-45d80659574e
-source-git-commit: bf9b94e8af72ad7b0a2c1d867fa35acfa31e6c1c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3263'
 ht-degree: 39%
 
 ---
 
 # ディレクトリの設定 {#configuring-directories}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 設定した各エンタープライズドメインに対して、認証プロバイダーがユーザー情報に対して問い合わせるディレクトリを指定します。 1 つのドメインに対して複数のディレクトリを設定できます。
 

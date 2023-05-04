@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 0e0a9b6b-fd2f-4cec-b233-500c940ee4d5
 exl-id: d8f60be3-474a-4dd1-aaa5-7b6a97e1a9bd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 32%
+source-wordcount: '301'
+ht-degree: 31%
 
 ---
 
 # フォームリスター項目にカスタムアクションボタンを追加 {#adding-custom-action-on-form-lister-items}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsでは、使用可能なフォームをリストするポータルページを作成できます。 デフォルトでは、ポータルページ上のフォームを検索してリストすることができます。 フォームを開いて、情報を入力し、送信することができます。 ポータルページにリストされたフォームでは、レンダリングアクションのみが標準で提供されます。 ポータルページの利用可能なアクションの詳細については、[フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)を参照してください。
 

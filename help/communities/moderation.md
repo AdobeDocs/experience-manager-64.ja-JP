@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
 role: Admin
 exl-id: ded38cee-fbce-46cc-974f-38d3a293a55d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1883'
 ht-degree: 5%
 
 ---
 
 # モデレートコンソール {#moderation-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesで一括 [コミュニティコンテンツのモデレート](moderate-ugc.md) は、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）によって、オーサー環境とパブリッシュ環境の両方から実行できます。
 
@@ -186,7 +190,7 @@ AEM Communitiesで一括 [コミュニティコンテンツのモデレート](m
 
 ![chlimage_1-475](assets/chlimage_1-475.png)
 
-* 保存を選択
+* 「保存」を選択します
 * コミュニティ — モデレートコンソールを更新します。
 
 その結果、次の項目の選択可能な新しいフィルターが作成されます。 `Voting`の下に `Content Type` フィルターグループを使用します。
@@ -322,7 +326,7 @@ AEM Communitiesで一括 [コミュニティコンテンツのモデレート](m
 
 複数の UGC 投稿のコンテンツ領域表示に戻るには、ビュー詳細ペインの右上隅にある X を選択します。
 
-例：
+次に例を示します。
 
 ![chlimage_1-486](assets/chlimage_1-486.png)
 
@@ -336,6 +340,6 @@ AEM Communitiesで一括 [コミュニティコンテンツのモデレート](m
 
 複数の UGC 投稿のコンテンツ領域表示に戻るには、ビュー詳細ペインの右上隅にある X を選択します。
 
-例：
+次に例を示します。
 
 ![chlimage_1-488](assets/chlimage_1-488.png)

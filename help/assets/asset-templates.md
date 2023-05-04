@@ -8,14 +8,18 @@ discoiquuid: 340b62f7-2405-4d2d-846d-2c444d6cc77b
 feature: Asset Management,Developer Tools
 role: User
 exl-id: 9b4f16e6-dd91-4179-9629-576d801fcf43
-source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1610'
 ht-degree: 29%
 
 ---
 
 # アセットテンプレート {#asset-templates}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アセットテンプレートは、デジタルメディアとプリントメディアの視覚的にリッチなコンテンツをすばやく再利用するための、アセットの特別なクラスです。アセットテンプレートには、固定メッセージセクションと編集可能セクションの 2 つの部分があります。
 

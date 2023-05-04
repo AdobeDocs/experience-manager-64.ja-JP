@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 0685478b-d08e-4d69-8dd3-f75270772167
 exl-id: aabfd05d-581b-4205-8e61-5667d5713cb1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 23%
+source-wordcount: '1435'
+ht-degree: 25%
 
 ---
 
 # AEM ドキュメントサービスの概要 {#overview-of-aem-document-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Document Services は、PDFドキュメントを作成、アセンブリ、および保護するための OSGi サービスのセットです。 ドキュメントサービスには、次のサービスが含まれています。
 
@@ -58,7 +62,7 @@ Assembler サービスを使用すると、PDFドキュメントと XDP ドキ�
 
 ### DDX について {#about-ddx}
 
-Assembler サービスを使用する場合は、Document Description XML(DDX) と呼ばれる XML ベースの言語を使用して、必要な出力を記述します。 DDX は宣言的マークアップ言語で、その要素がドキュメントの構築ブロックを表します。 これらの構築ブロックには、PDFドキュメント、XDP ドキュメント、XDP フォームフラグメント、およびコメント、しおり、スタイル設定されたテキストなどのその他の要素が含まれます。
+Assembler サービスを利用するときは、必要な出力を記述するために Document Description XML（DDX）と呼ばれる XML ベースの言語を使用します。DDX は宣言的マークアップ言語で、その要素がドキュメントの構築ブロックを表します。 これらの構築ブロックには、PDFドキュメント、XDP ドキュメント、XDP フォームフラグメント、およびコメント、しおり、スタイル設定されたテキストなどのその他の要素が含まれます。
 
 DDX ドキュメントは、次の特性を持つ結果ドキュメントを指定できます。
 
@@ -88,7 +92,7 @@ DDX を使用して、ドキュメントのアセンブリまたは分解の一�
 
 * File
 * FTP
-* HTTP/HTTPS
+* HTTP／HTTPS
 
 ## Doc Assurance サービス {#doc-assurance-service}
 

@@ -10,19 +10,23 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a6d9b08d-e669-4b9b-b591-c21cd72b6e22
 exl-id: 82e4af22-30b7-4678-9b14-84f2fecfd310
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 55%
+source-wordcount: '1262'
+ht-degree: 54%
 
 ---
 
 # ID 管理{#identity-management}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 Web サイトの個々の訪問者は、ユーザーがログインできる場合にのみ識別できます。 ログイン機能を提供する理由は、次のように様々です。
 
 * [AEM Communities](/help/communities/overview.md) サイト訪問者がコミュニティにコンテンツを投稿するにはログインする必要があります。
-* [閉じられたユーザーグループ](/help/sites-administering/cug.md)
+* [クローズドユーザーグループ](/help/sites-administering/cug.md)
 
    Web サイト（または Web サイト内のセクション）へのアクセスを特定の訪問者に制限することが必要な場合があります。
 

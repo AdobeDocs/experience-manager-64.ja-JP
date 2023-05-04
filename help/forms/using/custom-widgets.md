@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: 5d860f05-3257-4cf7-93dd-77d226d59b39
 feature: Mobile Forms
 exl-id: e9e53b6d-6403-4d37-bac1-efaff0317f34
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 44%
+source-wordcount: '676'
+ht-degree: 43%
 
 ---
 
 # HTML5 フォームのカスタム外観の作成 {#create-custom-appearances-in-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 カスタムウィジェットを Mobile Formsにプラグインできます。 既存の jQuery ウィジェットを拡張したり、外観フレームワークを使用して独自のカスタムウィジェットを開発したりできます。 XFA エンジンは様々なウィジェットを使用します。詳しくは、[アダプティブフォームおよび HTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)を参照してください。
 

@@ -11,14 +11,18 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 role: Developer
 exl-id: 92bc6878-6963-442a-8441-fba42e89c859
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3505'
-ht-degree: 100%
+source-wordcount: '3541'
+ht-degree: 99%
 
 ---
 
 # 編集可能なレイアウトを使用した Forms の事前入力 {#prepopulating-forms-with-flowable-layouts1}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 編集可能なレイアウトを使用した Forms の事前入力 {#prepopulating-forms-with-flowable-layouts2}
 

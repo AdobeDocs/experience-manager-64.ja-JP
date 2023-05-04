@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 49bf3e19-d299-4c99-896c-b12135f33fb7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1230'
 ht-degree: 31%
 
 ---
 
 # 基本操作 {#basic-handling}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -218,7 +222,7 @@ ht-degree: 31%
 
 | **列** | **カラー** | **説明** |
 |---|---|---|
-| 公開済み | グリーン | 公開に成功しました。 コンテンツが公開されました。 |
+| 公開済み | グリーン | 公開に成功しました。  コンテンツが公開されます。 |
 | 公開済み | イエロー | 公開は保留中です。 公開の確認は、システムでまだ受け取っていません。 |
 | 公開済み | レッド | パブリケーションに失敗しました. パブリッシュインスタンスとの接続はありません。 また、コンテンツが非アクティブ化されたことを意味する場合もあります。 |
 | 公開済み | *空白* | このページは公開されたことがありません。 |

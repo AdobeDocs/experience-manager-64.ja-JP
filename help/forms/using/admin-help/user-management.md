@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 10e6177a-8228-4515-aba9-bbe59bede449
 exl-id: 45e5b682-3d21-4843-8f62-9d0d493d91c0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 6%
+source-wordcount: '510'
+ht-degree: 7%
 
 ---
 
 # User Management {#user-management}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 User Management では、Security Assertion Markup Language(SAML) を使用して、AEM forms モジュールと Netegrity SiteMinder で保護されたアプリケーションとの間でシングルサインオン (SSO) を有効にできます。 SSO を実装すると、AEM forms のユーザーログインページは不要になり、ユーザーが会社のポータルで既に認証されている場合は表示されません。
 

@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 45578c86-6ec8-4f9c-92d9-e2f28f989fd3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '244'
 ht-degree: 27%
 
 ---
 
 # アダプティブフォームのキーワード {#adaptive-forms-keywords}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームのキーワードは、事前に定義され、アダプティブフォーム用に特別な意味を持つ予約済みの識別子です。 アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。 次の表に、アダプティブフォーム用に予約されているすべてのキーワードを示します。
 

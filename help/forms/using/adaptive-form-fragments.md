@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 4df5ee77-5a77-4efd-b7e1-c78e650673a9
 feature: Adaptive Forms
 exl-id: f63478c5-1798-428e-a662-f3db692b27fc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2056'
+source-wordcount: '2092'
 ht-degree: 33%
 
 ---
 
 # アダプティブフォームフラグメント {#adaptive-form-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 すべてのフォームは特定の目的用に設計されますが、ほとんどのフォームには、いくつかの共通するセグメントがあります（例：名前と住所、家族の詳細、収入の詳細などの個人情報などを入力するためのセグメント）。フォーム開発者は、新しいフォームを作成するたびに、これらの共通セグメントを作成する必要があります。
 

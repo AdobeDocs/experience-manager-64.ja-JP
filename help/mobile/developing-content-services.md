@@ -9,14 +9,18 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
 exl-id: e900d93e-f7cd-4a0d-a866-7fc6c7882797
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 7%
+source-wordcount: '337'
+ht-degree: 9%
 
 ---
 
 # コンテンツサービス{#content-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -44,7 +48,7 @@ Content Services では、開発者がAEMで管理されるコンテンツに、
 >
 >詳しくは、 **[コンテンツサービスの管理](/help/mobile/developing-content-services.md)** 」を参照してください。
 >
->詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+>詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 

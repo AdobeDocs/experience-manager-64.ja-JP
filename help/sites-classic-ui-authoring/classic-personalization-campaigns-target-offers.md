@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: ca9c6fd1-7f2e-4c99-ba6e-0a064274ac24
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 63%
+source-wordcount: '127'
+ht-degree: 51%
 
 ---
 
 # Target オファー {#target-offers}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## Test&amp;Target オファーエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
 

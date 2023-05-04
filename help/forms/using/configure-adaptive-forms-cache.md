@@ -10,14 +10,18 @@ topic-tags: Configuration
 discoiquuid: dd18f7b5-882d-4e81-ab3d-85f1e5d74992
 role: Admin
 exl-id: 6a610e9d-beec-486d-b1d2-78b5fec44c52
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 58%
+source-wordcount: '306'
+ht-degree: 54%
 
 ---
 
 # アダプティブフォームのキャッシュの設定 {#configure-adaptive-forms-cache}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I／O 速度を改善するメカニズムです。アダプティブフォームのキャッシュには、アダプティブフォームのHTMLコンテンツと JSON 構造のみが保存されます。事前入力されたデータは保存されません。 これにより、クライアント上でアダプティブフォームやドキュメントをレンダリングするのに必要な時間を短縮できます。 アダプティブフォーム専用に設計され、アダプティブドキュメントもサポートします。
 

@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 91a41bc1-3fa3-4467-b3f8-5570ba7757c0
 feature: Adaptive Forms
 exl-id: 8e7ba9d2-207f-419b-bcd5-74ba9b14ab92
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 41%
+source-wordcount: '562'
+ht-degree: 39%
 
 ---
 
 # アダプティブフォームコンポーネントのインラインスタイリング {#inline-styling-of-adaptive-form-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームの全体的な外観とスタイルは、 [テーマエディター](/help/forms/using/themes.md). また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、変更をその場でプレビューすることもできます。 インラインスタイルは、テーマで設定されたスタイルよりも優先されます。
 
@@ -78,7 +82,7 @@ ht-degree: 41%
   <tr> 
    <td><p>ラベル</p> </td> 
    <td><p>寸法と位置/幅</p> </td> 
-   <td><p>100px</p> </td> 
+   <td><p>100 px</p> </td> 
    <td><p>ラベルの幅を 100 px に固定します</p> </td> 
   </tr> 
   <tr> 

@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 50c2479b-72b6-42fa-8e48-45c8e9596161
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 59%
+source-wordcount: '512'
+ht-degree: 56%
 
 ---
 
 # 翻訳のための文字列の抽出{#extracting-strings-for-translating}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 xgettext-maven-plugin を使用して、翻訳が必要な文字列をソースコードから抽出します。 Maven プラグインは、翻訳のために送信する XLIFF ファイルに文字列を抽出します。 文字列は、次の場所から抽出されます。
 

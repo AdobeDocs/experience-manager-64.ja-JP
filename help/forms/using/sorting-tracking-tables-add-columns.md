@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 5f925f47-3123-4a27-aea1-0a1c1fba7bb6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 36%
+source-wordcount: '366'
+ht-degree: 35%
 
 ---
 
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。追跡テーブルを表示するには、最初に左側のペインでプロセス名を選択して、中央のペインでインスタンスのリストを表示します。 プロセスインスタンスを選択して、このインスタンスによって生成されたタスクのテーブルを右側のウィンドウに表示します。 デフォルトでは、テーブル列には次のタスク属性が表示されます（タスクモデル内の対応する属性は括弧内に表示されます）。
 

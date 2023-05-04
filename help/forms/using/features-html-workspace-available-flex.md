@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 exl-id: 109adc91-2291-4a10-af7b-e93ae8947258
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '417'
 ht-degree: 26%
 
 ---
 
 # Flex Workspace では利用できない AEM Forms Workspace の機能 {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace は Flex ベース Workspace を凌ぐ革新的な機能のワークスペースであり、ビジネス統合とユーザー生産性の向上に役立つ機能と能力を備えています。
 

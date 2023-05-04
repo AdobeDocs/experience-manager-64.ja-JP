@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
 exl-id: 0182155a-0156-458c-b89b-35ab3e27819e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2295'
-ht-degree: 64%
+source-wordcount: '2331'
+ht-degree: 63%
 
 ---
 
 # ページの作成と整理 {#creating-and-organizing-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、Adobe Experience Manager(AEM) でページを作成および管理し、次の操作を実行する方法について説明します。 [コンテンツを作成](/help/sites-authoring/editing-content.md) 」という名前を付けます。
 
@@ -306,7 +310,7 @@ AEMには、すぐに使用できる複数のテンプレートが用意され�
 * ページを名前変更せずに移動する。
 * 移動と名前の変更を同時に行います。
 
-AEM では、名前変更または移動が行われるページへの内部リンクを更新する機能が用意されています。これは、ページごとに実行できるので、最大限の柔軟性を提供します。
+AEM では、名前変更または移動が行われるページへの内部リンクを更新する機能が用意されています。これは、ページごとに実行でき、柔軟性を最大限に高めます。
 
 1. 移動するページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。

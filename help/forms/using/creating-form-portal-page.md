@@ -10,14 +10,18 @@ topic-tags: publish
 discoiquuid: 7387dfe8-0029-4ad0-b319-fc519928318b
 feature: Forms Portal
 exl-id: 4d66ab64-a132-4f2a-89ca-3fbd8dc56ce2
-source-git-commit: 977ada5fefe476c7cd2fe1470eb024a517a681d2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1682'
 ht-degree: 49%
 
 ---
 
 # フォームポータルページの作成  {#creating-a-forms-portal-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Formsポータルコンポーネントを使用すると、Web 開発者にAdobe Experience Manager(AEM) で作成された Web サイト上でフォームポータルを作成し、カスタマイズするためのコンポーネントが支給されます。 フォームポータルの概要については、 [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md).
 

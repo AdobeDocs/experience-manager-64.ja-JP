@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bbbe32bb-9d97-461e-822f-a7ddc6c9f9ef
 exl-id: af16f4df-ed8e-40e4-b117-3d612e122947
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1240'
 ht-degree: 2%
 
 ---
 
 # Q&amp;A フォーラム機能 {#q-a-forum-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -158,15 +162,15 @@ Q&amp;A（質問と回答）フォーラム機能は、コミュニティメン�
 
 * **[!UICONTROL 並べ替え基準]**
 許可されている並べ替えの選択項目をすべてオンにします。 
-`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked` を使用して作成します。デフォルトは `Newest, Oldest, Last Updated` です。
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**
 プルダウンして、オンにした並べ替えオプションの 1 つを選択し、デフォルトとして表示します。 初期設定は です。 
-`Newest`
+`Newest`。
 
 * **[!UICONTROL Analytics 並べ替えの時間オプションの選択]**
 プルダウンして次のいずれかを選択 
-`All, Last 24 Hours, Last 7 Days, Last 30 Days` を使用して作成します。デフォルトは `All` です。
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`。デフォルトは `All` です。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 

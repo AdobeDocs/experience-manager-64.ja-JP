@@ -10,14 +10,18 @@ content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
 feature: Configuring
 exl-id: 67dfa0f7-24ac-41ae-83c9-3bb1a8656502
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 94%
+source-wordcount: '192'
+ht-degree: 81%
 
 ---
 
 # 整合性チェックとトラバーサルチェック{#consistency-and-traversal-checks}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アップグレード中に、ワークスペースの不整合による問題が発生することがあります。テストアップグレードを実行して不整合の問題が発生するかを確認できます。または、予防策として整合性チェックを実行できます。
 

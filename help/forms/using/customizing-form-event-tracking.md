@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 exl-id: e07adddb-e904-4a80-9b1c-8028b12c0e37
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 42%
+source-wordcount: '482'
+ht-degree: 40%
 
 ---
 
 # フォームのイベント追跡のカスタマイズ {#customizing-form-event-tracking}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Analytics が有効なアダプティブフォームでは、次のイベントがデフォルトで追跡されます。
 

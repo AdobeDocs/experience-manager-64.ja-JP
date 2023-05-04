@@ -11,14 +11,18 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 8eba690a-797a-4ba9-b178-11f8c011239f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1445'
 ht-degree: 21%
 
 ---
 
 # 相互 SSL を使用したレプリケーション{#replicating-using-mutual-ssl}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 オーサーインスタンス上のレプリケーションエージェントが相互 SSL(MSSL) を使用してパブリッシュインスタンスに接続するようにAEMを設定します。 MSSL を使用して、レプリケーションエージェントとパブリッシュインスタンス上の HTTP サービスは、証明書を使用して互いに認証します。
 

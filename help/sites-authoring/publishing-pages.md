@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
 exl-id: 3de608f3-569f-438d-8ce7-24e82e5c1ec6
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 62%
+source-wordcount: '1716'
+ht-degree: 61%
 
 ---
 
 # ページの公開 {#publishing-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 オーサー環境でコンテンツを作成およびレビューしたら、目標は次のとおりです。 [公開 Web サイトで利用できるようにする](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （パブリッシュ環境）。
 

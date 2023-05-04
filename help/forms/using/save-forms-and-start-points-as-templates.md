@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: e0df2f85-664a-47b3-a8c5-e986b975d421
 exl-id: 355c4810-6e45-41cb-9b60-73225bd53526
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 36%
+source-wordcount: '364'
+ht-degree: 35%
 
 ---
 
 # フォームをテンプレートとして保存 {#save-forms-as-templates}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ユーザーがフォームに入力する際に、いくつかのフィールドへの入力が同じままになる場合があります。 このような場合は、すべてのインスタンスで同じ値を必要とするフィールドに入力し、フォームまたはドラフトをテンプレートとして保存できます。 これで、テンプレートのインスタンスを作成するたびに、指定されたフィールドには、テンプレートで指定された値が既に入力されています。 これにより、フォーム入力に必要な時間と労力を節約できます。
 

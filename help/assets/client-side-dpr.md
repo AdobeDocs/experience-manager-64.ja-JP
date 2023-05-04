@@ -3,14 +3,18 @@ title: クライアントサイドのデバイスピクセル比（DPR）を使�
 description: Dynamic Media を含む Adobe Experience Manager as a Cloud Service のスマートイメージングでクライアントサイドのデバイスピクセル比を使用する方法について説明します。
 role: Admin,User
 exl-id: 3c19a02f-9d97-4ed4-92ea-0b5861267219
-source-git-commit: 176e974bf99d9f70a5c1d075ee83eea9e9173221
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 100%
+source-wordcount: '359'
+ht-degree: 92%
 
 ---
 
 # クライアントサイドのデバイスピクセル比（DPR）を使用したスマートイメージングについて {#client-side-dpr}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 現在のスマートイメージングソリューションでは、ユーザーエージェント文字列を使用して、使用されているデバイスのタイプ（デスクトップ、タブレット、モバイルなど）を判断します。
 

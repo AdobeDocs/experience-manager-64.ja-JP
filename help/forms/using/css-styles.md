@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 feature: Mobile Forms
 exl-id: 9e381e71-63ff-41ab-a6ec-9f92447b65a0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '848'
 ht-degree: 33%
 
 ---
 
 # HTML5 フォームのための CSS スタイルの作成 {#creating-css-styles-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 XFA ベースのフォームテンプレートのHTML5 レンディションは、複数のHTML要素で構成されます。 これらの要素は、順に並べられます。 すべての要素には、適切に定義された CSS クラスがあります。 これらの CSS クラスを使用して、要素の外観を選択および変更できます。
 

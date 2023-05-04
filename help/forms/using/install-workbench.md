@@ -6,9 +6,9 @@ uuid: null
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: null
-source-git-commit: 19dcda357b34e7160792d43cb9335fc3be0dedbc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2779'
 ht-degree: 46%
 
 ---
@@ -16,9 +16,13 @@ ht-degree: 46%
 
 # Workbench のインストール {#install-workbench}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 このドキュメントでは、Workbench のインストールと設定の手順を説明します。 このインストールプログラムは Designer もインストールします。
 
-## について {#about}
+## 概要 {#about}
 
 このドキュメントは、Workbench のインストール、設定、管理またはデプロイを担当する管理者または開発者を対象としています。
 アップグレードされたAdobe® AEM forms® Enterprise Suite (ES) Update 1(8.2.x) およびAdobe® AEM forms® Enterprise Suite 2(ES2) プロセスをサポートするようにシステムを設定するために必要な情報も含まれています。

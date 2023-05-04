@@ -1,7 +1,7 @@
 ---
 title: IntelliJ IDEA を使用して AEM プロジェクトを開発する方法
 seo-title: How to Develop AEM Projects using IntelliJ IDEA
-description: IntelliJ IDEA を使用した AEM プロジェクトの開発
+description: IntelliJ IDEA を使用したAEMプロジェクトの開発
 seo-description: Using IntelliJ IDEA to develop AEM projects
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
@@ -10,37 +10,41 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 274b3a33-3267-41ee-bdcd-351787152570
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 100%
+source-wordcount: '678'
+ht-degree: 57%
 
 ---
 
 # IntelliJ IDEA を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-intellij-idea}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ## 概要 {#overview}
 
-IntelliJ で AEM の開発を開始するには、次の手順を実行する必要があります。
+IntelliJ でのAEM開発を開始するには、次の手順が必要です。
 
-各手順の詳細については、このページで後述します。
+それぞれについては、このハウツーの後半で詳しく説明します。
 
 * IntelliJ のインストール
-* Maven に基づく AEM プロジェクトの設定
+* Maven に基づいてAEMプロジェクトをセットアップする
 * Maven POM での IntelliJ 用の JSP サポートの準備
 * IntelliJ への Maven プロジェクトの読み込み
 
 >[!NOTE]
 >
->このガイドは IntelliJ IDEA Ultimate Edition 12.1.4 と AEM 5.6.1 を基に作成されています。
+>このガイドは、IntelliJ IDEA Ultimate Edition 12.1.4 およびAEM 5.6.1 に基づいています。
 
 ### IntelliJ IDEA のインストール {#install-intellij-idea}
 
-[JetBrains のダウンロードページ](https://www.jetbrains.com/idea/download/index.html)から IntelliJ IDEA をダウンロードします。
+次から IntelliJ IDEA をダウンロード： [JetBrains のダウンロードページ](https://www.jetbrains.com/idea/download/index.html).
 
-そのページのインストール手順に従ってください。
+次に、このページのインストール手順に従います。
 
-### Maven に基づく AEM プロジェクトの設定 {#set-up-your-aem-project-based-on-maven}
+### Maven に基づいてAEMプロジェクトをセットアップする {#set-up-your-aem-project-based-on-maven}
 
 次に、[Apache Maven を使用して AEM プロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)に記載されている手順に従って、Maven を使用してプロジェクトを設定します。
 
@@ -48,9 +52,9 @@ IntelliJ IDEA で AEM プロジェクトを使用するには、[5 分で完了�
 
 ### IntelliJ IDEA 用の JSP サポートの準備 {#prepare-jsp-support-for-intellij-idea}
 
-IntelliJ IDEA では JSP との連携もサポートされます。サポートされる項目の例を次に示します。
+IntelliJ IDEA では、JSP を使用する際のサポートも提供できます。例：
 
-* タグライブラリのオートコンプリート
+* タグライブラリの自動補完
 * `<cq:defineObjects />` と `<sling:defineObjects />` で定義されたオブジェクトの認知
 
 サポートを有効にするには、[Apache Maven を使用して AEM プロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)の [JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)に記載されている手順に従います。
@@ -75,18 +79,18 @@ IntelliJ IDEA では JSP との連携もサポートされます。サポート�
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
 
-### IntelliJ IDEA による JSP のデバッグ {#debugging-jsps-with-intellij-idea}
+### IntelliJ IDEA を使用した JSP のデバッグ {#debugging-jsps-with-intellij-idea}
 
-IntelliJ IDEA を使用して JSP をデバッグするには、次の手順をおこなう必要があります。
+IntelliJ IDEA で JSP をデバッグするには、次の手順が必要です
 
 * プロジェクトでの Web ファセットの設定
 * JSR45 サポートプラグインのインストール
 * デバッグプロファイルの設定
-* デバッグモード用の AEM の設定
+* デバッグモード用のAEMの設定
 
 #### プロジェクトでの Web ファセットの設定 {#set-up-a-web-facet-in-the-project}
 
-デバッグ用の JSP を検索する場所を IntelliJ IDEA で認識する必要があります。IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
+IntelliJ IDEA は、デバッグ用の JSP をどこで見つけるかを理解する必要があります。 IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
 
 1. **ファイル／プロジェクト構造**&#x200B;に移動します。
 1. 「**コンテンツ**」モジュールを選択します。
@@ -116,11 +120,11 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 ![chlimage_1-50](assets/chlimage_1-50.png) ![chlimage_1-51](assets/chlimage_1-51.png)
 
-#### デバッグモード用の AEM の設定 {#configure-aem-for-debug-mode}
+#### デバッグモード用のAEMの設定 {#configure-aem-for-debug-mode}
 
-必要な最後の手順は、IntelliJ IDEA が推奨する JVM オプションを指定して AEM を起動することです。
+最後に必要な手順は、IntelliJ IDEA が提案する JVM オプションでAEMを起動することです。
 
-そのためには、AEM jar ファイルを直接起動して、これらのオプションを追加します。例えば、次のコマンドラインを使用します。
+これをおこなうには、AEM jar ファイルを直接起動し、次のコマンドラインなどを使用して、これらのオプションを追加します。
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -XX:MaxPermSize=256M -jar cq-quickstart-5.6.1.jar`
 
@@ -129,7 +133,15 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 ```shell
 # ...
 
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
+
 # default JVM options
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 if [ -z "$CQ_JVM_OPTS" ]; then
  CQ_JVM_OPTS='-server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true'
 fi
@@ -137,18 +149,22 @@ fi
 CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y"
 
 # ...
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 ```
 
-#### デバッグの開始 {#start-debugging}
+#### デバッグを開始 {#start-debugging}
 
-これで、AEM における JSP のデバッグ用の設定はすべて完了です。
+これで、AEMでの JSP のデバッグ用に設定されました。
 
 1. **実行／デバッグ／デバッグプロファイル**&#x200B;を選択します。
-1. コンポーネントのコードにブレークポイントを設定します。
-1. ブラウザーでページにアクセスします。
+1. コンポーネントコードにブレークポイントを設定する
+1. ブラウザーでページにアクセスする
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
 ### IntelliJ IDEA によるバンドルのデバッグ {#debugging-bundles-with-intellij-idea}
 
-標準の汎用リモートデバッグ接続を使用して、バンドル内のコードをデバッグできます。[リモートデバッグに関する Jetbrain のドキュメント](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html)の手順に従ってください。
+バンドル内のコードは、標準の汎用リモートデバッグ接続を使用してデバッグできます。 次の手順を実行できます。 [リモートデバッグに関する Jetbrain ドキュメント](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html).

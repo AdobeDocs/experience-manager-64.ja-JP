@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: ae6b4caa-5bd0-4a09-9ccf-077405ea3868
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1126'
 ht-degree: 21%
 
 ---
 
 # 監視フォルダーのバックアップ方法 {#backup-strategies-for-watched-folders}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、監視フォルダーが様々なバックアップおよび回復シナリオに与える影響、これらのシナリオの制限事項と結果、およびデータ損失を最小限に抑える方法について説明します。
 

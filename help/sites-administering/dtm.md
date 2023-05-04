@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: d7108d54-cb87-4587-9b52-6711ba38bed2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2246'
 ht-degree: 29%
 
 ---
 
 # Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [Adobe Dynamic Tag Management](https://www.adobe.com/jp/solutions/digital-marketing/dynamic-tag-management.html) と AEM を統合すると、Dynamic Tag Management Web プロパティを使用して AEM Sites を追跡できます。マーケターは、Dynamic Tag Management を使用して、データ収集のためのタグを管理し、複数のデジタルマーケティングシステムにデータを配信できます。例えば、Dynamic Tag Management を使用して、AEM web サイトの使用状況データを収集し、そのデータを Adobe Analytics または Adobe Target に配信して分析します。
 
@@ -77,7 +81,7 @@ AEMにアクセスして、Dynamic Tag Managementデプロイメントフック�
 
 次の表に、設定するプロパティを示します。
 
-| Web コンソールのプロパティ | OSGi プロパティ | 説明 |
+| Web コンソールのプロパティ | OSGi のプロパティ | 説明 |
 |---|---|---|
 | ステージング DTM IP のホワイトリスト | `dtm.staging.ip.whitelist` | ステージングライブラリを更新する Dynamic Tag Managementサーバーの IP アドレス。 |
 | 実稼動 DTM IP ホワイトリスト | `dtm.production.ip.whitelist` | 実稼動用ライブラリを更新する Dynamic Tag Managementサーバーの IP アドレス。 |

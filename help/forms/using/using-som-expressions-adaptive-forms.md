@@ -9,14 +9,18 @@ topic-tags: develop
 discoiquuid: 7dff7ef2-80d1-434a-b9b0-ac6654736602
 feature: Adaptive Forms
 exl-id: e4680ede-6a02-4b8b-8a6f-9599a05da8e7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 57%
+source-wordcount: '363'
+ht-degree: 53%
 
 ---
 
 # アダプティブフォームでの SOM 式の使用 {#using-som-expressions-in-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームはAEM Page としてモデル化され、AEMリポジトリで JCR コンテンツ構造として表されます。 コンテンツ構造のキー要素は guideContainer ノードです。 guideContainer の下に、ネストされたパネルとフィールドを含む rootPanel があります。
 

@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management
 role: User
 exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 38%
+source-wordcount: '429'
+ht-degree: 37%
 
 ---
 
 # アセット内ファイルのチェックイン、チェック-アウト {#check-in-and-check-out-files-in-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。 アセットをチェックアウトした後は、そのユーザーだけがアセットを編集、注釈、公開、移動、削除できます。 アセットのチェックアウトでアセットにロックがかかることになります。他のユーザーは、アセットをに再度チェックインするまで、アセットに対してこれらの操作を実行できません。 [!DNL Experience Manager] アセット。 ただし、ロックされたアセットのメタデータは変更することができます。
 

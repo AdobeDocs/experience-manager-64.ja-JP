@@ -10,14 +10,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: df8cfde3-543d-4150-9822-9be763908bd7
 exl-id: d56fa6ba-6ac7-4d4f-968b-075f4f13957c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1693'
 ht-degree: 19%
 
 ---
 
 # JMX コンソールを使用したサービスの統合 {#integrating-services-with-the-jmx-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 JMX コンソールを使用して MBean を作成し、デプロイしてサービスを管理します。 管理タスクを実行できるように、サービス属性と操作を公開します。
 

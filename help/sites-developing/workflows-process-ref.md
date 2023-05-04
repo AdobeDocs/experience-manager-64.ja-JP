@@ -10,14 +10,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: dbdf981f-791b-4ff7-8ca8-039d0bdc9c92
 exl-id: c828302c-54ad-4171-89d1-f77f4d836277
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1139'
-ht-degree: 68%
+source-wordcount: '1175'
+ht-degree: 67%
 
 ---
 
 # ワークフロープロセスのリファレンス{#workflow-process-reference}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMには、ワークフローモデルの作成に使用できる複数のプロセスステップが用意されています。 カスタムプロセスステップは、組み込みステップでカバーされていないタスクにも追加できます ( [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)) をクリックします。
 

@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: a7ec190d-056e-4fc9-8f2d-f4164273674d
 exl-id: a6dca5d7-21b5-4a7f-9e83-b0f5ea77bc88
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 46%
+source-wordcount: '848'
+ht-degree: 45%
 
 ---
 
 # ローンチ 概要{#launches}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ローンチを使用すると、将来のリリース用にコンテンツを効率的に開発できます。
 

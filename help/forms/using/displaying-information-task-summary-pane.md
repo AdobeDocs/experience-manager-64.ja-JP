@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 exl-id: cb9de2d7-04ad-4221-8db7-403464c9888b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 44%
+source-wordcount: '313'
+ht-degree: 41%
 
 ---
 
 # タスクの概要ペインでの情報の表示 {#displaying-information-in-the-task-summary-pane}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace でタスクを開くと、タスクの概要ペインにタスクの概要が表示されます。 タスクに関するこの追加の関連情報により、AEM Forms Workspace のエンドユーザーにとってより多くの価値がもたらされます。
 

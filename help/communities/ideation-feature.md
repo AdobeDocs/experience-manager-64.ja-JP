@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 7c0a9120-2edb-431b-b460-68398832d5ec
 exl-id: 391885f2-e46d-4eb4-9c88-509233505df8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 2%
+source-wordcount: '1094'
+ht-degree: 3%
 
 ---
 
 # アイディエーション機能 {#ideation-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -55,7 +59,7 @@ ht-degree: 2%
 
 * **[!UICONTROL アイディエーションのタイトル]**
 アイデアの表示タイトル。 初期設定は です。 
-`Ideation`
+`Ideation`。
 
 * **[!UICONTROL アイディエーションの説明]**
 アイデアのサブタイトルとして表示する説明。 デフォルトでは説明はありません。
@@ -153,15 +157,15 @@ ht-degree: 2%
 
 * **[!UICONTROL 並べ替え基準]**
 許可されている並べ替えの選択項目をすべてオンにします。 
-`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked` を使用して作成します。デフォルトは `Newest, Oldest, Last Updated` です。
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**
 プルダウンして、オンにした並べ替えオプションの 1 つを選択し、デフォルトとして表示します。 初期設定は です。 
-`Newest`
+`Newest`。
 
 * **[!UICONTROL Analytics 並べ替えの時間オプションの選択]**
 プルダウンして次のいずれかを選択 
-`All, Last 24 Hours, Last 7 Days, Last 30 Days` を使用して作成します。デフォルトは `All` です。
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`。デフォルトは `All` です。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 

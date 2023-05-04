@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 4adce3b4-f209-4a01-b116-a5e01c4cc123
 exl-id: edc06f41-d0ee-45b0-b2f9-a8fa80e6a8d2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 83%
+source-wordcount: '903'
+ht-degree: 81%
 
 ---
 
 # コーディングのヒント{#coding-tips}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 可能な限り taglibs または HTL を使用 {#use-taglibs-or-htl-as-much-as-possible}
 

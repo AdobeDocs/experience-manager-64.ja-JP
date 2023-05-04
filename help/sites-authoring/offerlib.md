@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 889b5ffc-3652-47d8-b576-128f3cee513a
 exl-id: 5c7c1cda-0e9c-454f-91c4-8e1f37a155c3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '898'
 ht-degree: 18%
 
 ---
 
 # オファーの作成と管理 {#creating-and-managing-offers}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 オファーコンソールを使用して、次の操作を行えるオファーを作成します [アクティビティエクスペリエンスでの使用](/help/sites-authoring/content-targeting-touch.md). オファーコンソールでオファーを作成すると、複数のエクスペリエンスで同じオファーが必要となる場合の時間を節約できます。
 
@@ -94,7 +98,7 @@ ht-degree: 18%
 1. 表示されるダイアログボックスで、「 」をクリックまたはタップします。 **削除** 削除を確定します。
 1. オファーが 1 つ以上のエクスペリエンスで使用されている場合は、そのオファーが参照されていることを示すダイアログボックスが表示されます。
 
-   * オファーを削除してエクスペリエンスから削除するには、「 」または「 」をタップします **削除を強制**.
+   * オファーを削除してエクスペリエンスから削除するには、「 」をクリックまたはタップします **削除を強制**.
    * オファーを保持するには、をクリックまたはタップします **キャンセル**.
 
 ## オファーの検索 {#searching-for-offers}

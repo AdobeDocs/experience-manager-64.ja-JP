@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 feature: Document Security
 exl-id: 78fc7c4a-a634-4628-927a-c9622bdc13fc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 6%
+source-wordcount: '360'
+ht-degree: 8%
 
 ---
 
 # 大量の保護された情報の配布 {#high-volume-secure-information-delivery}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 通信会社の安全な月次請求書を生成するような大量生産環境では、各ドキュメントに固有のライセンスを作成すると、リソースを大量に消費する可能性があります。 このような場合、Document Security は、ドキュメントに対するライセンスの関連付けではなく、ユーザーに対するライセンスの関連付けをサポートします。 ユーザーに対して生成されたライセンスは、そのユーザーに対して保護されているすべてのドキュメントに対して使用されます。
 

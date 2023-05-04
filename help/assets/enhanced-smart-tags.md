@@ -9,14 +9,18 @@ discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
 feature: Smart Tags,Search
 role: User
 exl-id: 21a9f130-ea91-45bf-adc8-8a73a2a00c77
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 55%
+source-wordcount: '1550'
+ht-degree: 54%
 
 ---
 
 # 拡張スマートタグ {#enhanced-smart-tags}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 拡張スマートタグの概要 {#overview-of-enhanced-smart-tags}
 

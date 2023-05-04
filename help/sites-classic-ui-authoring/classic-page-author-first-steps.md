@@ -10,14 +10,18 @@ topic-tags: introduction, page-authoring
 content-type: reference
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 exl-id: 88976f08-c003-4b8f-87c5-38b592fc9921
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 27%
+source-wordcount: '452'
+ht-degree: 26%
 
 ---
 
 # 作成者がおこなう最初の手順 {#first-steps-for-authors}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、 [コンテンツのオーサリングを開始中](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) をAdobe Experience Manager(AEM) に置き換えます。
 

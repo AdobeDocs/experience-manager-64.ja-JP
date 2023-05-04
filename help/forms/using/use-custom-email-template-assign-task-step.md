@@ -7,14 +7,18 @@ uuid: bc2af94d-d4ad-417e-b3d2-bcfffc1b306d
 topic-tags: publish
 discoiquuid: c447fc39-c0f3-4932-ac6c-465d1fb83f8c
 exl-id: 5af73823-2c32-41b3-9ab8-a7ad9fd9532f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 39%
+source-wordcount: '567'
+ht-degree: 38%
 
 ---
 
-# タスクの割り当て手順におけるカスタムのメールテンプレートの使用 {#use-custom-email-templates-in-an-assign-task-step}
+# タスク割り当て手順でのカスタムメールテンプレートの使用 {#use-custom-email-templates-in-an-assign-task-step}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォームワークフローの電子メール通知用のカスタム電子メールテンプレート
 

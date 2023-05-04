@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: dcac2a3a-3241-47de-96ce-982ab0bc05eb
 exl-id: 997040d4-cf8f-4240-8423-a98d562aae02
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 76%
+source-wordcount: '232'
+ht-degree: 67%
 
 ---
 
 # UI の選択 {#selecting-your-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タッチ操作向け UI はクラシック UI より優先されるので、クラシック UI の使用を続行するには、AEM インスタンスのユーザーまたは管理者が自発的に決定する必要があります。クラシック UI のサポートは既に終了しています。そのため、オーサリングユーザーはクラシック UI からタッチ対応 UI の同等の機能に簡単に切り替えることはできません。
 

@@ -1,7 +1,7 @@
 ---
-title: 作成者がおこなう最初の手順
+title: 作成者が行う最初の手順
 seo-title: First Steps for Authors
-description: AEM でコンテンツのオーサリングを開始する際に使用する主なタスクの概要です
+description: AEMでコンテンツのオーサリングを開始する際に使用する主なタスクの概要
 seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
 uuid: 13aec50b-f902-4b5e-9e8b-bc94810d7b88
 contentOwner: Chris Bohnert
@@ -10,18 +10,22 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9086b14c-cd75-4fc9-928e-81c8ad6b6292
 exl-id: c4b0211f-aaaf-44e5-89bb-6b951dbdb98f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 92%
+source-wordcount: '476'
+ht-degree: 15%
 
 ---
 
-# 作成者がおこなう最初の手順{#first-steps-for-authors}
+# 作成者がおこなう最初の手順 {#first-steps-for-authors}
 
-ここでは、Adobe Experience Manager（AEM）で[コンテンツのオーサリングを開始する](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)際に使用する主なタスクの概要について説明します。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-次の内容について説明します。
+この節では、 [コンテンツのオーサリングを開始中](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) をAdobe Experience Manager(AEM) に置き換えます。
+
+対象は次のとおりです。
 
 * [はじめに](#getting-started)  — 最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
 
@@ -29,69 +33,69 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-このスライドショー（クリックスルー）では、AEM を使用した最初のページのオーサリングについて、視覚的にすばやく概要を説明します。個別の手順に関する詳細へのリンクが、[はじめに](#getting-started)の後にあります。
+このスライドショー（クリックスルー）では、AEMを使用して最初のページを作成する方法を視覚的にすばやく概要できます。 関連する個々の手順の詳細に関するリンクは、 [はじめに](#getting-started).
 
 ## はじめに {#getting-started}
 
-最初のページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
+ここでは、最初のページを作成して公開するために必要なイベントの基本的なシーケンスについて詳しく説明します。
 
-### ページの場所に移動 {#navigating-to-the-page-location}
+### ページの場所への移動 {#navigating-to-the-page-location}
 
-Web サイトのコンテンツはツリー構造により管理されます。ページを作成または編集するには、[そのページの場所に移動](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)する必要があります。
+Web サイトのコンテンツはツリー構造で保持されます。 ページを作成または編集するには、次の操作が必要です。 [場所に移動します。](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-編集前に、[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)する必要があります。
+編集する前に、次の操作を行う必要があります。 [新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page).
 
 ### ページを開く {#opening-a-page}
 
-編集などの多くのアクションで、[ページを開く](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)必要があります。
+編集など、多くのアクションを実行する場合は、次の手順を実行します。 [ページを開く](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 
 ### ページの編集 {#editing-a-page}
 
-インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-authoring/editing-content.md)できます。
+インスタンスに既存のページが存在するか、新しいページを自分で作成した直後の場合は、 [ページの編集](/help/sites-authoring/editing-content.md) 基準：
 
 * [コンポーネント（段落）の挿入](/help/sites-authoring/editing-content.md#inserting-a-component)
 * コンポーネントの[編集／設定／コピー／切り取り／削除／貼り付け](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 * [編集（コンテンツ）](/help/sites-authoring/editing-content.md#edit-content)
-* [編集（コンテンツ） - 全画面表示モード](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
+* [編集（コンテンツ） - フルスクリーンモード](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 * [ページ編集の取り消しとやり直し](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits)
 * [プレビューモードの使用](/help/sites-authoring/editing-content.md#preview-mode)（公開時にどのように表示されるかを確認するため）
 * [ページのロック](/help/sites-authoring/editing-content.md#locking-a-page)
 
-### ページの公開 {#publishing-a-page}
+### ページの公開  {#publishing-a-page}
 
-ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-authoring/publishing-pages.md)します。
+ページの編集が完了したら、次の操作をおこないます。 [ページを公開（またはアクティベート）します。](/help/sites-authoring/publishing-pages.md) web サイトの訪問者が使用できるようにします。
 
 ## その他のアクション {#further-actions}
 
-基本的な手順を実行した後も、他の多くのアクションをオーサリング時に使用できます。
+基本的な手順の後に、オーサリング時に使用できるその他のアクションが多数あります。
 
 ### ページのコピー {#copying-a-page}
 
-場合によっては、[ページをコピー](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page)してそのコンテンツを再利用する方が、最初からすべてのコンテンツをもう一度作成するよりも簡単です。
+～する方が簡単な場合もある。 [ページのコピー](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) を参照してください。コンテンツを一から作り直すのではなく、コンテンツを再利用する必要があります。
 
 ### ページの移動または名前の変更 {#moving-or-renaming-a-page}
 
-[ページの移動と名前変更](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)は、基本的に同じアクションにより実行されます。
+[ページの移動と名前の変更](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) は、基本的に同じ操作でおこなわれます。
 
 ### ページの非公開 {#unpublishing-a-page}
 
-以前公開（またはアクティベート）したコンテンツを公開 Web サイトで使用できないようにするには、[ページを非公開（またはアクティベート解除）](/help/sites-authoring/publishing-pages.md)にします。
+公開 Web サイト上で、以前に公開（またはアクティブ化）したコンテンツを使用できないようにするには、次の手順を実行します。 [ページを非公開（または非アクティブ化）にする](/help/sites-authoring/publishing-pages.md).
 
 ### ページの削除 {#deleting-a-page}
 
-ページが不要になった場合は、[ページを削除](/help/sites-authoring/managing-pages.md#deleting-a-page)できます。
+ページが不要になった場合は、 [ページの削除](/help/sites-authoring/managing-pages.md#deleting-a-page).
 
 ### ページプロパティの設定 {#setting-the-page-properties}
 
-すべての[ページにプロパティがあり](/help/sites-authoring/editing-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。ページプロパティはいずれの UI でも更新できます。
+毎 [ページにプロパティがあります](/help/sites-authoring/editing-page-properties.md) これらを定義して、操作の側面を決定できます。 これらは、どちらの UI でも更新できます。
 
 ### ページのバージョンの作成 {#creating-a-version-of-a-page}
 
-ページの[バージョンを作成](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)して、必要に応じて[そのバージョンに戻す](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)ことができます。
+以下が可能です。 [バージョンの作成](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) ページの [バージョンに戻す](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) 必要に応じて。
 
 ## 詳細情報 {#more-information}
 
-オーサリングに関する詳細情報については、[ページのオーサリング](/help/sites-authoring/author-environment-tools.md)および[オーサー環境の操作](/help/sites-authoring/home.md)で説明しています。
+オーサリングに関する詳細については、 [ページオーサリング](/help/sites-authoring/author-environment-tools.md) および [オーサー環境の使用](/help/sites-authoring/home.md).

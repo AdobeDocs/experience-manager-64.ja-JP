@@ -1,7 +1,7 @@
 ---
 title: Markdown
 seo-title: Markdown
-description: オーサリング中に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
+description: オーサリング時に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
 seo-description: When you are authoring, the content fragment editor uses markdown syntax to allow you to easily write content.
 uuid: 12b185a5-3d87-4d7c-8d09-8cc2726009a8
 contentOwner: AEM Docs
@@ -12,14 +12,18 @@ discoiquuid: bde54663-9050-4a5a-93cb-7cd84ac7f071
 exl-id: 209f0e02-b883-4104-8358-01cab15e5db2
 feature: Content Fragments
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 97%
+source-wordcount: '571'
+ht-degree: 60%
 
 ---
 
 # マークダウン {#markdown}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >
@@ -29,7 +33,7 @@ ht-degree: 97%
 
 ![Markdown エディター](/help/assets/assets/cfm-6420-08.png)
 
-次を定義できます。
+以下を定義できます。
 
 * [見出し表記](/help/assets/content-fragments-markdown.md#heading-notation)
 * [段落と改行](/help/assets/content-fragments-markdown.md#paragraphs-and-line-breaks)
@@ -43,7 +47,7 @@ ht-degree: 97%
 
 ## 見出し表記 {#heading-notation}
 
-ハッシュタグ（#）を前に付けて見出しを作成します。H1 には 1 つのハッシュタグ（#）、H2 には 2 つのハッシュタグ（##）のように使用します。最大で 6 個のハッシュタグを使用できます。次に例を示します。
+ヘッダーを作成するには、見出しの前にハッシュタグ (#) を配置します。 H1 には 1 つのハッシュタグ (#)、H2 には 2 つのハッシュタグ (##) が使用されます。 最大 6 個のハッシュタグを使用できます。 次に例を示します。
 
     `## This is an H2`
 
@@ -51,7 +55,7 @@ ht-degree: 97%
 
     `###### This is a H6`
 
-オプションで、テキストに等号で下線を付けて H1、マイナス符号で下線を付けて H2 を作成することもできます。次に例を示します。
+必要に応じて、H1 を作成するには、テキストに等号で下線を付け、マイナス記号で下線を付けて H2 を作成します。 次に例を示します。
 
     `This is an H1`
 
@@ -63,7 +67,7 @@ ht-degree: 97%
 
 ## 段落と改行 {#paragraphs-and-line-breaks}
 
-段落とは、1 つ以上の空白行によって区切られている、1 つ以上の連続したテキスト行です。空白行とは、スペースまたはタブしか含まれていない行です。通常の段落はスペースまたはタブでインデントされません。
+段落は、1 つ以上の空白行で区切られた、1 つ以上の連続したテキスト行です。 空白行とは、スペースやタブ以外を含まない行です。 通常の段落はスペースまたはタブでインデントされません。
 
 改行するには、行の末尾に 2 つ以上のスペースを付けてからリターンします。
 
@@ -117,7 +121,7 @@ ht-degree: 97%
 
 ## ブロック引用 {#block-quotes}
 
-テキストを引用するときは、テキストの先頭に > 記号を付けます。次に例を示します。
+テキストの前に > 記号を追加すると、テキストを引用できます。 次に例を示します。
 
     `>This is block quotes`
 
@@ -125,7 +129,7 @@ ht-degree: 97%
 
     `>asdfahsdlfasdfj`
 
-ブロック引用はネストできます。次に例を示します。
+ネストされたブロック引用符を使用できます。 次に例を示します。
 
     `> This is the first level of quoting.`
 
@@ -149,7 +153,7 @@ ht-degree: 97%
 
     `* item in list`
 
-順序付きリストを作成するには、数字の後にピリオドを付けて、リストの項目の前に付けます。次に例を示します。
+順序付きリストを作成するには、リスト内の各項目の前に数字とピリオドを 1 つ追加します。 次に例を示します。
 
     `1. First item in list.`
 
@@ -177,7 +181,7 @@ ht-degree: 97%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-コードの範囲を示すには、バッククォート（&grave;）で囲みます。事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
+コードの範囲を示すには、バッククォート（&grave;）で囲みます。書式設定済みのコードブロックとは異なり、コード span は通常の段落内のコードを示します。
 
 次に例を示します。
 
@@ -185,7 +189,7 @@ ht-degree: 97%
 
 ## コードブロック {#code-blocks}
 
-コードブロックは通常はソースコードを示すために使用されます。コードブロックを作成するには、1 個のタブまたは少なくとも 4 個分のスペースを使用してコードをインデントします。次に例を示します。
+コードブロックは、通常、ソースコードを説明するために使用されます。 コードブロックを作成するには、タブを使用してコードをインデントするか、少なくとも 4 つのスペースを使用します。 次に例を示します。
 
     `This is a normal paragraph.`
 

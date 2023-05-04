@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 role: Developer
 exl-id: 9d32c815-b66e-459e-bf36-c0d2e1ed707a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2890'
-ht-degree: 99%
+source-wordcount: '2926'
+ht-degree: 98%
 
 ---
 
 # 送信済みフォームの処理 {#handling-submitted-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ユーザーがインタラクティブフォームに入力できる Web ベースのアプリケーションでは、データをサーバーに送り返す必要があります。Forms サービスを使用すると、ユーザーがインタラクティブフォームに入力したデータを取得できます。データを取得したら、ビジネス要件に合わせてそのデータを処理できます。例えば、そのデータをデータベースに格納したり、別のアプリケーションに送信したり、別のサービスに送信したり、フォームデザインで結合したり、Web ブラウザーに表示したりすることができます。
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 71bba66a-3cac-445b-9941-aa4bcf9b2160
 feature: Interactive Communication
 exl-id: cb7a8e96-4440-47ec-b506-275d5acc774e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 51%
+source-wordcount: '734'
+ht-degree: 50%
 
 ---
 
 # 印刷チャネルと Web チャネル {#print-channel-and-web-channel}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 印刷チャネルテンプレートの読み込み、Web チャネルテンプレートの作成と有効化
 
@@ -53,7 +57,7 @@ Web チャネルテンプレートを作成するには、以下の手順を実�
 1. インタラクティブ通信の web チャネルテンプレートを保存するためのテンプレートフォルダーを作成します（まだ作成されていない場合）。詳しくは、[編集可能なページテンプレート](/help/sites-developing/page-templates-editable.md)の「テンプレートフォルダー」を参照してください。
 
    1. タップ **[!UICONTROL ツール]** ![tools-1](assets/tools-1.png) > **[!UICONTROL 設定ブラウザー]**.
-      * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+      * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
    1. 設定ブラウザーページで、「**[!UICONTROL 作成]**」をタップします。
    1. 設定作成ダイアログでフォルダーのタイトルを入力し、「**[!UICONTROL 編集可能テンプレート]**」を選択して「**[!UICONTROL 作成]**」をタップします。
 

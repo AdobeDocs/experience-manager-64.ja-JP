@@ -10,14 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: ec5253cd-7f1e-4408-9765-8aaa9a81095c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 40%
+source-wordcount: '428'
+ht-degree: 39%
 
 ---
 
 # オフロードのためのジョブの作成と使用{#creating-and-consuming-jobs-for-offloading}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Apache Sling Discovery 機能は、JobManager ジョブとそれらを使用する JobConsumer サービスを作成できる Java API を提供します。
 

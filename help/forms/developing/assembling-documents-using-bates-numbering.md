@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 902fc62b-262e-4eb4-b580-dbfbf4344fa6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1908'
-ht-degree: 97%
+source-wordcount: '1944'
+ht-degree: 95%
 
 ---
 
 # 通し番号を使用したドキュメントのアセンブリ {#assembling-documents-using-bates-numbering}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 通し番号を使用すると、個別ページの ID を含む PDF ドキュメントをアセンブリすることができます。*通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。たとえば、部品表情報を含み、アセンブリの製造に関連付けられている製造ドキュメントには、識別子を含めることができます。 Bates の数値には、連続して増分される数値と、オプションの接頭辞と接尾辞が含まれます。 プレフィックス + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
 

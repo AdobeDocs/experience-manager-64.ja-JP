@@ -10,14 +10,18 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: a063d1ba-712a-49e1-8844-75bfa6e98977
 exl-id: 5e2b4930-c030-4abe-9b81-6e6729fe3ad4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '7036'
+source-wordcount: '7072'
 ht-degree: 6%
 
 ---
 
 # 用語集 {#glossary}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この用語集には、[プロジェクトチェックリスト](/help/managing/best-practices-checklist.md)のすべての成果物ドキュメントの詳細が（アルファベット順に）記載されています。
 

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 86349e4d-29ff-4baa-9fcd-c0ab1f0753e9
 role: Admin
 exl-id: 136c0913-c8b8-451d-bb28-3c3285c172a1
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 4%
+source-wordcount: '847'
+ht-degree: 5%
 
 ---
 
 # ASRP - Adobe ストレージリソースプロバイダー {#asrp-adobe-storage-resource-provider}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## ASRP について {#about-asrp}
 
@@ -70,7 +74,7 @@ UGC 用の ASRP を使用するようにAEM Communitiesサイトを設定する�
 
       秘密鍵を入力
 
-* 選択 **[!UICONTROL 送信]**
+* 「**[!UICONTROL 送信]**」を選択します。
 
 パブリッシュインスタンスを準備します。
 

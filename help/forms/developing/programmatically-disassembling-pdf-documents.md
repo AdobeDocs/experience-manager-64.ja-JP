@@ -11,14 +11,18 @@ topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 role: Developer
 exl-id: 3f757392-96a0-4f20-91d0-7fbccb1bf171
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1747'
-ht-degree: 100%
+source-wordcount: '1783'
+ht-degree: 98%
 
 ---
 
 # プログラムによる PDF ドキュメントの分割 {#programmatically-disassembling-pdf-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler サービスに PDF ドキュメントを渡すことで、ドキュメントを分割できます。このタスクは、一般的に、PDF ドキュメントが最初に多数の個別ドキュメント（明細書一式など）から作成された場合に役立ちます。以下のイラストでは、DocA が複数の結果ドキュメントに分割されています。ページの初めの レベル 1 のブックマークで、新しい結果ドキュメントの開始が示されています。
 

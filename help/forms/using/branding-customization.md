@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 exl-id: 5c5cdfe6-37f2-45c7-b679-23e3592842b2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 47%
+source-wordcount: '922'
+ht-degree: 46%
 
 ---
 
 # ブランディングのカスタマイズ {#branding-customization}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アプリケーションアイコン、アプリケーション名、起動画像およびログインページをカスタマイズして、AEM Formsアプリに組織固有の明確な外観を提供することができます。 例えば、画像を変更して、組織のロゴを使用できます。 AEM Forms アプリケーションは次のカスタマイズをサポートしています。
 

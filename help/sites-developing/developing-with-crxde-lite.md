@@ -10,14 +10,18 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 19cb3946-32ba-4f0b-89f0-f9272f2373d2
 exl-id: 40e24cc6-95a9-4efd-b812-4144ba44b071
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2131'
+source-wordcount: '2167'
 ht-degree: 39%
 
 ---
 
 # CRXDE Lite による開発 {#developing-with-crxde-lite}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、CRXDE Liteを使用してAEMアプリケーションを開発する方法について説明します。
 

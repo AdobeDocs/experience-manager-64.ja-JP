@@ -10,16 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
 exl-id: 0e9d508e-d7dc-478a-99c0-c6885bcdcb81
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 60%
+source-wordcount: '292'
+ht-degree: 7%
 
 ---
 
 # ファイルライブラリの基本事項 {#file-library-essentials}
 
-このページでは、ファイルライブラリ機能の操作に関する基本情報をまとめています。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+このページでは、ファイルライブラリ機能の操作に関する基本情報を示します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -30,8 +34,8 @@ ht-degree: 60%
    <td>social/filelibrary/components/hbs/filelibrary</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -66,18 +70,18 @@ ht-degree: 60%
 
 を含むコミュニティサイト構造 [ファイルライブラリ関数](functions.md#file-library-function)（設定済みを含む） `file library` コンポーネント。
 
-### ファイルライブラリに投稿されたコメント（UGC）へのアクセス {#accessing-comments-posted-for-file-libraries-ugc}
+### ファイルライブラリ (UGC) に投稿されたコメントへのアクセス {#accessing-comments-posted-for-file-libraries-ugc}
 
-UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
-[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。\
+詳しくは、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
-AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
+AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
+**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
 
-次のページを参照してください。
+以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします

@@ -10,14 +10,18 @@ topic-tags: author
 discoiquuid: 4a51ebc4-e019-4fc5-93a1-d97f695126f5
 feature: Adaptive Forms
 exl-id: eec8bcbe-e2ba-42f1-98ea-08a4ca723e48
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 58%
+source-wordcount: '545'
+ht-degree: 56%
 
 ---
 
 # 複数手順フォームシーケンスの概要 {#introduction-to-multi-step-form-sequence}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アダプティブフォームを使用すると、フォーム作成者は、複数手順のデータキャプチャの操作を非常に簡単に作成できます。 複数パネルの作成や、各パネルと別の移動パターンとの関連付けに対する組み込みサポートが付属しています。フォーム作成者は、フォームフィールドを論理セクションにグループ化し、グループをパネルとして表すことができます。 パネル間の移動はすべてパネルレイアウトを使用して制御されます。作成者は、様々なレイアウトでパネルを配置できます。例えば、ウィザードレイアウトで順番に配置することも、タブ付きレイアウトを使って臨時に配置することもできます。パネルレイアウトについて詳しくは、 [アダプティブフォームのレイアウト機能](/help/forms/using/layout-capabilities-adaptive-forms.md).
 

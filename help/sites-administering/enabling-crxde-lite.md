@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: 3d8dc987-2ff9-4f71-bc07-48018caa3af4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 75%
+source-wordcount: '248'
+ht-degree: 67%
 
 ---
 
 # AEM での CRXDE Lite の有効化 {#enabling-crxde-lite-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMのインストールを可能な限り安全にするために、セキュリティチェックリストでは、 [WebDAV の無効化](/help/sites-administering/security-checklist.md#disable-webdav) 実稼動環境で使用できます。
 

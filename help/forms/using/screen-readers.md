@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: c27eb771-d390-4534-8e67-f1277550e760
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 55%
+source-wordcount: '373'
+ht-degree: 52%
 
 ---
 
 # HTML5 フォーム向けのスクリーンリーダー {#screen-readers-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 フォームコンポーネントは、XFA フォームテンプレートをHTML5 形式にレンダリングします。 これらのフォームは、HTML5 をサポートするすべての標準ブラウザーでレンダリングできます。 PDFフォームとHTML5 フォームで同様のデータキャプチャエクスペリエンスをサポートするために、PDF formsのレイアウトはHTML5 フォームでも保持されます。
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 role: Admin
 exl-id: eeffd886-8955-46eb-aa6d-dd4da5e8570c
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 58%
+source-wordcount: '1032'
+ht-degree: 57%
 
 ---
 
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Document Security を使用すると、事前定義されたセキュリティ設定を作成および格納して、ドキュメントに適用できます。これにより、許可されたユーザーのみがドキュメントを使用できるようになります。 ポリシーを使用してドキュメントを保護できます。 ポリシーとは、セキュリティ設定と、許可されたユーザーのリストを含む情報の集まりです。 1 つ以上のドキュメントにポリシーを適用し、AEM Forms JEE のユーザー管理に追加されたユーザーを許可することができます。
 

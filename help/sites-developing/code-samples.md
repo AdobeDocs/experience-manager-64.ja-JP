@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
 exl-id: 20f3c5d6-0f70-4b66-9e43-be1709dc8eb6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 74%
+source-wordcount: '259'
+ht-degree: 67%
 
 ---
 
 # コードサンプル{#code-samples}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、AEM開発者がAEMの主要な構築ブロックを理解できるように、コメント化されたコードの一部です。 サンプルは、[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/) から利用できます。
 

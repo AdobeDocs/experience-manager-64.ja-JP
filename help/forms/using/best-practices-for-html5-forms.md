@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: a5eba237-3aad-497a-8f77-061d5d3df371
 feature: Mobile Forms
 exl-id: 5f85882c-f7a7-448e-9946-e04a0d74dee1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 23%
+source-wordcount: '1462'
+ht-degree: 24%
 
 ---
 
 # HTML5 フォームのベストプラクティス  {#best-practices-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 最適なパフォーマンスが得られるように XFA ベースの HTML5 フォームを調整します。
 
@@ -72,7 +76,7 @@ XFA フォームには、レコードのドキュメント (DOR) 専用の多数
 
 ## 推奨読み取り  {#recommended-reads}
 
-Adobe Experience Manager(AEM)Forms を使用すると、複雑なトランザクションを、シンプルで楽しいデジタルエクスペリエンスに変換することができます。 しかし、効率的で生産的なフォームを開発するには、共同の作業が必要です。 HTML5 Formsに加えて、一般的なAEMのベストプラクティスに関するお勧めの参考資料を以下に示します。
+Adobe Experience Manager（AEM）Forms を使用すると、複雑なトランザクションを単純で使いやすいデジタルエクスペリエンスに変えることができます。しかし、効率的で生産的なフォームを開発するには、共同の作業が必要です。 HTML5 Formsに加えて、一般的なAEMのベストプラクティスに関するお勧めの参考資料を以下に示します。
 
 * [AEM のデプロイおよび維持のベストプラクティス](/help/sites-deploying/best-practices.md)
 * [コンテンツオーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)

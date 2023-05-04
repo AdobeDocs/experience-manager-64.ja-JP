@@ -1,7 +1,7 @@
 ---
 title: 「いいね!」設定の使用
 seo-title: Using Liking
-description: 「いいね!」設定コンポーネントの追加と設定
+description: 「いいね！」設定コンポーネントの追加と設定
 seo-description: Adding and configuring the Liking component
 uuid: 12103ab7-1a1c-49cd-8dad-6c7508b4550e
 contentOwner: msm-service
@@ -10,24 +10,28 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 exl-id: b5918a54-ef7b-4b3f-bca7-ed0344bab4aa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 30%
+source-wordcount: '262'
+ht-degree: 10%
 
 ---
 
 # 「いいね!」設定の使用 {#using-liking}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 この `Liking`コンポーネントは、フォーラム内のコメントなど、コンテンツの特定の部分に関する意見をユーザーが表現できる便利なツールです。 を使用 `Liking`コンポーネント、メンバーは、肯定的な意見を示す心アイコンを選択します。
 
-## ページへの「いいね!」設定の追加 {#adding-liking-to-a-page}
+## 「いいね！」の追加 {#adding-liking-to-a-page}
 
 を追加するには、以下を実行します。 `Liking` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して
 
 * `Communities / Liking`
 
-を探し、ページ上の適切な位置（ユーザーに「いいね!」してもらう機能の近くなど）にドラッグします。
+をクリックし、ページ上の適切な位置（ユーザーが好む機能に対する相対位置など）にドラッグします。
 
 必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
@@ -35,7 +39,7 @@ ht-degree: 30%
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
-## 「いいね!」の設定 {#configuring-liking}
+## 「いいね！」の設定 {#configuring-liking}
 
 配置された `Liking` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
@@ -57,15 +61,15 @@ ht-degree: 30%
 (
 *必須*) 投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
 
-## サイト訪問者のエクスペリエンス {#site-visitor-experience}
+## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
 ### メンバー {#members}
 
-メンバーは、いつでも「いいね!」を変更できます。
+メンバーは、いつでも同じように変更できます。
 
 ### 匿名 {#anonymous}
 
-匿名での「いいね!」はサポートされていません。Site visitors must register (become a member) and sign in to participate in liking.
+匿名の「いいね！」の設定はサポートされていません。 サイト訪問者が「いいね！」に参加するには、登録（メンバーになる）してサインインする必要があります。
 
 ## 追加情報 {#additional-information}
 

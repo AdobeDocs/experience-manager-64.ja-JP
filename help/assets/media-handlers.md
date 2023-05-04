@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Workflow,Renditions
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: bc27dee618ee57dc188c7f35a1af4d1dba80cf1b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2225'
-ht-degree: 44%
+source-wordcount: '2261'
+ht-degree: 43%
 
 ---
 
 # アセットの処理メディアハンドラーとワークフローを使用する {#processing-assets-using-media-handlers-and-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets には、アセットを処理するためのデフォルトのワークフローとメディアハンドラーのセットが用意されています。 ワークフローは、一般的なアセット管理および処理タスクを定義し、特定のタスクをメディアハンドラーに委任します。例えば、サムネールの生成やメタデータの抽出などです。
 

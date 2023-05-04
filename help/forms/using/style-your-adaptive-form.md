@@ -9,14 +9,18 @@ topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 feature: Adaptive Forms
 exl-id: 0ccf43eb-f0c6-4204-8325-f891caa8f5af
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2085'
 ht-degree: 56%
 
 ---
 
 # アダプティブフォームのスタイル設定 {#do-not-publish-style-your-adaptive-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 カスタムテーマの作成、個々のコンポーネントのスタイル設定、テーマでの Web フォントの使用について説明します
 
@@ -24,7 +28,7 @@ ht-degree: 56%
 
 このチュートリアルは、 [最初のアダプティブフォームを作成する](create-your-first-adaptive-form.md) 系列。 チュートリアルの使用例を理解、実行、デモするために、時系列に従うことをお勧めします。
 
-## チュートリアルについて  {#about-the-tutorial}
+## このチュートリアルについて  {#about-the-tutorial}
 
 テーマを使用して、アダプティブフォームに独自の外観とスタイルを設定することができます。 アダプティブフォームエディターに付属している標準のテーマを適用することも、独自のカスタムテーマを作成することもできます。 AEM Forms [テーマエディター](themes.md) をクリックしてカスタムテーマを作成します。 1 つのテーマで、モバイル、タブレット、デスクトップで開いた同じアダプティブフォームに異なる外観を提供できます。 CSS または LESS に関する事前の知識は、テーマエディターを使用する必要はありませんが、これは必須です。
 
@@ -133,7 +137,7 @@ ht-degree: 56%
    |---|---|
    | フォントファミリー | Arial |
    | フォントカラー | FFFFFF |
-   | フォントサイズ | 54px |
+   | フォントサイズ | 54 px |
 
 1. ヘッダーウィジェットをタップし、「**ヘッダー**」をタップします。ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「**寸法と位置**」アコーディオンを展開し、「**高さ** 」を `120px`に設定して、 「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 1. ヘッダーウィジェットの「背景」アコーディオンを展開し、「**背景色**」を「`F6921E.`」に設定します。
@@ -214,15 +218,15 @@ ht-degree: 56%
   <tr> 
    <td>テキスト</td> 
    <td>フォントサイズ</td> 
-   <td>18px</td> 
+   <td>18 px</td> 
   </tr> 
   <tr> 
-   <td>Dimensionと位置</td> 
+   <td>寸法と位置</td> 
    <td>幅</td> 
    <td>60%</td> 
   </tr> 
   <tr> 
-   <td>Dimensionと位置</td> 
+   <td>寸法と位置</td> 
    <td>余白</td> 
    <td> 
     <ul> 
@@ -283,7 +287,7 @@ ht-degree: 56%
   <tr> 
    <td>テキスト</td> 
    <td>フォントサイズ</td> 
-   <td>18px</td> 
+   <td>18 px</td> 
   </tr> 
  </tbody> 
 </table>
@@ -305,7 +309,7 @@ ht-degree: 56%
 
    | プロパティ | 値 |
    |---|---|
-   | 浮動小数 | 左 |
+   | 浮動小数 | Left |
    | 幅 | 10% |
 
 1. 「**Government approved address proof**」オプションをタップし、![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンをタップします。次のプロパティを設定します。
@@ -320,7 +324,7 @@ ht-degree: 56%
   <tr> 
    <td>寸法と位置</td> 
    <td>浮動小数</td> 
-   <td>左</td> 
+   <td>Left</td> 
   </tr> 
   <tr> 
    <td>寸法と位置</td> 
@@ -338,7 +342,7 @@ ht-degree: 56%
   <tr> 
    <td>寸法と位置</td> 
    <td>高さ</td> 
-   <td>40px</td> 
+   <td>40 px</td> 
   </tr> 
   <tr> 
    <td>寸法と位置<br /> </td> 
@@ -357,7 +361,7 @@ ht-degree: 56%
   <tr> 
    <td>境界線</td> 
    <td>境界線の幅</td> 
-   <td>1px</td> 
+   <td>1 px</td> 
   </tr> 
   <tr> 
    <td>境界線</td> 
@@ -372,7 +376,7 @@ ht-degree: 56%
   <tr> 
    <td>境界線</td> 
    <td>境界線の半径</td> 
-   <td>7px</td> 
+   <td>7 px</td> 
   </tr> 
   <tr> 
    <td>テキスト</td> 
@@ -387,7 +391,7 @@ ht-degree: 56%
   <tr> 
    <td>テキスト</td> 
    <td>フォントサイズ</td> 
-   <td>18px</td> 
+   <td>18 px</td> 
   </tr> 
   <tr> 
    <td>テキスト</td> 
@@ -407,12 +411,12 @@ ht-degree: 56%
    <td>値</td> 
   </tr> 
   <tr> 
-   <td>Dimensionと位置</td> 
+   <td>寸法と位置</td> 
    <td>浮動小数</td> 
    <td>右</td> 
   </tr> 
   <tr> 
-   <td>Dimensionと位置</td> 
+   <td>寸法と位置</td> 
    <td>余白</td> 
    <td> 
     <ul> 

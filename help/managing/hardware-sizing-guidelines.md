@@ -10,14 +10,18 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 3f4feb38-eca0-4852-88f8-9b20625e18ad
 exl-id: 34e4edd5-9e67-44ed-8c4c-bcdd3e161a35
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2831'
+source-wordcount: '2867'
 ht-degree: 40%
 
 ---
 
 # ハードウェアのサイジングのガイドライン {#hardware-sizing-guidelines}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 これらのサイジングガイドラインは、AEMプロジェクトのデプロイに必要なハードウェアリソースの概算を提供します。 サイズの見積もりは、プロジェクトのアーキテクチャ、ソリューションの複雑さ、予想されるトラフィック、プロジェクトの要件に応じて異なります。このガイドを使用すると、具体的なソリューションに必要なハードウェアを特定したり、ハードウェア要件の上限と下限を見積もることができます。
 

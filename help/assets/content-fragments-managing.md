@@ -12,14 +12,18 @@ discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
 feature: Content Fragments
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 98%
+source-wordcount: '1528'
+ht-degree: 59%
 
 ---
 
 # コンテンツフラグメントの管理 {#managing-content-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!CAUTION]
 >
@@ -29,7 +33,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->コンテンツフラグメントは、ページのオーサリングで使用します。[コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
+>その後、コンテンツフラグメントはページのオーサリングで使用されます。参照 [コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md).
 
 ## コンテンツフラグメントの作成 {#creating-content-fragments}
 
@@ -39,21 +43,21 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->単純なコンテンツフラグメントに使用されるテンプレートについて詳しくは、[コンテンツフラグメントの開発](/help/sites-developing/customizing-content-fragments.md)を参照してください。
+>詳しくは、 [コンテンツフラグメントの開発](/help/sites-developing/customizing-content-fragments.md) を参照してください。シンプルなコンテンツフラグメントに使用します。
 
 ### コンテンツフラグメントの作成 {#creating-a-content-fragment}
 
-コンテンツフラグメントの作成方法は基本的に単純なフラグメントと構造化フラグメントで同じです。
+コンテンツフラグメントの作成方法は（基本的に）シンプルなフラグメントと構造化されたフラグメントの両方で同じです。
 
 1. フラグメントを作成する **[!UICONTROL Assets]** フォルダーに移動します。
 1. 「**[!UICONTROL 作成]**」を選択し、「**[!UICONTROL コンテンツフラグメント]**」を選択して、ウィザードを開きます。
 1. ウィザードの最初の手順では、新しいフラグメントの基盤を指定することを求められます。
 
-   * 以下を指定します。
+   * 次のことが考えられます。
 
       * [](/help/sites-developing/content-fragment-templates.md)テンプレート - **[!UICONTROL 単純なフラグメント]**&#x200B;など
-      * [モデル](content-fragments-models.md) - **空港**&#x200B;モデルなど、構造化コンテンツを必要とするフラグメントの作成に使用されます
-   * 使用可能なテンプレートとモデルがすべて表示されます。
+      * [モデル](content-fragments-models.md)  — 構造化コンテンツを必要とするフラグメントの作成に使用します。例： **空港** モデル
+   * 使用可能なすべてのテンプレートとモデルが表示されます。
 
    選択した後、「**[!UICONTROL 次へ]**」を使用して続けます。
 
@@ -86,8 +90,8 @@ ht-degree: 98%
 
 **[!UICONTROL Assets]** コンソールでは、次のいずれかからコンテンツフラグメントに対して様々なアクションを使用できます。
 
-* ツールバーから。フラグメントを選択すると、該当するすべてのアクションを使用できるようになります。
-* [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)として。個別のフラグメントカードに使用可能なアクションのサブセット。
+* ツールバーから。フラグメントを選択した後は、適切なアクションをすべて使用できます。
+* 形式 [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions);個々のフラグメントカードで使用できるアクションのサブセット。
 
 ![cfm-6420-17](assets/cfm-6420-17.png)
 
@@ -101,7 +105,7 @@ ht-degree: 98%
 * **[!UICONTROL チェックアウト]**
 * **[!UICONTROL プロパティ]**
 
-   * フラグメントのメタデータを表示したり、編集したりできます。
+   * フラグメントのメタデータを表示または編集できます。
 
 * **[!UICONTROL 編集]**
 
@@ -111,9 +115,9 @@ ht-degree: 98%
 * **[!UICONTROL コレクションに追加]**
 
    * フラグメントをコレクションに追加します。
-   * これは、[コレクションをフラグメントと関連付ける](content-fragments-assoc-content.md#adding-associated-content)際に実行できます。
+   * これは、 [コレクションとフラグメントの関連付け](content-fragments-assoc-content.md#adding-associated-content).
 
-* **[!UICONTROL コピー／貼り付け]**
+* **[!UICONTROL コピー/貼り付け]**
 * **[!UICONTROL 移動]**
 * **[!UICONTROL クイック公開]**
 * **[!UICONTROL 公開を管理]**
@@ -129,12 +133,12 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
+>コンテンツフラグメントを編集するには、 [適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions). 問題が発生している場合は、システム管理者に問い合わせてください。
 
 1. **[!UICONTROL Assets]** コンソールを使用して、コンテンツフラグメントの場所に移動します。
-1. フラグメントを開いて編集するには、以下のいずれかを実行します。
+1. 次のいずれかの方法で、フラグメントを編集用に開きます。
 
-   * フラグメントまたはフラグメントリンクをクリック／タップ（これはコンソールビューによって異なります）。
+   * フラグメントまたはフラグメントリンクをクリックまたはタップします（これは、コンソール表示によって異なります）。
    * フラグメントを選択してから、ツールバーの「**[!UICONTROL 編集]**」を選択。
 
    フラグメントエディターが開きます。
@@ -148,7 +152,7 @@ ht-degree: 98%
    >2. **[!UICONTROL サイドパネルを切り替え]**&#x200B;アイコンを使用してサイドパネルを非表示／表示できます。
 
 
-1. サイドパネルのアイコンを使用して、3 つのモデル間を移動します。
+1. サイドパネルのアイコンを使用して、3 つのモード間を移動します。
 
    * バリエーション：[コンテンツの編集](#editing-the-content-of-your-fragment)と[バリエーションの管理](#creating-and-managing-variations-within-your-fragment)
    * [注釈](content-fragments-variations.md#annotating-a-content-fragment)
@@ -173,28 +177,28 @@ ht-degree: 98%
 
 * **[!UICONTROL 保存]**
 
-   最後の変更を保存し、エディターを終了します。
+   最新の変更を保存し、エディターを終了します。
 
    >[!CAUTION]
    >
-   >コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
+   >コンテンツフラグメントを編集するには、 [適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions). 問題が発生している場合は、システム管理者に問い合わせてください。
 
    >[!NOTE]
    >
-   >エディターを開いたまま、一連の変更を加えてから「**[!UICONTROL 保存]**」を選択することもできます。
+   >を選択する前に、エディターに留まって一連の変更を加えることができます。 **[!UICONTROL 保存]**.
 
    >[!CAUTION]
    >
-   >「**[!UICONTROL 保存]**」では、変更を保存するだけでなく、参照を更新し、必要に応じて Dispatcher がフラッシュされます。これらの変更が処理されるまでに時間がかかることがあります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
+   >「**[!UICONTROL 保存]**」では、変更を保存するだけでなく、参照を更新し、必要に応じて Dispatcher がフラッシュされます。これらの変更の処理には時間がかかる場合があります。 このため、大規模/複雑/負荷の高いシステムにパフォーマンスが影響を与える可能性があります。
    >
    >
-   >「**[!UICONTROL 保存]**」を使用する際はこの点に留意し、フラグメントエディターを迅速に開いて、変更をおこない、保存してください。
+   >ご使用の際は、次の点に留意してください **[!UICONTROL 保存]** その後、フラグメントエディターにすばやく再度入力して、さらに変更を加えて保存します。
 
 * **[!UICONTROL キャンセル]**
 
-   最後の変更を保存せずにエディターを終了します。
+   最新の変更を保存せずにエディターを終了します。
 
-コンテンツフラグメントを編集する際には、AEM によって自動的にバージョンが作成されます。これにより、変更内容を&#x200B;**[!UICONTROL キャンセル]**&#x200B;しても以前のコンテンツを復元できるようになります。
+コンテンツフラグメントの編集中に、AEMは自動的にバージョンを作成し、 **[!UICONTROL キャンセル]** 変更：
 
 1. コンテンツフラグメントを開いて編集しようとすると、AEM は&#x200B;*編集セッション*&#x200B;が存在しているかどうかを示す cookie ベースのトークンの存在を確認します。
 
@@ -216,15 +220,15 @@ ht-degree: 98%
 
 ## フラグメントのコンテンツの編集 {#editing-the-content-of-your-fragment}
 
-フラグメントを開いたら、「[バリエーション](content-fragments-variations.md)」タブを使用してコンテンツをオーサリングできます。
+フラグメントを開いたら、 [バリエーション](content-fragments-variations.md) タブを使用して、コンテンツを作成します。
 
 ## フラグメント内のバリエーションの作成と管理 {#creating-and-managing-variations-within-your-fragment}
 
 プライマリコンテンツを作成したら、そのコンテンツの[バリエーション](content-fragments-variations.md)を作成して管理できます。
 
-## コンテンツをフラグメントと関連付ける {#associating-content-with-your-fragment}
+## コンテンツとフラグメントの関連付け {#associating-content-with-your-fragment}
 
-フラグメントに[コンテンツを関連付ける](content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
+また、 [コンテンツを関連付け](content-fragments-assoc-content.md) フラグメントを含む これにより、アセット（画像）をフラグメントと共に（オプションで）コンテンツページに追加する際に使用できるようにする接続が提供されます。
 
 ## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
@@ -232,17 +236,17 @@ ht-degree: 98%
 
 ## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
 
-[タイムライン](managing-assets-touch-ui.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
+標準オプションに加えて、 [タイムライン](managing-assets-touch-ui.md#timeline) には、コンテンツフラグメントに固有の情報とアクションの両方が用意されています。
 
-* バージョン、コメントおよび注釈に関する情報の表示
-* バージョンに関するアクション
+* バージョン、コメント、注釈に関する情報の表示
+* バージョンに対するアクション
 
    * **[[!UICONTROL このバージョンに戻る]](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[[!UICONTROL 現在のバージョンと比較]](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[!UICONTROL ラベル]**&#x200B;や&#x200B;**[!UICONTROL コメント]**&#x200B;の追加（既存のフラグメントを選択してから特定のバージョンを選択）
-   * **[!UICONTROL バージョンとして保存]**（既存のフラグメントを選択してからタイムライン下部の上矢印を選択）
+   * **[!UICONTROL バージョンとして保存]** （既存のフラグメントを選択してから、タイムラインの下部にある上向き矢印を選択）
 
-* 注釈に関するアクション
+* 注釈のアクション
 
    * **[!UICONTROL 削除]**
 
@@ -251,13 +255,13 @@ ht-degree: 98%
 >コメントは次のとおりです。
 >
 >* すべてのアセットの標準機能
->* タイムラインで追加
->* フラグメントアセットに関連付けられる
+>* タイムラインで作成
+>* フラグメントアセットに関連
 >
 >注釈（コンテンツフラグメント用）は次のとおりです。
 >
->* フラグメントエディターで入力
->* フラグメント内の選択されたテキストセグメントに固有
+>* フラグメントエディターに入力
+>* フラグメント内の選択したテキストセグメントに固有
 
 
 次に例を示します。
@@ -266,37 +270,37 @@ ht-degree: 98%
 
 ## フラグメントのバージョンの比較 {#comparing-fragment-versions}
 
-特定のバージョンを選択したら、「[[!UICONTROL タイムライン]」から「**[!UICONTROL 現在のバージョンと比較]**」アクションを利用できるようになります。](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments)
+この **[!UICONTROL 現在と比較]** アクションは、 [[!UICONTROL タイムライン]](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments) 特定のバージョンを選択した後。
 
-これにより、次の情報が表示されます。
+開く：
 
 * **[!UICONTROL 現在]**（最新）のバージョン（左）
 
 * 選択されたバージョン **v&lt;*x.y*>**（右）
 
-これらは左右に並んで表示されます。この画面について以下で説明します。
+これらは並べて表示され、次の場所にあります。
 
-* すべての相違点がハイライト表示されます
+* 違いが強調表示されます
 
-   * 削除されたテキスト - 赤
+   * 削除されたテキスト — 赤
    * 挿入されたテキスト - 緑
-   * 置き換えられたテキスト - 青
+   * 置換されたテキスト — 青
 
 * 全画面表示アイコンを使用すれば、どちらかのバージョンで開いた後で、並列表示に切り替えることができます
-* 特定のバージョンに&#x200B;**[!UICONTROL 戻す]**&#x200B;ことができます
-* 「**[!UICONTROL 完了]**」を選択すると、コンソールに戻ります
+* 以下が可能です。 **[!UICONTROL 元に戻す]** 特定のバージョンに
+* **[!UICONTROL 完了]** コンソールに戻ります
 
 >[!NOTE]
 >
->フラグメントの比較中にフラグメントコンテンツを編集することはできません。
+>フラグメントの比較時にフラグメントコンテンツを編集することはできません。
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
 ## 特定のバージョンへの復帰   {#reverting-to-a-version}
 
-次の方法で特定のバージョンのフラグメントに戻すことができます。
+フラグメントの特定のバージョンに戻すことができます。
 
-* 直接[[!UICONTROL タイムライン]](content-fragments-managing.md#timeline-for-content-fragments)から。
+* 直接 [[!UICONTROL タイムライン]](content-fragments-managing.md#timeline-for-content-fragments).
 
    必要なバージョンを選択した後、「**[!UICONTROL このバージョンに戻す]**」アクションを選択します。
 
@@ -306,11 +310,11 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->フラグメントがモデルに基づいている場合、その[モデルが公開されている](content-fragments-models.md#publishing-a-content-fragment-model)ことを確認してください。
+>フラグメントがモデルに基づいている場合、 [モデルが公開されました](content-fragments-models.md#publishing-a-content-fragment-model).
 >
 >まだ公開されていないモデルのコンテンツフラグメントを公開すると、選択リストにそのことが示され、モデルがフラグメントと共に公開されます。
 
-コンテンツフラグメントを使用するには、パブリッシュ環境で公開する必要があります。次の方法で公開できます。
+コンテンツフラグメントをパブリッシュ環境で使用するには、公開する必要があります。 次の方法で公開できます。
 
 * 作成後に **[!UICONTROL Assets]** コンソールから。
 * [フラグメントを使用するページを公開](/help/sites-authoring/content-fragments.md#publishing)するとき。フラグメントはページ参照にリスト表示されます。
@@ -328,7 +332,7 @@ ht-degree: 98%
 
    >[!NOTE]
    >
-   >**[!UICONTROL 削除]**&#x200B;アクションはクイックアクションとして実行できません。
+   >この **[!UICONTROL 削除]** アクションは、クイックアクションとして使用できません。
 
 1. ツールバーから「**[!UICONTROL 削除]**」を選択します。
 1. 「**[!UICONTROL 削除]**」アクションを確認します。

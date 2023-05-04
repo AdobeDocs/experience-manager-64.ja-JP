@@ -10,14 +10,18 @@ topic-tags: interactive-communications, correspondence-management
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
 feature: Correspondence Management
 exl-id: 1b669f86-5090-4618-9bd2-85fcec44d51a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1721'
 ht-degree: 32%
 
 ---
 
 # インタラクティブ通信とレターのインライン条件と繰り返し構造 {#inline-condition-and-repeat-in-interactive-communications-and-letters}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信とレターでインライン条件と繰り返しを使用すると、コンテキストに応じた、適切に構造化された通信を作成できます。
 
@@ -25,7 +29,7 @@ ht-degree: 32%
 
 AEM Formsを使用すると、テキストモジュールでインライン条件を使用して、フォームデータモデル（インタラクティブ通信内）またはデータディクショナリ（レター内）に関連付けられたコンテキストやデータに依存するテキストのレンダリングを自動化できます。 インライン条件は、true または false の条件評価に基づいて特定のコンテンツを表示します。
 
-条件は、フォームデータモデル/データディクショナリ (Data Dictionary) またはエンドユーザーが指定したデータ値に対して計算を実行します。 インライン条件を使用すると、状況に応じてパーソナライズされたインタラクティブ通信/レターを作成しながら、時間を節約し、人間のミスを減らすことができます。
+条件は、フォームデータモデル/データディクショナリ (Data Dictionary) またはエンドユーザーが指定したデータ値に対して計算を実行します。 インライン条件を使用すると、状況に応じてパーソナライズされたインタラクティブ通信/レターを作成しながら、時間を節約し、人間のエラーを減らすことができます。
 
 詳しくは、次を参照してください。
 

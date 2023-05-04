@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 2a9be3b7-b325-4d74-a5bc-8d24db491920
 exl-id: 04adbbc9-9e4c-4c64-aab1-20b17bd75bb5
-source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 60%
+source-wordcount: '1479'
+ht-degree: 59%
 
 ---
 
 # コンポーネントデータと Adobe Analytics プロパティとのマッピング{#mapping-component-data-with-adobe-analytics-properties}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Analyticsに送信するデータを収集するフレームワークにコンポーネントを追加します。 分析データを収集するように設計されたコンポーネントは、データを適切な **CQ 変数**. そのようなコンポーネントをフレームワークに追加する場合、フレームワークは CQ 変数のリストを表示して、適切な **Analytics** 変数にマッピングできるようにします。
 

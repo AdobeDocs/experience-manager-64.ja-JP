@@ -9,14 +9,18 @@ topic-tags: correspondence-management
 discoiquuid: 2c1be479-9f44-4348-b074-a08af8df51fa
 feature: Correspondence Management
 exl-id: 645b990f-279c-4731-b552-07d0aa052eb8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3701'
+source-wordcount: '3737'
 ht-degree: 51%
 
 ---
 
 # 通信を作成 {#create-correspondence}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 通信を作成ユーザーインターフェイスで通信を作成 {#create-correspondence-in-the-create-correspondence-user-interface}
 

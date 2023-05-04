@@ -10,16 +10,20 @@ topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 feature: Adaptive Forms, Acrobat Sign
 exl-id: e7c27623-a889-4bd5-bfff-cfe513cd1a35
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 36%
+source-wordcount: '1003'
+ht-degree: 38%
 
 ---
 
 # Acrobat SignとAEM Formsの統合 {#integrate-adobe-sign-with-aem-forms}
 
-Acrobat Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+Acrobat Sign により、アダプティブフォームの電子サインワークフローを有効にできます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
 一般的なAcrobat Signおよびアダプティブフォームのシナリオでは、ユーザーは次の手順でアダプティブフォームに入力します。 **サービスを申し込む**. 例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームに入力、送信、署名すると、フォームがサービスプロバイダーに送信され、さらにアクションが実行されます。 サービスプロバイダーは、申し込みを確認し、Acrobat Signを使用して申し込みを承認済みとマークします。 同様の電子署名ワークフローを有効にするには、Acrobat SignとAEM Formsを統合します。
 
@@ -27,12 +31,12 @@ Acrobat SignをAEM Formsと共に使用するには、AEM as a Cloud Services �
 
 ## 前提条件 {#prerequisites}
 
-Acrobat SignをAEM Formsと統合するには、以下が必要です。
+Acrobat Sign を AEM Forms に統合するには、以下のものが必要です。
 
 * アクティブ [Acrobat Sign開発者アカウント。](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html)
 * An [SSL が有効](/help/sites-administering/ssl-by-default.md) AEM Formsサーバー。
 * An [Acrobat Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
-* Acrobat Sign API アプリケーションの資格情報（クライアント ID およびクライアントの秘密鍵）。
+* Acrobat Sign API アプリケーションの資格情報（クライアントの ID とクライアントシークレット）
 * 再設定時に、オーサーインスタンスとパブリッシュインスタンスの両方から既存のAcrobat Sign設定を削除します。
 * オーサーインスタンスとパブリッシュインスタンスには、[同一の暗号キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)を使用します。
 
@@ -41,7 +45,7 @@ Acrobat SignをAEM Formsと統合するには、以下が必要です。
 前提条件を満たしたら、次の手順を実行して、オーサーインスタンス上でAcrobat SignとAEM Formsを設定します。
 
 1. AEM Forms のオーサーインスタンスで、**ツール** ![ハンマー](assets/hammer.png)／**一般**／**設定ブラウザー**&#x200B;に移動します。
-   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定の&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、「**[!UICONTROL クラウド設定]**」を有効にして「**[!UICONTROL 作成]**」をタップします。これにより、Cloud Services 用の設定コンテナが作成されます。
 1. に移動します。 **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Acrobat Sign** をクリックし、上記の手順で作成した設定コンテナを選択します。

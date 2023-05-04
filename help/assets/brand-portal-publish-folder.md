@@ -5,14 +5,18 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: f41ab750-5780-42ae-a131-5bc748280215
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 51%
+source-wordcount: '588'
+ht-degree: 49%
 
 ---
 
 # Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets 管理者は、アセットやフォルダーをに公開できます [!DNL Experience Manager Assets Brand Portal] 組織のインスタンス（または公開ワークフローを後の日時にスケジュール）を作成する必要があります。 ただし、最初に [!DNL Experience Manager Assets] と [!DNL Brand Portal]. 詳しくは、 [設定 [!DNL Experience Manager Assets] Brand Portal](configure-aem-assets-with-brand-portal.md).
 

@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
 feature: PDF Generator
 exl-id: f6bca66b-265a-413c-b2c7-299d97e2ce18
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '7265'
+source-wordcount: '7301'
 ht-degree: 34%
 
 ---
 
 # Adobe PDF 設定の指定{#configuring-adobe-pdf-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe PDF設定ページに、使用するソースに対して指定できる変換設定が表示されます。 事前定義済みのPDF設定を使用するか、独自の設定を作成できます。 PDFの設定によって、ファイルの変換方法と、その結果のPDF構造および機能が正確に決まります。 Adobe PDFの設定は、以前はDistiller®のパラメーターやジョブオプションと呼ばれていました。
 

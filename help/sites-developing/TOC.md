@@ -8,10 +8,11 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: dbebe8ceaa629d04cee279e21a15594c54f0ba26
+hide: true
+source-git-commit: b61797a9096c0473658d6aabfb584a53e42095b7
 workflow-type: tm+mt
 source-wordcount: '869'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -120,7 +121,7 @@ ht-degree: 98%
       + [SPA 参照資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=ja)
    + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)
-   + [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/experience-fragments.html)
+   + [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/experience-fragments.html?lang=ja)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
    + [AEM モダナイゼーションツール](modernization-tools.md)

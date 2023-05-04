@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 exl-id: 85a367fe-a124-42af-ae3e-fe4d10425ea1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '391'
 ht-degree: 23%
 
 ---
 
 # コンテンツのプロパティとノード {#content-properties-and-nodes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -60,7 +64,7 @@ ht-degree: 23%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブール値 |  |
+| dps-hideFromBrowsePage | ブーリアン |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -80,8 +84,8 @@ ht-degree: 23%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブール値 |  |
-| dps-allowDownload | ブール値 |  |
+| dps-horizontalSwipe | ブーリアン |  |
+| dps-allowDownload | ブーリアン |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8c2567f3-7220-436a-b9f2-2824a98c1ccc
 exl-id: 04a832d5-1ab5-4db3-b185-57fba21eb839
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '743'
 ht-degree: 14%
 
 ---
 
 # 停止した操作および停止したブランチの使用 {#working-with-stalled-operations-and-branches}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 停止した操作ページと停止したブランチページに、停止したプロセスが表示されます。 操作の実行中または実行後にエラーが発生した場合、またはプロセス内の計画的な停止操作が原因で、プロセスは停止する場合があります。
 

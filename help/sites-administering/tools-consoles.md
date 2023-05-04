@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 7566e1bc-8571-4b3c-b420-4324026bd4dd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '911'
 ht-degree: 23%
 
 ---
 
 # ツールコンソール{#tools-consoles}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 **ツール** コンソールを使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現在、には 2 種類のフレーバーがあります **ツール** コンソールは、使用している UI に応じて異なります。
 
@@ -238,7 +242,7 @@ ht-degree: 23%
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-authoring/tags.md">タグ管理</a></td> 
+   <td><a href="/help/sites-authoring/tags.md">Tag Management</a></td> 
    <td>タグとその名前空間を整理します。</td> 
   </tr> 
   <tr> 
@@ -248,7 +252,7 @@ ht-degree: 23%
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-administering/workflows.md">ワークフロー</a></td> 
+   <td><a href="/help/sites-administering/workflows.md">workflows</a></td> 
    <td>モデルと管理のワークフロー.</td> 
   </tr> 
   <tr> 

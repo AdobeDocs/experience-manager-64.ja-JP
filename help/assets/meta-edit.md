@@ -5,18 +5,22 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: f0522343-f8a9-4d89-8ce8-b3357ae3fe70
-source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 81%
+source-wordcount: '515'
+ht-degree: 62%
 
 ---
 
 # メタデータの編集と追加 {#how-to-edit-or-add-metadata}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加（例えば、メタデータフィールドが空白の場合など）したりすることができます。
 
-メタデータの語彙を制御し、信頼性を確保する必要があるので、 [!DNL Experience Manager] Assets では、新しいメタデータプロパティをアドホックに追加することはできません。 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。[アセットの新しいメタデータプロパティの作成](meta-edit.md#editing-metadata-schema)を参照してください。
+メタデータの語彙を制御し、信頼性を確保する必要があるので、 [!DNL Experience Manager] Assets では、新しいメタデータプロパティをアドホックに追加することはできません。 作成者はアセットの新しいメタデータフィールドを追加できませんが、開発者は追加できます。 詳しくは、 [アセットの新しいメタデータプロパティの作成](meta-edit.md#editing-metadata-schema).
 
 ## アセットのメタデータの編集 {#editing-metadata-for-an-asset}
 
@@ -36,11 +40,11 @@ ht-degree: 81%
 
    >[!NOTE]
    >
-   >テキストフィールドが空の場合、現在設定されているメタデータはありません。フィールドに値を入力して保存すると、そのメタデータプロパティを追加できます。
+   >テキストフィールドが空の場合、既存のメタデータセットはありません。 フィールドに値を入力して保存すると、そのメタデータプロパティを追加できます。
 
-アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。この操作は、AEM のメタデータの書き戻しワークフローによって実行されます。既存のプロパティ（`dc:title` など）への変更は上書きされ、新しく作成されたプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
+アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。これは、AEMメタデータ書き戻しワークフローを使用しておこなわれます。 既存のプロパティ（`dc:title` など）への変更は上書きされ、新しく作成されたプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
 
-XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirements.md)に示されたプラットフォームおよびファイル形式でサポートされ、有効になります。
+XMPの書き戻しは、 [技術要件。](/help/sites-deploying/technical-requirements.md)
 
 ## メタデータスキーマの編集 {#editing-metadata-schema}
 
@@ -48,7 +52,7 @@ XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirem
 
 ##  内でのカスタム名前空間の登録 [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
-AEM 内での独自の名前空間を追加できます。cq、jcr、sling など事前に定義された名前空間があるように、リポジトリメタデータと xml 処理用の名前空間を設定できます。
+AEM内に独自の名前空間を追加できます。 cq、jcr、sling など事前に定義された名前空間があるように、リポジトリメタデータと xml 処理用の名前空間を設定できます。
 
 1. ノードタイプ管理ページに移動します。 `https://[AEM_server]:[port]/crx/explorer/nodetypes/index.jsp`.
 1. ページ上部の「**[!UICONTROL 名前空間]**」をクリックまたはタップします。ウィンドウに名前空間管理ページが表示されます。

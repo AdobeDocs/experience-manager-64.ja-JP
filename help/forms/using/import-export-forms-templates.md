@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: 6fddb09a-ec60-4235-8ff4-0646f53f38f7
 role: Admin
 exl-id: 2f71c588-5616-440f-8e47-8d9665169b3b
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 64%
+source-wordcount: '2538'
+ht-degree: 63%
 
 ---
 
 # AEM Forms におけるアセットの読み込みと書き出し {#importing-and-exporting-assets-to-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォームと、関連するアセット、テーマ、データ辞書、ドキュメントフラグメントおよびレターを異なる AEM Forms インスタンス間で移動できます。そうした移動が必要になるのは、システムを移行する場合か、ステージサーバーから実稼働サーバーへ AEM Form を移動する場合です。AEM Forms UI を介したアップロードおよび読み込みがサポートされるアセットの場合、書き出しや読み込みに Forms UI を使用することをお勧めします。このようなアセットの書き出しや読み込みに AEM パッケージマネージャーを使用するのは、お勧めしません。
 

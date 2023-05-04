@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 exl-id: 92c95cb5-fdbf-4200-89a8-10c768e4bc25
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 4%
+source-wordcount: '896'
+ht-degree: 5%
 
 ---
 
 # イネーブルメントのための初期設定 {#initial-setup-for-enablement}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## オーサーインスタンスとパブリッシュインスタンスを開始 {#start-author-and-publish-instances}
 
@@ -166,7 +170,7 @@ AEM CommunitiesはじめにのTutorials用に作成されたタグのサンプ�
    * ライリー
    * シドニー
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ### コミュニティ Ski クラスのプロパティ {#community-ski-class-properties}
 
@@ -210,9 +214,9 @@ AEM CommunitiesはじめにのTutorials用に作成されたタグのサンプ�
 
 * 「C」と入力して検索
 
-   * 選択 `Community Administrators`
-   * 選択 `Community Enablement Managers`
+   * `Community Administrators` を選択します。
+   * `Community Enablement Managers` を選択します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-419](assets/chlimage_1-419.png)

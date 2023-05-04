@@ -8,14 +8,18 @@ content-type: reference
 exl-id: 51150d51-865e-4b8e-9990-ca755e4c7778
 feature: Panoramic Images
 role: User
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 31%
+source-wordcount: '617'
+ht-degree: 30%
 
 ---
 
 # パノラマ画像 {#panoramic-images}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ここでは、パノラマ画像ビューアを使用して球パノラマ画像をレンダリングし、室内、物件、場所、風景などをあらゆる角度から見ることができる臨場感あふれる体験を提供する方法について説明します。
 
@@ -43,7 +47,7 @@ ht-degree: 31%
 
 パノラマ画像ビューアがAEM内で正しく動作するようにするには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットが JCR で更新されるようにする必要があります。 これをおこなうには、次の方法でDynamic Media Classicを設定します。
 
-1. [Dynamic Media Classicデスクトップアプリケーションへのログイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app) 会社アカウントごとに
+1. [Dynamic Media Classicデスクトップアプリケーションへのログイン](https://experienceleague.adobe.com/docs/?lang=jadynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) 会社アカウントごとに
 
 1. ページの右上隅にある「 **[!UICONTROL 設定/アプリケーション設定/公開設定/Image Server]**.
 1. の **[!UICONTROL Image Server 公開]** ページの **[!UICONTROL 公開コンテキスト]** 上部付近のドロップダウンメニューで、「 **[!UICONTROL 画像サービング]**.

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 role: Admin
 exl-id: 73c59497-43fe-4e15-afda-e3cf5264696e
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 4%
+source-wordcount: '477'
+ht-degree: 6%
 
 ---
 
 # JSRP - JCR ストレージリソースプロバイダー {#jsrp-jcr-storage-resource-provider}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## JSRP について {#about-jsrp}
 
@@ -43,7 +47,7 @@ AEM Communitiesが JSRP をストレージオプションとして使用する�
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
 * 選択 **[!UICONTROL JCR ストレージリソースプロバイダー (JSRP)]**
-* 選択 **[!UICONTROL 送信]**
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ### 設定の公開 {#publishing-the-configuration}
 

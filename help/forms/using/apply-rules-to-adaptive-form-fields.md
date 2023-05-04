@@ -9,20 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 feature: Adaptive Forms
 exl-id: bb65b6d7-5bbf-4cc5-a468-9ea8465f7a07
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1168'
 ht-degree: 52%
 
 ---
 
 # チュートリアル：アダプティブフォームフィールドへのルールの適用 {#tutorial-apply-rules-to-adaptive-form-fields}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
 このチュートリアルは、 [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md) 系列。 Adobeは、チュートリアルの使用例を理解し、実行し、実際に使用するために、一連の作業を時系列に従うことをお勧めします。
 
-## チュートリアルについて {#about-the-tutorial}
+## このチュートリアルについて {#about-the-tutorial}
 
 ルールを使用して、アダプティブフォームにインタラクティビティ、ビジネスロジック、スマート検証を追加できます。 アダプティブフォームには、ルールエディターが組み込まれています。 ルールエディターには、ガイド付きツアーと同様のドラッグ&amp;ドロップ機能が用意されています。 ドラッグ&amp;ドロップによる方法は、ルールを作成する最も速く最も簡単な方法です。 また、ルールエディターには、コーディングスキルのテストやルールの次のレベルへの移行に関心のあるユーザー向けのコードウィンドウも用意されています。
 

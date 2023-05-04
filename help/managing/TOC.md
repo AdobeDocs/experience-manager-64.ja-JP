@@ -7,7 +7,8 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について説明します。
 feature: Deploying
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+hide: true
+source-git-commit: b61797a9096c0473658d6aabfb584a53e42095b7
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 100%

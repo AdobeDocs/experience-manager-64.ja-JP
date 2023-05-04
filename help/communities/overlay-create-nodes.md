@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 exl-id: fc044a4e-0037-405f-8c26-b388c6a98733
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 12%
+source-wordcount: '316'
+ht-degree: 13%
 
 ---
 
 # ノードの作成 {#create-nodes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 必要最小限の数のファイルを/libs から/apps にコピーし、/apps で変更することで、コメントシステムをカスタムバージョンでオーバーレイします。
 

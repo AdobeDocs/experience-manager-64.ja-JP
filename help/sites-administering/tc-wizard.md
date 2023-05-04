@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: dc185a75-84a0-4075-ae1e-8bb78d414aa8
 feature: Language Copy
 exl-id: a3ac6b7e-8a18-4432-9e56-1f9bd7cf0548
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 48%
+source-wordcount: '250'
+ht-degree: 44%
 
 ---
 
 # 言語コピーウィザード{#language-copy-wizard}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 言語コピーウィザードは、多言語コンテンツ構造を作成および実装するためのガイド付きエクスペリエンスです。 言語コピーを作成する方が、より簡単で迅速になりました。
 

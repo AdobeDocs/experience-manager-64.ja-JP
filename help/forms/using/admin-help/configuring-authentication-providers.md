@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: 1b5ead0a-cf33-4422-bdca-2bd6aebbc98d
-source-git-commit: bf9b94e8af72ad7b0a2c1d867fa35acfa31e6c1c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1576'
-ht-degree: 40%
+source-wordcount: '1612'
+ht-degree: 39%
 
 ---
 
 # 認証プロバイダーの設定 {#configuring-authentication-providers}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ハイブリッドドメインには少なくとも 1 つの認証プロバイダーが必要で、エンタープライズドメインには少なくとも 1 つの認証プロバイダーまたはディレクトリプロバイダーが必要です。
 

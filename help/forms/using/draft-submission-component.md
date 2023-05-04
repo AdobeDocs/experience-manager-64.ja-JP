@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 219dd379-5bc9-40b0-bdc2-2fb347da29d8
 exl-id: d95d3586-ea4b-4068-a8f2-a198c27a0096
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 64%
+source-wordcount: '798'
+ht-degree: 63%
 
 ---
 
 # ドラフトと送信コンポーネント {#drafts-and-submissions-component}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ドラフトと送信コンポーネントは、ドラフト状態のすべてのフォームと、既に送信済みのフォームを一覧表示します。 このコンポーネントには、ドラフトフォームと送信済みフォーム用に別々のセクション（タブ）があります。 ユーザーは自分の下書きと送信済みのフォームのみを表示できます。
 

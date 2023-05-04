@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 exl-id: 93921d23-a2bf-43b6-b002-58a7482b22b0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3347'
-ht-degree: 38%
+source-wordcount: '3383'
+ht-degree: 37%
 
 ---
 
 # ページへの Dynamic Media Classic 機能の追加{#adding-scene-features-to-your-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Dynamic Media Classic は、リッチメディアアセットの管理や拡張のほか、web、モバイル、メールをはじめインターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
 
@@ -238,13 +242,13 @@ Dynamic Media Classic の画像コンポーネントを使用すると、Dynamic
 
 **[!UICONTROL シャープニング]** - 画像にシャープニングを適用する方法を選択します。シャープニングについて詳しくは、 [*Adobe Dynamic Media Classicの画質とシャープのベストプラクティス*](/help/assets/assets/sharpening_images.pdf).
 
-**[!UICONTROL URL 修飾子]** — 追加の Dynamic Media Classic 画像コマンドを指定して、画像エフェクトを変更できます。詳しくは、 [画像プリセットの管理](/help/assets/managing-image-presets.md) そして [コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=ja).
+**[!UICONTROL URL 修飾子]** — 追加の Dynamic Media Classic 画像コマンドを指定して、画像エフェクトを変更できます。詳しくは、 [画像プリセットの管理](/help/assets/managing-image-presets.md) そして [コマンドリファレンス](https://experienceleague.adobe.com/docs/?lang=jadynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 **[!UICONTROL ブレークポイント]** - レスポンシブ web サイトでは、ブレークポイントの調整が必要な場合があります。ブレークポイントはコンマで区切る必要があります `,`.
 
 ### 画像テンプレート {#image-template}
 
-[Dynamic Media Classic 画像テンプレート](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=ja#template-basics) は、Dynamic Media Classic にインポートされたレイヤー化された Photoshop コンテンツで、可変性を考慮してコンテンツとプロパティがパラメーター化されています。この **[!UICONTROL 画像テンプレート]** コンポーネントを使用すると、 AEMで画像を読み込んでテキストを動的に変更できます。 また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
+[Dynamic Media Classic 画像テンプレート](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html#template-basics) は、Dynamic Media Classic にインポートされたレイヤー化された Photoshop コンテンツで、可変性を考慮してコンテンツとプロパティがパラメーター化されています。この **[!UICONTROL 画像テンプレート]** コンポーネントを使用すると、 AEMで画像を読み込んでテキストを動的に変更できます。 また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
 
 コンポーネントを設定するには、「**[!UICONTROL 編集]**」をクリックします。次の項目を設定できます。 [すべてのDynamic Media Classicコンポーネントに共通の設定](/help/sites-administering/scene7.md#settingscommontoalldynamicmediaclassicscomponents) と、この節で説明するその他の設定。
 

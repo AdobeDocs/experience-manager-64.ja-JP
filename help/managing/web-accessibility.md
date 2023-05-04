@@ -10,16 +10,20 @@ topic-tags: managing-accessibility, introduction
 content-type: reference
 discoiquuid: 13c7e0bd-54af-49f3-9743-075ce6f3314d
 exl-id: f0ccdeae-3dbb-4dba-89cf-4c8b759da22b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 41%
+source-wordcount: '520'
+ht-degree: 40%
 
 ---
 
 # AEM と Web アクセシビリティのガイドライン{#aem-and-the-web-accessibility-guidelines}
 
-ウェブコンテンツを、障害や制限の有無にかかわらず、対象オーディエンスにとって可能な限りアクセシブルであるよう設計することには、多くの社会的、経済的、法的動機があります。そのため、優れた Web デザインの側面として、Web アクセシビリティの重要性が高まってきています。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+様々な社会的、経済的、法的動機により、Web コンテンツを設計する際には、身体的障碍や制限の有無に関係なく、対象とするオーディエンスができるだけアクセスしやすくことが求められます。そのため、優れた Web デザインの側面として、Web アクセシビリティの重要性が高まってきています。
 
 アクセシブルな Web サイトおよびコンテンツの作成とAEMの影響：
 

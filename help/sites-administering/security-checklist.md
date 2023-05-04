@@ -11,14 +11,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a91e1264-8441-42f8-aa83-1d9c983d214a
 exl-id: 0be6d031-f8b8-458b-a910-ff05d2b1a155
-source-git-commit: b921cf3a1739b031eea5c319953d20a024515544
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2830'
-ht-degree: 90%
+source-wordcount: '2866'
+ht-degree: 89%
 
 ---
 
 # セキュリティチェックリスト{#security-checklist}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このセクションでは、デプロイ時に AEM のインストールが安全になるようにするために必要な様々な手順について説明します。このチェックリストは、上から順に適用するように設計されています。
 

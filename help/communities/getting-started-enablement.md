@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 exl-id: 4d968f7e-bb6f-4c7a-b266-02f53797908c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 20%
+source-wordcount: '157'
+ht-degree: 21%
 
 ---
 
 # イネーブルメントのための AEM Communities 使用の手引き  {#getting-started-with-aem-communities-for-enablement}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesは、ソーシャルコミュニティ内で提供されるイネーブルメントリソース、割り当て済みコンテンツ、動的なレコメンデーションを使用して、従業員や顧客間でのイネーブルメントを容易にし、デジタルチャネルや対面チャネルで一貫したエクスペリエンスを作成します。
 

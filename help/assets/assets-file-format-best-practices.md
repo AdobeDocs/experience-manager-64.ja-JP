@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management,Developer Tools
 role: Admin
 exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
-source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '460'
 ht-degree: 17%
 
 ---
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [!DNL Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポートされるAdobeライブラリには、Adobe Camera Raw、ギブソン、Adobe PDF Rasterizer、Adobe InDesign Serverなどがあります。 さらに、 [!DNL Assets] は、ImageMagick、TwerbMonkes などのサードパーティライブラリをサポートしています。
 

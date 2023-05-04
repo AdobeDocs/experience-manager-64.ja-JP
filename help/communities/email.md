@@ -12,14 +12,18 @@ discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 role: Admin
 exl-id: 0a0222e7-ca30-4603-94ad-582005b2de11
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 4%
+source-wordcount: '859'
+ht-degree: 5%
 
 ---
 
 # メールの設定 {#configuring-email}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesは e メールを
 
@@ -45,7 +49,7 @@ AEM Communitiesは e メールを
 * を `Day CQ Mail Service`
 * 編集アイコンを選択します。
 
-これは、 [電子メール通知の設定](../../help/sites-administering/notification.md)が、フィールドに違いがある場合は `"From" address` が *not* 必須およびは空のままにする必要があります。
+これは、 [電子メール通知の設定](../../help/sites-administering/notification.md)が、そのフィールドに違いがある場合は `"From" address` が *not* 必須およびは空のままにする必要があります。
 
 次に例を示します（例として値を入力）。
 

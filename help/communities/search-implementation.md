@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 exl-id: 9092df98-f600-4ed8-93d8-f2e83cd8bb6a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 5%
+source-wordcount: '1220'
+ht-degree: 6%
 
 ---
 
 # 検索の基本事項 {#search-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -220,7 +224,7 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 Solr クエリに関する問題のトラブルシューティングに役立つように、
 
-`com.adobe.cq.social.srp.impl.SocialSolrConnector`
+`com.adobe.cq.social.srp.impl.SocialSolrConnector`。
 
 実際の Solr クエリは、URL エンコードされてデバッグログに表示されます。
 

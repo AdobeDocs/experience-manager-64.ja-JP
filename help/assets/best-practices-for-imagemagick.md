@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Renditions,Developer Tools
 role: Admin
 exl-id: 9aeda88a-fd66-4fad-b496-3352a6ecab81
-source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 54%
+source-wordcount: '800'
+ht-degree: 53%
 
 ---
 
 # [!DNL Experience Manager Assets] と連携するための ImageMagick のインストールと設定 {#install-and-configure-imagemagick-to-work-with-aem-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ImageMagick はビットマップ画像を作成、編集、組み立てまたは変換するためのソフトウェアプラグインです。PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVG など、200 種類以上の多様な形式の画像を読み書きできます。ImageMagick を使用して、画像のサイズ変更、反転、ミラー、回転、変形、シアーおよび変換を行います。 また、ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したり、テキスト、線、ポリゴン、楕円、曲線を描画したりすることもできます。
 

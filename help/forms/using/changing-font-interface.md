@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
 exl-id: bd7ec9d6-b1d2-4f01-8cef-05e5e1eceda1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 41%
+source-wordcount: '314'
+ht-degree: 39%
 
 ---
 
 # インターフェイスのフォントの変更 {#changing-the-font-on-the-interface}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace に表示されるフォントを変更できます。 ユーザーインターフェイスの特定のセクションで使用されるフォントは、スタイルシートの対応するセクションで定義されます。 ユーザーインターフェイス上のフォントを選択的に変更できます。
 

@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Migration,Renditions,Asset Management
 role: Architect,Admin
 exl-id: 31da9f3d-460a-4b71-9ba0-7487f1b159cb
-source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1808'
 ht-degree: 36%
 
 ---
 
 # Assets 移行ガイド {#assets-migration-guide}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アセットをAEMに移行する際には、いくつかの手順を考慮する必要があります。 現在のホームからアセットやメタデータを抽出する方法は、実装間で大きく異なるので、このドキュメントの範囲外です。 代わりに、このドキュメントでは、これらのアセットをAEMに取り込み、メタデータを適用し、レンディションを生成し、アセットをアクティベートまたは公開する方法について説明します。
 

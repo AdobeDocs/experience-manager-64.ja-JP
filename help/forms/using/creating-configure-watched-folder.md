@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 0ce7b338-6686-49b3-b58b-e7ab6b670708
 exl-id: 7e2706e2-092f-4780-be8f-2bf444613d70
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1860'
 ht-degree: 32%
 
 ---
 
 # 監視フォルダーの作成または設定 {#create-or-configure-a-watched-folder}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 管理者は、ネットワークフォルダー ( *監視フォルダー*&#x200B;を使用して、ユーザーがファイル (PDFファイルなど ) を監視フォルダーに配置したときに、事前設定済みの操作が開始され、ファイルが操作されます。 指定した操作が実行されると、変更したファイルが指定の出力フォルダに保存されます。 監視フォルダーの管理について詳しくは、 [管理ヘルプ](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md).
 

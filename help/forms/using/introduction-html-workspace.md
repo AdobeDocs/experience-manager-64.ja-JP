@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 7efc8ad6-2bb1-41a6-ac0b-7f8ddddbf2a6
 exl-id: d60462a7-b941-4d0c-b6c5-20289d553a25
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 31%
+source-wordcount: '241'
+ht-degree: 29%
 
 ---
 
 # AEM Forms Workspace の概要 {#introduction-to-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Formsのワークフローは、自動化を行い、重要なドキュメントやフォーム関連のビジネスプロセスを可視化することで、組織の効率を高めます。 Process Management モジュールを使用すると、オンラインまたはオフラインでアクセス可能な、合理化されたエンドツーエンドのワークフロー（人、システム、コンテンツ、ビジネスルールなど）を構築できます。Forms Workflow には、AEM Forms Workspace が含まれます。 AEM Forms workspace には、workspace を拡張および統合し、より使いやすくする新しい機能が追加されています。
 

@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 feature: Mobile Forms
 exl-id: b63758f1-b375-4c05-bd53-69e0346733c6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '648'
 ht-degree: 13%
 
 ---
 
 # HTML5 フォームにおけるパターン形式文字列サポート {#picture-clause-support-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 フォームでは、日付、テキスト、数値の記号の表示値と形式設定された値に対する XFA パターン形式文字列をサポートしています。 次のパターン形式文字列の式がサポートされています。
 

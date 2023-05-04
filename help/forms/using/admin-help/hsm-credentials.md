@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e5f17ba8-8aab-4449-811a-20ad33de1c6f
 exl-id: f38057d7-b500-448a-8664-a45374d4cfea
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1340'
 ht-degree: 11%
 
 ---
 
 # HSM 秘密鍵証明書の管理 {#managing-hsm-credentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Trust Store の管理ページでは、ハードウェアセキュリティモジュール (HSM) 秘密鍵証明書を管理できます。 HSM は、秘密鍵を安全に生成して保存するために使用できる、サードパーティの PKCS#11 デバイスです。 HSM は、秘密鍵へのアクセスと使用を物理的に保護します。
 

@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: 6c989701-10c7-466e-b3e5-008a6d377574
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 64%
+source-wordcount: '429'
+ht-degree: 60%
 
 ---
 
 # フォームを分類するための新しいフォルダーの作成 {#create-new-folders-to-categorize-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォルダーを使用すると、アセットをより整理できます。 AEM Formsでは、フォームテンプレート、PDF、ドキュメント、リソース、アダプティブフォームなど、様々な種類のアセットを様々なメタデータと共に使用できるので、フォルダーを使用して、必要な条件に基づいてフォームを分類できます。
 

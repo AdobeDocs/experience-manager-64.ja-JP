@@ -10,19 +10,23 @@ content-type: reference
 topic-tags: platform
 discoiquuid: a8c0cd0f-268f-4b37-83de-0ccbd819a016
 exl-id: a5f36d26-1be4-4e06-9237-3943e903d850
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 72%
+source-wordcount: '211'
+ht-degree: 37%
 
 ---
 
-# e コマース{#ecommerce}
+# e コマース {#ecommerce}
 
-統合フレームワークには、API を備えた統合レイヤーが含まれます。以下を実行できます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-* e コマースシステムを組み込んで、製品データを AEM に取り込む
-* 特定の e コマースエンジンに依存しないコマース機能用の AEM コンポーネントを作成する
+統合フレームワークには、API を備えた統合レイヤーが含まれます。 次の操作が可能です。
+
+* e コマースシステムをプラグインし、製品データをAEMに取り込む
+* 特定の e コマースエンジンに依存しない、コマース機能用のAEMコンポーネントの作成
 
 詳しくは、次を参照してください。
 
@@ -37,7 +41,7 @@ ht-degree: 72%
 >
 >この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[e コマースのデプロイ](/help/sites-deploying/ecommerce.md)を参照してください。
 >
->e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/sites-administering/ecommerce.md)を参照してください。
+>e コマース実装の概念と管理については、[e コマースの管理](/help/sites-administering/ecommerce.md)を参照してください。
 
 ## API に関するドキュメント {#api-documentation}
 

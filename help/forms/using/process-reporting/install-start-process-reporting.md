@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: process-reporting
 discoiquuid: a0f81621-6ccd-46e2-85d7-2eb4ee3cdb91
 exl-id: 0af2e992-6670-4e31-9d26-ab74c5b9df8e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 98%
+source-wordcount: '1752'
+ht-degree: 96%
 
 ---
 
 # プロセスレポートの概要  {#getting-started-with-process-reporting}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 プロセスレポートを使用すると、AEM Forms のユーザーは、AEM Forms 実装で現在定義されている AEM Forms プロセスに関する情報を照会できます。ただし、プロセスレポートは、AEM Forms のリポジトリのデータに直接アクセスしません。まず、スケジュールに従ってプロセスレポートのリポジトリにデータが公開されます（*ProcessDataPublisher サービスおよび ProcessDataStorage サービスによって*&#x200B;行われます）。次に、リポジトリに公開されたプロセスレポートのデータから、プロセスレポートのレポートとクエリが生成されます。プロセスレポートは、Forms Workflow モジュールの一部としてインストールされています。
 

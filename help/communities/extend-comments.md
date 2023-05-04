@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 exl-id: f6722953-ff71-4fba-b76e-1d566f71f6d5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 7%
+source-wordcount: '291'
+ht-degree: 8%
 
 ---
 
 # コメントコンポーネントの拡張 {#extend-comments-component}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 次の目的 [拡張](client-customize.md#extensions) デフォルトのコンポーネントは、特定の用途でのコンポーネントの外観や動作を変更することです。
 

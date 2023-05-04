@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 role: Admin
 exl-id: 5005d57c-2585-46d1-9785-939e249a0128
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 37%
+source-wordcount: '951'
+ht-degree: 36%
 
 ---
 
 # Forms User Management | ユーザーデータの処理 {#forms-user-management-handling-user-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ユーザー管理は、AEM Forms JEE コンポーネントで、AEM Formsユーザーを作成、管理および承認して、AEM Formsにアクセスすることを許可します。 User Management は、ユーザー情報を取得するために、ドメインをディレクトリとして使用します。 次のドメインタイプがサポートされています。
 

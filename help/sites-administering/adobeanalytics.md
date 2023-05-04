@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 0089394f-0107-49eb-ad73-52e9cabe71b1
 exl-id: ca11bfcd-06d1-4ca9-9069-afa91d8a6610
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 82%
+source-wordcount: '326'
+ht-degree: 75%
 
 ---
 
 # Adobe Analytics との統合{#integrating-with-adobe-analytics}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Analytics と AEM の統合により、Web ページのアクティビティを追跡できます。
 

@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: 2791c9a1-38a2-4154-8bea-2f7c564b46c8
 feature: Mobile Forms
 exl-id: 42da25de-7ad0-4e9a-8139-149954f9bd8e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '733'
 ht-degree: 29%
 
 ---
 
 # HTML5 forms サービスプロキシ {#html-forms-service-proxy}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 Forms サービスプロキシは、送信サービスのプロキシを登録する設定です。 サービスプロキシを設定するには、リクエストパラメーターを使用して送信サービスの URL を指定します *submissionServiceProxy*.
 

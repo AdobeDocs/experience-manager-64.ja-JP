@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
 exl-id: 759cff3e-960a-4c38-a731-9fff21e739cf
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
 
 # ワークマネージャーとスロットリング{#work-manager-and-throttling}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM forms（および以前のバージョン）では、JMS キューを使用して非同期的に操作を実行していました。 AEM forms では、JMS キューが Work Manager に置き換えられました。 このドキュメントでは、ワークマネージャーの背景情報と、ワークマネージャーのスロットルオプションを設定する手順を説明します。
 

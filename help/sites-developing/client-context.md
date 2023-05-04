@@ -1,7 +1,7 @@
 ---
 title: ClientContext の詳細
 seo-title: Client Context in Detail
-description: ClientContext は、動的に組み立てられたユーザーデータのコレクションを表します
+description: ClientContext は、動的にアセンブルされたユーザーデータのコレクションを表します
 seo-description: The Client Context represents a dynamically assembled collection of user data
 uuid: 31cfcfd0-14f3-4777-ae85-45eb352756d0
 contentOwner: msm-service
@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 7b97fc27-30de-4ef9-9efe-673aec50cff2
 feature: Context Hub
 exl-id: fb613a57-d064-45eb-be15-c4f7e06bb0ee
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '3013'
 ht-degree: 36%
 
 ---
 
 # ClientContext の詳細{#client-context-in-detail}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >

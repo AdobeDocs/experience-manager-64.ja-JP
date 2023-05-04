@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: 8249fd48-38af-4bf7-8dcc-2f63db6750b6
-source-git-commit: beb6e3ccc5cbef044f8b91d327c0361c881ccd72
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 64%
+source-wordcount: '414'
+ht-degree: 60%
 
 ---
 
 # コンソールのキーボードショートカット{#keyboard-shortcuts-for-consoles}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 全体で様々なキーボードショートカットを利用できます。コンソールの使用時に適用されるものや、[ページ編集](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)に適用されるものなどがあります。
 

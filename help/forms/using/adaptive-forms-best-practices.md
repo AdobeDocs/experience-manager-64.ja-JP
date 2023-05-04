@@ -9,18 +9,22 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 0c64940c-273d-4f23-afcb-38bf54cddd36
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4108'
-ht-degree: 32%
+source-wordcount: '4144'
+ht-degree: 33%
 
 ---
 
 # アダプティブフォームの操作のベストプラクティス {#best-practices-for-working-with-adaptive-forms}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ## 概要 {#overview}
 
-Adobe Experience Manager(AEM)Forms を使用すると、複雑なトランザクションを、シンプルで楽しいデジタルエクスペリエンスに変換することができます。 ただし、効率的で生産的なAEM Formsエコシステムを実装、構築、実行、維持するためには、多大な取り組みが必要です。
+Adobe Experience Manager（AEM）Forms を使用すると、複雑なトランザクションを単純で使いやすいデジタルエクスペリエンスに変えることができます。ただし、効率的で生産的なAEM Formsエコシステムを実装、構築、実行、維持するためには、多大な取り組みが必要です。
 
 ここでは、フォーム管理者、フォーム作成者、開発者がAEM Forms、特にアダプティブフォームコンポーネントを扱う際に知っておくべきガイドラインや推奨事項を紹介します。 フォーム開発プロジェクトの設定から、AEM Formsの設定、カスタマイズ、オーサリング、最適化に至るまで、ベストプラクティスを説明します。 これらのベストプラクティスを実行することで、AEM Formsのエコシステム全体のパフォーマンスを向上できます。
 

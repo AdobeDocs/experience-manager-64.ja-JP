@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 5fca5401-502d-483b-bfc1-ef53e2c041b7
 exl-id: 04a9c595-9a73-4a8a-99ae-c2292882338f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 45%
+source-wordcount: '138'
+ht-degree: 39%
 
 ---
 
 # エディター{#editor}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 デフォルトでは、エディターからクラシック UI に切り替える機能は無効になっています。
 

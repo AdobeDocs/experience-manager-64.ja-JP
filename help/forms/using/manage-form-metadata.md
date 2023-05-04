@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: 28549db2-e2f2-4a25-b0b1-785237d9d941
 role: Admin
 exl-id: d10bc3e9-66a6-4cb2-b484-da338259f1c8
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '2009'
 ht-degree: 65%
 
 ---
 
 # フォームメタデータの管理 {#manage-form-metadata}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要  {#overview-nbsp}
 
@@ -27,11 +31,11 @@ AEM Formsでは、デフォルトで、各アセットタイプに対して定�
 
 開発者またはサイトの所有者は、Forms Portal、AEM Formsのエンドユーザーインターフェイスをカスタマイズして、組織で使用しているメタデータを反映させることができます。 フォームポータルについて詳しくは、[ポータルでのフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)を参照してください。
 
-## AEM Forms におけるメタデータ  {#metadata-in-aem-forms-nbsp}
+## AEM Forms におけるメタデータ  {#metadata-in-aem-forms-nbsp}
 
 AEM Formsでは、アセットに関連付けられたメタデータプロパティのリストは、アセットのタイプに応じて異なります。 また、任意のカスタムメタデータのプロパティを追加すると、カスタムメタデータが追加されたタイプのすべてのアセットに追加されます。
 
-### アセットタイプ  {#asset-types-nbsp}
+### アセットタイプ  {#asset-types-nbsp}
 
 AEM Formsでは、次のアセットタイプがサポートされています。
 
@@ -226,7 +230,7 @@ AEM Formsでは、次のアセットタイプがサポートされています�
 
    どちらのアクションでも、更新済みの値を含むプロパティページを読み取り専用モードに戻すようユーザーは指示されます。
 
-### フォームサムネールの更新  {#update-the-form-thumbnail-nbsp}
+### フォームサムネールの更新  {#update-the-form-thumbnail-nbsp}
 
 プロパティページの左のパネルには、フォームのサムネールが表示されます。デフォルトでは、表示されるサムネールは、フォーム作成時（アダプティブフォーム）またはフォームアップロード時に生成されるサムネールです。
 
@@ -249,7 +253,7 @@ AEM Formsでは、次のアセットタイプがサポートされています�
 
 AEM Formsは、サポートされているフォームタイプのメタデータスキーマをこのツールで公開します。 この方法で、これらのスキーマにアクセスし、メタデータスキーマエディターで提供される機能を使用してカスタムプロパティを追加できます。
 
-### メタデータスキーマエディターに移動  {#navigate-the-metadata-schema-editor-nbsp}
+### メタデータスキーマエディターに移動  {#navigate-the-metadata-schema-editor-nbsp}
 
 1. **[!UICONTROL ツール／Assets／メタデータスキーマ]** に移動します。
 

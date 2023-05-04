@@ -1,7 +1,7 @@
 ---
 title: コミュニティコンソール
 seo-title: Communities Consoles
-description: コミュニティコンソールについて説明しています
+description: コミュニティコンソールの説明
 seo-description: Community Consoles explained
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
 contentOwner: Janice Kendall
@@ -11,16 +11,20 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 role: Admin
 exl-id: f31072dc-ad2d-4f2d-b222-05d7fb19e471
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 18%
+source-wordcount: '377'
+ht-degree: 4%
 
 ---
 
 # コミュニティコンソール {#communities-consoles}
 
-オーサー環境のグローバルナビゲーションパネルで使用できる AEM Communities コンソールでは、以下の管理タスクにアクセスできます。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+AEM Communitiesコンソールは、オーサー環境のグローバルナビゲーションパネルから使用でき、次のような管理タスクにアクセスできます。
 
 * [コミュニティサイトの作成](sites-console.md)
 * 追加中 [グループ](groups.md) サイト内にネストされる
@@ -42,7 +46,7 @@ ht-degree: 18%
 
 ![chlimage_1-91](assets/chlimage_1-91.png)
 
-`Adobe Experience Manager` のアイコンを選択し、グローバルナビゲーションパネルを開いて次の 2 つのアイコンにアクセスします。
+を選択します。 `Adobe Experience Manager` アイコン（左上隅）をクリックしてグローバルナビゲーションパネルを開き、2 つのアイコンにアクセスします。
 
 * [ナビゲーションコンソール](#navigation-console)
 * [ツールコンソール](tools.md)

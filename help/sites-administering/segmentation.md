@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 83e73a5d-c6fa-426a-8476-78769ae7a8c1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1483'
 ht-degree: 53%
 
 ---
 
 # ContextHub でのセグメント化の設定 {#configuring-segmentation-with-contexthub}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >
@@ -77,24 +81,24 @@ AEMを使用すると、ユーザーエクスペリエンスを簡単にパー�
 <table> 
  <tbody> 
   <tr> 
-   <td>プロパティ - 値<br /> </td> 
+   <td>プロパティ - 値<br />。 </td> 
    <td>ストアのプロパティと定義済みの値を比較<br /> </td> 
   </tr> 
   <tr> 
    <td>プロパティ - プロパティ</td> 
-   <td>ストアの 1 つのプロパティと別のプロパティを比較<br /> </td> 
+   <td>ストアの 1 つのプロパティと別のプロパティを比較<br />。 </td> 
   </tr> 
   <tr> 
    <td>プロパティ - セグメントの参照</td> 
-   <td>ストアのプロパティを参照先の別のセグメントと比較<br /> </td> 
+   <td>ストアのプロパティを参照先の別のセグメントと比較<br />。 </td> 
   </tr> 
   <tr> 
    <td>プロパティ - スクリプトの参照</td> 
-   <td>ストアのプロパティとスクリプトの結果を比較<br /> </td> 
+   <td>ストアのプロパティとスクリプトの結果を比較<br />。 </td> 
   </tr> 
   <tr> 
    <td>セグメントリファレンス - スクリプトリファレンス</td> 
-   <td>参照先セグメントとスクリプトの結果を比較<br /> </td> 
+   <td>参照先セグメントとスクリプトの結果を比較<br />。 </td> 
   </tr> 
  </tbody> 
 </table>

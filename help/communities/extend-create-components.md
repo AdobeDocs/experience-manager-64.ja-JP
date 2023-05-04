@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 exl-id: 48809969-5d14-41bb-bc6d-5857e679ceba
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 5%
+source-wordcount: '657'
+ht-degree: 6%
 
 ---
 
 # コンポーネントの作成 {#create-the-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コンポーネントを拡張する例では、コメントシステムを使用します。コメントシステムは、実際には 2 つのコンポーネントで構成されます
 
@@ -202,7 +206,7 @@ SCF コンポーネントを拡張（上書き）する場合、resourceType は
 * グローバルナビゲーションから
 
    * 選択 **[!UICONTROL ツール/導入/レプリケーション]**
-   * 選択 `Activate Tree`
+   * `Activate Tree` を選択します。
    * 設定 `Start Path`:から `/apps/custom`
    * オフ `Only Modified`
    * 選択 `Activate`ボタン

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f9a3f897-90c6-4942-8a86-aae510298f2a
 exl-id: 6b431cbd-2cea-4ae2-ad26-587ba524d2f5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 40%
+source-wordcount: '217'
+ht-degree: 37%
 
 ---
 
 # ドメイン情報をプリフェッチするためのAEM forms の設定 {#configure-aem-forms-to-prefetchdomain-information}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 多数のグループに属している場合（例：500 以上）や、グループが深くネストされている場合（例：30 レベル）は、応答時間が長くなる場合があります。 この問題が発生した場合は、特定のドメインから情報をプリフェッチするようにAEM forms を設定できます。
 

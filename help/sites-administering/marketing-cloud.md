@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 exl-id: e2295f71-ea3a-483c-9d7b-29acd151845d
-source-git-commit: 8220795bbf0c92ead3bb68dd6f8bbb48cc9ca2cd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 50%
+source-wordcount: '898'
+ht-degree: 49%
 
 ---
 
 # Adobe Marketing Cloud との統合{#integrating-with-the-adobe-marketing-cloud}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この [Adobe Marketing Cloud](https://www.adobe.com/jp/solutions/digital-marketing.html)には、オンラインイニシアチブを成功に導くための実用的なリアルタイムのデータとインサイトを提供する、強力な web 分析および web サイト最適化製品が含まれます。 オンラインビジネスの最適化のための統合されたオープンなプラットフォームを提供します。 Cloud は、顧客インサイトの力を収集し、解放して、顧客の獲得、コンバージョン、および保持の取り組みを最適化し、コンテンツの作成と配信をおこなう統合アプリケーションで構成されます。
 

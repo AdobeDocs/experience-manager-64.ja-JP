@@ -11,16 +11,20 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 4b9d2f5f-aae7-4366-b6a6-a8277155cee9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 70%
+source-wordcount: '1022'
+ht-degree: 68%
 
 ---
 
 # ローンチの作成 {#creating-launches}
 
-ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
 * タイトルは[参照](/help/sites-authoring/author-environment-tools.md#references)レールに表示されます。作成者はそこからローンチにアクセスして作業できます。
 * デフォルトでは、ソースページの子ページがローンチに含まれます。 必要に応じて、ソースページのみを使用できます。

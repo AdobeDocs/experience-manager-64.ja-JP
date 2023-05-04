@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 44871fe1-ddc9-492c-8784-5df3ca392f9b
 exl-id: a91e23e8-339d-4090-9872-2e066ab66590
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1091'
 ht-degree: 61%
 
 ---
 
 # ポータル上のフォーム発行の概要 {#introduction-to-publishing-forms-on-a-portal}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## AEM Forms portal コンポーネントの概要 {#aem-forms-portal-components-overview}
 
@@ -51,7 +55,7 @@ Search &amp; Lister コンポーネントを使用すると、フォームリポ
 
 ### ドラフトと送信 {#drafts-amp-submissions}
 
-Search &amp; Lister コンポーネントには、Formsの作成者が公開したフォームが表示され、Drafts &amp; Submissions コンポーネントには、後で完了するためにドラフトとして保存されたフォームと送信済みのフォームが表示されます。 このコンポーネントは、ログインしたすべてのユーザーに対してパーソナライズされたエクスペリエンスを提供します。
+Search &amp; Lister コンポーネントには、Formsの作成者が公開したフォームが表示され、Drafts &amp; Submissions コンポーネントには、後で完了するためにドラフトとして保存されたフォームと送信済みのフォームが表示されます。 このコンポーネントは、ログインしたユーザーに対してパーソナライズされたエクスペリエンスを提供します。
 
 ### リンク {#link}
 

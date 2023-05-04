@@ -12,14 +12,18 @@ discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: 5f43de8d-9d26-456e-b695-3ffa71a4f3bf
-source-git-commit: 3101fab64f6b9fbe2fdeed5fe28d650b84bcdef5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2693'
 ht-degree: 46%
 
 ---
 
 # Oak クエリとインデックス作成{#oak-queries-and-indexing}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 >[!NOTE]
 >

@@ -9,14 +9,18 @@ topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 feature: Mobile Forms
 exl-id: e8a53976-e9bd-459d-92f5-88527c72428b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 60%
+source-wordcount: '551'
+ht-degree: 58%
 
 ---
 
 # HTML5 フォームのエラーメッセージのカスタマイズ {#customizing-error-messages-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 デフォルトの HTML5 フォームでは、エラーメッセージと警告の位置と外観（フォントや色）は固定されており、エラーは選択したフィールドに 1 つだけ表示されます。
 
@@ -84,7 +88,7 @@ ht-degree: 60%
 
 添付されたパッケージを使用して、すべてのフィールドのエラーメッセージを同時に表示します。 エラーメッセージを単独で表示するには、デフォルトのプロファイルを使用します。
 
-### エラーメッセージの外観のカスタマイズ。  {#customizing-the-appearance-of-error-messages-nbsp}
+### エラーメッセージの外観のカスタマイズ。  {#customizing-the-appearance-of-error-messages-nbsp}
 
 1. etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css フォルダーに移動します。
 
@@ -118,7 +122,7 @@ ht-degree: 60%
 1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。 アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使用し、パッケージをアップロードしてインストールします。
 
-## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
+## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
 初期設定では、HTML5 フォームは次のデフォルトのプロファイルを使用しています。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;XDP の場所>&amp;template=&lt;XDP の名前>
 

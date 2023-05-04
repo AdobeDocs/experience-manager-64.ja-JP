@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 4f4c73eb-281e-4dfb-9cb0-2341d5ee94ae
 exl-id: d065e737-dbda-4c78-a987-b1891c6c4ec6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '144'
 ht-degree: 22%
 
 ---
 
 # AEM Communities 使用の手引き {#getting-started-with-aem-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesを使用すると、会社はサイトテンプレートのライブラリから、ブランド化された専用のコミュニティエクスペリエンスを作成できます。 フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルを Web サイトに統合して、提案者、顧客、企業間のインタラクションを促進できます。
 

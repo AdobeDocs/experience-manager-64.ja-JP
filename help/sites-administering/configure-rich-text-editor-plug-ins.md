@@ -3,15 +3,19 @@ title: リッチテキストエディタープラグインの設定
 description: Adobe Experience Manager リッチテキストエディターのプラグインを設定して、個々の機能を有効にする方法について説明します。
 contentOwner: AG
 exl-id: c9ab462d-b7d4-42c1-a4cf-80d16722910b
-source-git-commit: 9d1d6357c79e864e1fef89f713534dd074cf20ab
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4210'
-ht-degree: 76%
+source-wordcount: '4246'
+ht-degree: 75%
 
 ---
 
 
 # リッチテキストエディタープラグインの設定 {#configure-the-rich-text-editor-plug-ins}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 リッチテキストエディター（RTE）の各機能は一連のプラグインから使用でき、それぞれに features プロパティがあります。features プロパティを設定して、1 つ以上の RTE 機能を有効または無効にできます。 この記事では、RTE プラグインの特殊な設定方法について説明します。
 

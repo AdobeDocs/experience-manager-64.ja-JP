@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 feature: Document Security
 exl-id: f93d496e-6bd3-462a-b57a-80085647a636
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 1%
+source-wordcount: '971'
+ht-degree: 2%
 
 ---
 
 # Document Security Web ページの使用 {#using-the-document-security-webpages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ユーザーと管理者は、Document Security Web ページを使用して、ポリシーの作成と管理、ポリシーで保護されたドキュメントの管理、およびポリシーで保護されたドキュメントに関連するイベントの監視をおこないます。 また、管理者は Web ページを使用してポリシーセットを作成し、ポリシーセットコーディネーターを指定し、Document Security のデフォルト設定を構成し、招待ユーザーの登録とアカウントを管理し、サーバー、ポリシー、ユーザー、ドキュメント関連のイベントを監視および管理します。
 

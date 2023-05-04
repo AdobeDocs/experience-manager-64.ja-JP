@@ -9,14 +9,18 @@ topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
 feature: Form Data Model
 exl-id: a8f200ac-cf9f-47b7-9856-e62aa8b229eb
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 63%
+source-wordcount: '1435'
+ht-degree: 62%
 
 ---
 
 # データソースの設定 {#configure-data-sources}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 様々なタイプのデータソースを設定し、を活用してフォームデータモデルを作成する方法を説明します。
 
@@ -96,7 +100,7 @@ AEM におけるすべてのクラウドサービス設定は、AEM リポジト
 クラウドサービス設定用のフォルダーを構成するには、以下の手順を実行します。
 
 1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。
-   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
    1. **[!UICONTROL 設定ブラウザー]**&#x200B;で、「`global`」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。

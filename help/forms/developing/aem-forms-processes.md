@@ -11,14 +11,18 @@ topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 0ae0ddbf-ded6-4494-bf94-bf6cf7f1fd46
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 95%
+source-wordcount: '854'
+ht-degree: 92%
 
 ---
 
 # AEM Forms プロセスについて {#understanding-aem-forms-processes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 使用例として一般的なのは、一連の AEM Forms サービスが単一のドキュメントを操作するというものです。Workbench を使用してプロセスを作成することで、サービスコンテナにリクエストを送信できます。1 つのプロセスが、自動化対象の 1 つのビジネスプロセスを表します。プロセスの作成について詳しくは、[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
 

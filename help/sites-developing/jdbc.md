@@ -10,14 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 7f10451d-3acb-4298-82f3-07897f66e407
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 58%
+source-wordcount: '984'
+ht-degree: 56%
 
 ---
 
 # SQL データベースへの接続{#connecting-to-sql-databases}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 CQ アプリケーションがデータを操作できるように、外部 SQL データベースにアクセスします。
 

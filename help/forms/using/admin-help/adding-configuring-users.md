@@ -8,14 +8,18 @@ contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 exl-id: c81dfb71-8901-49fd-b448-a7afdbae24fd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 41%
+source-wordcount: '1775'
+ht-degree: 40%
 
 ---
 
 # ユーザーの追加および設定 {#adding-and-configuring-users}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ユーザーおよびグループの情報は、LDAP ディレクトリなどのサードパーティのストレージシステムで管理されます。 User Management は、サードパーティのストレージシステムに書き込みを行いません。 代わりに、User Management はユーザーおよびグループの情報を独自のデータベースと同期します
 

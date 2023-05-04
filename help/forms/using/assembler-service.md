@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: d34f1598-38bc-46c3-b6cd-954a3880994a
 exl-id: 3997b034-fa24-4366-b22f-0abf2b6d1e64
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2139'
+source-wordcount: '2175'
 ht-degree: 14%
 
 ---
 
 # Assembler サービスの使用 {#using-assembler-service}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Assembler サービスを使用すると、PDFドキュメントと XDP ドキュメントを組み合わせ、並べ替え、拡張し、PDFドキュメントに関する情報を取得できます。 Assembler サービスに送信される各ジョブには、Document Description XML(DDX) ドキュメント、ソースドキュメント、および外部リソース（文字列とグラフィック）が含まれます。 Assembler サービスについて詳しくは、 [Assembler サービスの概要](/help/forms/using/overview-aem-document-services.md#p-assembler-service-p).
 
@@ -336,4 +340,4 @@ digitalSignatures="true"/>
 </DDX>
 ```
 
-DDX と Assembler サービスを使用して他の LiveCycle サービスを呼び出すと、プロセスダイアグラムを簡略化できます。 ワークフローのカスタマイズに費やす労力を減らすこともできます。 ( 関連項目： [AEM Document Services をプログラムで使用する](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html))
+DDX と Assembler サービスを使用して他の LiveCycle サービスを呼び出すと、プロセスダイアグラムを簡略化できます。 ワークフローのカスタマイズに費やす労力を減らすこともできます。 ( 関連項目： [AEM Document Services をプログラムで使用する](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/aem-document-services-programmatically.html))

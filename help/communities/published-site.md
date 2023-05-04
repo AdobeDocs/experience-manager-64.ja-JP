@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 4dc54701-68b9-49dd-a212-b0b53330c1c0
 exl-id: 8f716a59-1116-4855-baeb-3997de71b55f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 3%
+source-wordcount: '1171'
+ht-degree: 4%
 
 ---
 
 # 公開したサイトを使ってみる {#experience-the-published-site}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 公開で新しいサイトを参照 {#browse-to-new-site-on-publish}
 
@@ -193,8 +197,8 @@ Weston McCall(weston.mccall@dodgit.com / password) としてログインし、�
 
 ログアウト後に、新しいユーザー登録を作成できます。
 
-* 選択 `Log In`
-* 選択 `Sign up for a new account`
+* `Log In` を選択します。
+* `Sign up for a new account` を選択します。
 
 ![chlimage_1-323](assets/chlimage_1-323.png) ![chlimage_1-324](assets/chlimage_1-324.png)
 

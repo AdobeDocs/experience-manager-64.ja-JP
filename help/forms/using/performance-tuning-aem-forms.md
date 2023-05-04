@@ -10,14 +10,18 @@ topic-tags: Configuration
 discoiquuid: 5d672b56-00c4-46a0-974b-e174fbdf07d6
 role: Admin
 exl-id: bc750571-08a5-414c-aed5-4e839f6695ae
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '902'
 ht-degree: 27%
 
 ---
 
 # AEM Forms サーバーのパフォーマンスチューニング {#performance-tuning-of-aem-forms-server}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この記事では、ボトルネックを減らし、AEM Formsデプロイメントのパフォーマンスを最適化するために実装できる戦略とベストプラクティスについて説明します。
 

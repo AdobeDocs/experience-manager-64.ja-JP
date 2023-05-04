@@ -8,14 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 exl-id: 4df9a16c-0853-4bbf-81bb-1856ab55c5ee
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '659'
 ht-degree: 29%
 
 ---
 
 # AEM Forms Workspace でのサードパーティアプリケーションの統合 {#integrating-third-party-applications-in-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms workspace は、フォームとドキュメントのタスクの割り当てと完了アクティビティの管理をサポートしています。 これらのフォームとドキュメントは、XDP、PDF、HTML、Flexの各形式でレンダリングされた XDP Forms、Flex®フォーム、または Guide （非推奨）にすることができます。
 

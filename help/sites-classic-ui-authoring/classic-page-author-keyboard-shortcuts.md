@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 04075ed1-3a52-4371-aa4e-0c3d61c878ef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 53%
+source-wordcount: '349'
+ht-degree: 50%
 
 ---
 
 # ページ編集時のキーボードショートカット{#keyboard-shortcuts-when-editing-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものと、 [コンソールの使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 

@@ -10,14 +10,18 @@ topic-tags: content
 content-type: reference
 discoiquuid: 8e568c59-5455-422f-94a6-baf6d2aae070
 exl-id: eebc10fa-1d49-4797-a9e6-b6615bfe0173
-source-git-commit: 9b2cf8887f799aff316f720ab173087e14692120
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4021'
+source-wordcount: '4057'
 ht-degree: 13%
 
 ---
 
 # パッケージの操作方法{#how-to-work-with-packages}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 パッケージを使用すると、リポジトリコンテンツの読み込みと書き出しが可能になります。例えば、パッケージを使用して新しい機能をインストールしたり、インスタンス間でコンテンツを転送したり、リポジトリコンテンツをバックアップしたりできます。
 

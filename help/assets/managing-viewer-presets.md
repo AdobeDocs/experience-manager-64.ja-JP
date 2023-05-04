@@ -13,14 +13,18 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 exl-id: 53e53cb7-1854-44e9-9516-51bcc99378b4
 feature: Viewer Presets
 role: Admin,User
-source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4220'
+source-wordcount: '4256'
 ht-degree: 67%
 
 ---
 
 # Dynamic Mediaビューアプリセットの管理 {#managing-viewer-presets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Dynamic Mediaのビューアプリセットは、ユーザーがコンピューターの画面やモバイルデバイスでリッチメディアアセットを表示する方法を決定する一連の設定です。 管理者は、ビューアプリセットを作成できます。 設定は、ビューア設定オプションの配列で使用できます。 例えば、ビューアの表示サイズやズームの動作を変更できます。
 

@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 exl-id: 68fe3f97-ded8-4223-b4b9-02704077e37e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 43%
+source-wordcount: '177'
+ht-degree: 38%
 
 ---
 
 # ドキュメントへのリンクの更新 {#updating-the-link-to-the-documentation}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、 **ヘルプ/Workspace ヘルプ**. Adobeの Web サイト上のオンラインドキュメントを指しています。 ただし、他の URL を指すように更新することもできます。
 

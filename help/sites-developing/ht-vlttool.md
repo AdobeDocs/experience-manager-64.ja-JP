@@ -10,14 +10,18 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: 26eecb01-492a-4f86-805f-da90e3dec657
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2718'
-ht-degree: 78%
+source-wordcount: '2754'
+ht-degree: 77%
 
 ---
 
 # VLT ツールの使用方法 {#how-to-use-the-vlt-tool}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Jackrabbit FileVault ツール (VLT) は、 [Apache Foundation](https://www.apache.org/) Jackrabbit/AEMインスタンスのコンテンツをファイルシステムにマッピングするためのものです。 VLT ツールは、ソース管理システムクライアント (Subversion(SVN) クライアントなど ) と同様の機能を備え、通常のチェックイン、チェックアウト、管理操作に加え、プロジェクトコンテンツを柔軟に表現するための設定オプションを提供します。
 

@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 feature: PDF Generator
 exl-id: f0441588-7c16-40ab-841f-e89576a0d292
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '905'
 ht-degree: 6%
 
 ---
 
 # マルチスレッドファイル変換の有効化 {#enabling-multi-threaded-file-conversions}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 PDFジェネレーターを使用すると、特定の種類のファイルに対してマルチスレッドファイル変換を有効にすることができます。 マルチスレッドファイル変換を使用すると、PDFジェネレーターで同時に複数の変換を実行できるので、パフォーマンスが向上します。
 

@@ -8,14 +8,18 @@ discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
 feature: Asset Management
 role: Architect,Admin
 exl-id: 6115e5e8-9cf5-417c-91b3-0c0c9c278b5b
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1876'
 ht-degree: 26%
 
 ---
 
 # Assets サイジングガイド {#assets-sizing-guide}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager Assets 実装の環境をサイズ設定する場合は、ディスク、CPU、メモリ、IO、ネットワークスループットなどのリソースに十分な空きがあることを確認することが重要です。 これらのリソースのサイズ設定の多くは、システムに読み込まれるアセットの数を理解しておく必要があります。 より良い指標が使用できない場合は、既存のライブラリのサイズをライブラリの年齢で割って、アセットの作成率を見つけることができます。
 

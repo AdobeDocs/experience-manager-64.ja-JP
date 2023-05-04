@@ -7,14 +7,18 @@ uuid: af197bcc-2c61-4c64-b781-f24d83c27c82
 contentOwner: jsyal
 discoiquuid: c66b65af-443f-4fc2-b775-9f4e3c60285a
 exl-id: 76110cf4-0fd8-4203-b256-c0818a1b64d2
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1527'
-ht-degree: 36%
+source-wordcount: '1563'
+ht-degree: 37%
 
 ---
 
 # AEM FAQ{#aem-faqs}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このページでは、AEMのトラブルシューティングと設定に関するいくつかの問題に対する回答を示します。
 
@@ -90,7 +94,7 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 PorterStem フィルタは、英語用の Porter Stemming Algorithm を適用します。 結果は、Snowball Porter Stemer を *language=&quot;英語&quot;* 引数。 しかし、このステマーは Java で直接コード化され、Snowball に基づいていません。 保護された単語のリストは受け付けられず、英語のテキストにのみ適しています。
 
-Oak は、AEMで使用する Lucene 提供のアナライザ設定要素のセットを公開します。 フィルターの使用方法については、 **Apache Oak アナライザー** in [シンプルな検索実装ガイド](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
+Oak は、AEM で使用するための lucene-provides アナライザー設定要素のセットを公開します。フィルターの使用方法については、 **Apache Oak アナライザー** in [シンプルな検索実装ガイド](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
 
 ### 完全なインデックス再作成の実行方法は？ {#how-to-perform-a-full-re-indexing}
 

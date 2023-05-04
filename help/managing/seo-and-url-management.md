@@ -10,14 +10,18 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 150b43e3-9fb3-4c1c-b1cd-ccfd162974ad
 exl-id: d45fe856-4709-437b-b193-e8243a695d2c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3133'
 ht-degree: 65%
 
 ---
 
 # SEO と URL 管理のベストプラクティス{#seo-and-url-management-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 検索エンジン最適化（SEO）は、多くのマーケターにとって重要な関心事となっています。したがって、多くの AEM プロジェクトで SEO の懸念に対処する必要があります。
 
@@ -193,7 +197,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 * この場合、URL を次のように表示した方が効果的です。
 
-   `www.mydomain.com/es/casa.html`
+   `www.mydomain.com/es/casa.html`。
 
 ページ名のローカライズに伴う課題は、AEM プラットフォームで使用可能なローカリゼーションツールの多くでは、コンテンツを同期しておくためには、ロケール間でページ名を一致させる必要があるという点です。
 
@@ -265,7 +269,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 
    * **Apache Sling Resource Resolver Factory**
 
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`
+      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`。
    URL を短縮するために必要なマッピングを正規表現として構築した後、ビルドに含まれている OsgiConfignode の `config.publish` でこれらの設定を定義することをお勧めします。
 
    `/etc/map`マッピングを定義する代わりに、プロパティ **URL Mappings**（`resource.resolver.mapping`）に直接割り当てることができます。

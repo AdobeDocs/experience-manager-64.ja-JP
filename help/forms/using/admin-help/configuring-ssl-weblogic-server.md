@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 exl-id: 5bbb51d8-db91-458a-bfdd-e3f874ef1723
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1085'
 ht-degree: 30%
 
 ---
 
 # WebLogic Server 用の SSL の設定 {#configuring-ssl-for-weblogic-server}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 WebLogic Server で SSL を設定するには、認証用の SSL 秘密鍵証明書が必要です。 Java keytool を使用して、次のタスクを実行し、秘密鍵証明書を作成できます。
 

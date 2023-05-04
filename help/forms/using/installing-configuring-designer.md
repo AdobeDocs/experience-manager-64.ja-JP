@@ -12,14 +12,18 @@ discoiquuid: 36560809-dba9-49cf-a8ee-23c6766382ef
 noindex: true
 role: Admin
 exl-id: 9791ffd5-04c4-4eed-8e99-b390e539197d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 80%
+source-wordcount: '178'
+ht-degree: 69%
 
 ---
 
 # Designer のインストールと設定 {#installing-and-configuring-designer}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer 用のスタンドアロンインストーラーを使用する場合は、次の手順に従います。
 

@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 exl-id: 27e92acb-16bd-4519-a7fc-ea1655c56be8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 2%
+source-wordcount: '734'
+ht-degree: 4%
 
 ---
 
 # 初期セットアップ {#initial-setup}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## オーサーインスタンスとパブリッシュインスタンスを開始 {#start-author-and-publish-instances}
 
@@ -110,10 +114,10 @@ Adobe Analyticsとの統合はオプションです。
 
 * 「C」と入力して検索
 
-   * 選択 `Community Administrators`
-   * 選択 `Community Enablement Managers`
+   * `Community Administrators` を選択します。
+   * `Community Enablement Managers` を選択します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 

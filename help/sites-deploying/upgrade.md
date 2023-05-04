@@ -12,14 +12,18 @@ discoiquuid: 81ceb91d-039e-45f0-9b0c-b8233901dea8
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 791da16c-bf2c-47a9-86a4-0a601a1b017e
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 50%
+source-wordcount: '736'
+ht-degree: 49%
 
 ---
 
 # AEM 6.4 へのアップグレード{#upgrading-to-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、AEMインストールをAEM 6.4 にアップグレードする方法について説明します。
 

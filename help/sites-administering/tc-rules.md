@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
 feature: Language Copy
 exl-id: 3e8ee0cc-b950-4823-9efa-65f12a4e6e6b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 73%
+source-wordcount: '1185'
+ht-degree: 72%
 
 ---
 
 # 翻訳するコンテンツの特定{#identifying-content-to-translate}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 翻訳ルールは、翻訳プロジェクトに含まれる（または翻訳プロジェクトから除外される）ページ、コンポーネントおよびアセットの翻訳するコンテンツを識別します。 ページまたはアセットの翻訳中に、翻訳サービスに送信できるように、AEMはこのコンテンツを抽出します。
 

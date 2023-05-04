@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: de6ed870-0e69-4d16-99e4-037dd5acf413
 feature: Configuring
 exl-id: a59a4d3e-dc21-4e14-b132-6ed369e674de
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '5878'
+source-wordcount: '5914'
 ht-degree: 53%
 
 ---
 
 # AEM インスタンスの監視および保守{#monitoring-and-maintaining-your-aem-instance}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM インスタンスがデプロイされた後は、操作、パフォーマンス、統合性を監視および保守するために、一定の作業が必要になります。
 
@@ -351,7 +355,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
    >
    >また、ログファイルが
    >

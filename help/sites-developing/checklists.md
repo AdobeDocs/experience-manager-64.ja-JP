@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 exl-id: addb71f8-d042-4b14-8775-f15ab9fa5b6b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 93%
+source-wordcount: '193'
+ht-degree: 80%
 
 ---
 
 # チェックリスト{#checklists}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 次のチェックリストでは、主な問題の一部を重点的に説明しています。詳しくは、テストに関する他の節を参照してください。
 

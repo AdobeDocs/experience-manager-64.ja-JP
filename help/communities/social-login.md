@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 role: Admin
 exl-id: 85dcae2f-0773-4867-a24c-056bd2f5585e
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2820'
-ht-degree: 2%
+source-wordcount: '2856'
+ht-degree: 3%
 
 ---
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ソーシャルログインは、サイト訪問者にFacebookまたはTwitterアカウントでログインするオプションを提示する機能です。 したがって、許可されたFacebookまたはTwitterのデータがAEMメンバープロファイルに含まれます。
 
@@ -110,7 +114,7 @@ facebookアプリケーションを作成するには、Facebookの手順 ( [htt
 1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。コンテキストを選択し、プロパティを編集します。 まだ有効になっていない場合は、クラウド設定を有効にします。
 
    ![config-propertiespng](assets/config-propertiespng.png)
-   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 
 1. facebookクラウドサービス設定を作成または編集します。
 
@@ -200,7 +204,7 @@ AEM Communitiesプロバイダーは、 [AdobeGranite OAuth Application and Prov
 オンにすると、ログインのたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。 初期設定はオフです。
 
 
-#### 次のステップ {#next-steps}
+#### 次の手順 {#next-steps}
 
 次の手順は、FacebookとTwitterの両方で同じです。
 
@@ -259,7 +263,7 @@ twitterアプリケーション管理の権限セクションで、以下の操�
 1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。コンテキストを選択し、プロパティを編集します。 まだ有効になっていない場合は、クラウド設定を有効にします。
 
    ![twitterconfigpropng](assets/twitterconfigproppng.png)
-   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 
 1. twitterクラウドサービス設定を作成または編集します。
 
@@ -322,7 +326,7 @@ AEM Communities設定は、 [AdobeGranite OAuth Application and Provider](#adobe
 
       オンにすると、ログインのたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。 デフォルトはオフです。
 
-#### 次のステップ {#next-steps-1}
+#### 次の手順 {#next-steps-1}
 
 次の手順は、FacebookとTwitterの両方で同じです。
 
@@ -371,7 +375,7 @@ AEM Communities設定は、 [AdobeGranite OAuth Application and Provider](#adobe
 例： http://localhost:4503/system/console/configMgr
 * 場所 `Adobe Granite OAuth Authentication Handler`
 * 選択して設定を開き、編集します。
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ![chlimage_1-489](assets/chlimage_1-489.png)
 
@@ -452,7 +456,7 @@ OAuth 認証ハンドラーの設定ごとに、インスタンスに 2 つの�
    * ノード/oak:index の下
    * ノード ntBaseLucene を選択
    * 選択 **[!UICONTROL コピー]**
-   * 選択 `/oak:index`
+   * `/oak:index` を選択します。
    * 選択 **[!UICONTROL 貼り付け]**
    * ntBaseLucene のコピーを ntBaseLucene-oauth に名前変更
 

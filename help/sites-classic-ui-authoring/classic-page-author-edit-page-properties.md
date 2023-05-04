@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 6969dc5e-f7fa-495e-8ddf-8123ca2bc9a6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 25%
+source-wordcount: '799'
+ht-degree: 26%
 
 ---
 
 # ページプロパティの編集 {#editing-page-properties}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ページに必要なプロパティを定義できます。これらは、ページの特性に応じて異なる場合があります。 例えば、一部のページがライブコピーに接続されている場合と、接続されていない場合があり、ライブコピー情報は必要に応じて使用できます。
 
@@ -77,7 +81,7 @@ ht-degree: 25%
 
    即座に公開するページでは、これらのフィールドを空のままにします。
 
-* **バニティー URL**
+* **バニティ URL**
 
    このページのバニティー URL を入力できます。 これにより、より短く、より表現力のある URL を指定できます。
 

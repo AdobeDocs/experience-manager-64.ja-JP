@@ -11,14 +11,18 @@ topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 feature: Mobile Forms
 exl-id: 8c75d395-1816-4b5a-869c-ec61069a54f6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 39%
+source-wordcount: '854'
+ht-degree: 38%
 
 ---
 
 # HTML5 フォーム のデバッグ {#debugging-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このドキュメントでは、いくつかのトラブルシューティングシナリオを説明します。 各シナリオで、問題のトラブルシューティングにいくつかの手順を示します。 次の手順に従い、問題が解決しない場合は、ロガーを設定してエラーや警告のログを取得し、確認します。 HTML5 フォームのロギングについて詳しくは、[HTML5 フォームのログの生成](/help/forms/using/enable-logs.md)を参照してください。
 

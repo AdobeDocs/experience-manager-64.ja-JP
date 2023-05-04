@@ -10,14 +10,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: 7e465a56-ca26-481e-9b3e-b438ef7fbff0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 81%
+source-wordcount: '1654'
+ht-degree: 80%
 
 ---
 
 # Adobe Analytics Framework のカスタマイズ{#customizing-the-adobe-analytics-framework}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Analytics フレームワークは、Adobe Analytics で追跡される情報を決定します。デフォルトのフレームワークをカスタマイズするには、Javascript を使用してカスタムトラッキングを追加し、Adobe Analytics プラグインを組み込み、トラッキングに使用するフレームワーク内の一般設定を変更します。
 

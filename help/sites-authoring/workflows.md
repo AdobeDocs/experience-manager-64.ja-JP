@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 7cb99618-d903-4cfb-b0d9-b23d189f6e78
 exl-id: 8d318fd5-3d8f-4144-95c8-d90685378a91
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 27%
+source-wordcount: '216'
+ht-degree: 26%
 
 ---
 
 # ワークフローの操作 {#working-with-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMワークフローを使用すると、（1 つ以上の）ページやアセットで実行される一連の手順を自動化できます。
 

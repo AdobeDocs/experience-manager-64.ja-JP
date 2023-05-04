@@ -2,26 +2,27 @@
 cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Adobe Experience Manager 6.4 のリリースノート
+user-guide-title: Adobe Experience Manager 6.4 リリースノート
 breadcrumb-title: リリースノート
 user-guide-description: AEM 6.4 の最近の新機能については、リリースノートを参照してください。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+hide: true
+source-git-commit: b61797a9096c0473658d6aabfb584a53e42095b7
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 78%
+ht-degree: 64%
 
 ---
 
 
-# Adobe Experience Manager 6.4 のリリースノート {#release-notes}
+# Adobe Experience Manager 6.4 リリースノート {#release-notes}
 
 + [AEM 6.4 の概要](home.md)
 + [一般リリースノート](release-notes.md)
 + [Service Pack リリースノート](sp-release-notes.md)
 + [累積修正パックのリリースノート](cfp-release-notes.md)
-+ [AEM Sites リリースノート](sites.md)
++ [AEM Sitesリリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
 + [AEM Forms リリースノート](forms.md)
 + [AEM Forms JEE パッチインストーラー](jee-patch-installer-64.md)

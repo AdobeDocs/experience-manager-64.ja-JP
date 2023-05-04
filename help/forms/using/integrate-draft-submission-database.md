@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 4d13d69b-1fe6-4fb6-9e3e-3ad0c5ffb829
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1503'
 ht-degree: 43%
 
 ---
 
 # ドラフトと送信コンポーネントとデータベースの統合のサンプル {#sample-for-integrating-drafts-submissions-component-with-database}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## サンプルの概要 {#sample-overview}
 
@@ -101,7 +105,7 @@ AEM Forms Portal のドラフトと送信コンポーネントを使用すると
    <td><p>データソースプールからドライバーをフィルタリングするためのデータソース名</p> <p><strong>注意： </strong><em>このサンプル実装環境では、データソース名として FormsPortal を使用しています。</em></p> </td> 
   </tr> 
   <tr> 
-   <td>JDBC ドライバークラス</td> 
+   <td>JDBC driver class</td> 
    <td>com.mysql.jdbc.Driver</td> 
   </tr> 
   <tr> 

@@ -1,30 +1,34 @@
 ---
 title: 画像マップを追加
-description: ハイパーリンクが指定された画像マップを画像アセットに追加する方法を学習します。
+description: 画像アセットにハイパーリンクされた画像マップを追加する方法を説明します。
 contentOwner: AG
 feature: Asset Management
 role: User,Admin
 exl-id: d6b04891-12d3-4255-a156-2e9000474fd1
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 20%
+source-wordcount: '324'
+ht-degree: 38%
 
 ---
 
 # 画像マップを追加 {#adding-image-maps}
 
-ハイパーリンクが指定された画像マップを画像アセットに追加する方法を学習します。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+画像アセットにハイパーリンクされた画像マップを追加する方法を説明します。
 
 画像マップを使用すると、ハイパーリンクが指定された 1 つ以上の領域を追加できます。この領域は、他のハイパーリンクと同様に機能します。
 
-1. 次のいずれかの操作を行ってを開きます。 **[!UICONTROL インプレース画像エディター]**:
+1. 次のいずれかの操作をおこなって、**[!UICONTROL インプレース画像エディター]**&#x200B;を開きます。
 
    * クイックアクションを使用して、 **[!UICONTROL 編集]** アイコン **[!UICONTROL カード]** 表示 リスト表示で、アセットを選択し、 **編集** アイコンをクリックします。
 
       >[!NOTE]
       >
-      >クイックアクションは、 **[!UICONTROL リスト]** 表示
+      >注意：**[!UICONTROL リスト]**&#x200B;表示ではクイックアクションを使用できません。
 
    * 内 **[!UICONTROL カード]** または **[!UICONTROL リスト]** を表示し、アセットを選択して、 **[!UICONTROL 編集]** アイコンをクリックします。
    * 次をタップします。 **[!UICONTROL 編集]** アセットページのアイコン
@@ -35,11 +39,11 @@ ht-degree: 20%
 
    ![chlimage_1-421](assets/chlimage_1-421.png)
 
-1. 画像マップの図形を選択します。選択した図形のホットスポットが画像上に置かれます。
+1. 画像マップの形状を選択します。 選択したシェイプのホットスポットが画像上に配置されます。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをタップし、「 URL 」と「 Alt 」のテキストを入力します。 次の **[!UICONTROL ターゲット]** リストで、同じタブ、新しいタブ、iFrame など、画像マップを表示する場所を指定します。 例えば、 `https://www.adobe.com` を URL として使用し、 `Adobe website` を代替テキストとして指定し、 **[!UICONTROL 新しいタブ]** から **[!UICONTROL ターゲット]** 画像マップを新しいタブで開くためのリスト。
+1. ホットスポットをタップし、「 URL 」と「 Alt 」のテキストを入力します。 「**[!UICONTROL ターゲット]**」リストから、画像マップを表示する場所（例：同じタブ、新しいタブ、iFrame など）を指定します。例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 

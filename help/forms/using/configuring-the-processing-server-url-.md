@@ -10,14 +10,18 @@ topic-tags: Configuration
 discoiquuid: fbb9044a-a737-45f6-8062-0ef5424a92f8
 role: Admin
 exl-id: f60beaae-4082-4165-8a37-9d9c94e360b2
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 40%
+source-wordcount: '276'
+ht-degree: 37%
 
 ---
 
 # AEM DS の設定 {#configuring-aem-ds-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この記事では、 **AEM DS Settings Service**. この設定は、次のような複数のシナリオで使用できます。
 

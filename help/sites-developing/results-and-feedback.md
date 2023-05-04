@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: 2fff5f64-d330-4b32-a861-1f5315363b69
 exl-id: 976f00d0-0b7a-4d5e-bfbc-44c2504ca2f6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 46%
+source-wordcount: '195'
+ht-degree: 42%
 
 ---
 
 # 結果の追跡とフィードバックの提供{#tracking-results-and-providing-feedback}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 テストケースの定義方法と場所、および結果のテスト計画は、自由に指定できます。多くのツールを使用できます。
 

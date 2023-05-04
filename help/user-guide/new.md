@@ -6,14 +6,18 @@ seo-description: Questions, answers, and resources for users new to AEM
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: 654c2576-93c0-4095-ba66-9c6ffb41c953
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 100%
+source-wordcount: '396'
+ht-degree: 92%
 
 ---
 
 # 新規 AEM ユーザー向けリソース {#resources-for-new-aem-users}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## Adobe Experience Manager（AEM）とは何で、ドキュメントはどこから取得すればよいですか？ {#what-is-aem}
 
@@ -38,7 +42,7 @@ AEM リリースについては、[AEM Sustenance Hub](https://helpx.adobe.com/j
 
 AEM 6.4 の最新ドキュメントはまさにここです。
 
-また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意されています。 任意のページでバージョンコンポーネントを使用して、バージョン間を移動したり、このリストから選択したりできます。
+また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意されています。任意のページでバージョンコンポーネントを使用して、バージョン間を移動したり、このリストから選択したりできます。
 
 * [AEM 6.5](https://helpx.adobe.com/jp/support/experience-manager/6-5.html)
 * [AEM 6.3](https://helpx.adobe.com/jp/support/experience-manager/6-3.html)
@@ -46,11 +50,11 @@ AEM 6.4 の最新ドキュメントはまさにここです。
 * [AEM 6.1](https://docs.adobe.com/docs/en/aem/6-1.html)**
 * [AEM 6.0](https://docs.adobe.com/docs/en/aem/6-0.html)**
 * [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [AEM 5.6](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.5](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CRX 2.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
 
 ** アドビで正式にサポートされなくなったバージョンを示します。
 

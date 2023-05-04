@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Developer Tools,Renditions
 role: Developer,Admin
 exl-id: 7d78fba9-16df-44e0-aae6-83f65e8d2bbd
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 77%
+source-wordcount: '757'
+ht-degree: 74%
 
 ---
 
 # PDF Rasterizer の使用 {#using-pdf-rasterizer}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 サイズが大きくコンテンツが多い PDF や AI ファイルを [!DNL Adobe Experience Manager Assets] にアップロードすると、デフォルトのライブラリで正確な出力が生成されない場合があります。Adobe PDF Rasterizer ライブラリでは、デフォルトライブラリの出力よりも信頼性が高く正確な出力を生成できます。次のようなシナリオで PDF Rasterizer ライブラリを使用することをお勧めします。
 

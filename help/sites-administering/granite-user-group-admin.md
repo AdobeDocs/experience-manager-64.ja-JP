@@ -11,14 +11,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '959'
 ht-degree: 31%
 
 ---
 
 # Granite の操作 - ユーザー管理とグループ管理{#granite-operations-user-and-group-administration}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Granite は JCR API 仕様の CRX リポジトリ実装を組み込んでいるので、独自のユーザーおよびグループ管理を持っています。
 

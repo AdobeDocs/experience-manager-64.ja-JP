@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 feature: Interactive Communication
 exl-id: 5822145f-d317-4807-a3f0-1d2aea0a779b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1816'
-ht-degree: 52%
+source-wordcount: '1852'
+ht-degree: 51%
 
 ---
 
 # チュートリアル：テンプレートの作成 {#tutorial-create-templates}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信用の印刷テンプレートと Web テンプレートの作成
 
@@ -178,7 +182,7 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 次の手順を実行して、編集可能テンプレート用のフォルダーを作成します。
 
 1. タップ **ツール** ![ツール](assets/tools-icon.svg) > **設定ブラウザー**.
-   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 1. 設定ブラウザーページで、「**作成**」をタップします。
 1. **設定を作成**&#x200B;ダイアログで、フォルダー用タイトルとして **Create_First_IC_templates** を指定し、「**編集可能テンプレート**」を指定し、「**作成**」をタップします。
 

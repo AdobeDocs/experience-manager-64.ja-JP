@@ -6,15 +6,19 @@ seo-description: DO NOT PUBLISH
 page-status-flag: de-activated
 uuid: 2cb2bf82-130f-4d6b-a711-df0b97cb0504
 discoiquuid: f3ca177f-7c0d-4b8b-ab4b-bf04668d634c
-source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 16%
+source-wordcount: '820'
+ht-degree: 12%
 
 ---
 
 
 # 公開しない 最初のアダプティブドキュメントを作成する {#do-not-publish-create-your-first-adaptive-document}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## ユースケース {#use-case}
 
@@ -44,9 +48,9 @@ We Finance 社は、金融サービス分野の主要な組織で、多様な顧
    <td>
     <ul> 
      <li>AEMオーサーインスタンスを設定します。 </li> 
-     <li>AEM Forms アドオンのインストール. 詳しくは、 <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">AEM Formsのインストールと設定</a>.</li> 
-     <li>JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQL データベースに基づいており、Oracleの MySQL JDBC データベースドライバを使用しています。 </li> 
-     <li>顧客データを含むデータベースを設定します。 アダプティブドキュメントを作成するには、データベースが必要です。 このチュートリアルではデータベースを使用して、AEM Forms のフォームデータモデルと永続性機能を表示します。 </li> 
+     <li>AEM Formsアドオンをインストールします。 詳しくは、 <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">AEM Formsのインストールと設定</a>.</li> 
+     <li>JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルに記載されている例は、MySQL データベースに基づいています。これらの例では、Oracle の MySQL JDBC データベースドライバーを使用しています。 </li> 
+     <li>顧客データを含むデータベースを設定します。 アダプティブドキュメントを作成するには、データベースが必要です。 このチュートリアルでは、データベースを使用して、AEM Formsのフォームデータモデルと永続性機能を表示します。 </li> 
      <li>作成/インポートして有効にする <a href="/help/forms/using/web-channel-print-channel.md">印刷チャネルと Web チャネル用のテンプレート</a>.</li> 
      <li>次の条件を満たしていることを確認します。 <a href="/help/forms/using/document-fragments.md">FDM に基づくドキュメントフラグメント</a>.</li> 
     </ul> </td> 
@@ -56,9 +60,9 @@ We Finance 社は、金融サービス分野の主要な組織で、多様な顧
 
 ## 手順 1：フォームデータモデルを作成する {#step-create-form-data-model}
 
-フォームデータモデルを使用すると、アダプティブドキュメントを複数の異なるデータソースに接続することができます。 例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。アダプティブドキュメントでフォームデータモデルを使用すると、接続されたデータソースからデータを取得することができます。 フォームデータモデルについて詳しくは、 [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+フォームデータモデルを使用すると、アダプティブドキュメントを複数の異なるデータソースに接続することができます。 例えば、AEMユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、リレーショナルデータベースなどです。 フォームデータモデルは、接続されたデータソースで使用できるビジネスエンティティとサービスの統合データ表現スキーマです。 アダプティブドキュメントでフォームデータモデルを使用すると、接続されたデータソースからデータを取得することができます。 フォームデータモデルの詳細情報については、「[AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)」を参照してください。
 
-ゴール:
+目標：
 
 * データベースインスタンス (Microsoft Dynamics) をデータソースとして設定する
 * Microsoft Dynamics をデータソースとして使用してフォームデータモデルを作成する
@@ -74,7 +78,7 @@ We Finance 社は、金融サービス分野の主要な組織で、多様な顧
 
 <!--`For more information about adaptive documents, see [Introduction to authoring adaptive documents](/forms/using/introduction-ad-authoring.md).`-->
 
-ゴール:
+目標：
 
 * フォームデータモデルに基づいて、アダプティブドキュメントの印刷出力と Web 出力を作成します。
 * 顧客に情報を表示するためのアダプティブフォームのレイアウトフィールド
@@ -86,16 +90,16 @@ We Finance 社は、金融サービス分野の主要な組織で、多様な顧
 
 アダプティブドキュメントには、アダプティブドキュメントオブジェクトにルールを記述するためのエディターが用意されています。 これらのルールは、ドキュメントに対する事前設定された条件とユーザーアクションに基づいて、ドキュメントオブジェクトに対してトリガーを設定するアクションを定義します。 これにより、アダプティブドキュメントの Web バージョンの正確性を確保し、ユーザーエクスペリエンスを高速化できます。 アダプティブドキュメントのルールとルールエディターについて詳しくは、 [ルールエディター](/help/forms/using/rule-editor.md).
 
-ゴール:
+目標：
 
 * アダプティブドキュメントの Web チャネルフィールドにルールを作成して適用する
 * ルールを使用して、Web チャネルでドキュメントデータモデルサービスをトリガー化します
 
 ## 手順 4:アダプティブドキュメントのスタイル設定（Web チャネルのみ） {#step-style-the-adaptive-document-web-channel-only}
 
-アダプティブドキュメントには、アダプティブドキュメントのテーマを作成し、インラインスタイルを設定するためのエディターが用意されています。 テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれており、異なるドキュメントの Web チャネルでテーマを再利用できます。 スタイルには、背景色、状態色、透明度、配置、サイズなどのプロパティが含まれます。テーマをドキュメントに適用すると、指定したスタイルがドキュメントの対応するコンポーネントに反映されます。 詳しくは、「[テーマ](/help/forms/using/themes.md)」を参照してください。
+アダプティブドキュメントには、アダプティブドキュメントのテーマを作成し、インラインスタイルを設定するためのエディターが用意されています。 テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれており、異なるドキュメントの Web チャネルでテーマを再利用できます。 スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマをドキュメントに適用すると、指定したスタイルがドキュメントの対応するコンポーネントに反映されます。 詳しくは、 [テーマ](/help/forms/using/themes.md).
 
-ゴール:
+目標：
 
 * アダプティブドキュメントの Web チャネルのテーマを作成する
 * アダプティブドキュメントの Web チャネルにテーマを適用する

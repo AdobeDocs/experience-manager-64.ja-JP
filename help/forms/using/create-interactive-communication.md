@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c106aa41-cbc0-4daf-9ac6-6c0d23710010
 feature: Interactive Communication
 exl-id: a65b775d-040c-4069-b43a-6815be959b31
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3120'
-ht-degree: 65%
+source-wordcount: '3156'
+ht-degree: 64%
 
 ---
 
 # インタラクティブ通信の作成  {#create-an-interactive-communication}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信エディタを使用してインタラクティブ通信を作成します。 ドラッグ&amp;ドロップ機能を使用してインタラクティブ通信を作成し、異なる種類のデバイスで印刷出力と Web 出力の両方をプレビューします。
 

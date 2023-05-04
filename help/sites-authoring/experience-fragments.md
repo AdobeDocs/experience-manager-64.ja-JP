@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 exl-id: 8906b3ab-cb08-4b3e-8796-334e36b1e491
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 58%
+source-wordcount: '1345'
+ht-degree: 57%
 
 ---
 
 # エクスペリエンスフラグメント {#experience-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 エクスペリエンスフラグメントは、ページ内で参照できるコンテンツとレイアウトを含む 1 つまたは複数のコンポーネントからなるグループです。任意のコンポーネントを含めることができます。
 
@@ -261,7 +265,7 @@ ht-degree: 58%
 
    ![xf-authoring-13-icon](assets/xf-authoring-13-icon.png)
 
-   例：
+   次に例を示します。
 
    ![xf-authoring-13](assets/xf-authoring-13.png)
 

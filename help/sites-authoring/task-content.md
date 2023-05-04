@@ -10,14 +10,18 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
 exl-id: 6480a0ba-ff65-42af-a14f-ce9fdbb7945f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '605'
 ht-degree: 29%
 
 ---
 
 # タスクの操作{#working-with-tasks}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 タスクは、コンテンツ上で行う作業の項目を表します。タスクが割り当てられると、ワークフローインボックスに表示されます。タスク項目のタイプ列には task の値が含まれます。
 

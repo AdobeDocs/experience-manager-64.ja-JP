@@ -11,14 +11,18 @@ topic-tags: upgrading
 discoiquuid: 282a828a-edb2-4643-9bf7-ec30c29dc6ce
 feature: Upgrading
 exl-id: 8dc2dfb8-037f-40ae-a962-ced89dd3fdd0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 23%
 
 ---
 
 # 遅延コンテンツ移行{#lazy-content-migration}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 下位互換性を保つため、のコンテンツと設定 **/etc** および **/content** AEM 6.3 以降は、アップグレードの際に変更や変換が即座におこなわれることはありません。 これは、これらの構造に対する顧客アプリケーションの依存関係を確実に維持するためにおこなわれます。 標準搭載のAEM 6.4 内のコンテンツが別の場所でホストされている場合でも、これらのコンテンツ構造に関連する機能は同じです。
 

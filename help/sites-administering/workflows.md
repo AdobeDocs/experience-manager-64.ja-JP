@@ -10,14 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 exl-id: e57b7a69-6e25-4066-ad7a-917969cebbe8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '800'
 ht-degree: 30%
 
 ---
 
 # ワークフローの管理{#administering-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ワークフローを使用すると、Adobe Experience Manager(AEM) アクティビティを自動化できます。ワークフロー：
 

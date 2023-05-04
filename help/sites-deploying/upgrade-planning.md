@@ -11,14 +11,18 @@ topic-tags: upgrading
 discoiquuid: 901108a1-c0cb-4680-bc71-6266bcde2775
 feature: Upgrading
 exl-id: a3cf6d27-c99f-43f7-a557-b14e88cc921e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2470'
 ht-degree: 15%
 
 ---
 
 # アップグレードの計画{#planning-your-upgrade}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## AEM Project の概要 {#aem-project-overview}
 

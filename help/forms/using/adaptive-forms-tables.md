@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 feature: Adaptive Forms
 exl-id: 3269aab9-ac39-4adc-9a6b-9fe9f4276b29
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2140'
-ht-degree: 76%
+source-wordcount: '2176'
+ht-degree: 75%
 
 ---
 
 # アダプティブフォームのテーブル {#tables-in-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 複雑なデータであっても、テーブルを使用することで、効果的かつシンプルにまとめて提示できます。情報をわかりやすく配置し、行と列に分けて規則正しく配列することで、ユーザーも入力しやすくなります。金融サービスや政府機関が提供するフォームの大部分は、数字を入力して計算を実行できる大規模なデータテーブルを必要とします。
 

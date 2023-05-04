@@ -11,14 +11,18 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 759068fa-dc1b-4cf5-bc7b-62b8c5464831
 feature: Document Security
 exl-id: c405c69b-3588-4701-8f36-1ea0680e056d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 50%
+source-wordcount: '696'
+ht-degree: 48%
 
 ---
 
 # Document Security によって保護された PDF ドキュメントを AEM で検索可能にする {#enable-aem-to-search-document-security-protected-pdf-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM検索では、AEMアセットを検索および検索し、プレーンテキストファイル、Microsoft Office ドキュメント、PDFドキュメントなど、一般的に使用される様々なドキュメント形式でテキスト検索を実行できます。 ネイティブ検索を拡張して、フルテキスト検索を実行することもできます [AEM Document Security で保護されたPDFドキュメント](/help/forms/using/admin-help/document-security.md). AEMがドキュメントに対して全文検索を実行できるようにするには、次の手順を実行します。
 
@@ -36,7 +40,7 @@ AEM検索では、AEMアセットを検索および検索し、プレーンテ�
 * すべてのバンドルが正常に実行していることを確認します。アクティブ状態になっていないバンドルが存在する場合は、すべてのバンドルが起動して実行されるまで待ちます。
 
    * OSGi 上のAEM Formsの場合、バンドルは次の場所にリストされます。 `https://[server]:[port]/system/console/bundles`.
-   * JEE 上のAEM Formsの場合、バンドルは次の場所に一覧表示されます。 `https://[server]:[port]/[context-path]/system/console/bundles`. 例えば、`http://localhost:8080/lc/system/console/bundles` です。
+   * JEE 上のAEM Formsの場合、バンドルは次の場所に一覧表示されます。 `https://[server]:[port]/[context-path]/system/console/bundles`. 例：`http://localhost:8080/lc/system/console/bundles`
 
 * *sun.util.calendar* パッケージを許可リストに追加します。パッケージを許可リストに追加するには、次の手順を実行します。
 

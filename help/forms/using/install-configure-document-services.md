@@ -8,14 +8,18 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: b3eea94d-87f1-49b3-aabc-cdb32629ef20
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4249'
+source-wordcount: '4285'
 ht-degree: 65%
 
 ---
 
 # ドキュメントサービスのインストールと設定 {#installing-and-configuring-document-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsは、PDFドキュメントを作成、組み立て、配布、アーカイブするサービス、ドキュメントへのアクセスを制限する電子署名の追加、バーコードフォームのデコードなど、様々なドキュメントレベルの操作を実行する一連の OSGi サービスを提供します。 これらのサービスは、AEM Formsアドオンパッケージに含まれています。 これらのサービスをまとめて、ドキュメントサービスと呼びます。 使用可能なドキュメントサービスとその主な機能のリストを次に示します。
 
@@ -523,7 +527,7 @@ Trust Store の管理を使用すると、電子署名と証明書認証の検�
 
 ### 証明書拡張およびReaderサービス用の証明書を設定する {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance サービスは、使用権限をPDFドキュメントに適用できます。 PDF ドキュメントに使用権限を適用するには、証明書を設定します。
+DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDF ドキュメントに使用権限を適用するには、証明書を設定します。
 
 証明書を設定する前に、次が揃っていることを確認します。
 

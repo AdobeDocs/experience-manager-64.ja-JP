@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: 3e005993-d96b-4c7c-83b3-37f733218c3d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1262'
-ht-degree: 1%
+source-wordcount: '1298'
+ht-degree: 2%
 
 ---
 
 # クライアント側のカスタマイズ {#client-side-customization}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 | **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -168,7 +172,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 
 * /etc/clientlibs/social/hbs/&lt;component name=&quot;&quot;>
 
-例：
+次に例を示します。
 
 * クライアントフォルダーノード：/etc/clientlibs/social/hbs/forum
 * Categories プロパティ：cq.social.hbs.forum
@@ -187,7 +191,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 
 * /libs/social/&lt;feature>/components/hbs/&lt;component name=&quot;&quot;>/clientlibs
 
-例：
+次に例を示します。
 
 * クライアントフォルダーノード：/libs/social/forum/hbs/forum/clientlibs
 * Categories プロパティ：cq.social.author.hbs.forum

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Admin
 exl-id: b506018d-67dc-4e47-a3d8-83ae288b5d7e
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1617'
 ht-degree: 3%
 
 ---
 
 # SRP 用の Solr 設定 {#solr-configuration-for-srp}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## AEM Platform 用 Solr {#solr-for-aem-platform}
 
@@ -72,7 +76,7 @@ SolrCloud モードで実行する場合は、MLS をインストールする前
 参照:\
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
-使用方法:\
+使用方法：\
 sh./scripts/cloud-scripts/zkcli.sh \\
 -cmd upconfig \\
 -zkhost *server:port* \\
@@ -85,7 +89,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 参照:\
 [https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
-使用方法:\
+使用方法：\
 。/bin/solr 作成\\
 -c *mycollection-name*\\
 -d *config-dir* \\
@@ -101,7 +105,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 参照:\
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
-使用方法:\
+使用方法：\
 sh./scripts/cloud-scripts/zkcli.sh \\
 -cmd linkconfig \\
 -zkhost *server:port* \\

@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 feature: Adaptive Forms
 exl-id: 130bdc9f-b19e-4b7d-a6ad-ef5097c9cf41
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 43%
+source-wordcount: '401'
+ht-degree: 42%
 
 ---
 
 # フォームのプレビュー {#previewing-a-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -63,7 +67,7 @@ AEM Formsでは、リポジトリ内に存在するフォームとドキュメ�
 
    以下のオプションがあります。
 
-   * プレビューをHTML
+   * HTML としてプレビュー
    * データを使用したプレビュー
    * PDF としてプレビュー（フォームテンプレートから選択可能）
 

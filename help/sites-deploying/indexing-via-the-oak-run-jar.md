@@ -9,14 +9,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: c8a505ab-a075-47da-8007-43645a8c3ce5
 exl-id: b85fc608-9653-4491-8557-f66a0a7da5ea
-source-git-commit: 809a62eeca8b8e30e010beea7d594ced165e8faa
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 49%
+source-wordcount: '906'
+ht-degree: 48%
 
 ---
 
 # Oak-run Jar を使用したインデックス作成{#indexing-via-the-oak-run-jar}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Oak-run は、JMX レベルから操作する必要なく、コマンドラインですべてのインデックス作成の使用例をサポートします。 oak-run アプローチの利点は次のとおりです。
 
@@ -38,7 +42,7 @@ Oak-run は、JMX レベルから操作する必要なく、コマンドライ�
 
 ![screen_shot_2017-12-14at135758](assets/screen_shot_2017-12-14at135758.png)
 
-## インデックス統計 {#indexstatistics}
+## インデックスの統計 {#indexstatistics}
 
 >[!NOTE]
 >

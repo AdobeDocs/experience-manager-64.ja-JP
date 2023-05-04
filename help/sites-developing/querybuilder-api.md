@@ -4,14 +4,18 @@ seo-title: Query Builder API
 description: アセット共有 Query Builder の機能は、Java API と REST API を通じて公開されます。
 seo-description: The functionality of the Asset Share Query Builder is exposed through a Java API and a REST API.
 exl-id: ff305c6d-c11e-4e1c-b262-4802b4f54592
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 70%
+source-wordcount: '2348'
+ht-degree: 69%
 
 ---
 
 # Query Builder API{#query-builder-api}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 の機能 [アセット共有 Query Builder](/help/assets/assets-finder-editor.md) は、Java API と REST API を通じて公開されます。 この節では、これらの API について説明します。
 

@@ -1,7 +1,7 @@
 ---
 title: コーディングのガイドライン
 seo-title: Coding Guidelines
-description: Communities 開発者向けのガイドライン、ヒント、テクニック
+description: Communities 開発者向けガイドライン、ヒント、テクニック
 seo-description: Communities developer guidelines, tips, and tricks
 uuid: 311ef4f7-7f2c-44c3-bcf2-f68713752623
 contentOwner: msm-service
@@ -10,22 +10,26 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 244cd43c-a573-495d-b80c-b97ba9d19b75
 exl-id: 022043cd-35ed-49b1-b5b4-5cc92d29cef4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 35%
+source-wordcount: '216'
+ht-degree: 6%
 
 ---
 
 # コーディングのガイドライン {#coding-guidelines}
 
-## ガイドライン、ヒント、テクニック {#guidelines-tips-and-tricks}
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-AEM Communities の操作は、以前は Java Server Pages に大きく依存していましたが、ビジネスロジック、スタイルおよびページコンテンツが相互に異なる場合にテンプレートスクリプト言語を柔軟に選択できるように進化しています。
+## ガイドライン、ヒントとテクニック {#guidelines-tips-and-tricks}
+
+AEM Communitiesの使用は、Java Server Pages に大きく依存することから、ビジネスロジック、スタイル、ページコンテンツが互いに異なるテンプレートスクリプティング言語を柔軟に選択できるように進化しました。
 
 ユーザー生成コンテンツ (UGC) を柔軟に操作できるのは、SocialResourceProvider API を使用することです。UGC では、どのコンテンツを認識する必要がなくなります [SRP](srp.md) オプションがデプロイメント用に選択されました。
 
-AEM Communities 開発者向けのさまざまなコーディングのガイドラインとベストプラクティスを次に示します。
+AEM Communities開発者向けの様々なコーディングガイドラインおよびベストプラクティスを次に示します。
 
 ### コード {#code}
 

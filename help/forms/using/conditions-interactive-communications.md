@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3ade2a54-cb9a-4e34-808c-c6feec23cfe1
 feature: Interactive Communication
 exl-id: 0ffb297f-8c5a-4909-b4c0-2d8253548640
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 55%
+source-wordcount: '1528'
+ht-degree: 54%
 
 ---
 
 # インタラクティブ通信内の条件 {#conditions-in-interactive-communications}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 インタラクティブ通信で使用する条件フラグメントの作成と編集 — 条件は、インタラクティブ通信の構築に使用する 4 種類のドキュメントフラグメントの 1 つです。 残りの 3 つは、テキスト、リスト、レイアウトフラグメントです。
 

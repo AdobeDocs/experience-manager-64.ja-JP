@@ -1,7 +1,7 @@
 ---
 title: コミュニティでの Maven の使用
 seo-title: Using Maven for Communities
-description: AEM Communities API jar と AEM Uber API jar
+description: AEM Communities API jar とAEM Uber API jar
 seo-description: AEM Communities API jar and AEM Uber API jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
 contentOwner: Janice Kendall
@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 exl-id: d86411b9-6ed1-4091-bf5c-d46b4e518da4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 32%
+source-wordcount: '150'
+ht-degree: 11%
 
 ---
 
 # コミュニティでの Maven の使用 {#using-maven-for-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -33,7 +37,7 @@ AEM Communitiesドキュメントのこの節には、次の項目に加えて�
 >
 >AEM 6.4 以降では、Communities API は明示的にリリースされていません。 すべての Communities API が Uber jar 自体に含まれるようになりました。
 >
->コミュニティのリリースを常に最新に保つことをお勧めします。
+>最新の Communities リリースを常に最新の状態に保つことをお勧めします。
 >
 >詳しくは、 [最新リリース](deploy-communities.md#latest-releases) 「 」セクションで最新バージョンを識別します。
 
@@ -54,6 +58,10 @@ AEM Communitiesドキュメントのこの節には、次の項目に加えて�
 
 <!--
 # Using Maven for Communities {#using-maven-for-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 
 ## Overview {#overview}
 

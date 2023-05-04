@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 88ee8573-58c4-42cd-8e36-2ea4a0d654e4
 exl-id: e03cf05c-2469-4883-ae7b-9d7e6660b71f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '971'
 ht-degree: 3%
 
 ---
 
 # メッセージング機能 {#messaging-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォーラムやコメントで公開されるインタラクションに加えて、AEM Communitiesのメッセージ機能を使用すると、コミュニティメンバーは互いに非公開でやり取りできます。
 
@@ -140,11 +144,11 @@ In `Edit` モード：メッセージ本文を含むページ上のメインコ�
 
 * **[!UICONTROL リダイレクト URL]**
 メッセージの送信後に表示されるページの URL を入力します。 例： 
-`../messaging.html`
+`../messaging.html`。
 
 * **[!UICONTROL キャンセル URL]**
 送信者がメッセージをキャンセルした場合に表示されるページの URL を入力します。 例： 
-`../messaging.html`
+`../messaging.html`。
 
 * **[!UICONTROL メッセージ件名の最大長]**
 「件名」フィールドに入力できる最大文字数。 例：500 初期設定は無制限です。

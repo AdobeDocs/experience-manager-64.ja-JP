@@ -5,18 +5,22 @@ contentOwner: AG
 feature: Asset Management
 role: User
 exl-id: 0abdfe87-d932-41dd-b1e6-9f5fa5b924fe
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 19%
+source-wordcount: '664'
+ht-degree: 16%
 
 ---
 
 # 非同期操作 {#asynchronous-operations}
 
-パフォーマンスに対する悪影響を軽減するには、 [!DNL Adobe Experience Manger Assets] は、長時間実行され、リソースを集中的に消費する特定のアセット操作を非同期的に処理します。 非同期処理では複数のタスクがエンキューされ、システムリソースの可用性に応じて順に実行されます。 このような操作には以下のようなものがあります。
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
-* 多数のアセットの削除。
+パフォーマンスに対する悪影響を軽減するには、 [!DNL Adobe Experience Manger Assets] は、長時間実行され、リソースを集中的に消費する特定のアセット操作を非同期的に処理します。 非同期処理では複数のタスクがエンキューされ、システムリソースの可用性に応じて順に実行されます。 次の操作が含まれます。
+
+* 多数のアセットを削除しています。
 * 多数のアセットまたは多数の参照があるアセットの移動.
 * アセットメタデータの一括書き出しと読み込み
 
@@ -36,9 +40,9 @@ ht-degree: 19%
 
    ![非同期操作のステータスと詳細](assets/job_status.png)
 
-   操作の進行状況を確認するには、 **[!UICONTROL ステータス]** 列。 進行状況に応じて、以下のいずれかのステータスが表示されます。
+   操作の進行状況を確認するには、 **[!UICONTROL ステータス]** 列。 進行状況に応じて、次のいずれかのステータスが表示されます。
 
-   * **[!UICONTROL アクティブ]**：操作は処理中です。。
+   * **[!UICONTROL アクティブ]**:操作を処理中です。
    * **[!UICONTROL 成功]**:操作が完了しました。
    * **[!UICONTROL 失敗]** または **[!UICONTROL エラー]**:操作を処理できませんでした。
    * **[!UICONTROL 予定]**:操作は後で処理するようにスケジュールされています。
@@ -92,6 +96,6 @@ ht-degree: 19%
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager で電子メールを設定します](/help/sites-administering/notification.md)。
+>* [Experience Manager でメールを設定します](/help/sites-administering/notification.md)。
 >* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md)
 

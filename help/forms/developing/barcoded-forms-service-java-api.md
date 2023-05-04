@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
 exl-id: fbeefa4e-966d-43b5-ae59-9548fe520cc2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 92%
+source-wordcount: '261'
+ht-degree: 83%
 
 ---
 
 # Barcoded Forms サービス Java API クイックスタート（SOAP） {#barcoded-forms-service-java-apiquick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Java API クイックスタート（SOAP）は、Barcoded Forms サービスで使用できます。
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager, introduction
 discoiquuid: 6f9cb26a-ac7f-4218-827f-9d4d55b859b4
 exl-id: 08686ad6-85cc-4de5-86d8-05d55acec418
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1612'
 ht-degree: 36%
 
 ---
 
 # フォーム管理の概要 {#introduction-to-managing-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsは、フォーム、ドキュメント、テーマ、レター、ドキュメントフラグメント、データ辞書、関連アセットを作成および管理するための、シンプルで強力なユーザーインターフェイスを備えています。 開発者のデスクトップから提供まで、フォーム、ドキュメント、および関連アセットのライフサイクル全体を管理するのに役立ちます。\
 エンドユーザー向けのポータルサーバー上にある。 AEM Formsユーザーインターフェイスを使用して、次のことができます。

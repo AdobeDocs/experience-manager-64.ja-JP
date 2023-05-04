@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 feature: Mobile Forms
 exl-id: a3337bb1-635c-4dc9-b438-3a829d4a9e03
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 38%
+source-wordcount: '310'
+ht-degree: 36%
 
 ---
 
 # アクセス可能な複雑なテーブルを HTML5 フォームで作成する {#create-accessible-complex-tables-in-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 HTML5 Formsのテーブルのデフォルト実装では、HTMLDIV 要素を使用してテーブルをレンダリングします。 レンダリングでは、アクセシビリティ要件を満たすために ARIA ロールを使用する必要があります。
 

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 exl-id: ee5b0a82-5dd8-4ea6-885c-6154fd41ef4c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1527'
 ht-degree: 15%
 
 ---
 
 # AEM forms のバックアップと回復方法{#backup-and-recovery-strategy-for-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM forms の実装環境で、追加のカスタムデータを別のデータベースに格納している場合は、そのデータをバックアップする方法を導入し、AEM forms データと同期を維持する必要があります。 また、追加のデータベースが同期しなくなるシナリオに対応できる堅牢性を備えたアプリケーションを設計する必要があります。 実行するデータベース操作は、トランザクションのコンテキストで実行し、一貫性のある状態を維持することを強くお勧めします。
 

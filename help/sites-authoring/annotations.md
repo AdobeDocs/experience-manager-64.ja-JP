@@ -10,14 +10,18 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: 65e534ec-7f73-4333-b225-7adf082f66d5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 52%
+source-wordcount: '670'
+ht-degree: 51%
 
 ---
 
 # ページ編集時の注釈 {#annotations-when-editing-a-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Web サイトのページにコンテンツを追加する場合、多くの場合、実際にコンテンツを公開する前にディスカッションの対象となります。 これを支援するために、（レイアウトなどに対して）コンテンツに直接関連する多くのコンポーネントでは注釈を追加できます。
 

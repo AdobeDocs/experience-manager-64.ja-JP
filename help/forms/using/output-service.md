@@ -9,18 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 8b96ba2d-007e-472a-875f-2caedd35ecf4
 exl-id: ccc291fc-f4c5-4d14-816a-c57f56a95663
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 59%
+source-wordcount: '548'
+ht-degree: 62%
 
 ---
 
 # Output サービス {#output-service}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ## 概要 {#overview}
 
-出力サービスは、AEM Document Services に含まれる OSGi サービスです。 出力サービスは、様々な出力形式や、AEM Forms Designer の出力設計機能をサポートしています。出力サービスは、XFA テンプレートおよび XML データを変換して、様々な形式の印刷ドキュメントを生成できます。
+出力サービスは、AEM ドキュメントサービスの一部を成す OSGi サービスです。出力サービスは、様々な出力形式や、AEM Forms Designer の出力設計機能をサポートしています。出力サービスでは、XFA テンプレートと XML データを変換して、様々な形式の印刷ドキュメントを生成することができます。
 
 出力サービスを使用すると、次のことを可能にするアプリケーションを作成できます。
 

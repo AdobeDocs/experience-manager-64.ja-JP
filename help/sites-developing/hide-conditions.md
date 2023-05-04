@@ -10,14 +10,18 @@ topic-tags: components
 content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 exl-id: 646146b1-55bf-4d13-ba3d-2e9bdfd8d8af
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 56%
+source-wordcount: '662'
+ht-degree: 54%
 
 ---
 
 # 非表示条件の使用{#using-hide-conditions}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 非表示条件を使用して、コンポーネントリソースがレンダリングされるかどうかを判断できます。 例えば、テンプレート作成者がコアコンポーネントを設定する際に、このような状況が発生します [リストコンポーネント](https://helpx.adobe.com/jp/experience-manager/core-components/using/list.html) 内 [テンプレートエディター](/help/sites-authoring/templates.md) とは、子ページに基づいてリストを作成するためのオプションを無効にすることを決定します。 デザインダイアログでこのオプションを無効にすると、リストコンポーネントのレンダリング時に非表示の条件が評価され、子ページを表示するオプションが表示されないようにプロパティが設定されます。
 

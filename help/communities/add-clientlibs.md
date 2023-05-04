@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: c84040b0-7850-4960-b676-ffa0a74c8cb2
 exl-id: 9b8c3d1c-a9b1-4dde-9044-46c8f2b22c22
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 3%
+source-wordcount: '735'
+ht-degree: 5%
 
 ---
 
 # clientlib の追加 {#add-clientlibs}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## ClientLibraryFolder(clientlibs) の追加 {#add-a-clientlibraryfolder-clientlibs}
 
@@ -129,7 +133,7 @@ include ステートメントは、 `<head>` セクション `<html>` スクリ�
 
 1. 使用 **[!UICONTROL CRXDE Lite]**&#x200B;を選択します。 **`/libs/foundation/components/page/headlibs.jsp`**
 1. 右クリックして「 」を選択します。 **[!UICONTROL コピー]** （または、ツールバーから「コピー」を選択します）。
-1. 選択 **`/apps/an-scf-sandbox/components/playpage`**
+1. **`/apps/an-scf-sandbox/components/playpage`** を選択します。
 1. 右クリックして「 」を選択します。 **[!UICONTROL 貼り付け]** （または、ツールバーから「貼り付け」を選択します）。
 1. ダブルクリック **`headlibs.jsp`** 開ける
 1. ファイルの末尾に次の行を追加します。
@@ -168,7 +172,7 @@ include ステートメントは、 `<head>` セクション `<html>` スクリ�
 * クリック **[!UICONTROL パッケージを作成]**
 
    * パッケージ名: `an-scf-sandbox-minimal-pkg`
-   * バージョン: `0.1`
+   * バージョン：`0.1`
    * グループ： &lt;leave as=&quot;&quot; default=&quot;&quot;>
    * クリック **[!UICONTROL OK]**
 

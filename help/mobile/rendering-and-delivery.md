@@ -9,34 +9,38 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 exl-id: d826375d-0ce6-49fc-b264-bac39882983d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 39%
+source-wordcount: '609'
+ht-degree: 9%
 
 ---
 
 # レンダリングと配信{#rendering-and-delivery}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEMコンテンツは、 [Sling のデフォルトサーブレット](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) レンダリング [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) およびその他の形式
 
-これらの既製のレンダラーは一般に、リポジトリを調べて、コンテンツをそのまま返します。
+これらのレンダリングは通常、リポジトリーを参照し、そのままコンテンツを返します。
 
-また、AEM は、Sling を介して、レンダリングされるスキーマとコンテンツのフルコントロールを取得するカスタム sling レンダラーの開発および展開もサポートします。
+AEMは、Sling を介して、レンダリングされたスキーマとコンテンツを完全に制御するカスタム Sling レンダラーの開発とデプロイもサポートします。
 
 Content Services Default Renderers は、標準の Sling Defaults と Custom Development の間のギャップを埋め、開発を行わずにレンダリングされたコンテンツの多くの側面をカスタマイズし、制御できます。
 
-次の図に、コンテンツサービスのレンダリングの構造を示します。
+次の図に、コンテンツサービスのレンダリングを示します。
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 ## JSON のリクエスト {#requesting-json}
 
-用途 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;EXPORT-CONFIG][.&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストする。]
+用途 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストする。]
 
 <table>
  <tbody>
@@ -166,16 +170,16 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 ### 既存のコンテンツサービスの書き出し設定 {#existing-content-services-export-configs}
 
-コンテンツサービスには 2 つの書き出し設定があります。
+コンテンツサービスには、次の 2 つの書き出し設定が含まれます。
 
 * デフォルト（設定が指定されていません）
-* ページ（サイトのページをレンダリングする）
+* ページ（サイトページをレンダリングする）
 
-#### デフォルト書き出し設定 {#default-export-configuration}
+#### デフォルトの書き出し設定 {#default-export-configuration}
 
-リクエストされた URI に設定が指定されている場合は、コンテンツサービスのデフォルト書き出し設定が適用されます。
+要求された URI で設定が指定されている場合、Content Services のデフォルトの書き出し設定が適用されます。
 
-&lt;RESOURCE>.caas[.&lt;depth-int>].json
+&lt;resource>.caas[.&lt;depth-int>].json
 
 <table>
  <tbody>
@@ -220,13 +224,13 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 #### ページ書き出し設定 {#page-export-configuration}
 
-この設定は、デフォルトを拡張して、子要素ノードの下にグループ化された子要素を含めます。
+この設定は、デフォルトを拡張して、子ノードの下にグループ化の子を含めます。
 
-&lt;SITE_PAGE>.caas.page[.&lt;depth-int>].json
+&lt;site_page>.caas.page[.&lt;depth-int>].json
 
 ### その他のリソース {#additional-resources}
 
-コンテンツサービスの追加トピックについて詳しくは、次のリソースを参照してください。
+コンテンツサービスのその他のトピックについては、以下のリソースを参照してください。
 
 * [モデルの開発](/help/mobile/administer-mobile-apps.md)
 * [コンテンツサービスのオーサリング](/help/mobile/develop-content-as-a-service.md)

@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 exl-id: d2cd532b-4086-4553-ac26-f311da6d5ca9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 33%
+source-wordcount: '650'
+ht-degree: 32%
 
 ---
 
 # AEM Forms のデプロイメントの監視 {#monitoring-aem-forms-deployments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM forms のデプロイメントは、システムレベルと内部レベルの両方で監視できます。 HP OpenView、IBM Tivoli、CA UniCenter、および JMX と呼ばれるサード・パーティ製モニタなど、スペシャリスト管理ツールを使用できます。 *JConsole* を使用して、Java アクティビティを特別に監視します。 監視戦略を実装すると、AEM Forms デプロイメントの可用性、信頼性、パフォーマンスが向上します。
 

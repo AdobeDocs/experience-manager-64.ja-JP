@@ -10,14 +10,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: e7b368b4-2fcd-43bc-b59f-ab4ba6b61f0d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3582'
-ht-degree: 70%
+source-wordcount: '3618'
+ht-degree: 69%
 
 ---
 
 # ワークフロー機能の拡張{#extending-workflow-functionality}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このトピックでは、ワークフローのカスタムステップコンポーネントを開発し、プログラムによるワークフローとのやり取りの方法について説明します。
 

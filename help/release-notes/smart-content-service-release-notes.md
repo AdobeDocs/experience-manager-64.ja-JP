@@ -8,14 +8,18 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER
 discoiquuid: 9f88c773-ddeb-4c66-ac07-7d3aa196c51b
 exl-id: 6e7ac9d2-7181-48bb-82c4-61a90e594ff5
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 32%
+source-wordcount: '341'
+ht-degree: 27%
 
 ---
 
 # スマートコンテンツサービスのリリースノート {#smart-content-service-release-notes}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 スマートコンテンツサービスの概要と、サービスに関する既知の問題です。
 
@@ -25,7 +29,7 @@ ht-degree: 32%
 
 ビジネス上の分類を認識するには、厳選されたAEMアセットとタグのセットでスマートコンテンツサービスのトレーニングをおこなう必要があります。 トレーニングが終わると、サービスは類似のアセットセットにこれらのタグを適用できます。
 
-スマートコンテンツサービスは、Adobe Senseiプラットフォームを活用して、ビジネス上の分類に基づいて画像認識アルゴリズムのトレーニングをおこなうことができます。 このコンテンツインテリジェンスを利用して、類似のアセットに関連性の高いタグが付加されます。
+スマートコンテンツサービスは、Adobe Senseiプラットフォームを活用して、ビジネス上の分類に基づいて画像認識アルゴリズムのトレーニングをおこなうことができます。 その後、このコンテンツインテリジェンスを使用して、類似のアセットに関連タグを適用します。
 
 ## 主な改善点 {#key-improvements}
 

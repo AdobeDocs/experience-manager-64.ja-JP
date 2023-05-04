@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8c7e5667-14c5-40f3-968a-c574b04671e3
 exl-id: a89cf964-cc9f-46d7-afd8-150d48948513
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2233'
 ht-degree: 31%
 
 ---
 
 # AEM タッチ操作対応 UI の概念{#concepts-of-the-aem-touch-enabled-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM 5.6Adobeでは、 [レスポンシブデザイン](/help/sites-authoring/responsive-layout.md) オーサー環境用。 タッチデバイスとデスクトップデバイスの両方で動作するように設計されているので、これは元のクラシック UI とは大きく異なります。
 

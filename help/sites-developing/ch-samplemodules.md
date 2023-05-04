@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: fa68c786-5102-4cc3-b61c-2565ee919768
 exl-id: 637ec80e-320f-4cf7-b09a-9f3cbf47bb63
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 48%
+source-wordcount: '1212'
+ht-degree: 47%
 
 ---
 
 # ContextHub UI モジュールタイプのサンプル {#sample-contexthub-ui-module-types}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています。 次の情報が提供されます。
 

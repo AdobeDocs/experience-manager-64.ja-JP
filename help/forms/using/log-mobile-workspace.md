@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: e5aa84a5-9b47-4cc8-8622-510a0a2950bf
 exl-id: bc8c2080-eb67-4bd0-8829-fd6ddbf8d4a9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 34%
+source-wordcount: '186'
+ht-degree: 32%
 
 ---
 
 # AEM Forms アプリケーションへのログイン {#logging-in-to-aem-forms-app}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Formsアプリを起動する際は、まずログイン資格情報とAEM Formsサーバー URL を指定する必要があります。
 

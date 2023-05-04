@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: 12268c43-93f9-42c1-8dd7-f17f9ae2219b
 exl-id: 9804a96e-cad7-4df6-b463-ee3e794fdd39
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 81%
+source-wordcount: '1010'
+ht-degree: 79%
 
 ---
 
 # 計画{#planning}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このドキュメントでは、テストの計画に必要な情報を説明します。 また、テストを実施する前に、次の質問に答える必要があります。
 

@@ -1,5 +1,5 @@
 ---
-title: スマートコンテンツサービスのトレーニングガイドライン
+title: スマートコンテンツサービストレーニングガイドライン
 description: アセットにスマートタグを適用するための AI サービスのトレーニング
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 1c011496-be6e-470b-9da8-48db8c6d1108
@@ -8,26 +8,30 @@ discoiquuid: a5aab094-8b2d-4a23-890f-be6f9e5137bd
 feature: Tagging,Metadata,Smart Tags
 role: User
 exl-id: 14241f8d-fd0b-4bcf-b2bb-1d0e52bf7748
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 89%
+source-wordcount: '491'
+ht-degree: 64%
 
 ---
 
-# スマートコンテンツサービスのトレーニングガイドライン {#smart-content-service-training-guidelines}
+# スマートコンテンツサービストレーニングガイドライン {#smart-content-service-training-guidelines}
 
-To be able to effectively tag your brand images, the Smart Content Service requires that the training images conform to certain guidelines.
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
+スマートコンテンツサービスでブランド画像を効果的にタグ付けできるようにするには、トレーニング画像が特定のガイドラインに従っている必要があります。
 
 ## トレーニングのガイドライン {#guidelines-for-training}
 
 最適な結果を得るには、トレーニングセット内の画像は次のガイドラインに従う必要があります。
 
-**Quantity and size:** Minimum **30 images per tag**. 長辺が 500 ピクセル以上である必要があります。
+**数量とサイズ：** 最小 **タグ 1 つにつき 30 個の画像**. 長辺が 500 ピクセル以上である必要があります。
 
 **一貫性**：タグの各画像は、似たような外観にする必要があります。
 
-例えば、以下の画像は似ていないので、これらの画像すべてを my-party **（トレーニング用）としてタグ付けするのは適切ではありません。
+例えば、これらの画像をすべて次のようにタグ付けするのは適切ではありません。 *マイパーティ* （トレーニングの場合）似ていないので、似ていないと見なされます。
 
 ![トレーニングガイドラインの例を示すイラスト](assets/do-not-localize/coherence.png)
 
@@ -49,13 +53,13 @@ To be able to effectively tag your brand images, the Smart Content Service requi
 
 ## 制限事項 {#limitations}
 
-拡張スマートタグは、ブランド画像とそのタグの学習モデルに基づいています。これらのモデルは、タグを識別するうえで常に完璧であるわけではありません。スマートコンテンツサービスの現行バージョンには次の制限事項があります。
+拡張スマートタグは、ブランド画像とそのタグの学習モデルに基づいています。 これらのモデルは、タグを識別するうえで常に完璧であるわけではありません。スマートコンテンツサービスの現在のバージョンには、次の制限があります。
 
 * 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
-* 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-* タグ付けは、 [!DNL Experience Manager] はでサポートされています。 言語の一覧については、](/help/release-notes/smart-content-service-release-notes.md)スマートコンテンツサービスのリリースノート[を参照してください。
+* 画像の小さなパターンや部分に基づいてタグを識別できない。 例えば、T シャツのロゴなどです。
+* タグ付けは、[!DNL Experience Manager] がサポートされているロケールでサポートされています。言語の一覧については、](/help/release-notes/smart-content-service-release-notes.md)スマートコンテンツサービスのリリースノート[を参照してください。
 
-スマートタグ（通常または拡張）付きのアセットを検索するには、アセットのオムニサーチ（全文検索）を使用します。スマートタグには個別の検索用述語はありません。
+スマートタグ（通常または拡張）付きのアセットを検索するには、アセットオムニサーチ（全文検索）を使用します。 スマートタグには個別の検索用述語はありません。
 
 >[!NOTE]
 >

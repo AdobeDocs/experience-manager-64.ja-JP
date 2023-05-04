@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8e1b2f7c-2609-474b-a1b2-fa820df74ae3
 exl-id: 642f5ee3-c991-4238-9b82-f0e19a6d8e2d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1249'
 ht-degree: 36%
 
 ---
 
 # ワークマネージャーに関連する統計情報の表示 {#view-statistics-related-to-work-manager}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 「ワークマネージャー」タブには、ワークマネージャー項目に関連する統計が表示されます。 これらの作業項目は、プロセス内の場所に応じて異なる状態にあります。 ( [ステータス（デフォルト、ワークフロー、イベントの各カテゴリのみ）](view-statistics-related-manager.md#status-for-default-workflow-or-events-categories-only).) 使用可能な各種オプション（「ステータス」や「カテゴリ」など）を使用して、情報をフィルタリングし、項目のサブセットのみを表示できます。 列ヘッダーの 1 つをクリックして、結果の作業項目やジョブ項目を（昇順または降順で）並べ替えることができます。 また、作業項目リストの上に表示される操作ツールを使用して、作業項目を管理できます。
 

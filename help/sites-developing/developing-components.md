@@ -4,14 +4,18 @@ seo-title: Developing AEM Components
 description: AEM コンポーネントを使用して、web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
 seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
 exl-id: d3c1559a-1a7a-46ed-a935-9ad226cdea33
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3475'
+source-wordcount: '3511'
 ht-degree: 55%
 
 ---
 
 # AEM コンポーネントの開発{#developing-aem-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM コンポーネントを使用して、web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
 
@@ -364,7 +368,7 @@ AEMでは、次のようにページ上で段落システムを設定できま�
 
 この動作と、必要なアセットとコンポーネントの関係は、次のように設定できます。
 
-1. ページデザインの段落定義の下に表示されます。 例：
+1. ページデザインの段落定義の下に表示されます。 次に例を示します。
 
    * `/etc/designs/<myApp>/page/par`
 

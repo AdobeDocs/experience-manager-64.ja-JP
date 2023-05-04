@@ -10,14 +10,18 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 9cdd09f6-bfc2-48c3-af40-a54f98833a38
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 76%
+source-wordcount: '844'
+ht-degree: 74%
 
 ---
 
 # AEM Developer Tools for Eclipse {#aem-developer-tools-for-eclipse}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ![](do-not-localize/chlimage_1-9.png)
 

@@ -4,14 +4,18 @@ description: Experience Cloud との AEM Assets 統合の設定方法につい�
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f8629c30-1901-4b6e-b5a6-e46ee3c72fba
-source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 84%
+source-wordcount: '1053'
+ht-degree: 82%
 
 ---
 
 # AEM Assets 統合と Experience Cloud の設定 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内のアセットを Adobe Creative Cloud と同期できます。また、その逆も可能です。また、アセットを Experience Cloud に（またはその逆に）同期することもできます。[!DNL Adobe I/O] 経由でこの同期をセットアップできます。[!DNL Adobe Marketing Cloud] の更新された名前は [!DNL Adobe Experience Cloud] です。
 

@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 exl-id: 3da30cb4-39b2-4495-9e8b-93567b73b644
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 6%
+source-wordcount: '644'
+ht-degree: 7%
 
 ---
 
 # 初期サンドボックスアプリケーション {#initial-sandbox-application}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このセクションでは、次のものを作成します。
 
@@ -100,7 +104,7 @@ ht-degree: 6%
    * タイトル： **SCF Sandbox Play コンポーネント**
    * 説明： **これは、SCF サンドボックスページのコンテンツをレンダリングするコンポーネントです。**
    * スーパータイプ： *&lt;leave blank=&quot;&quot;>*
-   * グループ:
+   * グループ：
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 

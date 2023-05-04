@@ -10,14 +10,18 @@ topic-tags: testing
 content-type: reference
 discoiquuid: d8da194f-f161-4ba7-b8cc-c2c282dc9c83
 exl-id: e6dd95d2-9444-40e6-a83a-2c4f9e4cfcef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 62%
+source-wordcount: '143'
+ht-degree: 52%
 
 ---
 
 # 受け入れとサインオフ{#acceptance-and-sign-off}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 これまでに述べたように、[受け入れテスト](/help/sites-developing/planning.md)は、次の点を検証するための特別なカテゴリのテストです。
 

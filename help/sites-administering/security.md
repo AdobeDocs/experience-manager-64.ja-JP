@@ -11,14 +11,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a67b9e56-944d-424d-a64a-025f369faa5b
 exl-id: 1dd54d3f-419c-4c83-8cd8-4ae0e7feead2
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '5422'
+source-wordcount: '5458'
 ht-degree: 36%
 
 ---
 
 # ユーザー管理とセキュリティ{#user-administration-and-security}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この章では、ユーザー認証を設定および維持する方法と、AEMでの認証および承認の動作の背後にある理論について説明します。
 
@@ -219,7 +223,7 @@ AEM WCM は、アクセス制御リスト (ACL) を使用して、様々なペ�
 >`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`：全員に読み取りアクセスを許可します。
 >`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`：全員に読み取りアクセスを許可します。
 >`/home/users/geometrixx-outdoors`：全員に`*/profile*`の読み取りアクセスを許可します。\
->`*/social/relationships/following/*`
+>`*/social/relationships/following/*`。
 >
 >カスタムアプリケーションは、次のような他の関係`*/social/relationships/friend/*`や`*/social/relationships/pending-following/*`用のアクセスを設定できます。 
 >

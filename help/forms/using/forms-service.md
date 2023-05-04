@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: a9695d10-43ec-40eb-942f-7720abaa0973
 exl-id: a1c7c90f-6b50-4bc1-9972-1d3bdf8887ce
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '721'
 ht-degree: 45%
 
 ---
 
 # Forms サービス {#forms-service}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## 概要 {#overview}
 
@@ -48,7 +52,7 @@ Forms サービスを使用すると、AEM Forms Designer または `renderPDFFo
 
 ## フラグメントに基づいたフォームのレンダリング {#rendering-forms-based-on-fragments}
 
-Formsサービスでは、AEM Forms Designer で作成したフラグメントに基づいてフォームをレンダリングできます。 フラグメントは、フォームの再利用可能な部分です。 複数のフォームデザインに挿入できる個別の XDP ファイルとして保存されます。 例えば、フラグメントには住所ブロックや法律文を含めることができます。
+Formsサービスでは、AEM Forms Designer で作成したフラグメントに基づいてフォームをレンダリングできます。 フラグメントは、フォームの再使用可能な部分です。複数のフォームデザインに挿入できる個別の XDP ファイルとして保存されます。 例えば、フラグメントには住所ブロックや法律文を含めることができます。
 
 フラグメントを使用すると、大量のフォームを簡単に作成し、管理することができます。 フォームを作成するときに必要なフラグメントへの参照を挿入すると、そのフラグメントがフォームに表示されます。フラグメント参照には、物理 XDP ファイルを指すサブフォームが含まれます。
 

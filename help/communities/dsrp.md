@@ -1,7 +1,7 @@
 ---
 title: DSRP - リレーショナルデータベースストレージリソースプロバイダー
 seo-title: DSRP - Relational Database Storage Resource Provider
-description: リレーショナルデータベースを共通ストアとして使用するように AEM Communities を設定する
+description: リレーショナルデータベースを共通ストアとして使用するようにAEM Communitiesを設定する
 seo-description: Set up AEM Communities to use a relational database as its common store
 uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
@@ -11,53 +11,57 @@ content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 role: Admin
 exl-id: 3dd2bdc9-0c4d-43d9-a731-ca8c27503e1c
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 49%
+source-wordcount: '665'
+ht-degree: 7%
 
 ---
 
 # DSRP - リレーショナルデータベースストレージリソースプロバイダー {#dsrp-relational-database-storage-resource-provider}
 
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
+
 ## DSRP について {#about-dsrp}
 
-リレーショナルデータベースを共通ストアとして使用するように AEM Communities を設定すると、すべてのオーサーインスタンスとパブリッシュインスタンスからユーザー生成コンテンツ（UGC）にアクセスでき、同期やレプリケーションをおこなう必要はありません。
+リレーショナルデータベースを共通ストアとして使用するようにAEM Communitiesを設定すると、同期やレプリケーションを必要とせずに、すべてのオーサーインスタンスとパブリッシュインスタンスからユーザー生成コンテンツ (UGC) にアクセスできます。
 
-[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
+関連トピック [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options) および [推奨されるトポロジ](topologies.md).
 
 ## 要件 {#requirements}
 
-* [MySQL](#mysql-configuration)：リレーショナルデータベース
-* [Apache Solr](#solr-configuration)：検索プラットフォーム
+* [MySQL](#mysql-configuration)，リレーショナルデータベース
+* [Apache Solr](#solr-configuration)、検索プラットフォーム
 
 >[!NOTE]
 >
 >デフォルトのストレージ設定が conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) の代わりに etc パス (`/etc/socialconfig/srpc/defaultconfiguration`) をクリックします。 以下をフォローするようお勧めします。 [移行手順](#migration-steps-0dt) defaultsrp を期待どおりに動作させる。
 
-## リレーショナルデータベースの設定 {#relational-database-configuration}
+## リレーショナル・データベース構成 {#relational-database-configuration}
 
 ### MySQL 設定 {#mysql-configuration}
 
-別々のデータベース（スキーマ）名と別々の接続（server:port）を使用することで、1 つの MySQL を同じ接続プール内のイネーブルメント機能と共通ストア（DSRP）の間で共有できます。
+異なるデータベース（スキーマ）名と異なる接続（サーバー：ポート）を使用することで、1 つの MySQL インストールを同じ接続プール内のイネーブルメント機能と共通ストア (DSRP) の間で共有できます。
 
 インストールと設定の詳細については、 [DSRP 用の MySQL 設定](dsrp-mysql.md).
 
 ### Solr 設定 {#solr-configuration}
 
-別々のコレクションを使用することで、1 つの Solr をノードストア（Oak）と共通ストア（SRP）の間で共有できます。
+異なるコレクションを使用することで、1 つの Solr インストールをノードストア (Oak) と共通ストア (SRP) の間で共有できます。
 
-Oak と SRP のコレクションがどちらも高頻度で使用される場合は、パフォーマンス上の理由から 2 つ目の Solr をインストールすることもできます。
+Oak コレクションと SRP コレクションの両方を集中的に使用する場合は、パフォーマンス上の理由から 2 つ目の Solr をインストールすることができます。
 
 実稼動環境では、SolrCloud モードを使用すると、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
-インストールと設定について詳しくは、[SRP 向け Solr 設定](solr.md)を参照してください。
+インストールと設定の詳細については、 [SRP 用の Solr 設定](solr.md).
 
-### DSRP の選択 {#select-dsrp}
+### DSRP を選択 {#select-dsrp}
 
 この [ストレージ設定コンソール](srp-config.md) では、使用する SRP の実装を指定するデフォルトのストレージ設定を選択できます。
 
-オーサー環境でストレージ設定コンソールにアクセスするには
+オーサー環境で、ストレージ設定コンソールにアクセスします。
 
 * 管理者権限でログイン
 * 次の **メインメニュー**
@@ -102,9 +106,9 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
       * **[!UICONTROL Solr コレクション]**
 
-         *デフォルト*：collection1
+         *デフォルト*:collection1
 
-* 選択 **[!UICONTROL 送信]**
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ### defaultsrp のダウンタイムなしの移行手順 {#migration-steps-0dt}
 
@@ -118,15 +122,15 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
 ## 設定の公開 {#publishing-the-configuration}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで、DSRP が共通ストアとして指定されている必要があります。
+DSRP は、すべてのオーサーインスタンスとパブリッシュインスタンスで共通ストアとして指定する必要があります。
 
-パブリッシュ環境で同一の設定を使用できるようにするには：
+パブリッシュ環境で同じ設定を使用できるようにするには、次の手順を実行します。
 
 作成者：
 
 * メインメニューからに移動します。 **[!UICONTROL [ ツール ] > [ 操作 ] > [ レプリケーション ]]**
 * ダブルクリック **[!UICONTROL ツリーをアクティベート]**
-* **開始パス：**
+* **開始パス:**
 
    * 参照先 `/conf/global/settings/community/srpc/`
 
@@ -135,14 +139,14 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-パブリッシュ環境で頻繁に入力されるユーザー、ユーザープロファイルおよびユーザーグループについては、以下を参照してください。******
+以下に関する情報： *ユーザー*, *ユーザープロファイル* および *ユーザーグループ*&#x200B;パブリッシュ環境に入力されることが多い場合は、次にアクセスします。
 
 * [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
-## DSRP の Solr のインデックス再作成 {#reindexing-solr-for-dsrp}
+## DSRP 用 Solr のインデックス再作成 {#reindexing-solr-for-dsrp}
 
-DSRP Solr のインデックスを再作成するには、[MSRP のインデックスの再作成](msrp.md#msrp-reindex-tool)に関するドキュメントの説明に従います。ただし、DSRP のインデックスを再作成する場合は、この URL を使用します：**/services/social/datastore/rdb/reindex**
+DSRP Solr のインデックスを再作成するには、 [MSRP のインデックス再作成](msrp.md#msrp-reindex-tool)ただし、DSRP のインデックスを再作成する場合は、代わりに次の URL を使用してください。 **/services/social/datastore/rdb/reindex**
 
 例えば、DSRP のインデックスを再作成する curl コマンドは次のようになります。
 

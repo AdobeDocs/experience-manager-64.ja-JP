@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: eb8fd2b3-0a31-425e-b0f1-38f09e1106df
 exl-id: c6ad3c2b-8776-4ec4-99da-ab73ecc61153
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '423'
+ht-degree: 6%
 
 ---
 
 # メッセージングの基本事項 {#messaging-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 このページでは、メッセージングコンポーネントを使用して Web サイトにメッセージング機能を組み込む方法について詳しく説明します。
 
@@ -106,7 +110,7 @@ ht-degree: 5%
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->例：
+>次に例を示します。
 >
 >
 ```

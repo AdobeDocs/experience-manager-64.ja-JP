@@ -11,14 +11,18 @@ topic-tags: upgrading
 discoiquuid: 899ea120-c96d-4dbf-85da-e5d25959d10a
 feature: Upgrading
 exl-id: f146cb2f-ee77-4c99-8dff-446cdb3a7797
-source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2204'
 ht-degree: 43%
 
 ---
 
 # アップグレード前のメンテナンスタスク{#pre-upgrade-maintenance-tasks}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 アップグレードを開始する前に、次のメンテナンスタスクに従って、問題が発生した場合にシステムの準備が整い、ロールバックが可能であることを確認することが重要です。
 

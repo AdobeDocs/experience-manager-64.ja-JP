@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 9a3c6ab4-8bb9-40c7-8c56-59153b364887
 exl-id: 14303b8f-40a7-4bc5-8282-7526e0319264
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 35%
+source-wordcount: '568'
+ht-degree: 34%
 
 ---
 
 # オフラインモードの使用 {#working-in-the-offline-mode}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms アプリケーションのオフラインモードを使用すると、アプリケーションがオフラインになってもシームレスに作業を続けることができます。ネットワーク接続を必要とせずにフォームを開いたり、更新したり、送信したりすることができます。
 

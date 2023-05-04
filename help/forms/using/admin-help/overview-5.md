@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 207c6335-f700-48f1-814b-992692534f6c
 feature: PDF Generator
 exl-id: 217f0f80-fce6-4671-9853-633691d447f5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 36%
+source-wordcount: '177'
+ht-degree: 33%
 
 ---
 
 # PDF Generator の操作の概要 {#introduction-to-working-with-pdf-generator}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 PDFジェネレーターは、様々なファイル形式をPDFに変換します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。サポートされるファイル形式のリストについては、「GeneratePDFサービス」( [サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 

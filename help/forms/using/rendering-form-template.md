@@ -10,14 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 feature: Mobile Forms
 exl-id: ccdb2045-9339-4f39-acb5-85999c4667b9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 35%
+source-wordcount: '571'
+ht-degree: 36%
 
 ---
 
 # HTML5 forms 用のフォームテンプレートのレンダリング {#rendering-form-template-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## レンダリングエンドポイント {#render-endpoint}
 
@@ -69,7 +73,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 | パラメーター | 説明 |
 |---|---|
 | dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターには XML 形式データを返す REST サービスへの URL を使用できます。 |
-| data | このパラメーターは、テンプレートと結合される UTF-8 でエンコードされたデータバイトを指定します。 このパラメータを指定した場合、HTML5 フォームは dataRef パラメータを無視します。 |
+| data | このパラメーターは、テンプレートと結合される UTF-8 でエンコードされたデータバイトを指定します。 このパラメーターが指定されている場合、HTML5 フォームでは dataRef パラメーターが無視されます。 |
 
 ### レンダーパラメーターを渡す {#passing-the-render-parameter}
 

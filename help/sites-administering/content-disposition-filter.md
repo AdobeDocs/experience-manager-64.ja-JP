@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 exl-id: bb022f6b-938b-4421-8860-4c22aecf5b85
-source-git-commit: 8cc85728be93d58e3aaee69c96f59ee98d5484a1
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 73%
+source-wordcount: '275'
+ht-degree: 66%
 
 ---
 
 # Content Disposition フィルター {#content-disposition-filter}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 コンテンツの配置フィルターは、SVGファイルに対する XSS 攻撃に対するセキュリティ機能です。
 
@@ -34,4 +38,4 @@ Content Disposition フィルターのオプションには、次の機能があ
 * **除外されたリソースパス：**&#x200B;除外されたリソースのリストです。各リソースパスは絶対パスおよび完全修飾パスとして指定する必要があります。プレフィックスマッチング／ワイルドカードはサポートされていません。
 
 * **すべてのリソースパスを有効化：**&#x200B;このフラグは、除外されたリソースパスで定義されたパス以外のすべてのパスに対して、このフィルターを有効にするかどうかを制御します。これを「true」に設定すると、Content Disposition パスが無視されます。設定とは無関係に、という名前のプロパティを含むリソースパスのみが対象となります。 `jcr:data` または
-   `jcr:content jcr:data`
+   `jcr:content jcr:data`。

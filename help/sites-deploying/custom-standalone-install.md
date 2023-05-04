@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: c9e51008-6009-49a2-9c74-1c610cef2e7f
 exl-id: 0933f733-50bf-48ae-a5da-be5dc9335253
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1545'
 ht-degree: 45%
 
 ---
 
 # カスタムスタンドアロンインストール{#custom-standalone-install}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 この節では、スタンドアロンのAEMインスタンスをインストールする際に使用できるオプションについて説明します。 また、 [ストレージ要素](/help/sites-deploying/storage-elements-in-aem-6.md) AEM 6 を新規インストールした後のバックエンドストレージタイプの選択に関する詳細
 
@@ -311,7 +315,7 @@ CRXDE Lite を開くには、スタートアップスクリーンから **CRXDE 
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
 ```
 
-例：\
+次に例を示します。\
 `http://localhost:4502/crx/de/index.jsp` ``
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
@@ -324,7 +328,7 @@ Adobe CQ web コンソールにアクセスするには、ようこそ画面か�
  https://<<i>host</i>>:<<i>port</i>>/system/console
 ```
 
-例：\
+次に例を示します。\
 `http://localhost:4502/system/console`\
 または「Bundles」ページの\
 `http://localhost:4502/system/console/bundles`

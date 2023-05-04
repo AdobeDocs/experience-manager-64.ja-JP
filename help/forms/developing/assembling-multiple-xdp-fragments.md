@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: 0ed1f69d-c212-4d47-a572-ae030f2983fc
 role: Developer
 exl-id: be9db93d-97e1-4d4e-8d07-1c58a4a1a44c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1887'
-ht-degree: 100%
+source-wordcount: '1923'
+ht-degree: 98%
 
 ---
 
 # 複数の XDP フラグメントのアセンブル {#assembling-multiple-xdp-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 複数の XDP フラグメントを単一の XDP ドキュメントにアセンブルできます。例えば、各 XDP ファイルに、ヘルスフォームの作成に使用される 1 つ以上のサブフォームが含まれている XDP フラグメントについて考えてみましょう。次の図に、アウトラインビューを示します（*複数の XDP フラグメントのアセンブル*&#x200B;クイックスタートで使用される tuc018_template_flowed.xdp ファイルを表わしています）。
 

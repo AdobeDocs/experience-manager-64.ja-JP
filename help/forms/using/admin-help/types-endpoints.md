@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8fe572e0-8a53-4129-940f-3fdb990073fe
 exl-id: 7c6b9b6c-d4b5-46a8-8a6a-3b8802ac392d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 63%
+source-wordcount: '474'
+ht-degree: 59%
 
 ---
 
 # エンドポイントの種類 {#types-of-endpoints}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 サービスを使用する前に、エンドポイントを設定して有効にする必要があります。 エンドポイントは、サービスの呼び出し方法を指定します。
 

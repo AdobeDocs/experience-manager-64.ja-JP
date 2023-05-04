@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dc149196-fa56-494e-975c-b11ca1ef193b
 exl-id: 7118dbca-e9b4-4b69-b4c3-34bb52008168
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 38%
+source-wordcount: '322'
+ht-degree: 36%
 
 ---
 
 # コミュニティコンポーネント {#communities-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -43,7 +47,7 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 >
 >読み取り [コミュニティコンポーネントの基本](basics.md) コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれているので、
 
-| **コンポーネントタイトル** | **機能** |
+| **コンポーネントのタイトル** | **機能** |
 |---|---|
 | アクティビティストリーム | [アクティビティストリーム](activities.md) |
 | ブログ | [ブログ](blog-feature.md) |

@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: 6ae70f02-a86d-4514-abc5-1ed08e484852
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1119'
-ht-degree: 95%
+source-wordcount: '1155'
+ht-degree: 93%
 
 ---
 
 # 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 

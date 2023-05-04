@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 discoiquuid: 3a1817cd-357b-473d-9a09-e18bbfc60dfd
 exl-id: 07f89673-125b-4205-bc54-c90287a1e9a5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 47%
+source-wordcount: '797'
+ht-degree: 46%
 
 ---
 
 # デフォルトの SSL{#ssl-by-default}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEMのセキュリティを継続的に改善するために、Adobeではデフォルトで SSL と呼ばれる機能が導入されました。 この目的は、AEMインスタンスへの接続に HTTPS の使用を推奨することです。
 

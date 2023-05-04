@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: e32fc619-6226-48c6-bbd7-1910963d1036
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 2%
+source-wordcount: '861'
+ht-degree: 3%
 
 ---
 
 # MongoDB をデモ用に設定する方法 {#how-to-setup-mongodb-for-demo}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## はじめに {#introduction}
 
@@ -171,8 +175,8 @@ MongoDB 共通ストアをテストおよび検証するには、パブリッシ
 
    * Solr ダッシュボードを参照します。 [http://localhost:8983/solr/](http://localhost:8983/solr/)
    * ユーザー `core selector` 選択 `collection1`
-   * 選択 `Query`
-   * 選択 `Execute Query`
+   * `Query` を選択します。
+   * `Execute Query` を選択します。
 
    ![chlimage_1-194](assets/chlimage_1-194.png)
 

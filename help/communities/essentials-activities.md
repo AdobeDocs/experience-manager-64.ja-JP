@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8cc04993-4021-4cb7-b973-5afc4da1ed11
 exl-id: 74dcbefa-e670-419b-af9b-b3d3c593ebaa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 4%
+source-wordcount: '332'
+ht-degree: 6%
 
 ---
 
 # アクティビティストリームの基本事項 {#activity-stream-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 フォーラムやブログへの投稿など、サインインしたコミュニティメンバーのアクティビティは、ストリームに収集され、アクティビティストリームコンポーネントの設定を通じて、様々な方法でフィルタリングおよび表示できます。
 

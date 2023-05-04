@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
 exl-id: 9fff10fb-4b65-459a-a7a7-6ee9c0c26bf5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 72%
+source-wordcount: '468'
+ht-degree: 68%
 
 ---
 
 # コンテンツのアーキテクチャ{#content-architecture}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ## David のモデルに従う {#follow-david-s-model}
 

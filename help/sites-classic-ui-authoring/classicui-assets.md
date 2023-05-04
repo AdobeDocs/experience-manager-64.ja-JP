@@ -10,14 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: f3b4d49b-5873-4825-91b9-71a3204516b1
 exl-id: 535d2a9f-852c-48ea-89ec-31de3a891666
-source-git-commit: 82f31577e41e1cd484ee3a8d22bbc11756ff23a2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 88%
+source-wordcount: '116'
+ht-degree: 68%
 
 ---
 
 # アセットの操作 {#working-with-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md)のセクションでは、ページの編集中にアセットを検索して使用するための[!UICONTROL コンテンツファインダー]の使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 

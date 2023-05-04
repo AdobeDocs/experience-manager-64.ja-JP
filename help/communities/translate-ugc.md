@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 role: Admin
 exl-id: b8cbc429-b0c3-4f6e-a15f-4aef54733c8e
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1108'
-ht-degree: 2%
+source-wordcount: '1144'
+ht-degree: 3%
 
 ---
 
 # ユーザー生成コンテンツの翻訳 {#translating-user-generated-content}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Communitiesの翻訳機能は、 [ページコンテンツの翻訳](../../help/sites-administering/translation.md) を使用してコミュニティサイトに投稿されたユーザー生成コンテンツ (UGC) に [ソーシャルコンポーネントフレームワーク (SCF) コンポーネント](scf.md).
 
@@ -96,7 +100,7 @@ Web サイトに複数の [言語コピー](../../help/sites-administering/tc-pr
 
 * **[!UICONTROL 親設定]**
 （必須）通常はデフォルトのままにします。 初期設定は です。 
-`/etc/cloudservices/translation`
+`/etc/cloudservices/translation`。
 
 * **[!UICONTROL タイトル]**
 （必須）任意の表示タイトルを入力します。 デフォルト値はありません。

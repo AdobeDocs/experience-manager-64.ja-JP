@@ -12,14 +12,18 @@ discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
 exl-id: d2fdad3f-513b-4147-a7c6-a3c1b64dd6e3
 feature: Carousel Banners
 role: User
-source-git-commit: 76592d2714106f96184196b9e8db012801bf7c28
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4735'
+source-wordcount: '4771'
 ht-degree: 59%
 
 ---
 
 # カルーセルバナー {#carousel-banners}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 カルーセルバナーを使用すると、マーケターは、インタラクティブで回転するプロモーションコンテンツを簡単に作成し、任意の画面に配信することで、コンバージョンを促進できます。
 

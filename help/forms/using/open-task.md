@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 exl-id: c87a35d5-3371-472d-af28-14d3412d6ebe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 14%
+source-wordcount: '359'
+ht-degree: 15%
 
 ---
 
 # タスクを開く {#opening-a-task}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM Forms アプリケーションが AEM Forms サーバーと同期されている場合は、自分に割り当てられているタスクを操作することができます。タスクとは、ワークベンチまたは AEM ワークフローエディターで定義されるワークフロー内の手順のことです。例えば、 [Conard は、GeometrixxGov リファレンスサイトで評価タスクを取得します](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task). 現在自分に割り当てられているタスクに変更を加えることができます。 すべてのタスクは「タスク」タブで使用できます。 下書きとして保存されたタスクは、「タスク」タブに残ります。
 

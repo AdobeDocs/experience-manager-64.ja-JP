@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 exl-id: 8c205d1d-d17e-4810-8ef9-a8bdcd9aa1c2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 31%
+source-wordcount: '609'
+ht-degree: 30%
 
 ---
 
 # ジャストインタイムのユーザープロビジョニング {#just-in-time-user-provisioning}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 AEM forms は、User Management にまだ存在しないユーザーのジャストインタイムプロビジョニングをサポートしています。 ジャストインタイムプロビジョニングでは、ユーザーの資格情報が正常に認証されると、ユーザーは User Management に自動的に追加されます。 さらに、関連する役割とグループが新しいユーザーに動的に割り当てられます。
 

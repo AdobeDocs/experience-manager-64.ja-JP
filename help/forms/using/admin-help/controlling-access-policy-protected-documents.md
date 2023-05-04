@@ -11,14 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 64431958-c802-42d1-a2e3-5e85e15bfad6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2205'
 ht-degree: 22%
 
 ---
 
 # ポリシーで保護されたドキュメントへのアクセス制御 {#controlling-access-to-policy-protected-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ポリシーで保護されたドキュメントを、どれだけ広く配布しても、受信者がそのドキュメントを使用する方法を制御できます。
 

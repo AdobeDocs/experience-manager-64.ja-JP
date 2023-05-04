@@ -10,14 +10,18 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 7f813b59-d904-49b6-994c-be3badf74464
 exl-id: 776ceb9f-f835-4dbb-9100-f456a36b6dcd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 68%
+source-wordcount: '509'
+ht-degree: 65%
 
 ---
 
 # ContextHub ストア候補のサンプル{#sample-contexthub-store-candidates}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 ContextHub には、ソリューションで使用できるサンプルストア候補がいくつか用意されています。 各サンプルについて、次の情報が提供されます。
 

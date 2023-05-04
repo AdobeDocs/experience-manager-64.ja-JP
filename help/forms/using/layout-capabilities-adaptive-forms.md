@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: 10bf1d44-9660-44d9-b2c3-dd9a252efc3a
 feature: Adaptive Forms
 exl-id: 887e88c6-4c2b-4ef3-b268-8956fdb4535f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 58%
+source-wordcount: '1179'
+ht-degree: 57%
 
 ---
 
 # アダプティブフォームのレイアウトの機能 {#layout-capabilities-of-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 の拡張サポートは終了し、このドキュメントは更新されなくなりました。 詳細は、 [技術サポート期間](https://helpx.adobe.com/jp/support/programs/eol-matrix.html). サポートされているバージョンを見つける [ここ](https://experienceleague.adobe.com/docs/?lang=ja).
 
 Adobe Experience Manager(AEM) を使用すると、使いやすいアダプティブフォームを作成して、エンドユーザーにダイナミックなエクスペリエンスを提供できます。 フォームレイアウトは、アダプティブフォームでの項目やコンポーネントの表示方法を制御します。
 
@@ -40,7 +44,7 @@ Adobe Experience Manager(AEM) を使用すると、使いやすいアダプテ�
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
-`/libs/fd/af/layouts`
+`/libs/fd/af/layouts`。
 
 >[!NOTE]
 >
